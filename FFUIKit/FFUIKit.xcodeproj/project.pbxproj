@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */; };
-		07A9C7A219E3C807004ABC10 /* FFLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A019E3C807004ABC10 /* FFLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07A9C7A319E3C807004ABC10 /* FFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A119E3C807004ABC10 /* FFLabel.m */; };
-		07A9C7A419E3C807004ABC10 /* FFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A119E3C807004ABC10 /* FFLabel.m */; };
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
+		07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF5E5B1A376B91006928A9 /* FFLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +22,9 @@
 		07A9C79219E3C7C4004ABC10 /* FFUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C79519E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFUIKitTests.m; sourceTree = "<group>"; };
-		07A9C7A019E3C807004ABC10 /* FFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLabel.h; sourceTree = "<group>"; };
-		07A9C7A119E3C807004ABC10 /* FFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLabel.m; sourceTree = "<group>"; };
 		07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProgressIndicatorView.h; sourceTree = "<group>"; };
 		07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProgressIndicatorView.m; sourceTree = "<group>"; };
+		07FF5E5B1A376B91006928A9 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +66,7 @@
 		07A9C78919E3C7C4004ABC10 /* FFUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				07A9C7A019E3C807004ABC10 /* FFLabel.h */,
-				07A9C7A119E3C807004ABC10 /* FFLabel.m */,
+				07FF5E5B1A376B91006928A9 /* FFLabel.swift */,
 				07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */,
 				07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */,
 				07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */,
@@ -113,7 +109,6 @@
 			files = (
 				07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */,
 				07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */,
-				07A9C7A219E3C807004ABC10 /* FFLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A9C7A319E3C807004ABC10 /* FFLabel.m in Sources */,
+				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
-				07A9C7A419E3C807004ABC10 /* FFLabel.m in Sources */,
 				07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +311,7 @@
 		07A9C79B19E3C7C4004ABC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -326,12 +321,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		07A9C79C19E3C7C4004ABC10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -393,6 +390,7 @@
 				07A9C79C19E3C7C4004ABC10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A9C79D19E3C7C4004ABC10 /* Build configuration list for PBXNativeTarget "FFUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +399,7 @@
 				07A9C79F19E3C7C4004ABC10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
