@@ -15,5 +15,4 @@ FOUNDATION_EXPORT double FFUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FFUIKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FFUIKit/PublicHeader.h>
-#import <FFUIKit/FFLabel.h>
 #import <FFUIKit/FFProgressIndicatorView.h>
