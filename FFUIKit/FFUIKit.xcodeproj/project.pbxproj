@@ -12,8 +12,28 @@
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
+		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
+		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
+		07B37F501A3B566A00911042 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF5E5B1A376B91006928A9 /* FFLabel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07B37F4C1A3B565100911042 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07FF5E271A3761D0006928A9;
+			remoteInfo = FFFoundation;
+		};
+		07B37F4E1A3B565100911042 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07FF5E321A3761D1006928A9;
+			remoteInfo = FFFoundationTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +44,9 @@
 		07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFUIKitTests.m; sourceTree = "<group>"; };
 		07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProgressIndicatorView.h; sourceTree = "<group>"; };
 		07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProgressIndicatorView.m; sourceTree = "<group>"; };
+		07B37F421A3A082800911042 /* Intent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intent.swift; sourceTree = "<group>"; };
+		07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsAndHelpers.swift; sourceTree = "<group>"; };
+		07B37F471A3B565100911042 /* FFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FFFoundation.xcodeproj; path = ../Submodules/FFFoundation/FFFoundation/FFFoundation.xcodeproj; sourceTree = "<group>"; };
 		07FF5E5B1A376B91006928A9 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B37F501A3B566A00911042 /* FFFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +74,7 @@
 			children = (
 				07A9C78919E3C7C4004ABC10 /* FFUIKit */,
 				07A9C79319E3C7C4004ABC10 /* FFUIKitTests */,
+				07B37F461A3B563E00911042 /* Frameworks */,
 				07A9C78819E3C7C4004ABC10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				07FF5E5B1A376B91006928A9 /* FFLabel.swift */,
+				07B37F421A3A082800911042 /* Intent.swift */,
+				07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */,
 				07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */,
 				07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */,
 				07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */,
@@ -98,6 +125,23 @@
 				07A9C79519E3C7C4004ABC10 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07B37F461A3B563E00911042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B37F471A3B565100911042 /* FFFoundation.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07B37F481A3B565100911042 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07B37F4D1A3B565100911042 /* FFFoundation.framework */,
+				07B37F4F1A3B565100911042 /* FFFoundationTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +221,12 @@
 			mainGroup = 07A9C77D19E3C7C4004ABC10;
 			productRefGroup = 07A9C78819E3C7C4004ABC10 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 07B37F481A3B565100911042 /* Products */;
+					ProjectRef = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				07A9C78619E3C7C4004ABC10 /* FFUIKit */,
@@ -184,6 +234,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		07B37F4D1A3B565100911042 /* FFFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FFFoundation.framework;
+			remoteRef = 07B37F4C1A3B565100911042 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07B37F4F1A3B565100911042 /* FFFoundationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FFFoundationTests.xctest;
+			remoteRef = 07B37F4E1A3B565100911042 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		07A9C78519E3C7C4004ABC10 /* Resources */ = {
@@ -209,6 +276,8 @@
 			files = (
 				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
+				07B37F431A3A082800911042 /* Intent.swift in Sources */,
+				07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +330,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
