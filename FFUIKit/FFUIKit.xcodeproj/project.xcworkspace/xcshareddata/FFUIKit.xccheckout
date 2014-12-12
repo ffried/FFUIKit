@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5134F3F7A71ADD498CB13E4A9C7574DD5D40E192</key>
-		<string>../../../Submodules/FFFoundation/</string>
+		<string>../../../Submodules/FFFoundation</string>
 		<key>CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68</key>
 		<string>../../..</string>
 	</dict>
