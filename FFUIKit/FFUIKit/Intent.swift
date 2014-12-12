@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import UIKit
-import FFFoundation
+import FFUIKit
 
 public typealias IntentCompletion = (intent: Intent, succeeded: Bool, cancelled: Bool) -> ()
 

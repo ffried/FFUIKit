@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
+@import FFFoundation;
 @import UIKit;
 
 //! Project version number for FFUIKit.

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import Foundation
+import FFUIKit
 
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
