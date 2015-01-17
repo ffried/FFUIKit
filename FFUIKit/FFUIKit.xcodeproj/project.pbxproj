@@ -10,6 +10,9 @@
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
+		0721BB101A6ADCC300733CF7 /* FFUIKit+FFFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0721BB0F1A6ADCC300733CF7 /* FFUIKit+FFFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0721BB241A6ADCD500733CF7 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
+		0721BB271A6ADCF200733CF7 /* FFUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */; };
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,11 +20,17 @@
 		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
 		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
-		07B37F501A3B566A00911042 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF5E5B1A376B91006928A9 /* FFLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0721BB251A6ADCEC00733CF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A9C77E19E3C7C4004ABC10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A9C78619E3C7C4004ABC10;
+			remoteInfo = FFUIKit;
+		};
 		07B37F4C1A3B565100911042 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
@@ -42,6 +51,9 @@
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
+		0721BB0B1A6ADCC200733CF7 /* FFUIKit+FFFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "FFUIKit+FFFoundation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0721BB0E1A6ADCC200733CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0721BB0F1A6ADCC300733CF7 /* FFUIKit+FFFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFUIKit+FFFoundation.h"; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
@@ -57,11 +69,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0721BB071A6ADCC200733CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0721BB271A6ADCF200733CF7 /* FFUIKit.framework in Frameworks */,
+				0721BB241A6ADCD500733CF7 /* FFFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07A9C78319E3C7C4004ABC10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B37F501A3B566A00911042 /* FFFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,11 +95,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0721BB0C1A6ADCC200733CF7 /* FFUIKit+FFFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				0721BB0F1A6ADCC300733CF7 /* FFUIKit+FFFoundation.h */,
+				0721BB0D1A6ADCC200733CF7 /* Supporting Files */,
+			);
+			path = "FFUIKit+FFFoundation";
+			sourceTree = "<group>";
+		};
+		0721BB0D1A6ADCC200733CF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0721BB0E1A6ADCC200733CF7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		07A9C77D19E3C7C4004ABC10 = {
 			isa = PBXGroup;
 			children = (
 				07A9C78919E3C7C4004ABC10 /* FFUIKit */,
 				07A9C79319E3C7C4004ABC10 /* FFUIKitTests */,
+				0721BB0C1A6ADCC200733CF7 /* FFUIKit+FFFoundation */,
 				07B37F461A3B563E00911042 /* Frameworks */,
 				07A9C78819E3C7C4004ABC10 /* Products */,
 			);
@@ -90,6 +128,7 @@
 			children = (
 				07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */,
 				07A9C79219E3C7C4004ABC10 /* FFUIKitTests.xctest */,
+				0721BB0B1A6ADCC200733CF7 /* FFUIKit+FFFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +195,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0721BB081A6ADCC200733CF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0721BB101A6ADCC300733CF7 /* FFUIKit+FFFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07A9C78419E3C7C4004ABC10 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +215,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0721BB0A1A6ADCC200733CF7 /* FFUIKit_FFFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0721BB1E1A6ADCC300733CF7 /* Build configuration list for PBXNativeTarget "FFUIKit_FFFoundation" */;
+			buildPhases = (
+				0721BB061A6ADCC200733CF7 /* Sources */,
+				0721BB071A6ADCC200733CF7 /* Frameworks */,
+				0721BB081A6ADCC200733CF7 /* Headers */,
+				0721BB091A6ADCC200733CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0721BB261A6ADCEC00733CF7 /* PBXTargetDependency */,
+			);
+			name = FFUIKit_FFFoundation;
+			productName = "FFUIKit+FFFoundation";
+			productReference = 0721BB0B1A6ADCC200733CF7 /* FFUIKit+FFFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		07A9C78619E3C7C4004ABC10 /* FFUIKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07A9C79A19E3C7C4004ABC10 /* Build configuration list for PBXNativeTarget "FFUIKit" */;
@@ -212,6 +278,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Florian Friedrich";
 				TargetAttributes = {
+					0721BB0A1A6ADCC200733CF7 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					07A9C78619E3C7C4004ABC10 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -240,6 +309,7 @@
 			targets = (
 				07A9C78619E3C7C4004ABC10 /* FFUIKit */,
 				07A9C79119E3C7C4004ABC10 /* FFUIKitTests */,
+				0721BB0A1A6ADCC200733CF7 /* FFUIKit_FFFoundation */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +332,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0721BB091A6ADCC200733CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07A9C78519E3C7C4004ABC10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +356,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0721BB061A6ADCC200733CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07A9C78219E3C7C4004ABC10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,7 +388,52 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0721BB261A6ADCEC00733CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A9C78619E3C7C4004ABC10 /* FFUIKit */;
+			targetProxy = 0721BB251A6ADCEC00733CF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0721BB1F1A6ADCC300733CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FFUIKit+FFFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0721BB201A6ADCC300733CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FFUIKit+FFFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		07A9C79819E3C7C4004ABC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,6 +584,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0721BB1E1A6ADCC300733CF7 /* Build configuration list for PBXNativeTarget "FFUIKit_FFFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0721BB1F1A6ADCC300733CF7 /* Debug */,
+				0721BB201A6ADCC300733CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
