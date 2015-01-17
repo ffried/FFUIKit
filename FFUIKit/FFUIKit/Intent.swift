@@ -20,12 +20,11 @@ public class Intent {
     
     public var completion: IntentCompletion?
     
-    public init(completion: IntentCompletion?) {
+    public init(selfsustaining: Bool = false, completion: IntentCompletion? = nil) {
         self.completion = completion
-    }
-    
-    public convenience init() {
-        self.init(completion: nil)
+        if (selfsustaining) {
+            becomeSelfSustaining()
+        }
     }
     
     // MARK: Completion
