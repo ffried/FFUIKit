@@ -52,7 +52,7 @@ internal func findForemostViewController() -> UIViewController? {
     }
     if let vc = viewController {
         var presentedViewController = vc
-        while (presentedViewController.presentedViewController != nil) {
+        while presentedViewController.presentedViewController != nil {
             presentedViewController = presentedViewController.presentedViewController!
         }
         viewController = presentedViewController

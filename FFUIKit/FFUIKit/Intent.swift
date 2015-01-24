@@ -8,7 +8,15 @@
 
 import FFUIKit
 
-public typealias IntentCompletion = (intent: Intent, succeeded: Bool, cancelled: Bool) -> ()
+public enum IntentState {
+    case New
+    case Running
+    case Succeeded
+    case Failed
+    case Cancelled
+}
+
+public typealias IntentCompletion = (intent: Intent, state: IntentState) -> ()
 
 private var SelfSustainingIntents = [Intent]()
 public class Intent {
@@ -17,6 +25,9 @@ public class Intent {
     public final var isSelfSustaining: Bool { return selfSustaining }
     
     public var viewController: UIViewController?
+    
+    private var state = IntentState.New
+    public var currentState: IntentState { return state }
     
     public var completion: IntentCompletion?
     
@@ -28,8 +39,9 @@ public class Intent {
     }
     
     // MARK: Completion
-    private final func completeWithSuccess(success: Bool, cancelled: Bool) {
-        completion?(intent: self, succeeded: success, cancelled: cancelled)
+    private final func completeWithState(state: IntentState) {
+        self.state = state
+        completion?(intent: self, state: currentState)
         if isSelfSustaining {
             resignSelfSustainingState()
         }
@@ -47,28 +59,41 @@ public class Intent {
     }
     
     public func succeed() {
-        completeWithSuccess(true, cancelled: false)
+        completeWithState(.Succeeded)
     }
     
     public func succeedWithMessage(message: String) {
-        showAlertWithTitle(localizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: message)
+        succeedWithTitle(localizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: message)
+    }
+    
+    public func succeedWithTitle(title: String, message: String) {
+        showAlertWithTitle(title, message: message)
         succeed()
     }
     
     public func fail() {
-        completeWithSuccess(false, cancelled: false)
+        completeWithState(.Failed)
     }
     
     public func failWithMessage(message: String) {
-        showAlertWithTitle(localizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: message)
+        failWithTitle(localizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: message)
+    }
+    
+    public func failWithTitle(title: String, message: String) {
+        showAlertWithTitle(title, message: message)
         fail()
     }
     
     // MARK: Run
-    public func run() {}
+    public func run() {
+        state = .Running
+        if viewController == nil {
+            println("WARNING: Intent has no view controller set! Completion alerts might not work as expected!")
+        }
+    }
     
     public func cancel() {
-        completeWithSuccess(false, cancelled: true)
+        completeWithState(.Cancelled)
     }
     
     // MARK: SelfSustaining State

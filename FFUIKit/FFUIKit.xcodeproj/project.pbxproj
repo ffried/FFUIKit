@@ -10,6 +10,7 @@
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
+		0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */; };
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +50,7 @@
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
+		0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
@@ -82,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		076576911A73C80F00EEA793 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */,
+				0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */,
+				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
+				0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		076576921A73C81A00EEA793 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07FF5E5B1A376B91006928A9 /* FFLabel.swift */,
+				07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */,
+				07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		07A9C77D19E3C7C4004ABC10 = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +127,10 @@
 		07A9C78919E3C7C4004ABC10 /* FFUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				07FF5E5B1A376B91006928A9 /* FFLabel.swift */,
+				076576911A73C80F00EEA793 /* Categories */,
+				076576921A73C81A00EEA793 /* Views */,
 				07B37F421A3A082800911042 /* Intent.swift */,
 				07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */,
-				0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */,
-				0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */,
-				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
-				07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */,
-				07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */,
 				07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */,
 				07A9C78A19E3C7C4004ABC10 /* Supporting Files */,
 			);
@@ -292,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
+				0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */,
 				0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */,
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
