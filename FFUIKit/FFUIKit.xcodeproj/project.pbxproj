@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0700FD9C1A74E5B100570B96 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0700FD9D1A74E5B100570B96 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */; };
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */,
 				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
 				0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */,
+				0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */,
+				0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0700FD9C1A74E5B100570B96 /* UIAppearance+Swift.h in Headers */,
 				07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */,
 				07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */,
 			);
@@ -313,6 +320,7 @@
 				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
 				0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */,
 				0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */,
+				0700FD9D1A74E5B100570B96 /* UIAppearance+Swift.m in Sources */,
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
