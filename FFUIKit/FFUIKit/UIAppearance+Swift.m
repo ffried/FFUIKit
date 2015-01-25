@@ -35,3 +35,15 @@
 }
 
 @end
+
+@implementation UIBarItem (SwiftAppearance)
+
++ (instancetype)ffAppearanceWhenContainedInClass:(Class<UIAppearanceContainer>)ContainerClass {
+    return [self appearanceWhenContainedIn:ContainerClass, nil];
+}
+
++ (instancetype)ffAppearanceForTraitCollection:(UITraitCollection *)trait whenContainedInClass:(Class<UIAppearanceContainer>)ContainerClass {
+    return [self appearanceForTraitCollection:trait whenContainedIn:ContainerClass, nil];
+}
+
+@end

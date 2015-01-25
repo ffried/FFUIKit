@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface UIView (SwiftAppearance)
+@protocol FFAppearance <UIAppearance>
 
 + (instancetype)ffAppearanceWhenContainedInClass:(Class <UIAppearanceContainer>)ContainerClass;
 //+ (instancetype)ffAppearanceWhenContainedInClasses:(NSArray *)ContainerClasses; // Class names!
@@ -16,4 +16,10 @@
 + (instancetype)ffAppearanceForTraitCollection:(UITraitCollection *)trait whenContainedInClass:(Class <UIAppearanceContainer>)ContainerClass NS_AVAILABLE_IOS(8_0);
 //+ (instancetype)ffAppearanceForTraitCollection:(UITraitCollection *)trait whenContainedInClasses:(NSArray *)ContainerClasses NS_AVAILABLE_IOS(8_0); // Class Names
 
+@end
+
+@interface UIView (SwiftAppearance) <FFAppearance>
+@end
+
+@interface UIBarItem (SwiftAppearance) <FFAppearance>
 @end
