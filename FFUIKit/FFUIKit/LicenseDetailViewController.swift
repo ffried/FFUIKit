@@ -17,6 +17,9 @@ public class LicenseDetailViewController: UIViewController {
         tv.setTranslatesAutoresizingMaskIntoConstraints(false)
         tv.backgroundColor = UIColor.clearColor()
         tv.editable = false
+        tv.dataDetectorTypes = .Link
+        tv.selectable = true
+        tv.contentInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
         return tv
         }()
     
