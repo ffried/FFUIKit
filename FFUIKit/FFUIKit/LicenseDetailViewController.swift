@@ -10,6 +10,8 @@ import FFUIKit
 
 public class LicenseDetailViewController: UIViewController {
     
+    internal var preferredStatusBarStyle: UIStatusBarStyle = .Default
+    
     private let textView: UITextView = {
         let tv = UITextView()
         tv.setTranslatesAutoresizingMaskIntoConstraints(false)

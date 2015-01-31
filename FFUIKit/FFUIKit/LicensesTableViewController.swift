@@ -12,9 +12,13 @@ public class LicensesTableViewController: UITableViewController {
     
     private let LicenseCellReuseIdentifier = "LicenseCell"
     
+    public var preferredStatusBarStyle: UIStatusBarStyle = .Default
+    
     public var licenses: [License] = [] {
         didSet {
-            tableView?.updateFromRows(oldRows: oldValue, toRows: licenses, inSection: 0, animated: true)
+            if isViewLoaded() {
+                tableView?.updateFromRows(oldRows: oldValue, toRows: licenses, inSection: 0, animated: true)
+            }
         }
     }
 
@@ -59,6 +63,8 @@ public class LicensesTableViewController: UITableViewController {
     public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailVC = LicenseDetailViewController()
         detailVC.license = licenses[indexPath.row]
+        detailVC.view.backgroundColor = self.view.backgroundColor
+        detailVC.preferredStatusBarStyle = preferredStatusBarStyle
         navigationController!.pushViewController(detailVC, animated: true)
     }
 }
