@@ -20,6 +20,7 @@ public class LicenseDetailViewController: UIViewController {
         tv.dataDetectorTypes = .Link
         tv.selectable = true
         tv.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: -10.0)
+        tv.clipsToBounds = false
         return tv
         }()
     
