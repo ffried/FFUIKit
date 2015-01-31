@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0700FD9C1A74E5B100570B96 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0700FD9D1A74E5B100570B96 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */; };
+		07085BE51A7CEEAF0057E65B /* LicensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BE41A7CEEAF0057E65B /* LicensesTableViewController.swift */; };
+		07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */; };
+		07085BEE1A7CF1CD0057E65B /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BED1A7CF1CD0057E65B /* License.swift */; };
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
@@ -20,6 +23,7 @@
 		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
 		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
+		07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */; };
 		07E010D21A6AE10E006184DD /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF5E5B1A376B91006928A9 /* FFLabel.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,9 @@
 /* Begin PBXFileReference section */
 		0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
 		0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		07085BE41A7CEEAF0057E65B /* LicensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesTableViewController.swift; sourceTree = "<group>"; };
+		07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
+		07085BED1A7CF1CD0057E65B /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 		07B37F421A3A082800911042 /* Intent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intent.swift; sourceTree = "<group>"; };
 		07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsAndHelpers.swift; sourceTree = "<group>"; };
 		07B37F471A3B565100911042 /* FFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FFFoundation.xcodeproj; path = ../Submodules/FFFoundation/FFFoundation/FFFoundation.xcodeproj; sourceTree = "<group>"; };
+		07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+AnimatedArrayUpdate.swift"; sourceTree = "<group>"; };
 		07FF5E5B1A376B91006928A9 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07085BE21A7CEE670057E65B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07085BE41A7CEEAF0057E65B /* LicensesTableViewController.swift */,
+				07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		07085BEC1A7CF1BD0057E65B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07085BED1A7CF1CD0057E65B /* License.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		076576911A73C80F00EEA793 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,7 @@
 				0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */,
 				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
 				0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */,
+				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
 				0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */,
 				0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */,
 			);
@@ -133,8 +159,10 @@
 		07A9C78919E3C7C4004ABC10 /* FFUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				07085BEC1A7CF1BD0057E65B /* Model */,
 				076576911A73C80F00EEA793 /* Categories */,
 				076576921A73C81A00EEA793 /* Views */,
+				07085BE21A7CEE670057E65B /* ViewControllers */,
 				07B37F421A3A082800911042 /* Intent.swift */,
 				07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */,
 				07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */,
@@ -318,10 +346,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
+				07085BE51A7CEEAF0057E65B /* LicensesTableViewController.swift in Sources */,
 				0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */,
+				07085BEE1A7CF1CD0057E65B /* License.swift in Sources */,
 				0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */,
 				0700FD9D1A74E5B100570B96 /* UIAppearance+Swift.m in Sources */,
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
+				07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */,
+				07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
 				07B37F431A3A082800911042 /* Intent.swift in Sources */,
