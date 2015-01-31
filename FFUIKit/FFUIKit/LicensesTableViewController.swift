@@ -13,6 +13,7 @@ public class LicensesTableViewController: UITableViewController {
     private let LicenseCellReuseIdentifier = "LicenseCell"
     
     public var preferredStatusBarStyle: UIStatusBarStyle = .Default
+    public var cellBackgroundColor: UIColor? = nil
     
     public var licenses: [License] = [] {
         didSet {
@@ -54,6 +55,7 @@ public class LicensesTableViewController: UITableViewController {
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath) as UITableViewCell
+        cell.backgroundColor = cellBackgroundColor
         cell.accessoryType = .DisclosureIndicator
         cell.textLabel?.text = licenses[indexPath.row].title
         return cell
