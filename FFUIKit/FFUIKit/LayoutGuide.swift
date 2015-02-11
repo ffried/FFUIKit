@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIkit
+import FFUIKit
 
 public class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
