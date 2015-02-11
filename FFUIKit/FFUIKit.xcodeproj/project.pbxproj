@@ -21,6 +21,7 @@
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
+		07B2F40F1A8BE10000F854FC /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2F40E1A8BE10000F854FC /* LayoutGuide.swift */; };
 		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
 		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
 		07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */; };
@@ -70,6 +71,7 @@
 		07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFUIKitTests.m; sourceTree = "<group>"; };
 		07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProgressIndicatorView.h; sourceTree = "<group>"; };
 		07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProgressIndicatorView.m; sourceTree = "<group>"; };
+		07B2F40E1A8BE10000F854FC /* LayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
 		07B37F421A3A082800911042 /* Intent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intent.swift; sourceTree = "<group>"; };
 		07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsAndHelpers.swift; sourceTree = "<group>"; };
 		07B37F471A3B565100911042 /* FFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FFFoundation.xcodeproj; path = ../Submodules/FFFoundation/FFFoundation/FFFoundation.xcodeproj; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				07085BED1A7CF1CD0057E65B /* License.swift */,
+				07B2F40E1A8BE10000F854FC /* LayoutGuide.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				07FF5E5C1A376B91006928A9 /* FFLabel.swift in Sources */,
 				07085BE51A7CEEAF0057E65B /* LicensesTableViewController.swift in Sources */,
+				07B2F40F1A8BE10000F854FC /* LayoutGuide.swift in Sources */,
 				0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */,
 				07085BEE1A7CF1CD0057E65B /* License.swift in Sources */,
 				0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */,
