@@ -42,7 +42,7 @@ public extension UITableView {
         // Add sections
         var toAddSections = NSMutableIndexSet()
         var toReloadSections = NSMutableIndexSet()
-        for (idx, section) in enumerate(newSections.reverse()) {
+        for (idx, section) in enumerate(newSections) {
             if let oldIdx = find(oldSections, section) {
                 if section.needsReloadFrom(oldSections[oldIdx]) {
                     toReloadSections.addIndex(idx)
@@ -109,7 +109,7 @@ public extension UITableView {
         
         // Add rows
         let toAddIndexes = newRows.filter { !contains(oldRows, $0) }.map { find(newRows, $0)! }
-        for idx in toAddIndexes.reverse() { results.insert(newRows[idx], atIndex: idx) }
+        for idx in toAddIndexes { results.insert(newRows[idx], atIndex: idx) }
         let toAddIndexPaths: [NSIndexPath] = toAddIndexes.map { NSIndexPath(forRow: $0, inSection: section) }
         insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)
     }
