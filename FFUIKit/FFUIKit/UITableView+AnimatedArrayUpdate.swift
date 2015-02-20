@@ -35,17 +35,14 @@ public extension UITableView {
         
         // Remove sections
         let toRemoveIndexes = oldSections.filter { !contains(newSections, $0) }.map { find(oldSections, $0)! }
-        let toRemoveSections = toRemoveIndexes.reverse().reduce(NSMutableIndexSet()) {
-            sectionResults.removeAtIndex($1)
-            $0.addIndex($1)
-            return $0
-        }
+        for idx in toRemoveIndexes.reverse() { sectionResults.removeAtIndex(idx) }
+        let toRemoveSections = toRemoveIndexes.reduce(NSMutableIndexSet()) { $0.addIndex($1); return $0 }
         deleteSections(toRemoveSections, withRowAnimation: animation)
         
         // Add sections
         var toAddSections = NSMutableIndexSet()
         var toReloadSections = NSMutableIndexSet()
-        for (idx, section) in enumerate(newSections) {
+        for (idx, section) in enumerate(newSections.reverse()) {
             if let oldIdx = find(oldSections, section) {
                 if section.needsReloadFrom(oldSections[oldIdx]) {
                     toReloadSections.addIndex(idx)
@@ -106,19 +103,15 @@ public extension UITableView {
     private func insertAndDeleteFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inout results: [T], inSection section: Int, withAnimation animation: UITableViewRowAnimation) {
         // Remove rows
         let toDeleteIndexes = oldRows.filter { !contains(newRows, $0) }.map { find(oldRows, $0)! }
-        let toRemoveIndexPaths: [NSIndexPath] = toDeleteIndexes.reverse().map {
-            results.removeAtIndex($0)
-            return NSIndexPath(forRow: $0, inSection: section)
-        }
+        for idx in toDeleteIndexes.reverse() { results.removeAtIndex(idx) }
+        let toRemoveIndexPaths: [NSIndexPath] = toDeleteIndexes.map { NSIndexPath(forRow: $0, inSection: section) }
         deleteRowsAtIndexPaths(toRemoveIndexPaths, withRowAnimation: animation)
         
         // Add rows
         let toAddIndexes = newRows.filter { !contains(oldRows, $0) }.map { find(newRows, $0)! }
-        let toAddIndexPaths: [NSIndexPath] = toAddIndexes.map {
-            results.insert(newRows[$0], atIndex: $0)
-            return NSIndexPath(forRow: $0, inSection: section)
-        }
-        insertRowsAtIndexPaths(toAddIndexes, withRowAnimation: animation)
+        for idx in toAddIndexes.reverse() { results.insert(newRows[idx], atIndex: idx) }
+        let toAddIndexPaths: [NSIndexPath] = toAddIndexes.map { NSIndexPath(forRow: $0, inSection: section) }
+        insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)
     }
     
     private func moveFromRows<T: Equatable>(oldRows: [T], toRows newRows: [T], withPreviousResults results: [T], inSection section: Int, withAnimation animation: UITableViewRowAnimation) {
