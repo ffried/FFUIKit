@@ -35,7 +35,7 @@ public extension UITableView {
         
         // Remove sections
         let toRemoveIndexes = oldSections.filter { !contains(newSections, $0) }.map { find(oldSections, $0)! }
-        let toRemoveSections = toRemoveIndexes.reduce(NSMutableIndexSet()) {
+        let toRemoveSections = toRemoveIndexes.reverse().reduce(NSMutableIndexSet()) {
             sectionResults.removeAtIndex($1)
             $0.addIndex($1)
             return $0
@@ -83,7 +83,7 @@ public extension UITableView {
     
     public func updateFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inSection section: Int = 0, animated: Bool = true) {
         let animation: UITableViewRowAnimation = (animated) ? .Automatic : .None
-        if oldRows.count <= 0 {
+        if countElements(oldRows) <= 0 {
             let toAddIndexPaths: [NSIndexPath] = (0..<newRows.count).map { NSIndexPath(forRow: $0, inSection: section) }
             beginUpdates()
             insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)
@@ -106,7 +106,7 @@ public extension UITableView {
     private func insertAndDeleteFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inout results: [T], inSection section: Int, withAnimation animation: UITableViewRowAnimation) {
         // Remove rows
         let toDeleteIndexes = oldRows.filter { !contains(newRows, $0) }.map { find(oldRows, $0)! }
-        let toRemoveIndexPaths: [NSIndexPath] = toDeleteIndexes.map {
+        let toRemoveIndexPaths: [NSIndexPath] = toDeleteIndexes.reverse().map {
             results.removeAtIndex($0)
             return NSIndexPath(forRow: $0, inSection: section)
         }
