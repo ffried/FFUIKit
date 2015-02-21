@@ -12,6 +12,7 @@
 		07085BE51A7CEEAF0057E65B /* LicensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BE41A7CEEAF0057E65B /* LicensesTableViewController.swift */; };
 		07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */; };
 		07085BEE1A7CF1CD0057E65B /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07085BED1A7CF1CD0057E65B /* License.swift */; };
+		071B65BD1A97EFBE00C19418 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */; };
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
@@ -59,6 +60,7 @@
 		07085BE41A7CEEAF0057E65B /* LicensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesTableViewController.swift; sourceTree = "<group>"; };
 		07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		07085BED1A7CF1CD0057E65B /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
 				0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */,
 				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
+				071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */,
 				0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */,
 				0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */,
 			);
@@ -285,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIKit" */;
+			buildConfigurationList = 07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIkit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -358,6 +361,7 @@
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
 				07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */,
 				07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */,
+				071B65BD1A97EFBE00C19418 /* UIScrollView+Keyboard.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
 				07B37F431A3A082800911042 /* Intent.swift in Sources */,
@@ -535,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIKit" */ = {
+		07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07A9C79819E3C7C4004ABC10 /* Debug */,

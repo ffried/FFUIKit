@@ -18,16 +18,16 @@ public func findFirstResponder() -> UIResponder? {
 
 public func findFirstResponderInView(view: UIView) -> UIResponder? {
     var firstResponder: UIResponder? = nil
-    if let subviews = view.subviews as? [UIView] {
+    if view.isFirstResponder() {
+        firstResponder = view
+    } else if let subviews = view.subviews as? [UIView] {
         for subview in subviews {
             if subview.isFirstResponder() {
                 firstResponder = subview
                 break
             } else {
                 firstResponder = findFirstResponderInView(subview)
-                if firstResponder != nil {
-                    break
-                }
+                if firstResponder != nil { break }
             }
         }
     }
