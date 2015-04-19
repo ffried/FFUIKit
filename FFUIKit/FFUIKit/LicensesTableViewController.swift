@@ -54,7 +54,7 @@ public class LicensesTableViewController: UITableViewController {
     }
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath) as! UITableViewCell
         cell.backgroundColor = cellBackgroundColor
         cell.accessoryType = .DisclosureIndicator
         cell.textLabel?.text = licenses[indexPath.row].title

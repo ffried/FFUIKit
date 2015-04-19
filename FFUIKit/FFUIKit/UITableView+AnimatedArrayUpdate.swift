@@ -80,7 +80,7 @@ public extension UITableView {
     
     public func updateFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inSection section: Int = 0, animated: Bool = true) {
         let animation: UITableViewRowAnimation = (animated) ? .Automatic : .None
-        if countElements(oldRows) <= 0 {
+        if count(oldRows) <= 0 {
             let toAddIndexPaths: [NSIndexPath] = (0..<newRows.count).map { NSIndexPath(forRow: $0, inSection: section) }
             beginUpdates()
             insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)

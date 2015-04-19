@@ -18,8 +18,8 @@ public extension UIColor {
             rawHex = hex.substringFromIndex(hex.rangeOfString("0x")!.endIndex)
         }
         
-        let count = countElements(rawHex)
-        assert((count == 6 || count == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
+        let c = count(rawHex)
+        assert((c == 6 || c == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
         
         var startIndex = rawHex.startIndex
         let redHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
@@ -28,7 +28,7 @@ public extension UIColor {
         startIndex = advance(startIndex, 2)
         let blueHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
         var alphaHex = ""
-        if count == 8 {
+        if c == 8 {
             startIndex = advance(startIndex, 2)
             alphaHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
         }
@@ -40,7 +40,7 @@ public extension UIColor {
         NSScanner(string: redHex).scanHexInt(&r)
         NSScanner(string: greenHex).scanHexInt(&g)
         NSScanner(string: blueHex).scanHexInt(&b)
-        if countElements(alphaHex) > 0 {
+        if count(alphaHex) > 0 {
             NSScanner(string: alphaHex).scanHexInt(&a)
         }
         

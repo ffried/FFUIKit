@@ -10,15 +10,15 @@ import FFUIKit
 
 public extension UIApplication {
     public var name: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")! as String
+        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")! as! String
     }
     
     public var version: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")! as String
+        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")! as! String
     }
     
     public var build: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion")! as String
+        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion")! as! String
     }
     
     public var fullVersion: String {
