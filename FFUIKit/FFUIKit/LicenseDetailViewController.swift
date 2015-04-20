@@ -10,7 +10,13 @@ import FFUIKit
 
 public class LicenseDetailViewController: UIViewController {
     
-    internal var preferredStatusBarStyle: UIStatusBarStyle = .Default
+    private var _preferredStatusBarStyle: UIStatusBarStyle = .Default
+    public func setPreferredStatusBarStyle(style: UIStatusBarStyle) {
+        _preferredStatusBarStyle = style
+    }
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return _preferredStatusBarStyle
+    }
     
     private let textView: UITextView = {
         let tv = UITextView()

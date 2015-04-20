@@ -12,7 +12,13 @@ public class LicensesTableViewController: UITableViewController {
     
     private let LicenseCellReuseIdentifier = "LicenseCell"
     
-    public var preferredStatusBarStyle: UIStatusBarStyle = .Default
+    private var _preferredStatusBarStyle: UIStatusBarStyle = .Default
+    public func setPreferredStatusBarStyle(style: UIStatusBarStyle) {
+        _preferredStatusBarStyle = style
+    }
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return _preferredStatusBarStyle
+    }
     public var cellBackgroundColor: UIColor? = nil
     
     public var licenses: [License] = [] {
@@ -66,7 +72,7 @@ public class LicensesTableViewController: UITableViewController {
         let detailVC = LicenseDetailViewController()
         detailVC.license = licenses[indexPath.row]
         detailVC.view.backgroundColor = self.view.backgroundColor
-        detailVC.preferredStatusBarStyle = preferredStatusBarStyle
+        detailVC.setPreferredStatusBarStyle(preferredStatusBarStyle())
         navigationController!.pushViewController(detailVC, animated: true)
     }
 }

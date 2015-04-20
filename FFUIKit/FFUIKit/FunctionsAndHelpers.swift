@@ -10,7 +10,7 @@ import FFUIKit
 
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
-    if let v = UIApplication.sharedApplication().delegate?.window? {
+    if let window = UIApplication.sharedApplication().delegate?.window, let v = window {
         firstResponder = findFirstResponderInView(v)
     }
     return firstResponder
