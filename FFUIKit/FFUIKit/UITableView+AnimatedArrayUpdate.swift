@@ -12,7 +12,7 @@ public protocol UITableViewSectionObject: Equatable {
     typealias UITableViewRowObject: Equatable
     
     var rows: [UITableViewRowObject] { get }
-    func needsReloadFrom(sectionObject: UITableViewSectionObject) -> Bool
+    func needsReloadFrom<S: UITableViewSectionObject>(sectionObject: S) -> Bool
 }
 
 public extension UITableView {
@@ -34,22 +34,22 @@ public extension UITableView {
         beginUpdates()
         
         // Remove sections
-        let toRemoveIndexes = oldSections.filter { !contains(newSections, $0) }.map { find(oldSections, $0)! }
+        let toRemoveIndexes = oldSections.filter { !newSections.contains($0) }.map { oldSections.indexOf($0)! }
         for idx in toRemoveIndexes.reverse() { sectionResults.removeAtIndex(idx) }
         let toRemoveSections = toRemoveIndexes.reduce(NSMutableIndexSet()) { $0.addIndex($1); return $0 }
         deleteSections(toRemoveSections, withRowAnimation: animation)
         
         // Add sections
-        var toAddSections = NSMutableIndexSet()
-        var toReloadSections = NSMutableIndexSet()
-        for (idx, section) in enumerate(newSections) {
-            if let oldIdx = find(oldSections, section) {
+        let toAddSections = NSMutableIndexSet()
+        let toReloadSections = NSMutableIndexSet()
+        for (idx, section) in newSections.enumerate() {
+            if let oldIdx = oldSections.indexOf(section) {
                 if section.needsReloadFrom(oldSections[oldIdx]) {
                     toReloadSections.addIndex(idx)
                     rowResults.append(nil)
                 } else {
                     var currentRowResults = oldSections[oldIdx].rows
-                    insertAndDeleteFromRows(oldRows: oldSections[oldIdx].rows, toRows: section.rows, results: &currentRowResults, inSection: idx, withAnimation: animation)
+                    insertAndDeleteFromRows(oldSections[oldIdx].rows, toRows: section.rows, results: &currentRowResults, inSection: idx, withAnimation: animation)
                     rowResults.append(currentRowResults)
                 }
             } else {
@@ -63,9 +63,9 @@ public extension UITableView {
         
         beginUpdates()
         // Move and update sections
-        for (idx, section) in enumerate(newSections) {
-            if let oldIdx = find(oldSections, section) {
-                if let resultIdx = find(sectionResults, section) {
+        for (idx, section) in newSections.enumerate() {
+            if let oldIdx = oldSections.indexOf(section) {
+                if let resultIdx = sectionResults.indexOf(section) {
                     if idx != resultIdx {
                         moveSection(resultIdx, toSection: idx)
                     }
@@ -80,7 +80,7 @@ public extension UITableView {
     
     public func updateFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inSection section: Int = 0, animated: Bool = true) {
         let animation: UITableViewRowAnimation = (animated) ? .Automatic : .None
-        if count(oldRows) <= 0 {
+        if oldRows.count <= 0 {
             let toAddIndexPaths: [NSIndexPath] = (0..<newRows.count).map { NSIndexPath(forRow: $0, inSection: section) }
             beginUpdates()
             insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)
@@ -91,7 +91,7 @@ public extension UITableView {
         var results = [T](oldRows)
         
         beginUpdates()
-        insertAndDeleteFromRows(oldRows: oldRows, toRows: newRows, results: &results, inSection: section, withAnimation: animation)
+        insertAndDeleteFromRows(oldRows, toRows: newRows, results: &results, inSection: section, withAnimation: animation)
         endUpdates()
         
         beginUpdates()
@@ -102,27 +102,25 @@ public extension UITableView {
     // MARK: - Helpers
     private func insertAndDeleteFromRows<T: Equatable>(oldRows: [T] = [], toRows newRows: [T], inout results: [T], inSection section: Int, withAnimation animation: UITableViewRowAnimation) {
         // Remove rows
-        let toDeleteIndexes = oldRows.filter { !contains(newRows, $0) }.map { find(oldRows, $0)! }
+        let toDeleteIndexes = oldRows.filter { !newRows.contains($0) }.map { oldRows.indexOf($0)! }
         for idx in toDeleteIndexes.reverse() { results.removeAtIndex(idx) }
         let toRemoveIndexPaths: [NSIndexPath] = toDeleteIndexes.map { NSIndexPath(forRow: $0, inSection: section) }
         deleteRowsAtIndexPaths(toRemoveIndexPaths, withRowAnimation: animation)
         
         // Add rows
-        let toAddIndexes = newRows.filter { !contains(oldRows, $0) }.map { find(newRows, $0)! }
+        let toAddIndexes = newRows.filter { !oldRows.contains($0) }.map { newRows.indexOf($0)! }
         for idx in toAddIndexes { results.insert(newRows[idx], atIndex: idx) }
         let toAddIndexPaths: [NSIndexPath] = toAddIndexes.map { NSIndexPath(forRow: $0, inSection: section) }
         insertRowsAtIndexPaths(toAddIndexPaths, withRowAnimation: animation)
     }
     
     private func moveFromRows<T: Equatable>(oldRows: [T], toRows newRows: [T], withPreviousResults results: [T], inSection section: Int, withAnimation animation: UITableViewRowAnimation) {
-        for (idx, row) in enumerate(newRows) {
-            if contains(oldRows, row) {
-                if let oldIdx = find(results, row) {
-                    if oldIdx != idx {
-                        let oldIndexPath = NSIndexPath(forRow: oldIdx, inSection: section)
-                        let newIndexPath = NSIndexPath(forRow: idx, inSection: section)
-                        moveRowAtIndexPath(oldIndexPath, toIndexPath: newIndexPath)
-                    }
+        for (idx, row) in newRows.enumerate() {
+            if oldRows.contains(row) {
+                if let oldIdx = results.indexOf(row) where oldIdx != idx {
+                    let oldIndexPath = NSIndexPath(forRow: oldIdx, inSection: section)
+                    let newIndexPath = NSIndexPath(forRow: idx, inSection: section)
+                    moveRowAtIndexPath(oldIndexPath, toIndexPath: newIndexPath)
                 }
             }
         }

@@ -20,7 +20,7 @@ public class LicenseDetailViewController: UIViewController {
     
     private let textView: UITextView = {
         let tv = UITextView()
-        tv.setTranslatesAutoresizingMaskIntoConstraints(false)
+        tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = UIColor.clearColor()
         tv.editable = false
         tv.dataDetectorTypes = .Link

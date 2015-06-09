@@ -20,8 +20,8 @@ public func findFirstResponderInView(view: UIView) -> UIResponder? {
     var firstResponder: UIResponder? = nil
     if view.isFirstResponder() {
         firstResponder = view
-    } else if let subviews = view.subviews as? [UIView] {
-        for subview in subviews {
+    } else {
+        for subview in view.subviews {
             if subview.isFirstResponder() {
                 firstResponder = subview
                 break
@@ -35,8 +35,8 @@ public func findFirstResponderInView(view: UIView) -> UIResponder? {
 }
 
 public func setupView(view: UIView, fullscreenInView superview: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsetsZero) {
-    if view.translatesAutoresizingMaskIntoConstraints() {
-        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    if view.translatesAutoresizingMaskIntoConstraints {
+        view.translatesAutoresizingMaskIntoConstraints = false
     }
     if view.superview != superview {
         superview.addSubview(view)
@@ -52,13 +52,13 @@ internal func findForemostViewController() -> UIViewController? {
     var viewController: UIViewController? = nil
     if let vc = UIApplication.sharedApplication().delegate?.window??.rootViewController {
         if let navController = vc as? UINavigationController {
-            viewController = navController.viewControllers.last as? UIViewController
+            viewController = navController.viewControllers.last
         }
         if let tabBarController = vc as? UITabBarController {
             viewController = tabBarController.selectedViewController
         }
         if let pageController = vc as? UIPageViewController {
-            viewController = pageController.viewControllers.first as? UIViewController
+            viewController = pageController.viewControllers?.first
         }
         if viewController == nil {
             viewController = vc

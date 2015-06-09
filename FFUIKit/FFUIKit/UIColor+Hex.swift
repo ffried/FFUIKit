@@ -18,7 +18,7 @@ public extension UIColor {
             rawHex = hex.substringFromIndex(hex.rangeOfString("0x")!.endIndex)
         }
         
-        let c = count(rawHex)
+        let c = rawHex.characters.count
         assert((c == 6 || c == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
         
         var startIndex = rawHex.startIndex
@@ -40,7 +40,7 @@ public extension UIColor {
         NSScanner(string: redHex).scanHexInt(&r)
         NSScanner(string: greenHex).scanHexInt(&g)
         NSScanner(string: blueHex).scanHexInt(&b)
-        if count(alphaHex) > 0 {
+        if alphaHex.characters.count > 0 {
             NSScanner(string: alphaHex).scanHexInt(&a)
         }
         
