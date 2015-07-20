@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import Foundation
 
 public struct License: Hashable {
     public let title: String
@@ -32,7 +32,6 @@ public struct License: Hashable {
         do {
             if #available(iOS 9.0, *) {
                 content = try NSAttributedString(URL: licenseFilePath, options: [:], documentAttributes: nil)
-                
             } else {
                 content = try NSAttributedString(fileURL: licenseFilePath, options: [:], documentAttributes: nil)
             }

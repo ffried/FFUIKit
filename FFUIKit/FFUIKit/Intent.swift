@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public enum IntentState {
     case New

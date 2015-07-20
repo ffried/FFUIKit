@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public class LicensesTableViewController: UITableViewController {
     

@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
+import FFFoundation
 
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
-    if let window = UIApplication.sharedApplication().delegate?.window, let v = window {
-        firstResponder = findFirstResponderInView(v)
+    if let window = UIApplication.sharedApplication().delegate?.window, view = window {
+        firstResponder = findFirstResponderInView(view)
     }
     return firstResponder
 }
@@ -42,8 +43,16 @@ public func setupView(view: UIView, fullscreenInView superview: UIView, withInse
         superview.addSubview(view)
     }
     let views = ["view": view]
-    let metrics = ["top": insets.top, "left": insets.left, "bottom": insets.bottom, "right": insets.right]
-    let formats = ["H:|-(==left)-[view]-(==right)-|", "V:|-(==top)-[view]-(==bottom)-|"]
+    let metrics = [
+        "top": insets.top.native,
+        "left": insets.left.native,
+        "bottom": insets.bottom.native,
+        "right": insets.right.native
+    ]
+    let formats = [
+        "H:|-(==left)-[view]-(==right)-|",
+        "V:|-(==top)-[view]-(==bottom)-|"
+    ]
     let constraints = NSLayoutConstraint.constraintsWithVisualFormats(formats, metrics: metrics, views: views)
     superview.addConstraints(constraints)
 }
@@ -66,8 +75,8 @@ internal func findForemostViewController() -> UIViewController? {
     }
     if let vc = viewController {
         var presentedViewController = vc
-        while presentedViewController.presentedViewController != nil {
-            presentedViewController = presentedViewController.presentedViewController!
+        while let pvc = presentedViewController.presentedViewController {
+            presentedViewController = pvc
         }
         viewController = presentedViewController
     }

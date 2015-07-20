@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 @IBDesignable
 public class FFLabel: UILabel {
