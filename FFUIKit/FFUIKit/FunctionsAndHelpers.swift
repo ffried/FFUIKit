@@ -35,31 +35,6 @@ public func findFirstResponderInView(view: UIView) -> UIResponder? {
     return firstResponder
 }
 
-public func setupView(view: UIView, fullscreenInView superview: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsetsZero) {
-    if view.translatesAutoresizingMaskIntoConstraints {
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
-    if view.superview != superview {
-        if view.superview != nil {
-            view.removeFromSuperview()
-        }
-        superview.addSubview(view)
-    }
-    let views = ["view": view]
-    let metrics = [
-        "top": insets.top,
-        "left": insets.left,
-        "bottom": insets.bottom,
-        "right": insets.right
-    ]
-    let formats = [
-        "H:|-(==left)-[view]-(==right)-|",
-        "V:|-(==top)-[view]-(==bottom)-|"
-    ]
-    let constraints = formats.constraintsWithViews(views, metrics: metrics)
-    superview.addConstraints(constraints)
-}
-
 internal func findForemostViewController() -> UIViewController? {
     var viewController: UIViewController? = nil
     if let vc = UIApplication.sharedApplication().delegate?.window??.rootViewController {
@@ -84,4 +59,31 @@ internal func findForemostViewController() -> UIViewController? {
         viewController = presentedViewController
     }
     return viewController
+}
+
+extension UIView {
+    public func setupFullscreenInView(superview: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsetsZero) {
+        if translatesAutoresizingMaskIntoConstraints {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
+        if self.superview != superview {
+            if self.superview != nil {
+                removeFromSuperview()
+            }
+            superview.addSubview(self)
+        }
+        let views = ["view": self]
+        let metrics = [
+            "top": insets.top,
+            "left": insets.left,
+            "bottom": insets.bottom,
+            "right": insets.right
+        ]
+        let formats = [
+            "H:|-(==left)-[view]-(==right)-|",
+            "V:|-(==top)-[view]-(==bottom)-|"
+        ]
+        let constraints = formats.constraintsWithViews(views, metrics: metrics)
+        superview.addConstraints(constraints)
+    }
 }
