@@ -40,20 +40,23 @@ public func setupView(view: UIView, fullscreenInView superview: UIView, withInse
         view.translatesAutoresizingMaskIntoConstraints = false
     }
     if view.superview != superview {
+        if view.superview != nil {
+            view.removeFromSuperview()
+        }
         superview.addSubview(view)
     }
     let views = ["view": view]
     let metrics = [
-        "top": insets.top.native,
-        "left": insets.left.native,
-        "bottom": insets.bottom.native,
-        "right": insets.right.native
+        "top": insets.top,
+        "left": insets.left,
+        "bottom": insets.bottom,
+        "right": insets.right
     ]
     let formats = [
         "H:|-(==left)-[view]-(==right)-|",
         "V:|-(==top)-[view]-(==bottom)-|"
     ]
-    let constraints = NSLayoutConstraint.constraintsWithVisualFormats(formats, metrics: metrics, views: views)
+    let constraints = formats.constraintsWithViews(views, metrics: metrics)
     superview.addConstraints(constraints)
 }
 
