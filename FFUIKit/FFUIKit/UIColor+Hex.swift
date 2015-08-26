@@ -22,15 +22,15 @@ public extension UIColor {
         assert((c == 6 || c == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
         
         var startIndex = rawHex.startIndex
-        let redHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
-        startIndex = advance(startIndex, 2)
-        let greenHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
-        startIndex = advance(startIndex, 2)
-        let blueHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
+        let redHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
+        startIndex = startIndex.advancedBy(2)
+        let greenHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
+        startIndex = startIndex.advancedBy(2)
+        let blueHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
         var alphaHex = ""
         if c == 8 {
-            startIndex = advance(startIndex, 2)
-            alphaHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
+            startIndex = startIndex.advancedBy(2)
+            alphaHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
         }
         
         var r: UInt32 = 0
