@@ -53,6 +53,7 @@ public extension UITableView {
                     rowResults.append(currentRowResults)
                 }
             } else {
+                rowResults.append(nil)
                 sectionResults.insert(section, atIndex: idx)
                 toAddSections.addIndex(idx)
             }
