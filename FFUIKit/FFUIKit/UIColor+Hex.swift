@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public extension UIColor {
     public convenience init(hex: String) {
@@ -18,19 +18,19 @@ public extension UIColor {
             rawHex = hex.substringFromIndex(hex.rangeOfString("0x")!.endIndex)
         }
         
-        let c = count(rawHex)
+        let c = rawHex.characters.count
         assert((c == 6 || c == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
         
         var startIndex = rawHex.startIndex
-        let redHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
-        startIndex = advance(startIndex, 2)
-        let greenHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
-        startIndex = advance(startIndex, 2)
-        let blueHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
+        let redHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
+        startIndex = startIndex.advancedBy(2)
+        let greenHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
+        startIndex = startIndex.advancedBy(2)
+        let blueHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
         var alphaHex = ""
         if c == 8 {
-            startIndex = advance(startIndex, 2)
-            alphaHex = rawHex.substringWithRange(startIndex..<advance(startIndex, 2))
+            startIndex = startIndex.advancedBy(2)
+            alphaHex = rawHex.substringWithRange(startIndex..<startIndex.advancedBy(2))
         }
         
         var r: UInt32 = 0
@@ -40,7 +40,7 @@ public extension UIColor {
         NSScanner(string: redHex).scanHexInt(&r)
         NSScanner(string: greenHex).scanHexInt(&g)
         NSScanner(string: blueHex).scanHexInt(&b)
-        if count(alphaHex) > 0 {
+        if alphaHex.characters.count > 0 {
             NSScanner(string: alphaHex).scanHexInt(&a)
         }
         

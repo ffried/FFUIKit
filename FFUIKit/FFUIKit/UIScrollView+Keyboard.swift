@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 import FFFoundation
 import ObjectiveC
 
@@ -102,7 +102,7 @@ public extension UIScrollView {
         originalScrollIndicatorInsets = scrollIndicatorInsets
     }
     
-    private func restoreEdgeInsets(animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
+    private func restoreEdgeInsets(animated animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
             self.contentInset = self.originalContentInsets
             self.scrollIndicatorInsets = self.originalScrollIndicatorInsets
@@ -133,7 +133,7 @@ public extension UIScrollView {
     private func animate(animations: () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((finished: Bool) -> ())? = nil) {
         var duration: NSTimeInterval = 1.0/3.0
         var curve: UIViewAnimationCurve = .Linear
-        let options: UIViewAnimationOptions = (.BeginFromCurrentState | .AllowAnimatedContent | .AllowUserInteraction)
+        let options: UIViewAnimationOptions = [.BeginFromCurrentState, .AllowAnimatedContent, .AllowUserInteraction]
         if let info = userInfo {
             if let d = info[UIKeyboardAnimationDurationUserInfoKey] as? NSTimeInterval { duration = d }
             if let c = UIViewAnimationCurve(rawValue: (info[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
@@ -154,7 +154,7 @@ private extension UIScrollView {
             return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
         }
         set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(UIEdgeInsets: newValue), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -163,7 +163,7 @@ private extension UIScrollView {
             return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
         }
         set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(UIEdgeInsets: newValue), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -172,7 +172,7 @@ private extension UIScrollView {
             return (objc_getAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey) as? Bool) ?? false
         }
         set {
-            objc_setAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_ASSIGN))
+            objc_setAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
 }

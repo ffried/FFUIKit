@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public class LicenseDetailViewController: UIViewController {
     
@@ -20,7 +20,7 @@ public class LicenseDetailViewController: UIViewController {
     
     private let textView: UITextView = {
         let tv = UITextView()
-        tv.setTranslatesAutoresizingMaskIntoConstraints(false)
+        tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = UIColor.clearColor()
         tv.editable = false
         tv.dataDetectorTypes = .Link
@@ -37,7 +37,7 @@ public class LicenseDetailViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupView(textView, fullscreenInView: view, withInsets: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
+        textView.setupFullscreenInView(view, withInsets: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
         textView.delegate = self
         if license != nil { updateContents() }
     }

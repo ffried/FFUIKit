@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public class LicensesTableViewController: UITableViewController {
     
@@ -24,7 +24,7 @@ public class LicensesTableViewController: UITableViewController {
     public var licenses: [License] = [] {
         didSet {
             if isViewLoaded() {
-                tableView?.updateFromRows(oldRows: oldValue, toRows: licenses, inSection: 0, animated: true)
+                tableView?.updateFromRows(oldValue, toRows: licenses, inSection: 0, animated: true)
             }
         }
     }
@@ -42,7 +42,7 @@ public class LicensesTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         assert(navigationController != nil, "LicenseViewController is not within a UINavigationController! Trouble ahead!")
         if clearsSelectionOnViewWillAppear {
-            if let ip = tableView.indexPathForSelectedRow() {
+            if let ip = tableView.indexPathForSelectedRow {
                 tableView.deselectRowAtIndexPath(ip, animated: animated)
             }
         }
@@ -60,7 +60,7 @@ public class LicensesTableViewController: UITableViewController {
     }
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath)
         cell.backgroundColor = cellBackgroundColor
         cell.accessoryType = .DisclosureIndicator
         cell.textLabel?.text = licenses[indexPath.row].title

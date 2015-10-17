@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public enum IntentState {
     case New
@@ -88,7 +88,7 @@ public class Intent {
     public func run() {
         state = .Running
         if viewController == nil {
-            println("WARNING: Intent has no view controller set! Completion alerts might not work as expected!")
+            print("WARNING: Intent has no view controller set! Completion alerts might not work as expected!")
         }
     }
     

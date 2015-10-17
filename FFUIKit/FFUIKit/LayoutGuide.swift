@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
+@available(iOS, introduced=7.0, deprecated=9.0, message="Please use NSLayoutAnchor!")
 public class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
     
@@ -17,4 +18,11 @@ public class LayoutGuide: NSObject, UILayoutSupport {
     }
     
     override convenience init() { self.init(length: 0.0) }
+    
+    @available(iOS 9.0, *)
+    public var topAnchor: NSLayoutYAxisAnchor { fatalError("Please use NSLayoutAnchor!") }
+    @available(iOS 9.0, *)
+    public var bottomAnchor: NSLayoutYAxisAnchor { fatalError("Please use NSLayoutAnchor!") }
+    @available(iOS 9.0, *)
+    public var heightAnchor: NSLayoutDimension { fatalError("Please use NSLayoutAnchor!") }
 }

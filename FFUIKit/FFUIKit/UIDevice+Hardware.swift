@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import UIKit
 
 public extension UIDevice {
     private var platformNameMapping: [String: String] {
@@ -65,7 +65,7 @@ public extension UIDevice {
     public var platform: String {
         var size = Int()
         sysctlbyname("hw.machine", nil, &size, nil, 0)
-        var machine = UnsafeMutablePointer<CChar>(malloc(size))
+        let machine = UnsafeMutablePointer<CChar>(malloc(size))
         sysctlbyname("hw.machine", machine, &size, nil, 0)
         let platform = String.fromCString(machine)
         free(machine)

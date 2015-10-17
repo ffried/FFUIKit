@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Florian Friedrich. All rights reserved.
 //
 
-import FFUIKit
+import Foundation
 
 public struct License: Hashable {
     public let title: String
@@ -28,10 +28,17 @@ public struct License: Hashable {
     }
     
     private mutating func readContents() -> NSAttributedString? {
-        var error: NSError? = nil
-        let content = NSAttributedString(fileURL: self.licenseFilePath, options: nil, documentAttributes: nil, error: &error)
-        if content == nil && error != nil {
-            println("FFUIKit: Failed to read license content: \(error)")
+        let content: NSAttributedString?
+        do {
+            if #available(iOS 9.0, *) {
+                content = try NSAttributedString(URL: licenseFilePath, options: [:], documentAttributes: nil)
+            } else {
+                content = try NSAttributedString(fileURL: licenseFilePath, options: [:], documentAttributes: nil)
+            }
+        }
+        catch {
+            print("FFUIKit: Failed to read license content: \(error)")
+            content = nil
         }
         return content
     }
