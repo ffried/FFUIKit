@@ -79,11 +79,9 @@ extension UIView {
             "bottom": insets.bottom,
             "right": insets.right
         ]
-        let formats = [
+        [
             "H:|-(==left)-[view]-(==right)-|",
             "V:|-(==top)-[view]-(==bottom)-|"
-        ]
-        let constraints = formats.constraintsWithViews(views, metrics: metrics)
-        superview.addConstraints(constraints)
+        ].constraintsWithViews(views, metrics: metrics).activate()
     }
 }
