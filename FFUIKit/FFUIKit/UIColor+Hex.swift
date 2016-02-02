@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIColor {
-    public convenience init(hex: String) {
+    public convenience init(hexString hex: String) {
         var rawHex = hex
         if hex.hasPrefix("#") {
             rawHex = hex.substringFromIndex(hex.rangeOfString("#")!.endIndex)
