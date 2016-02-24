@@ -11,11 +11,13 @@ import UIKit
 public extension UIImage {
     public var averageColor: UIColor {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        var rgba = UnsafePointer<UInt8>()
         let alphaInfo: CGImageAlphaInfo = .PremultipliedLast
         let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .ByteOrder32Big]
-        let context = CGBitmapContextCreate(&rgba, 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
+        let context = CGBitmapContextCreate(UnsafeMutablePointer<UInt8>(), 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
         CGContextDrawImage(context, CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)), CGImage)
+        
+        let data = CGBitmapContextGetData(context)
+        let rgba = UnsafePointer<UInt8>(data)
         
         let color: UIColor
         if rgba[3] > 0 {
@@ -40,7 +42,7 @@ public extension UIImage {
     
     // Draws the image onto a rect of {0, 0, 1, 1} and returns the resulting color mix.
     public var mergedColor: UIColor {
-        let size = CGSize(width: 0, height: 0)
+        let size = CGSize(width: 1, height: 1)
         UIGraphicsBeginImageContext(size)
         defer { UIGraphicsEndImageContext() }
         let context = UIGraphicsGetCurrentContext()
