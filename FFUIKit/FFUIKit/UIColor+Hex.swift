@@ -12,10 +12,10 @@ public extension UIColor {
     public convenience init(hexString hex: String) {
         var rawHex = hex
         if hex.hasPrefix("#") {
-            rawHex = hex.substringFromIndex(hex.rangeOfString("#")!.endIndex)
+            rawHex = hex.substringFromIndex(hex.startIndex.advancedBy("#".characters.count))
         }
         if hex.hasPrefix("0x") {
-            rawHex = hex.substringFromIndex(hex.rangeOfString("0x")!.endIndex)
+            rawHex = hex.substringFromIndex(hex.startIndex.advancedBy("0x".characters.count))
         }
         
         let c = rawHex.characters.count
