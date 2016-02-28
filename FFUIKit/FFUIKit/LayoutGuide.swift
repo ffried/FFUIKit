@@ -8,21 +8,31 @@
 
 import UIKit
 
-@available(iOS, introduced=7.0, deprecated=9.0, message="Please use NSLayoutAnchor!")
+@available(iOS, introduced=7.0)
 public class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
     
-    public required init(length: CGFloat = 0.0) {
+    public private(set) var originalGuide: UILayoutSupport
+    public required init(originalGuide: UILayoutSupport, length: CGFloat = 0.0) {
+        self.originalGuide = originalGuide
         self.length = length
         super.init()
     }
     
-    override convenience init() { self.init(length: 0.0) }
+    convenience init(originalGuide: UILayoutSupport) { self.init(originalGuide: originalGuide, length: 0.0) }
     
     @available(iOS 9.0, *)
-    public var topAnchor: NSLayoutYAxisAnchor { fatalError("Please use NSLayoutAnchor!") }
+    public var topAnchor: NSLayoutYAxisAnchor {
+        return originalGuide.topAnchor
+    }
+    
     @available(iOS 9.0, *)
-    public var bottomAnchor: NSLayoutYAxisAnchor { fatalError("Please use NSLayoutAnchor!") }
+    public var bottomAnchor: NSLayoutYAxisAnchor {
+        return originalGuide.bottomAnchor
+    }
+    
     @available(iOS 9.0, *)
-    public var heightAnchor: NSLayoutDimension { fatalError("Please use NSLayoutAnchor!") }
+    public var heightAnchor: NSLayoutDimension {
+        return originalGuide.heightAnchor
+    }
 }
