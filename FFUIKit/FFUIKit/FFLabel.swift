@@ -10,7 +10,9 @@ import UIKit
 
 @IBDesignable
 public class FFLabel: UILabel {
-    @IBInspectable public var edgeInsets = UIEdgeInsetsZero
+    @IBInspectable public var edgeInsets = UIEdgeInsetsZero {
+        didSet { invalidateIntrinsicContentSize() }
+    }
     
     public override func intrinsicContentSize() -> CGSize {
         var size = super.intrinsicContentSize()

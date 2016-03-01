@@ -51,7 +51,7 @@ public class LicenseDetailViewController: UIViewController {
 }
 
 extension LicenseDetailViewController: UITextViewDelegate {
-    public func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
+    @objc public func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         return true
     }
 }

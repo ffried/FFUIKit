@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImage {
-    public func imageByRoundingCornersTo(cornerRadius: CGFloat) -> UIImage {
+    public final func imageByRoundingCornersTo(cornerRadius: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         defer { UIGraphicsEndImageContext() }
         let rect = CGRect(origin: CGPoint.zero, size: size)

@@ -62,7 +62,7 @@ internal func findForemostViewController() -> UIViewController? {
 }
 
 extension UIView {
-    public func setupFullscreenInView(superview: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsetsZero, constraintPreparations: (NSLayoutConstraint -> Void)? = nil) -> [NSLayoutConstraint] {
+    public final func setupFullscreenInView(superview: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsetsZero, constraintPreparations: (NSLayoutConstraint -> Void)? = nil) -> [NSLayoutConstraint] {
         if translatesAutoresizingMaskIntoConstraints {
             translatesAutoresizingMaskIntoConstraints = false
         }

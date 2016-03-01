@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImageView {
-    public func setImage(image: UIImage?, animated: Bool, animationDuration: NSTimeInterval = 1.0) {
+    public final func setImage(image: UIImage?, animated: Bool, animationDuration: NSTimeInterval = 1.0) {
         let change: () -> () = {
             self.image = image
         }

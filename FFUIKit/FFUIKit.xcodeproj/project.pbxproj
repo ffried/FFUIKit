@@ -16,6 +16,7 @@
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB021A6AC41D00733CF7 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
+		0732337F1C84971A007F708D /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732337E1C84971A007F708D /* UIImage+FixOrientation.swift */; };
 		07550DEA1AE3B9950001CA32 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,6 +72,7 @@
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB011A6AC41D00733CF7 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
+		0732337E1C84971A007F708D /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
 		0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				07DB3A361C7DB13500D4268A /* UIImage+Colors.swift */,
 				07DB3A381C7DB80300D4268A /* UIImage+ColorImages.swift */,
 				07DB3A3A1C7DB9B800D4268A /* UIImage+CorderRadius.swift */,
+				0732337E1C84971A007F708D /* UIImage+FixOrientation.swift */,
 			);
 			name = UIImage;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */,
 				071B65BD1A97EFBE00C19418 /* UIScrollView+Keyboard.swift in Sources */,
 				07E87EE61C7D8ACB00D88243 /* UIColor+ColorComponents.swift in Sources */,
+				0732337F1C84971A007F708D /* UIImage+FixOrientation.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
 				07DB3A391C7DB80300D4268A /* UIImage+ColorImages.swift in Sources */,

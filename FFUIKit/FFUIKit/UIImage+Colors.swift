@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImage {
-    public var averageColor: UIColor {
+    public final var averageColor: UIColor {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let alphaInfo: CGImageAlphaInfo = .PremultipliedLast
         let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .ByteOrder32Big]
@@ -41,7 +41,7 @@ public extension UIImage {
     }
     
     // Draws the image onto a rect of {0, 0, 1, 1} and returns the resulting color mix.
-    public var mergedColor: UIColor {
+    public final var mergedColor: UIColor {
         let size = CGSize(width: 1, height: 1)
         UIGraphicsBeginImageContext(size)
         defer { UIGraphicsEndImageContext() }

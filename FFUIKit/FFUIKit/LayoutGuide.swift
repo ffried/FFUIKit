@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS, introduced=7.0)
-public class LayoutGuide: NSObject, UILayoutSupport {
+public final class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
     
     public private(set) var originalGuide: UILayoutSupport

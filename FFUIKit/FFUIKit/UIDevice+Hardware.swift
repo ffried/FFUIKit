@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIDevice {
-    private var platformNameMapping: [String: String] {
+    private final var platformNameMapping: [String: String] {
         return [
             "iPhone1,1" : "iPhone 1G",
             "iPhone1,2" : "iPhone 3G",
@@ -77,7 +77,7 @@ public extension UIDevice {
         ]
     }
     
-    public var platform: String {
+    public final var platform: String {
         var size = Int()
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         let machine = UnsafeMutablePointer<CChar>(malloc(size))
@@ -87,7 +87,7 @@ public extension UIDevice {
         return platform!
     }
     
-    public var platformName: String? {
+    public final var platformName: String? {
         return platformNameMapping[platform]
     }
 }

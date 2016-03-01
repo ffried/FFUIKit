@@ -10,20 +10,20 @@ import UIKit
 
 public extension UIColor {
     
-    private func updatedComponents(components: ColorComponents) -> ColorComponents? {
+    private final func updatedComponents(components: ColorComponents) -> ColorComponents? {
         var comps = components
         return comps.updateFromColor(self) ? comps : nil
     }
     
-    public var rgbaComponents: ColorComponents? {
+    public final var rgbaComponents: ColorComponents? {
         return updatedComponents(ColorComponents.blackRGBA)
     }
     
-    public var hsbaComponents: ColorComponents? {
+    public final var hsbaComponents: ColorComponents? {
         return updatedComponents(ColorComponents.blackHSBA)
     }
     
-    public var bwaComponents: ColorComponents? {
+    public final var bwaComponents: ColorComponents? {
         return updatedComponents(ColorComponents.blackBWA)
     }
     
