@@ -28,6 +28,8 @@
 		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
 		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
 		07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */; };
+		07CCBAE71C905FFB00F0D8D1 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCBAE61C905FFB00F0D8D1 /* UIView+AutoLayout.swift */; };
+		07CCBAEA1C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCBAE91C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift */; };
 		07DB3A341C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */; };
 		07DB3A371C7DB13500D4268A /* UIImage+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A361C7DB13500D4268A /* UIImage+Colors.swift */; };
 		07DB3A391C7DB80300D4268A /* UIImage+ColorImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A381C7DB80300D4268A /* UIImage+ColorImages.swift */; };
@@ -87,6 +89,8 @@
 		07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsAndHelpers.swift; sourceTree = "<group>"; };
 		07B37F471A3B565100911042 /* FFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FFFoundation.xcodeproj; path = ../Submodules/FFFoundation/FFFoundation/FFFoundation.xcodeproj; sourceTree = "<group>"; };
 		07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+AnimatedArrayUpdate.swift"; sourceTree = "<group>"; };
+		07CCBAE61C905FFB00F0D8D1 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		07CCBAE91C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+AutoLayout.swift"; sourceTree = "<group>"; };
 		07DB3A311C7D9CBB00D4268A /* FFUIKitPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FFUIKitPlayground.playground; sourceTree = "<group>"; };
 		07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AnimatedImageChange.swift"; sourceTree = "<group>"; };
 		07DB3A361C7DB13500D4268A /* UIImage+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Colors.swift"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
 				071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */,
 				07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */,
+				07CCBAE91C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift */,
+				07CCBAE61C905FFB00F0D8D1 /* UIView+AutoLayout.swift */,
 				0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */,
 				0700FD9B1A74E5B100570B96 /* UIAppearance+Swift.m */,
 			);
@@ -406,6 +412,7 @@
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
 				07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */,
 				07DB3A341C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift in Sources */,
+				07CCBAE71C905FFB00F0D8D1 /* UIView+AutoLayout.swift in Sources */,
 				07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */,
 				07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */,
 				071B65BD1A97EFBE00C19418 /* UIScrollView+Keyboard.swift in Sources */,
@@ -413,6 +420,7 @@
 				0732337F1C84971A007F708D /* UIImage+FixOrientation.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
+				07CCBAEA1C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift in Sources */,
 				07DB3A391C7DB80300D4268A /* UIImage+ColorImages.swift in Sources */,
 				07B37F431A3A082800911042 /* Intent.swift in Sources */,
 				07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */,
