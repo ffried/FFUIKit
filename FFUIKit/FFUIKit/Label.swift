@@ -1,5 +1,5 @@
 //
-//  FFLabel.swift
+//  Label.swift
 //  FFUIKit
 //
 //  Created by Florian Friedrich on 9.12.14.
@@ -21,7 +21,7 @@
 import UIKit
 
 @IBDesignable
-public class FFLabel: UILabel {
+public class Label: UILabel {
     @IBInspectable public var edgeInsets = UIEdgeInsets() {
         didSet { invalidateIntrinsicContentSize() }
     }

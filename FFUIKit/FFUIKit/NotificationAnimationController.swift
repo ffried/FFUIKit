@@ -1,14 +1,25 @@
 //
 //  NotificationAnimationController.swift
-//  NotificationsController
+//  FFUIKit
 //
-//  Created by Florian Friedrich on 13/03/16.
-//  Copyright © 2016 Florian Friedrich. All rights reserved.
+//  Copyright 2016 Florian Friedrich
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//  http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 import UIKit
 
-internal class NotificationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+internal final class NotificationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     private var topConstraint: NSLayoutConstraint!
     private var bottomConstraint: NSLayoutConstraint!
     private var originalVCContainer: UIView!
@@ -18,11 +29,11 @@ internal class NotificationAnimationController: NSObject, UIViewControllerAnimat
         bottomConstraint = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: view.superview, attribute: .Top, multiplier: 1.0, constant: 0.0)
     }
     
-    internal func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    @objc internal func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.3
     }
     
-    internal func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    @objc internal func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         guard let container = transitionContext.containerView() else { return }
         guard let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
             let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else { return }
@@ -59,14 +70,16 @@ internal class NotificationAnimationController: NSObject, UIViewControllerAnimat
             }
             transitionContext.completeTransition(finished)
         }
-        if presenting {
-//            UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1, options: options, animations: animations, completion: completion)
-            UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: animations, completion: completion)
+        if transitionContext.isAnimated() {
+            if presenting {
+                //            UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1, options: options, animations: animations, completion: completion)
+                UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: animations, completion: completion)
+            } else {
+                UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: animations, completion: completion)
+            }
         } else {
-            UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: animations, completion: completion)
+            animations()
+            completion(true)
         }
-    }
-    
-    internal func animationEnded(transitionCompleted: Bool) {
     }
 }
