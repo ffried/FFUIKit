@@ -22,7 +22,6 @@
 		07532EFA1C96A48F00B4655B /* TextNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF61C96A48F00B4655B /* TextNotificationView.swift */; };
 		07532EFB1C96A48F00B4655B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF71C96A48F00B4655B /* NotificationController.swift */; };
 		07532EFE1C96A5CC00B4655B /* NotificationViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EFD1C96A5CC00B4655B /* NotificationViewType.swift */; };
-		07550DEA1AE3B9950001CA32 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */; };
@@ -60,13 +59,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 07FF5E321A3761D1006928A9;
 			remoteInfo = FFFoundationTests;
-		};
-		07E010D31A6AE117006184DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07FF5E261A3761D0006928A9;
-			remoteInfo = FFFoundation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,7 +111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07550DEA1AE3B9950001CA32 /* FFFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +328,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				07E010D41A6AE117006184DD /* PBXTargetDependency */,
 			);
 			name = FFUIKit;
 			productName = FFUIKit;
@@ -485,14 +475,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		07E010D41A6AE117006184DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FFFoundation;
-			targetProxy = 07E010D31A6AE117006184DD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		07A9C79819E3C7C4004ABC10 /* Debug */ = {
