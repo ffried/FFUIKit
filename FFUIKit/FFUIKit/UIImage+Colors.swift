@@ -25,7 +25,11 @@ public extension UIImage {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let alphaInfo: CGImageAlphaInfo = .PremultipliedLast
         let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .ByteOrder32Big]
-        let context = CGBitmapContextCreate(UnsafeMutablePointer<UInt8>(), 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
+        #if swift(>=2.2)
+            let context = CGBitmapContextCreate(nil, 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
+        #else
+            let context = CGBitmapContextCreate(UnsafeMutablePointer<UInt8>(), 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
+        #endif
         CGContextDrawImage(context, CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)), CGImage)
         
         let data = CGBitmapContextGetData(context)

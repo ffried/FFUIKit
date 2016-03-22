@@ -21,7 +21,11 @@
 import UIKit
 
 public protocol UITableViewSectionObject: Equatable {
-    typealias UITableViewRowObject: Equatable
+    #if swift(>=2.2)
+        associatedtype UITableViewRowObject: Equatable
+    #else
+        typealias UITableViewRowObject: Equatable
+    #endif
     
     var rows: [UITableViewRowObject] { get }
     func needsReloadFrom<S: UITableViewSectionObject>(sectionObject: S) -> Bool

@@ -42,7 +42,11 @@ public final class NotificationController<NotificationView: NotificationViewType
     
     public private(set) lazy var tapGestureRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
-        recognizer.addTarget(self, action: "didTapNotification:")
+        #if swift(>=2.2)
+            recognizer.addTarget(self, action: #selector(NotificationController.didTapNotification(_:)))
+        #else
+            recognizer.addTarget(self, action: "didTapNotification:")
+        #endif
         return recognizer
     }()
     
