@@ -21,6 +21,8 @@
 import UIKit
 import FFFoundation
 
+public let UIApp = UIApplication.sharedApplication()
+
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
     if let window = UIApplication.sharedApplication().delegate?.window, view = window {
