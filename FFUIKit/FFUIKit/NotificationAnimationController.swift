@@ -44,11 +44,12 @@ internal final class NotificationAnimationController: NSObject, UIViewController
         
         if presenting {
             originalVCContainer = vcView.superview
-            vcView.setupFullscreenInView(container)
+            container.addSubview(vcView)
+            
             container.addSubview(noteView)
             setupTopBottomConstraints(noteView)
-            let views: [String: UIView] = ["note": noteView, "view": vcView]
-            ([bottomConstraint] + ["H:|[view]|", "V:|[view]|", "H:|[note]|"].constraintsWithViews(views)).activate()
+            let views: [String: UIView] = ["note": noteView]
+            ([bottomConstraint] + ["H:|[note]|"].constraintsWithViews(views)).activate()
             container.layoutIfNeeded()
         }
         
@@ -66,7 +67,7 @@ internal final class NotificationAnimationController: NSObject, UIViewController
         }
         let completion = { (finished: Bool) in
             if !presenting {
-                vcView.setupFullscreenInView(self.originalVCContainer)
+                self.originalVCContainer.addSubview(vcView)
             }
             transitionContext.completeTransition(finished)
         }

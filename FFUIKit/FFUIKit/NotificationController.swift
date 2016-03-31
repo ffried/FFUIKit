@@ -121,8 +121,20 @@ public final class NotificationController<NotificationView: NotificationViewType
         dismissNotification()
     }
     
-    private final func dismissNotification() {
-        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    public final func dismissNotification(animated: Bool = true, completion: (() -> ())? = nil) {
+        timer?.invalidate()
+        presentingViewController?.dismissViewControllerAnimated(animated, completion: completion)
+    }
+    
+    public final func presentNotification(source: UIViewController, animated: Bool = true, completion: (() -> ())? = nil) {
+        let presentationBlock = {
+            source.presentViewController(self, animated: animated, completion: completion)
+        }
+        if let note = source.presentedViewController as? NotificationController {
+            note.dismissNotification(animated, completion: presentationBlock)
+        } else {
+            presentationBlock()
+        }
     }
     
     // MARK: - Transitioning
