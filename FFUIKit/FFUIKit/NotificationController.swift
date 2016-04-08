@@ -56,12 +56,12 @@ public final class NotificationController<NotificationView: NotificationViewType
     }
     
     public let autoDismissType: NotificationAutoDismissType
-    private lazy var timer: Timer? = {
+    private lazy var timer: AnyTimer? = {
         switch self.autoDismissType {
         case .None:
             return nil
         case let .AfterDuration(duration):
-            let timer = Timer(interval: duration) { [unowned self] timer in
+            let timer = AnyTimer(interval: duration) { [unowned self] timer in
                 self.dismissNotification()
             }
             timer.tolerance = 0.5
