@@ -43,7 +43,7 @@ public class LicensesTableViewController: UITableViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        title = localizedString("Licenses", comment: NSStringFromClass(LicensesTableViewController.self))
+        title = NSLocalizedString("Licenses", comment: NSStringFromClass(LicensesTableViewController.self))
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.tableFooterView?.backgroundColor = UIColor.clearColor()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: LicenseCellReuseIdentifier)

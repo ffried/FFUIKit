@@ -21,11 +21,12 @@
 import UIKit
 import FFFoundation
 
-public let UIApp = UIApplication.sharedApplication()
+@available(*, deprecated, message="Now provided by FFFoundation", renamed="App")
+public let UIApp = App
 
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
-    if let window = UIApplication.sharedApplication().delegate?.window, view = window {
+    if let window = App.delegate?.window, view = window {
         firstResponder = findFirstResponderInView(view)
     }
     return firstResponder
@@ -51,7 +52,7 @@ public func findFirstResponderInView(view: UIView) -> UIResponder? {
 
 internal func findForemostViewController() -> UIViewController? {
     var viewController: UIViewController? = nil
-    if let vc = UIApplication.sharedApplication().delegate?.window??.rootViewController {
+    if let vc = App.delegate?.window??.rootViewController {
         if let navController = vc as? UINavigationController {
             viewController = navController.viewControllers.last
         }

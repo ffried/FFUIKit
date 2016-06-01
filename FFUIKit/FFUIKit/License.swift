@@ -26,7 +26,7 @@ public struct License: Hashable {
     
     public private(set) var licenseContent: NSAttributedString?
     
-    public var hashValue: Int { return self.title.hashValue ^ self.licenseFilePath.hashValue }
+    public var hashValue: Int { return title.hashValue ^ licenseFilePath.hashValue }
     
     public init(title: String, licenseFilePath: NSURL) {
         self.title = title

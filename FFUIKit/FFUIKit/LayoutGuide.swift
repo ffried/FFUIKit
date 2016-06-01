@@ -31,8 +31,6 @@ public final class LayoutGuide: NSObject, UILayoutSupport {
         super.init()
     }
     
-    convenience init(originalGuide: UILayoutSupport) { self.init(originalGuide: originalGuide, length: 0.0) }
-    
     @available(iOS 9.0, *)
     public var topAnchor: NSLayoutYAxisAnchor {
         return originalGuide.topAnchor

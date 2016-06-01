@@ -20,7 +20,7 @@
 
 import UIKit
 
-// = FFUIKitiTunesIdentifier
+/// FFUIKitiTunesIdentifier
 public let FFUIKitiTunesIdentifierInfoDictionaryKey = "FFUIKitiTunesIdentifier"
 
 public extension UIApplication {

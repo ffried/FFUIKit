@@ -20,9 +20,10 @@
 
 import UIKit
 
-private var SelfSustainingIntents = [Intent]()
-
+@available(*, deprecated, message="This is very similar to what Apple provides in Advanced NSOperations. We suggest using NSOperations!")
 public class Intent {
+    private static var SelfSustainingIntents = [Intent]()
+    
     public typealias Completion = (intent: Intent, state: State) -> ()
     
     public enum State {
@@ -44,7 +45,7 @@ public class Intent {
     
     public init(selfsustaining: Bool = false, completion: Completion? = nil) {
         self.completion = completion
-        if (selfsustaining) {
+        if selfsustaining {
             becomeSelfSustaining()
         }
     }
@@ -60,7 +61,7 @@ public class Intent {
     
     private final func showAlertWithTitle(title: String, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let buttonTitle = localizedString("ffuikit_btn_ok", comment: "FFUIKit.Intent")
+        let buttonTitle = NSLocalizedString("ffuikit_btn_ok", comment: "FFUIKit.Intent")
         controller.addAction(UIAlertAction(title: buttonTitle, style: .Cancel, handler: nil))
         var vc = viewController
         if vc == nil {
@@ -74,7 +75,7 @@ public class Intent {
     }
     
     public func succeedWithMessage(message: String) {
-        succeedWithTitle(localizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: message)
+        succeedWithTitle(NSLocalizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: message)
     }
     
     public func succeedWithTitle(title: String, message: String) {
@@ -87,7 +88,7 @@ public class Intent {
     }
     
     public func failWithMessage(message: String) {
-        failWithTitle(localizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: message)
+        failWithTitle(NSLocalizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: message)
     }
     
     public func failWithTitle(title: String, message: String) {
@@ -111,15 +112,15 @@ public class Intent {
     public func becomeSelfSustaining() {
         if !isSelfSustaining {
             isSelfSustaining = true
-            selfSustainingIndex = SelfSustainingIntents.count
-            SelfSustainingIntents.append(self)
+            selfSustainingIndex = self.dynamicType.SelfSustainingIntents.count
+            self.dynamicType.SelfSustainingIntents.append(self)
         }
     }
     
     public func resignSelfSustainingState() {
         if isSelfSustaining {
             isSelfSustaining = false
-            SelfSustainingIntents.removeAtIndex(selfSustainingIndex!)
+            self.dynamicType.SelfSustainingIntents.removeAtIndex(selfSustainingIndex!)
         }
     }
 }

@@ -60,6 +60,13 @@
 			remoteGlobalIDString = 07FF5E321A3761D1006928A9;
 			remoteInfo = FFFoundationTests;
 		};
+		07D8C01C1CFF56520037AC72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0735189A1CFC2D1E001C05AA;
+			remoteInfo = "FFFoundation OS X Tests";
+		};
 		07F96F0B1CB791CC0012C546 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07B37F471A3B565100911042 /* FFFoundation.xcodeproj */;
@@ -178,10 +185,10 @@
 				07E87EE31C7D8A9F00D88243 /* UIColor */,
 				0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */,
 				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
-				07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */,
 				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
 				071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */,
 				07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */,
+				07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */,
 				07CCBAE91C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift */,
 				07CCBAE61C905FFB00F0D8D1 /* UIView+AutoLayout.swift */,
 				0700FD9A1A74E5B100570B96 /* UIAppearance+Swift.h */,
@@ -274,8 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				07B37F4D1A3B565100911042 /* FFFoundation.framework */,
-				07B37F4F1A3B565100911042 /* FFFoundationTests.xctest */,
 				07F96F0C1CB791CC0012C546 /* FFFoundation.framework */,
+				07B37F4F1A3B565100911042 /* FFFoundation iOSTests.xctest */,
+				07D8C01D1CFF56520037AC72 /* FFFoundation OS X Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,11 +417,18 @@
 			remoteRef = 07B37F4C1A3B565100911042 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07B37F4F1A3B565100911042 /* FFFoundationTests.xctest */ = {
+		07B37F4F1A3B565100911042 /* FFFoundation iOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "FFFoundation iOSTests.xctest";
+			path = "FFFoundation iOS Tests.xctest";
 			remoteRef = 07B37F4E1A3B565100911042 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07D8C01D1CFF56520037AC72 /* FFFoundation OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "FFFoundation OS X Tests.xctest";
+			remoteRef = 07D8C01C1CFF56520037AC72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		07F96F0C1CB791CC0012C546 /* FFFoundation.framework */ = {
