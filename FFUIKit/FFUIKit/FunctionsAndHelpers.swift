@@ -21,34 +21,61 @@
 import UIKit
 import FFFoundation
 
-@available(*, deprecated, message="Now provided by FFFoundation", renamed="App")
-public let UIApp = App
+#if swift(>=3)
+    @available(*, deprecated, message: "Now provided by FFFoundation", renamed: "App")
+    public let UIApp = App
+#else
+    @available(*, deprecated, message="Now provided by FFFoundation", renamed="App")
+    public let UIApp = App
+#endif
 
 public func findFirstResponder() -> UIResponder? {
     var firstResponder: UIResponder? = nil
-    if let window = App.delegate?.window, view = window {
-        firstResponder = findFirstResponderInView(view)
+    if let window = App.delegate?.window, let view = window {
+        #if swift(>=3)
+            firstResponder = findFirstResponder(in: view)
+        #else
+            firstResponder = findFirstResponderInView(view)
+        #endif
     }
     return firstResponder
 }
 
-public func findFirstResponderInView(view: UIView) -> UIResponder? {
-    var firstResponder: UIResponder? = nil
-    if view.isFirstResponder() {
-        firstResponder = view
-    } else {
-        for subview in view.subviews {
-            if subview.isFirstResponder() {
-                firstResponder = subview
-                break
-            } else {
-                firstResponder = findFirstResponderInView(subview)
-                if firstResponder != nil { break }
+#if swift(>=3)
+    public func findFirstResponder(in view: UIView) -> UIResponder? {
+        var firstResponder: UIResponder? = nil
+        if view.isFirstResponder {
+            firstResponder = view
+        } else {
+            for subview in view.subviews where firstResponder == nil {
+                if subview.isFirstResponder {
+                    firstResponder = subview
+                } else {
+                    firstResponder = findFirstResponder(in: subview)
+                }
             }
         }
+        return firstResponder
     }
-    return firstResponder
-}
+#else
+    public func findFirstResponderInView(view: UIView) -> UIResponder? {
+        var firstResponder: UIResponder? = nil
+        if view.isFirstResponder() {
+            firstResponder = view
+        } else {
+            for subview in view.subviews {
+                if subview.isFirstResponder() {
+                    firstResponder = subview
+                    break
+                } else {
+                    firstResponder = findFirstResponderInView(subview)
+                    if firstResponder != nil { break }
+                }
+            }
+        }
+        return firstResponder
+    }
+#endif
 
 internal func findForemostViewController() -> UIViewController? {
     var viewController: UIViewController? = nil

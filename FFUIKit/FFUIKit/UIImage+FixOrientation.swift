@@ -22,16 +22,40 @@ import UIKit
 
 public extension UIImage {
     public final var hasAlpha: Bool {
-        let alpha = CGImageGetAlphaInfo(CGImage)
-        let allowedValues: [CGImageAlphaInfo] = [.First, .Last, .PremultipliedFirst, .PremultipliedLast]
-        return allowedValues.contains(alpha)
+        #if swift(>=3.0)
+            let alpha = cgImage?.alphaInfo
+            let allowedValues: [CGImageAlphaInfo] = [.first, .last, .premultipliedFirst, .premultipliedLast]
+            return alpha.map { allowedValues.contains($0) } ?? false
+        #else
+            let alpha = CGImageGetAlphaInfo(CGImage)
+            let allowedValues: [CGImageAlphaInfo] = [.First, .Last, .PremultipliedFirst, .PremultipliedLast]
+            return allowedValues.contains(alpha)
+        #endif
     }
     
     public final var normalizedImage: UIImage {
-        guard imageOrientation != .Up else { return self }
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        defer { UIGraphicsEndImageContext() }
-        drawInRect(CGRect(origin: CGPointZero, size: size))
-        return UIGraphicsGetImageFromCurrentImageContext()
+        #if swift(>=3.0)
+            guard imageOrientation != .up else { return self }
+            if #available(iOS 10, *) {
+                let format = UIGraphicsImageRendererFormat.default()
+                format.opaque = !hasAlpha
+                format.scale = scale
+                let renderer = UIGraphicsImageRenderer(size: size, format: format)
+                return renderer.image { _ in
+                    draw(in: CGRect(origin: CGPoint.zero, size: size))
+                }
+            } else {
+                UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+                defer { UIGraphicsEndImageContext() }
+                draw(in: CGRect(origin: CGPoint.zero, size: size))
+                return UIGraphicsGetImageFromCurrentImageContext() ?? self
+            }
+        #else
+            guard imageOrientation != .Up else { return self }
+            UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+            defer { UIGraphicsEndImageContext() }
+            drawInRect(CGRect(origin: CGPointZero, size: size))
+            return UIGraphicsGetImageFromCurrentImageContext()
+        #endif
     }
 }

@@ -22,23 +22,61 @@ import Foundation
 
 public struct License: Hashable {
     public let title: String
+    #if swift(>=3)
+    public let licenseFilePath: URL
+    #else
     public let licenseFilePath: NSURL
+    #endif
     
+//    #if swift(>=3)
+//    public private(set) var licenseContent: AttributedString?
+//    #else
     public private(set) var licenseContent: NSAttributedString?
+//    #endif
     
     public var hashValue: Int { return title.hashValue ^ licenseFilePath.hashValue }
     
+    #if swift(>=3)
+    public init(title: String, licenseFilePath: URL) {
+        self.title = title
+        self.licenseFilePath = licenseFilePath
+        self.licenseContent = readContents()
+    }
+    #else
     public init(title: String, licenseFilePath: NSURL) {
         self.title = title
         self.licenseFilePath = licenseFilePath
         self.licenseContent = readContents()
     }
+    #endif
     
-    public init(title: String, fileExtension: String) {
-        let url = NSBundle.mainBundle().URLForResource(title, withExtension: fileExtension)!
-        self.init(title: title, licenseFilePath: url)
+    public init?(title: String, fileExtension: String) {
+        #if swift(>=3)
+            let url = Bundle.main.url(forResource: title, withExtension: fileExtension)
+        #else
+            let url = NSBundle.mainBundle().URLForResource(title, withExtension: fileExtension)
+        #endif
+        guard let u = url else { return nil }
+        self.init(title: title, licenseFilePath: u)
     }
     
+    #if swift(>=3)
+    private mutating func readContents() -> NSAttributedString? {
+        let content: NSAttributedString?
+        do {
+            if #available(iOS 9.0, *) {
+                content = try NSAttributedString(url: licenseFilePath, options: [:], documentAttributes: nil)
+            } else {
+                content = try NSAttributedString(fileURL: licenseFilePath, options: [:], documentAttributes: nil)
+            }
+        }
+        catch {
+            print("FFUIKit: Failed to read license content: \(error)")
+            content = nil
+        }
+        return content
+    }
+    #else
     private mutating func readContents() -> NSAttributedString? {
         let content: NSAttributedString?
         do {
@@ -54,8 +92,13 @@ public struct License: Hashable {
         }
         return content
     }
+    #endif
 }
 
 public func ==(lhs: License, rhs: License) -> Bool {
-    return lhs.title == rhs.title && lhs.licenseFilePath.isEqual(rhs.licenseFilePath)
+    #if swift(>=3)
+        return (lhs.title, lhs.licenseFilePath) == (rhs.title, rhs.licenseFilePath)
+    #else
+        return lhs.title == rhs.title && lhs.licenseFilePath.isEqual(rhs.licenseFilePath)
+    #endif
 }

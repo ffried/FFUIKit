@@ -9,11 +9,11 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3E8D5306-5E09-487C-AAB9-8745E3D75327",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192" : "FFUIKitSubmodules\/FFFoundation",
-    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68" : "FFUIKit"
+    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192" : "FFFoundation\/",
+    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68" : "FFUIKit\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "FFUIKit",
-  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FFUIKit\/FFUIKit.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {

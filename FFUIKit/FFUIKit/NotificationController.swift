@@ -51,8 +51,8 @@ public final class NotificationController<NotificationView: NotificationViewType
     }()
     
     public var dismissOnTap: Bool {
-        get { return tapGestureRecognizer.enabled }
-        set { tapGestureRecognizer.enabled = newValue }
+        get { return tapGestureRecognizer.isEnabled }
+        set { tapGestureRecognizer.isEnabled = newValue }
     }
     
     public let autoDismissType: NotificationAutoDismissType
@@ -70,65 +70,69 @@ public final class NotificationController<NotificationView: NotificationViewType
     }()
     
     // MARK: - Initalizer
-    public init(type: Type = .Default, autoDismissType: NotificationAutoDismissType = .None) {
+    public init(type: Type = .default, autoDismissType: NotificationAutoDismissType = .none) {
         notificationType = type
         self.autoDismissType = autoDismissType
         super.init(nibName: nil, bundle: nil)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - View Lifecycle
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clearColor()
+        view.backgroundColor = .clear()
         notificationType.configureNotificationView(notificationView)
         notificationView.addGestureRecognizer(tapGestureRecognizer)
         notificationView.setupFullscreenInView(view)
     }
     
-    public override func viewWillAppear(animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         informedNotificationView?.willAppear(animated)
     }
     
-    public override func viewDidAppear(animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         informedNotificationView?.didAppear(animated)
         timer?.schedule()
     }
     
-    public override func viewWillDisappear(animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         informedNotificationView?.willDisappear(animated)
     }
     
-    public override func viewDidDisappear(animated: Bool) {
+    public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         informedNotificationView?.didDisappear(animated)
     }
     
     // MARK: - Status Bar
     public override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
-        return UIStatusBarAnimation.Slide
+        return UIStatusBarAnimation.slide
     }
     
     public override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return (notificationView.backgroundColor?.components?.isDarkColor ?? false) ? .LightContent : .Default
+        return (notificationView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
     }
     
     // MARK: - Actions
-    @objc internal func didTapNotification(recognizer: UITapGestureRecognizer) {
+    @objc internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
         dismissNotification()
     }
     
-    public final func dismissNotification(animated: Bool = true, completion: (() -> ())? = nil) {
+    public final func dismissNotification(_ animated: Bool = true, completion: (() -> ())? = nil) {
         timer?.invalidate()
-        presentingViewController?.dismissViewControllerAnimated(animated, completion: completion)
+        presentingViewController?.dismiss(animated: animated, completion: completion)
     }
     
-    public final func presentNotification(source: UIViewController, animated: Bool = true, completion: (() -> ())? = nil) {
+    public final func presentNotification(_ source: UIViewController, animated: Bool = true, completion: (() -> ())? = nil) {
         let presentationBlock = {
-            source.presentViewController(self, animated: animated, completion: completion)
+            source.present(self, animated: animated, completion: completion)
         }
         if let note = source.presentedViewController as? NotificationController {
             note.dismissNotification(animated, completion: presentationBlock)
@@ -146,27 +150,27 @@ public final class NotificationController<NotificationView: NotificationViewType
     }
 
     public override var modalPresentationStyle: UIModalPresentationStyle {
-        get { return .Custom }
+        get { return .custom }
         set {}
     }
     
-    @objc public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    @objc public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if presented is NotificationController {
             return animationController
         }
         return nil
     }
     
-    @objc public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    @objc public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if dismissed is NotificationController {
             return animationController
         }
         return nil
     }
     
-    @objc public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+    @objc public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         if presented is NotificationController {
-            return NotificationPresentationController(presentedViewController: presented, presentingViewController:  presenting)
+            return NotificationPresentationController(presentedViewController: presented, presenting:  presenting)
         }
         return nil
     }

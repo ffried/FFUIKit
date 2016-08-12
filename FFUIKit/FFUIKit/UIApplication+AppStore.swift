@@ -30,7 +30,11 @@ public extension UIApplication {
     
     /// Returns the value for "FFUIKitiTunesIdentifier" in info plist
     public final var iTunesIdentifier: String? {
-        return NSBundle.mainBundle().infoDictionary?[FFUIKitiTunesIdentifierInfoDictionaryKey] as? String
+        #if swift(>=3.0)
+            return Bundle.main.infoDictionary?[FFUIKitiTunesIdentifierInfoDictionaryKey] as? String
+        #else
+            return NSBundle.mainBundle().infoDictionary?[FFUIKitiTunesIdentifierInfoDictionaryKey] as? String
+        #endif
     }
     
     public final var iTunesURL: NSURL {

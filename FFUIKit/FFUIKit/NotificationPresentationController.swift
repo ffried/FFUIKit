@@ -21,6 +21,20 @@ import UIKit
 
 internal final class NotificationPresentationController: UIPresentationController {
 
+    #if swift(>=3.0)
+    internal override var frameOfPresentedViewInContainerView: CGRect {
+        presentedView?.layoutIfNeeded()
+        return presentedView?.bounds ?? CGRect.zero
+    }
+    
+    internal override var shouldPresentInFullscreen: Bool {
+        return false
+    }
+    
+    internal override var shouldRemovePresentersView: Bool {
+        return false
+    }
+    #else
     internal override func frameOfPresentedViewInContainerView() -> CGRect {
         presentedView()?.layoutIfNeeded()
         return presentedView()?.bounds ?? CGRect.zero
@@ -33,4 +47,5 @@ internal final class NotificationPresentationController: UIPresentationControlle
     internal override func shouldRemovePresentersView() -> Bool {
         return false
     }
+    #endif
 }

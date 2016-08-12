@@ -21,6 +21,31 @@
 import UIKit
 
 public extension UIImage {
+    #if swift(>=3)
+    public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage? {
+        if #available(iOS 10, *) {
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            defer { UIGraphicsEndImageContext() }
+            let rect = CGRect(origin: CGPoint.zero, size: size)
+            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+            draw(in: rect)
+            return UIGraphicsGetImageFromCurrentImageContext()?
+                .resizableImage(withCapInsets: UIEdgeInsets(
+                    horizontal: cornerRadius,
+                    vertical: 0))
+        } else {
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            defer { UIGraphicsEndImageContext() }
+            let rect = CGRect(origin: CGPoint.zero, size: size)
+            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+            draw(in: rect)
+            return UIGraphicsGetImageFromCurrentImageContext()?
+                .resizableImage(withCapInsets: UIEdgeInsets(
+                    horizontal: cornerRadius,
+                    vertical: 0))
+        }
+    }
+    #else
     public final func imageByRoundingCornersTo(cornerRadius: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         defer { UIGraphicsEndImageContext() }
@@ -32,4 +57,5 @@ public extension UIImage {
                 horizontal: cornerRadius,
                 vertical: 0))
     }
+    #endif
 }

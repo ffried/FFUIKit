@@ -282,7 +282,7 @@
 			children = (
 				07B37F4D1A3B565100911042 /* FFFoundation.framework */,
 				07F96F0C1CB791CC0012C546 /* FFFoundation.framework */,
-				07B37F4F1A3B565100911042 /* FFFoundation iOSTests.xctest */,
+				07B37F4F1A3B565100911042 /* FFFoundation iOS Tests.xctest */,
 				07D8C01D1CFF56520037AC72 /* FFFoundation OS X Tests.xctest */,
 			);
 			name = Products;
@@ -374,11 +374,15 @@
 		07A9C77E19E3C7C4004ABC10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Florian Friedrich";
 				TargetAttributes = {
 					07A9C78619E3C7C4004ABC10 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 8AVR59FNSV;
+						DevelopmentTeamName = "Florian Friedrich";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					07A9C79119E3C7C4004ABC10 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -417,7 +421,7 @@
 			remoteRef = 07B37F4C1A3B565100911042 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07B37F4F1A3B565100911042 /* FFFoundation iOSTests.xctest */ = {
+		07B37F4F1A3B565100911042 /* FFFoundation iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "FFFoundation iOS Tests.xctest";
@@ -531,6 +535,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -576,6 +581,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -596,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -605,8 +612,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -614,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -624,6 +634,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

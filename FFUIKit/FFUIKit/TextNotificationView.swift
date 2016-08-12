@@ -45,7 +45,11 @@ public final class TextNotificationView: UIView, NotificationViewType {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(textLabel)
         let views = ["label": textLabel]
-        ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraintsWithViews(views).activate()
+        #if swift(>=3.0)
+            ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraints(with: views).activate()
+        #else
+            ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraintsWithViews(views).activate()
+        #endif
         layoutIfNeeded()
     }
 }

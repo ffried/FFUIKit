@@ -37,7 +37,26 @@ extension UIView {
         }
     }
     
-    public final func setupFullscreenInView(view: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsets(), constraintPreparations: (NSLayoutConstraint -> Void)? = nil) -> [NSLayoutConstraint] {
+    #if swift(>=3)
+    @discardableResult
+    public final func setupFullscreen(in view: UIView, with insets: UIEdgeInsets = UIEdgeInsets(), prepare constraintPreparations: ((NSLayoutConstraint) -> Void)? = nil) -> [NSLayoutConstraint] {
+        enableAutoLayout()
+        if superview != view {
+            if superview != nil {
+                removeFromSuperview()
+            }
+            view.addSubview(self)
+        }
+        let constraints = [
+            "H:|-(==left)-[view]-(==right)-|",
+            "V:|-(==top)-[view]-(==bottom)-|"
+        ].constraints(with: ["view": self], metrics: insets.asMetrics)
+        if let preps = constraintPreparations { constraints.forEach(preps) }
+        constraints.activate()
+        return constraints
+    }
+    #else
+    public final func setupFullscreenInView(view: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsets(), constraintPreparations: ((NSLayoutConstraint) -> Void)? = nil) -> [NSLayoutConstraint] {
         enableAutoLayout()
         if superview != view {
             if superview != nil {
@@ -54,4 +73,5 @@ extension UIView {
         constraints.activate()
         return constraints
     }
+    #endif
 }

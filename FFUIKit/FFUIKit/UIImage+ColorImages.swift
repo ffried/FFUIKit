@@ -22,17 +22,44 @@ import UIKit
 
 public extension UIImage {
     public convenience init?(color: UIColor, size: CGSize) {
-        UIGraphicsBeginImageContext(size)
-        defer { UIGraphicsEndImageContext() }
-        let context = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, CGRect(origin: CGPoint.zero, size: size))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        
-        if let cgimage = image.CGImage {
-            self.init(CGImage: cgimage)
-        } else {
-            return nil
-        }
+        #if swift(>=3.0)
+            if #available(iOS 10, *) {
+                let renderer = UIGraphicsImageRenderer(size: size)
+                let image = renderer.image {
+                    $0.cgContext.setFillColor(color.cgColor)
+                    $0.cgContext.fill(CGRect(origin: CGPoint.zero, size: size))
+                }
+                if let cgimage = image.cgImage {
+                    self.init(cgImage: cgimage)
+                } else {
+                    return nil
+                }
+            } else {
+                UIGraphicsBeginImageContext(size)
+                defer { UIGraphicsEndImageContext() }
+                let context = UIGraphicsGetCurrentContext()
+                context?.setFillColor(color.cgColor)
+                context?.fill(CGRect(origin: CGPoint.zero, size: size))
+                let image = UIGraphicsGetImageFromCurrentImageContext()
+                if let cgimage = image?.cgImage {
+                    self.init(cgImage: cgimage)
+                } else {
+                    return nil
+                }
+            }
+        #else
+            UIGraphicsBeginImageContext(size)
+            defer { UIGraphicsEndImageContext() }
+            let context = UIGraphicsGetCurrentContext()
+            CGContextSetFillColorWithColor(context, color.CGColor)
+            CGContextFillRect(context, CGRect(origin: CGPoint.zero, size: size))
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            if let cgimage = image.CGImage {
+                self.init(CGImage: cgimage)
+            } else {
+                return nil
+            }
+        #endif
     }
 }

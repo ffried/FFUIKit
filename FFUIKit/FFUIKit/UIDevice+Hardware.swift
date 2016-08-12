@@ -96,7 +96,11 @@ public extension UIDevice {
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         let machine = UnsafeMutablePointer<CChar>(malloc(size))
         sysctlbyname("hw.machine", machine, &size, nil, 0)
-        let platform = String.fromCString(machine)
+        #if swift(>=3.0)
+            let platform = machine.map { String(cString: $0) }
+        #else
+            let platform = String.fromCString(machine)
+        #endif
         free(machine)
         return platform!
     }

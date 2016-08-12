@@ -26,10 +26,19 @@ public class Label: UILabel {
         didSet { invalidateIntrinsicContentSize() }
     }
     
+    #if swift(>=3.0)
+    public override var intrinsicContentSize: CGSize {
+        var size = super.intrinsicContentSize
+        size.width += edgeInsets.left + edgeInsets.right
+        size.height += edgeInsets.top + edgeInsets.bottom
+        return size
+    }
+    #else
     public override func intrinsicContentSize() -> CGSize {
         var size = super.intrinsicContentSize()
         size.width += edgeInsets.left + edgeInsets.right
         size.height += edgeInsets.top + edgeInsets.bottom
         return size
     }
+    #endif
 }

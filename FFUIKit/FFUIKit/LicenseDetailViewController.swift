@@ -22,34 +22,59 @@ import UIKit
 
 public class LicenseDetailViewController: UIViewController {
     
+    #if swift(>=3)
+    private var _preferredStatusBarStyle: UIStatusBarStyle = .default
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        get { return _preferredStatusBarStyle }
+        set { _preferredStatusBarStyle = newValue }
+    }
+    #else
     private var _preferredStatusBarStyle: UIStatusBarStyle = .Default
     public func setPreferredStatusBarStyle(style: UIStatusBarStyle) {
-        _preferredStatusBarStyle = style
+    _preferredStatusBarStyle = style
     }
     public override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return _preferredStatusBarStyle
+    return _preferredStatusBarStyle
     }
+    #endif
     
     private let textView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.backgroundColor = UIColor.clearColor()
-        tv.editable = false
-        tv.dataDetectorTypes = .Link
-        tv.selectable = true
+        #if swift(>=3.0)
+            tv.backgroundColor = UIColor.clear
+            tv.isEditable = false
+            tv.dataDetectorTypes = .link
+            tv.isSelectable = true
+        #else
+            tv.backgroundColor = UIColor.clearColor()
+            tv.editable = false
+            tv.dataDetectorTypes = .Link
+            tv.selectable = true
+        #endif
         tv.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: -10.0)
         tv.clipsToBounds = false
         return tv
         }()
     
     public var license: License! {
-        didSet { if isViewLoaded() { updateContents() } }
+        didSet {
+            #if swift(>=3.0)
+                if isViewLoaded { updateContents() }
+            #else
+                if isViewLoaded() { updateContents() }
+            #endif
+        }
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        textView.setupFullscreenInView(view, withInsets: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
+        #if swift(>=3.0)
+            textView.setupFullscreen(in: view, with: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
+        #else
+            textView.setupFullscreenInView(view, withInsets: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
+        #endif
         textView.delegate = self
         if license != nil { updateContents() }
     }
@@ -63,7 +88,13 @@ public class LicenseDetailViewController: UIViewController {
 }
 
 extension LicenseDetailViewController: UITextViewDelegate {
+    #if swift(>=3.0)
+    @objc public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+        return true
+    }
+    #else
     @objc public func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         return true
     }
+    #endif
 }

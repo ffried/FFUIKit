@@ -20,18 +20,33 @@
 
 import UIKit
 
+#if swift(>=3)
+@available(*, deprecated, message: "This is very similar to what Apple provides in Advanced NSOperations. We suggest using NSOperations!")
+public extension Intent {}
+#else
 @available(*, deprecated, message="This is very similar to what Apple provides in Advanced NSOperations. We suggest using NSOperations!")
+public extension Intent {}
+#endif
+
 public class Intent {
     private static var SelfSustainingIntents = [Intent]()
     
     public typealias Completion = (intent: Intent, state: State) -> ()
     
     public enum State {
+        #if swift(>=3)
+        case new
+        case running
+        case succeeded
+        case failed
+        case cancelled
+        #else
         case New
         case Running
         case Succeeded
         case Failed
         case Cancelled
+        #endif
     }
     
     private final var selfSustainingIndex: Int?
@@ -39,11 +54,15 @@ public class Intent {
     
     public var viewController: UIViewController?
     
+    #if swift(>=3)
+    public private(set) var currentState = State.new
+    #else
     public private(set) var currentState = State.New
+    #endif
     
     public var completion: Completion?
     
-    public init(selfsustaining: Bool = false, completion: Completion? = nil) {
+    public required init(selfsustaining: Bool = false, completion: Completion? = nil) {
         self.completion = completion
         if selfsustaining {
             becomeSelfSustaining()
@@ -51,6 +70,15 @@ public class Intent {
     }
     
     // MARK: Completion
+    #if swift(>=3)
+    private final func complete(with state: State) {
+        currentState = state
+        completion?(intent: self, state: currentState)
+        if isSelfSustaining {
+            resignSelfSustainingState()
+        }
+    }
+    #else
     private final func completeWithState(state: State) {
         currentState = state
         completion?(intent: self, state: currentState)
@@ -58,7 +86,20 @@ public class Intent {
             resignSelfSustainingState()
         }
     }
+    #endif
     
+    #if swift(>=3)
+    private final func showAlert(with title: String, message: String) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let buttonTitle = NSLocalizedString("ffuikit_btn_ok", comment: "FFUIKit.Intent")
+        controller.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: nil))
+        var vc = viewController
+        if vc == nil {
+            vc = findForemostViewController()
+        }
+        vc?.present(controller, animated: true, completion: nil)
+    }
+    #else
     private final func showAlertWithTitle(title: String, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let buttonTitle = NSLocalizedString("ffuikit_btn_ok", comment: "FFUIKit.Intent")
@@ -69,11 +110,22 @@ public class Intent {
         }
         vc?.presentViewController(controller, animated: true, completion: nil)
     }
+    #endif
     
     public func succeed() {
-        completeWithState(.Succeeded)
+        #if swift(>=3)
+            complete(with: .succeeded)
+        #else
+            completeWithState(.Succeeded)
+        #endif
     }
     
+    #if swift(>=3)
+    public func succeed(with title: String = NSLocalizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: String) {
+        showAlert(with: title, message: message)
+        succeed()
+    }
+    #else
     public func succeedWithMessage(message: String) {
         succeedWithTitle(NSLocalizedString("ffuikit_title_succeeded", comment: "FFUIKit.Intent"), message: message)
     }
@@ -82,11 +134,22 @@ public class Intent {
         showAlertWithTitle(title, message: message)
         succeed()
     }
+    #endif
     
     public func fail() {
-        completeWithState(.Failed)
+        #if swift(>=3)
+            complete(with: .failed)
+        #else
+            completeWithState(.Failed)
+        #endif
     }
     
+    #if swift(>=3)
+    public func fail(with title: String = NSLocalizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: String) {
+        showAlert(with: title, message: message)
+        fail()
+    }
+    #else
     public func failWithMessage(message: String) {
         failWithTitle(NSLocalizedString("ffuikit_title_failed", comment: "FFUIKit.Intent"), message: message)
     }
@@ -95,21 +158,30 @@ public class Intent {
         showAlertWithTitle(title, message: message)
         fail()
     }
+    #endif
     
     // MARK: Run
     public func run() {
-        currentState = .Running
+        #if swift(>=3)
+            currentState = .running
+        #else
+            currentState = .Running
+        #endif
         if viewController == nil {
             print("WARNING: Intent has no view controller set! Completion alerts might not work as expected!")
         }
     }
     
     public func cancel() {
-        completeWithState(.Cancelled)
+        #if swift(>=3)
+            complete(with: .cancelled)
+        #else
+            completeWithState(.Cancelled)
+        #endif
     }
     
     // MARK: SelfSustaining State
-    public func becomeSelfSustaining() {
+    public final func becomeSelfSustaining() {
         if !isSelfSustaining {
             isSelfSustaining = true
             selfSustainingIndex = self.dynamicType.SelfSustainingIntents.count
@@ -117,10 +189,14 @@ public class Intent {
         }
     }
     
-    public func resignSelfSustainingState() {
+    public final func resignSelfSustainingState() {
         if isSelfSustaining {
             isSelfSustaining = false
-            self.dynamicType.SelfSustainingIntents.removeAtIndex(selfSustainingIndex!)
+            #if swift(>=3)
+                self.dynamicType.SelfSustainingIntents.remove(at: selfSustainingIndex!)
+            #else
+                self.dynamicType.SelfSustainingIntents.removeAtIndex(selfSustainingIndex!)
+            #endif
         }
     }
 }

@@ -21,6 +21,19 @@
 import UIKit
 
 public extension UIImageView {
+    #if swift(>=3.0)
+    public final func setImage(image: UIImage?, animated: Bool, animationDuration: TimeInterval = 1.0) {
+        let change: () -> () = {
+            self.image = image
+        }
+        if !animated {
+            change()
+        } else {
+            let options: UIViewAnimationOptions = [.transitionCrossDissolve, .beginFromCurrentState, .allowUserInteraction]
+            UIView.transition(with: self, duration: animationDuration, options: options, animations: change, completion: nil)
+        }
+    }
+    #else
     public final func setImage(image: UIImage?, animated: Bool, animationDuration: NSTimeInterval = 1.0) {
         let change: () -> () = {
             self.image = image
@@ -32,4 +45,5 @@ public extension UIImageView {
             UIView.transitionWithView(self, duration: animationDuration, options: options, animations: change, completion: nil)
         }
     }
+    #endif
 }
