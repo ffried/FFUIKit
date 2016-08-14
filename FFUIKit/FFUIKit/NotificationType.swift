@@ -25,68 +25,73 @@ public enum NotificationType<NotificationView: NotificationViewType where Notifi
     case Custom(viewConfiguration: (NotificationView) -> Void) // Whatever you like
     #endif
     
+    #if swift(>=3.0)
+    internal func configure(notificationView view: NotificationView) {
+        let backgroundColor: UIColor
+        let textColor: UIColor
+        let alpha: CGFloat = 0.85
+        switch self {
+        case .default:
+            backgroundColor = UIColor.lightGray.withAlphaComponent(alpha)
+            textColor = .black
+        case .warning:
+            backgroundColor = UIColor.yellow.withAlphaComponent(alpha)
+            textColor = .black
+        case .failure:
+            backgroundColor = UIColor.red.withAlphaComponent(alpha)
+            textColor = .white
+        case .success:
+            backgroundColor = UIColor.green.withAlphaComponent(alpha)
+            textColor = .black
+        case .info:
+            backgroundColor = UIColor.blue.withAlphaComponent(alpha)
+            textColor = .white
+        case .custom(_):
+            backgroundColor = .clear
+            textColor = .black
+        }
+        if case NotificationType.custom(let configuration) = self {
+            configuration(view)
+        } else {
+            view.backgroundColor = backgroundColor
+            if let textNotificationView = view as? TextNotificationView {
+                textNotificationView.textLabel.textColor = textColor
+            }
+        }
+    }
+    #else
     internal func configureNotificationView(view: NotificationView) {
         let backgroundColor: UIColor
         let textColor: UIColor
         let alpha: CGFloat = 0.85
-        #if swift(>=3.0)
-            switch self {
-            case .default:
-                backgroundColor = UIColor.lightGray.withAlphaComponent(alpha)
-                textColor = .black
-            case .warning:
-                backgroundColor = UIColor.yellow.withAlphaComponent(alpha)
-                textColor = .black
-            case .failure:
-                backgroundColor = UIColor.red.withAlphaComponent(alpha)
-                textColor = .white
-            case .success:
-                backgroundColor = UIColor.green.withAlphaComponent(alpha)
-                textColor = .black
-            case .info:
-                backgroundColor = UIColor.blue.withAlphaComponent(alpha)
-                textColor = .white
-            case .custom(_):
-                backgroundColor = .clear
-                textColor = .black
+        switch self {
+        case .Default:
+            backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(alpha)
+            textColor = .blackColor()
+        case .Warning:
+            backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(alpha)
+            textColor = UIColor.blackColor()
+        case .Failure:
+            backgroundColor = UIColor.redColor().colorWithAlphaComponent(alpha)
+            textColor = UIColor.whiteColor()
+        case .Success:
+            backgroundColor = UIColor.greenColor().colorWithAlphaComponent(alpha)
+            textColor = UIColor.blackColor()
+        case .Info:
+            backgroundColor = UIColor.blueColor().colorWithAlphaComponent(alpha)
+            textColor = UIColor.whiteColor()
+        case .Custom(_):
+            backgroundColor = UIColor.clearColor()
+            textColor = UIColor.clearColor()
+        }
+        if case let NotificationType.Custom(configuration) = self {
+            configuration(view)
+        } else {
+            view.backgroundColor = backgroundColor
+            if let textNotificationView = view as? TextNotificationView {
+                textNotificationView.textLabel.textColor = textColor
             }
-            if case NotificationType.custom(let configuration) = self {
-                configuration(view)
-            } else {
-                view.backgroundColor = backgroundColor
-                if let textNotificationView = view as? TextNotificationView {
-                    textNotificationView.textLabel.textColor = textColor
-                }
-            }
-        #else
-            switch self {
-            case .Default:
-                backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(alpha)
-                textColor = .blackColor()
-            case .Warning:
-                backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(alpha)
-                textColor = UIColor.blackColor()
-            case .Failure:
-                backgroundColor = UIColor.redColor().colorWithAlphaComponent(alpha)
-                textColor = UIColor.whiteColor()
-            case .Success:
-                backgroundColor = UIColor.greenColor().colorWithAlphaComponent(alpha)
-                textColor = UIColor.blackColor()
-            case .Info:
-                backgroundColor = UIColor.blueColor().colorWithAlphaComponent(alpha)
-                textColor = UIColor.whiteColor()
-            case .Custom(_):
-                backgroundColor = UIColor.clearColor()
-                textColor = UIColor.clearColor()
-            }
-            if case let NotificationType.Custom(configuration) = self {
-                configuration(view)
-            } else {
-                view.backgroundColor = backgroundColor
-                if let textNotificationView = view as? TextNotificationView {
-                    textNotificationView.textLabel.textColor = textColor
-                }
-            }
-        #endif
+        }
     }
+    #endif
 }

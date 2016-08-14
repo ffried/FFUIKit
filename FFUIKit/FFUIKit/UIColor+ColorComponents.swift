@@ -22,35 +22,53 @@ import UIKit
 
 public extension UIColor {
     
-    private final func updatedComponents(components: ColorComponents) -> ColorComponents? {
+    #if swift(>=3.0)
+    private final func updated(components: ColorComponents) -> ColorComponents? {
+        var comps = components
+        return comps.update(from: self) ? comps : nil
+    }
+    #else
+    private final func updated(components components: ColorComponents) -> ColorComponents? {
         var comps = components
         return comps.updateFromColor(self) ? comps : nil
     }
+    #endif
     
     public final var rgbaComponents: ColorComponents? {
-        return updatedComponents(ColorComponents.blackRGBA)
+        return updated(components: ColorComponents.blackRGBA)
     }
     
     public final var hsbaComponents: ColorComponents? {
-        return updatedComponents(ColorComponents.blackHSBA)
+        return updated(components: ColorComponents.blackHSBA)
     }
     
     public final var bwaComponents: ColorComponents? {
-        return updatedComponents(ColorComponents.blackBWA)
+        return updated(components: ColorComponents.blackBWA)
     }
     
-    public var components: ColorComponents? {
+    public final var components: ColorComponents? {
         return ColorComponents(color: self)
     }
     
     public convenience init(components: ColorComponents) {
-        switch components {
-        case .RGBA(let red, let green, let blue, let alpha):
-            self.init(red: red, green: green, blue: blue, alpha: alpha)
-        case .HSBA(let hue, let saturation, let brightness, let alpha):
-            self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-        case .BWA(let white, let alpha):
-            self.init(white: white, alpha: alpha)
-        }
+        #if swift(>=3.0)
+            switch components {
+            case .rgba(let red, let green, let blue, let alpha):
+                self.init(red: red, green: green, blue: blue, alpha: alpha)
+            case .hsba(let hue, let saturation, let brightness, let alpha):
+                self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+            case .bwa(let white, let alpha):
+                self.init(white: white, alpha: alpha)
+            }
+        #else
+            switch components {
+            case .RGBA(let red, let green, let blue, let alpha):
+                self.init(red: red, green: green, blue: blue, alpha: alpha)
+            case .HSBA(let hue, let saturation, let brightness, let alpha):
+                self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+            case .BWA(let white, let alpha):
+                self.init(white: white, alpha: alpha)
+            }
+        #endif
     }
 }
