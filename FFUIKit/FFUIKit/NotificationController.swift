@@ -137,7 +137,7 @@ public final class NotificationController<NotificationView: NotificationViewType
             notificationView.addGestureRecognizer(tapGestureRecognizer)
             notificationView.setupFullscreen(in: view)
         #else
-            view.backgroundColor = .clear()
+            view.backgroundColor = .clearColor()
             notificationType.configureNotificationView(notificationView)
             notificationView.addGestureRecognizer(tapGestureRecognizer)
             notificationView.setupFullscreenInView(view)

@@ -26,18 +26,23 @@ internal final class NotificationAnimationController: NSObject, UIViewController
     private var originalVCContainer: UIView!
     
     private final func setupTopBottomConstraints(for view: UIView) {
-        if #available(iOS 9.0, *) {
-            topConstraint = view.superview?.topAnchor.constraint(equalTo: view.topAnchor)
-            bottomConstraint = view.superview?.topAnchor.constraint(equalTo: view.bottomAnchor)
-        } else {
-            #if swift(>=3.0)
+        #if swift(>=3.0)
+            if #available(iOS 9.0, *) {
+                topConstraint = view.superview?.topAnchor.constraint(equalTo: view.topAnchor)
+                bottomConstraint = view.superview?.topAnchor.constraint(equalTo: view.bottomAnchor)
+            } else {
                 topConstraint = NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: view.superview, attribute: .top, multiplier: 1.0, constant: 0.0)
                 bottomConstraint = NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: view.superview, attribute: .top, multiplier: 1.0, constant: 0.0)
-            #else
+            }
+        #else
+            if #available(iOS 9.0, *) {
+                topConstraint = view.superview?.topAnchor.constraintEqualToAnchor(view.topAnchor)
+                bottomConstraint = view.superview?.topAnchor.constraintEqualToAnchor(view.bottomAnchor)
+            } else {
                 topConstraint = NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: view.superview, attribute: .Top, multiplier: 1.0, constant: 0.0)
                 bottomConstraint = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: view.superview, attribute: .Top, multiplier: 1.0, constant: 0.0)
-            #endif
-        }
+            }
+        #endif
     }
     
     #if swift(>=3.0)

@@ -118,8 +118,8 @@ public extension UITableView {
         beginUpdates()
         
         // Remove sections
-        let toRemoveIndexes = oldSections.enumerate().filter { !newSections.contains($1) }.map { $0 }
-        for idx in toRemoveIndexes.reverse() { sectionResults.removeAtIndex(idx) }
+        let toRemoveIndexes = oldSections.enumerate().filter { !newSections.contains($1) }.map { $0.0 }
+        toRemoveIndexes.reverse().forEach { sectionResults.removeAtIndex($0) }
         let toRemoveSections = toRemoveIndexes.reduce(NSMutableIndexSet()) { $0.addIndex($1); return $0 }
         deleteSections(toRemoveSections, withRowAnimation: animation)
     

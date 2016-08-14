@@ -22,12 +22,14 @@ import UIKit
 
 public extension UIImage {
     public final var averageColor: UIColor? {
-        guard let cgImage = cgImage else { return nil }
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        #if swift(>=3)
+        #if swift(>=3.0)
+            guard let cgImage = cgImage else { return nil }
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
             let alphaInfo: CGImageAlphaInfo = .premultipliedLast
             let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
         #else
+            guard let cgImage = CGImage else { return nil }
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
             let alphaInfo: CGImageAlphaInfo = .PremultipliedLast
             let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .ByteOrder32Big]
         #endif
@@ -48,7 +50,7 @@ public extension UIImage {
         #if swift(>=3)
             guard let data = context.data else { return nil }
         #else
-            let data = context.data
+            let data = CGBitmapContextGetData(context)
         #endif
         let rgba = UnsafePointer<UInt8>(data)
         
@@ -109,9 +111,9 @@ public extension UIImage {
             UIGraphicsBeginImageContext(size)
             defer { UIGraphicsEndImageContext() }
             let context = UIGraphicsGetCurrentContext()
-            CGContextSetInterpolationQuality(context, .medium)
-            draw(in: CGRect(origin: CGPoint.zero, size: size), blendMode: .copy, alpha: 1.0)
-            let data = context.data
+            CGContextSetInterpolationQuality(context, .Medium)
+            drawInRect(CGRect(origin: CGPoint.zero, size: size), blendMode: .Copy, alpha: 1.0)
+            let data = CGBitmapContextGetData(context)
             let rgba = UnsafePointer<UInt8>(data)
             return UIColor(
                 red: CGFloat(rgba[0]) / 255.0,
@@ -157,21 +159,21 @@ public extension UIImage {
         }
     }
     #else
-    public final func imageTintedWithColor(_ color: UIColor) -> UIImage {
+    public final func imageTintedWithColor(color: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         defer { UIGraphicsEndImageContext() }
         let context = UIGraphicsGetCurrentContext()
         color.setFill()
         // translate/flip the graphics context (for transforming from CG* coords to UI* coords
-        context.translateBy(x: 0.0, y: size.height)
-        context.scaleBy(x: 1.0, y: -1.0)
+        CGContextTranslateCTM(context, 0.0, size.height)
+        CGContextScaleCTM(context, 1.0, -1.0)
         
         let rect = CGRect(origin: CGPoint.zero, size: size)
-        context.setBlendMode(.colorBurn)
-        context.draw(in: rect, image: cgImage)
-        context.clip(to: rect, mask: cgImage)
-        context.addRect(rect)
-        context.drawPath(using: .fill)
+        CGContextSetBlendMode(context, .ColorBurn)
+        CGContextDrawImage(context, rect, CGImage)
+        CGContextClipToMask(context, rect, CGImage)
+        CGContextAddRect(context, rect)
+        CGContextDrawPath(context, .Fill)
         
         return UIGraphicsGetImageFromCurrentImageContext()
     }
