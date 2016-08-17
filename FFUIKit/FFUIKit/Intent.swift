@@ -31,7 +31,11 @@ public extension Intent {}
 public class Intent {
     private static var SelfSustainingIntents = [Intent]()
     
+    #if swift(>=3.0)
+    public typealias Completion = (Intent, State) -> ()
+    #else
     public typealias Completion = (intent: Intent, state: State) -> ()
+    #endif
     
     public enum State {
         #if swift(>=3)
@@ -73,7 +77,7 @@ public class Intent {
     #if swift(>=3)
     private final func complete(with state: State) {
         currentState = state
-        completion?(intent: self, state: currentState)
+        completion?(self, currentState)
         if isSelfSustaining {
             resignSelfSustainingState()
         }
@@ -184,8 +188,13 @@ public class Intent {
     public final func becomeSelfSustaining() {
         if !isSelfSustaining {
             isSelfSustaining = true
-            selfSustainingIndex = self.dynamicType.SelfSustainingIntents.count
-            self.dynamicType.SelfSustainingIntents.append(self)
+            #if swift(>=3.0)
+                selfSustainingIndex = type(of: self).SelfSustainingIntents.count
+                type(of: self).SelfSustainingIntents.append(self)
+            #else
+                selfSustainingIndex = self.dynamicType.SelfSustainingIntents.count
+                self.dynamicType.SelfSustainingIntents.append(self)
+            #endif
         }
     }
     
@@ -193,7 +202,7 @@ public class Intent {
         if isSelfSustaining {
             isSelfSustaining = false
             #if swift(>=3)
-                self.dynamicType.SelfSustainingIntents.remove(at: selfSustainingIndex!)
+                type(of: self).SelfSustainingIntents.remove(at: selfSustainingIndex!)
             #else
                 self.dynamicType.SelfSustainingIntents.removeAtIndex(selfSustainingIndex!)
             #endif

@@ -42,17 +42,18 @@ public extension UIImage {
             let context = CGBitmapContextCreate(UnsafeMutablePointer<UInt8>(), 1, 1, 8, 4, colorSpace, bitmapInfo.rawValue)
         #endif
         #if swift(>=3)
-            context.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)), image: cgImage)
+            context .draw(cgImage, in: CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)))
         #else
             CGContextDrawImage(context, CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)), cgImage)
         #endif
         
         #if swift(>=3)
             guard let data = context.data else { return nil }
+            let rgba = data.assumingMemoryBound(to: UInt8.self)
         #else
             let data = CGBitmapContextGetData(context)
+            let rgba = UnsafePointer<UInt8>(data)
         #endif
-        let rgba = UnsafePointer<UInt8>(data)
         
         let color: UIColor
         if rgba[3] > 0 {
@@ -98,7 +99,7 @@ public extension UIImage {
                 context.interpolationQuality = .medium
                 draw(in: CGRect(origin: CGPoint.zero, size: size), blendMode: .copy, alpha: 1.0)
                 guard let data = context.data else { return nil }
-                let rgba = UnsafePointer<UInt8>(data)
+                let rgba = data.assumingMemoryBound(to: UInt8.self)
                 return UIColor(
                     red: CGFloat(rgba[0]) / 255.0,
                     green: CGFloat(rgba[1]) / 255.0,
@@ -132,7 +133,7 @@ public extension UIImage {
             context.scaleBy(x: 1.0, y: -1.0)
             
             context.setBlendMode(.colorBurn)
-            context.draw(in: rect, image: cgImage)
+            context.draw(cgImage, in: rect)
             context.clip(to: rect, mask: cgImage)
             context.addRect(rect)
             context.drawPath(using: .fill)

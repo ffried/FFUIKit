@@ -24,7 +24,11 @@ import FFFoundation
 
 private var _UIScrollViewKeyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 public extension UIScrollView {
+    #if swift(>=3.0)
+    private typealias UserInfoDictionary = [AnyHashable: AnyObject]
+    #else
     private typealias UserInfoDictionary = [String: AnyObject]
+    #endif
     private final var notificationObservers: [NotificationObserver] {
         get {
             guard let observers = objc_getAssociatedObject(self, &_UIScrollViewKeyboardNotificationObserversKey) as? [NotificationObserver] else {
@@ -39,8 +43,8 @@ public extension UIScrollView {
     // MARK: Register / Unregister
     public final func registerForKeyboardNotifications() {
         #if swift(>=3.0)
-            func block(for selector: (userInfo: UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
-                return { note in if let userInfo = note.userInfo as? UserInfoDictionary { selector(userInfo: userInfo) } }
+            func block(for selector: @escaping (UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
+                return { note in if let userInfo = note.userInfo as? UserInfoDictionary { selector(userInfo) } }
             }
         
             let center = NotificationCenter.default
@@ -239,7 +243,7 @@ public extension UIScrollView {
         return height
     }
     
-    private final func animate(_ animations: () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((finished: Bool) -> ())? = nil) {
+    private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: (@escaping (_ finished: Bool) -> ())? = nil) {
         var duration: TimeInterval = 1.0 / 3.0
         var curve: UIViewAnimationCurve = .linear
         let options: UIViewAnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
@@ -287,38 +291,52 @@ public extension UIScrollView {
 private var _UIScrollViewOriginalContentInsetsKey = "OriginalContentInsets"
 private var _UIScrollViewOriginalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
 private var _UIScrollViewKeyboardVisibleKey = "KeyboardVisible"
+#if swift(>=3.0)
+fileprivate extension UIScrollView {
+    fileprivate final var originalContentInsets: UIEdgeInsets {
+        get {
+            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
+        }
+        set {
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    fileprivate final var originalScrollIndicatorInsets: UIEdgeInsets {
+        get {
+            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
+        }
+        set {
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    fileprivate final var keyboardVisible: Bool {
+        get {
+            return (objc_getAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey) as? Bool) ?? false
+        }
+        set {
+            objc_setAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
+}
+#else
 private extension UIScrollView {
     private final var originalContentInsets: UIEdgeInsets {
         get {
-            #if swift(>=3.0)
-                return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
-            #else
-                return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
-            #endif
+            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
         }
         set {
-            #if swift(>=3.0)
-                objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            #else
-                objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            #endif
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     private final var originalScrollIndicatorInsets: UIEdgeInsets {
         get {
-            #if swift(>=3.0)
-                return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
-            #else
-                return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
-            #endif
+            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
         }
         set {
-            #if swift(>=3.0)
-                objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            #else
-                objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            #endif
+            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -331,3 +349,4 @@ private extension UIScrollView {
         }
     }
 }
+#endif

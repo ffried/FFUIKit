@@ -168,9 +168,9 @@ public enum ColorComponents {
     // - hsba
     // - bwa
     public init?(color: UIColor) {
-        var rgbaTest = self.dynamicType.blackRGBA
-        var hsbaTest = self.dynamicType.blackHSBA
-        var bwaTest = self.dynamicType.blackBWA
+        var rgbaTest = type(of: self).blackRGBA
+        var hsbaTest = type(of: self).blackHSBA
+        var bwaTest = type(of: self).blackBWA
         #if swift(>=3)
             if rgbaTest.update(from: color) {
                 self = rgbaTest

@@ -94,15 +94,19 @@ public extension UIDevice {
     public final var platform: String {
         var size = Int()
         sysctlbyname("hw.machine", nil, &size, nil, 0)
-        let machine = UnsafeMutablePointer<CChar>(malloc(size))
+        #if swift(>=3.0)
+            let machine = UnsafeMutablePointer<CChar>.allocate(capacity: size)
+        #else
+            let machine = UnsafeMutablePointer<CChar>(malloc(size))
+        #endif
         sysctlbyname("hw.machine", machine, &size, nil, 0)
         #if swift(>=3.0)
-            let platform = machine.map { String(cString: $0) }
+            let platform = String(cString: machine)
         #else
             let platform = String.fromCString(machine)
         #endif
         free(machine)
-        return platform!
+        return platform
     }
     
     public final var platformName: String? {
