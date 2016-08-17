@@ -103,7 +103,7 @@ public extension UIDevice {
         #if swift(>=3.0)
             let platform = String(cString: machine)
         #else
-            let platform = String.fromCString(machine)
+            let platform = String.fromCString(machine)!
         #endif
         free(machine)
         return platform

@@ -168,10 +168,10 @@ public enum ColorComponents {
     // - hsba
     // - bwa
     public init?(color: UIColor) {
-        var rgbaTest = type(of: self).blackRGBA
-        var hsbaTest = type(of: self).blackHSBA
-        var bwaTest = type(of: self).blackBWA
         #if swift(>=3)
+            var rgbaTest = type(of: self).blackRGBA
+            var hsbaTest = type(of: self).blackHSBA
+            var bwaTest = type(of: self).blackBWA
             if rgbaTest.update(from: color) {
                 self = rgbaTest
             } else if hsbaTest.update(from: color) {
@@ -182,6 +182,9 @@ public enum ColorComponents {
                 return nil
             }
         #else
+            var rgbaTest = self.dynamicType.blackRGBA
+            var hsbaTest = self.dynamicType.blackHSBA
+            var bwaTest = self.dynamicType.blackBWA
             if rgbaTest.updateFromColor(color) {
                 self = rgbaTest
             } else if hsbaTest.updateFromColor(color) {
