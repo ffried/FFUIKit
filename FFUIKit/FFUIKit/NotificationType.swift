@@ -8,24 +8,16 @@
 
 import UIKit
 
-public enum NotificationType<NotificationView: NotificationViewType where NotificationView: UIView> {
-    #if swift(>=3.0)
+#if swift(>=3.0)
+public enum NotificationType<NotificationView: NotificationViewType> where NotificationView: UIView {
+    
     case `default` // White
     case warning // Yellow
     case failure // Red
     case success // Green
     case info    // Blue
     case custom(viewConfiguration: (NotificationView) -> Void) // Whatever you like
-    #else
-    case Default // White
-    case Warning // Yellow
-    case Failure // Red
-    case Success // Green
-    case Info    // Blue
-    case Custom(viewConfiguration: (NotificationView) -> Void) // Whatever you like
-    #endif
     
-    #if swift(>=3.0)
     internal func configure(notificationView view: NotificationView) {
         let backgroundColor: UIColor
         let textColor: UIColor
@@ -59,7 +51,18 @@ public enum NotificationType<NotificationView: NotificationViewType where Notifi
             }
         }
     }
-    #else
+}
+#else
+public enum NotificationType<NotificationView: NotificationViewType where NotificationView: UIView> {
+    
+    case Default // White
+    case Warning // Yellow
+    case Failure // Red
+    case Success // Green
+    case Info    // Blue
+    case Custom(viewConfiguration: (NotificationView) -> Void) // Whatever you like
+    }
+
     internal func configureNotificationView(view: NotificationView) {
         let backgroundColor: UIColor
         let textColor: UIColor
@@ -92,6 +95,5 @@ public enum NotificationType<NotificationView: NotificationViewType where Notifi
                 textNotificationView.textLabel.textColor = textColor
             }
         }
-    }
-    #endif
 }
+#endif

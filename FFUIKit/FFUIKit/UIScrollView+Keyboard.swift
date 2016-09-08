@@ -243,7 +243,7 @@ public extension UIScrollView {
         return height
     }
     
-    private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: (@escaping (_ finished: Bool) -> ())? = nil) {
+    private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
         var duration: TimeInterval = 1.0 / 3.0
         var curve: UIViewAnimationCurve = .linear
         let options: UIViewAnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
