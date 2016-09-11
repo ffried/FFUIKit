@@ -37,6 +37,18 @@ public extension UIApplication {
         #endif
     }
     
+    #if swift(>=3.0)
+    public final var iTunesURL: URL {
+        let appID = iTunesIdentifier ?? ""
+        return URL(string: "\(iTunesBaseURL)app/id\(appID)")!
+    }
+    
+    public final var iTunesRatingURL: URL {
+        let appID = iTunesIdentifier ?? ""
+        let urlString = "\(iTunesBaseURL)WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=\(appID)"
+        return URL(string: urlString)!
+    }
+    #else
     public final var iTunesURL: NSURL {
         let appID = iTunesIdentifier ?? ""
         return NSURL(string: "\(iTunesBaseURL)app/id\(appID)")!
@@ -47,4 +59,5 @@ public extension UIApplication {
         let urlString = "\(iTunesBaseURL)WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=\(appID)"
         return NSURL(string: urlString)!
     }
+    #endif
 }
