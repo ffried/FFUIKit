@@ -28,13 +28,15 @@ public struct License: Hashable {
     public let licenseFilePath: NSURL
     #endif
     
-//    #if swift(>=3)
-//    public private(set) var licenseContent: AttributedString?
-//    #else
     public private(set) var licenseContent: NSAttributedString?
-//    #endif
     
     public var hashValue: Int { return title.hashValue ^ licenseFilePath.hashValue }
+    
+    #if swift(>=3)
+    public static func ==(lhs: License, rhs: License) -> Bool {
+        return (lhs.title, lhs.licenseFilePath) == (rhs.title, rhs.licenseFilePath)
+    }
+    #endif
     
     #if swift(>=3)
     public init(title: String, licenseFilePath: URL) {
@@ -95,10 +97,8 @@ public struct License: Hashable {
     #endif
 }
 
+#if !swift(>=3)
 public func ==(lhs: License, rhs: License) -> Bool {
-    #if swift(>=3)
-        return (lhs.title, lhs.licenseFilePath) == (rhs.title, rhs.licenseFilePath)
-    #else
-        return lhs.title == rhs.title && lhs.licenseFilePath.isEqual(rhs.licenseFilePath)
-    #endif
+    return lhs.title == rhs.title && lhs.licenseFilePath.isEqual(rhs.licenseFilePath)
 }
+#endif
