@@ -160,21 +160,24 @@ public final class NotificationController<NotificationView: NotificationViewType
         set {}
     }
     
-    @objc public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    @objc(animationControllerForPresentedController:presentingController:sourceController:)
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if presented is NotificationController {
             return animationController
         }
         return nil
     }
     
-    @objc public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    @objc(animationControllerForDismissedController:)
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if dismissed is NotificationController {
             return animationController
         }
         return nil
     }
     
-    @objc public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         if presented is NotificationController {
             return NotificationPresentationController(presentedViewController: presented, presenting:  presenting)
         }
