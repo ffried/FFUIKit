@@ -89,7 +89,8 @@ public class LicenseDetailViewController: UIViewController {
 
 extension LicenseDetailViewController: UITextViewDelegate {
     #if swift(>=3.0)
-    @objc public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+    @objc(textView:shouldInteractWithURL:inRange:)
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
         return true
     }
     #else

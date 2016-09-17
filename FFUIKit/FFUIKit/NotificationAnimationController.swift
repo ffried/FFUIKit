@@ -46,11 +46,13 @@ internal final class NotificationAnimationController: NSObject, UIViewController
     }
     
     #if swift(>=3.0)
-    @objc internal func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    @objc(transitionDuration:)
+    internal func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    @objc internal func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    @objc(animateTransition:)
+    internal func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
             let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else { return }
         
