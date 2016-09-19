@@ -1,37 +1,37 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++4DDCCA4",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++D97720C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++4DDCCA4" : 0,
-    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++8372C79" : 0,
-    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++E3E7237" : 0
+    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++9F25EB3" : 0,
+    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++D97720C" : 0,
+    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++C9A8672" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3E8D5306-5E09-487C-AAB9-8745E3D75327",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++4DDCCA4" : "FFUIKit\/",
-    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++8372C79" : "FFUIKit\/Submodules\/FFFoundation\/",
-    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++E3E7237" : "FFFoundation\/"
+    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++9F25EB3" : "FFFoundation\/",
+    "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++D97720C" : "FFUIKit\/",
+    "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++C9A8672" : "FFUIKit\/Submodules\/FFFoundation\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "FFUIkit",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FFUIKit",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FFUIKit\/FFUIkit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FFUIKit\/FFUIKit.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ffried\/FFFoundation",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++8372C79"
-    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ffried\/FFFoundation.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++E3E7237"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++9F25EB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ffried\/FFFoundation",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5134F3F7A71ADD498CB13E4A9C7574DD5D40E192+++C9A8672"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ffried\/FFUIKit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++4DDCCA4"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE0ED282A9952C2CD6A137B67E40D3F3F40FCA68+++D97720C"
     }
   ]
 }
