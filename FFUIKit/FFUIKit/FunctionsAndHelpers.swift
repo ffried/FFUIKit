@@ -21,25 +21,23 @@
 import UIKit
 import FFFoundation
 
-#if swift(>=3)
-    @available(*, deprecated, message: "Now provided by FFFoundation", renamed: "App")
-    public let UIApp = App
-#else
-    @available(*, deprecated, message="Now provided by FFFoundation", renamed="App")
-    public let UIApp = App
-#endif
-
-public func findFirstResponder() -> UIResponder? {
-    var firstResponder: UIResponder? = nil
-    if let window = App.delegate?.window, let view = window {
-        #if swift(>=3)
-            firstResponder = findFirstResponder(in: view)
-        #else
-            firstResponder = findFirstResponderInView(view)
-        #endif
-    }
-    return firstResponder
-}
+// Waiting for https://bugs.swift.org/browse/SR-1226
+//@available(iOSApplicationExtension, unavailable)
+//@available(watchOSApplicationExtension, unavailable)
+//@available(tvOSApplicationExtension, unavailable)
+//public func findFirstResponder() -> UIResponder? {
+//    var firstResponder: UIResponder? = nil
+//    #if swift(>=3)
+//    if let window = Application.shared.delegate?.window, let view = window {
+//        firstResponder = findFirstResponder(in: view)
+//    }
+//    #else
+//    if let window = Application.sharedApplication().delegate?.window, let view = window {
+//        firstResponder = findFirstResponderInView(view)
+//    }
+//    #endif
+//    return firstResponder
+//}
 
 #if swift(>=3)
     public func findFirstResponder(in view: UIView) -> UIResponder? {
@@ -77,28 +75,36 @@ public func findFirstResponder() -> UIResponder? {
     }
 #endif
 
-internal func findForemostViewController() -> UIViewController? {
-    var viewController: UIViewController? = nil
-    if let vc = App.delegate?.window??.rootViewController {
-        if let navController = vc as? UINavigationController {
-            viewController = navController.viewControllers.last
-        }
-        if let tabBarController = vc as? UITabBarController {
-            viewController = tabBarController.selectedViewController
-        }
-        if let pageController = vc as? UIPageViewController {
-            viewController = pageController.viewControllers?.first
-        }
-        if viewController == nil {
-            viewController = vc
-        }
-    }
-    if let vc = viewController {
-        var presentedViewController = vc
-        while let pvc = presentedViewController.presentedViewController {
-            presentedViewController = pvc
-        }
-        viewController = presentedViewController
-    }
-    return viewController
-}
+//@available(iOSApplicationExtension, unavailable)
+//@available(watchOSApplicationExtension, unavailable)
+//@available(tvOSApplicationExtension, unavailable)
+//internal func findForemostViewController() -> UIViewController? {
+//    var viewController: UIViewController? = nil
+//    #if swift(>=3.0)
+//        let rootVC = Application.shared.delegate?.window??.rootViewController
+//    #else
+//        let rootVC = Application.sharedApplication().delegate?.window??.rootViewController
+//    #endif
+//    if let vc = rootVC {
+//        if let navController = vc as? UINavigationController {
+//            viewController = navController.viewControllers.last
+//        }
+//        if let tabBarController = vc as? UITabBarController {
+//            viewController = tabBarController.selectedViewController
+//        }
+//        if let pageController = vc as? UIPageViewController {
+//            viewController = pageController.viewControllers?.first
+//        }
+//        if viewController == nil {
+//            viewController = vc
+//        }
+//    }
+//    if let vc = viewController {
+//        var presentedViewController = vc
+//        while let pvc = presentedViewController.presentedViewController {
+//            presentedViewController = pvc
+//        }
+//        viewController = presentedViewController
+//    }
+//    return viewController
+//}

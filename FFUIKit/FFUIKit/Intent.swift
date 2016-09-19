@@ -97,10 +97,10 @@ public class Intent {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let buttonTitle = NSLocalizedString("ffuikit_btn_ok", comment: "FFUIKit.Intent")
         controller.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: nil))
-        var vc = viewController
-        if vc == nil {
-            vc = findForemostViewController()
-        }
+        let vc = viewController
+//        if vc == nil {
+//            vc = findForemostViewController()
+//        }
         vc?.present(controller, animated: true, completion: nil)
     }
     #else
