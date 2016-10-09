@@ -99,7 +99,6 @@
 		07532EF71C96A48F00B4655B /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		07532EFD1C96A5CC00B4655B /* NotificationViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewType.swift; sourceTree = "<group>"; };
 		0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		079DA36A1C96F815008B2612 /* FFFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FFFoundation.framework; path = FFFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
@@ -262,7 +261,6 @@
 		07B37F461A3B563E00911042 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				079DA36A1C96F815008B2612 /* FFFoundation.framework */,
 				07B37F471A3B565100911042 /* FFFoundation.xcodeproj */,
 			);
 			name = Frameworks;
@@ -434,7 +432,7 @@
 		07D8C01D1CFF56520037AC72 /* FFFoundation OS X Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "FFFoundation OS X Tests.xctest";
+			path = "FFFoundation macOS Tests.xctest";
 			remoteRef = 07D8C01C1CFF56520037AC72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
