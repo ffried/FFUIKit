@@ -24,10 +24,8 @@
 		0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */; };
 		079DA36C1C96F81C008B2612 /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B37F4D1A3B565100911042 /* FFFoundation.framework */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */; };
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
-		07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */; };
 		07B2F40F1A8BE10000F854FC /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2F40E1A8BE10000F854FC /* LayoutGuide.swift */; };
 		07B37F431A3A082800911042 /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F421A3A082800911042 /* Intent.swift */; };
 		07B37F451A3B538800911042 /* FunctionsAndHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B37F441A3B538800911042 /* FunctionsAndHelpers.swift */; };
@@ -42,6 +40,8 @@
 		07E87EE81C7D8B4500D88243 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE71C7D8B4500D88243 /* ColorComponents.swift */; };
 		07E930891C96AC85008D1CE3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E930881C96AC85008D1CE3 /* NotificationType.swift */; };
 		07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */; };
+		07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */; };
+		07F830051DAA7F7600DBCBAA /* FFUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */; };
 		07FF5E5C1A376B91006928A9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF5E5B1A376B91006928A9 /* Label.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +66,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 0735189A1CFC2D1E001C05AA;
 			remoteInfo = "FFFoundation OS X Tests";
+		};
+		07F830061DAA7F7600DBCBAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A9C77E19E3C7C4004ABC10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A9C78619E3C7C4004ABC10;
+			remoteInfo = FFUIKit;
 		};
 		07F96F0B1CB791CC0012C546 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,9 +103,6 @@
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
-		07A9C79219E3C7C4004ABC10 /* FFUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07A9C79519E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFUIKitTests.m; sourceTree = "<group>"; };
 		07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProgressIndicatorView.h; sourceTree = "<group>"; };
 		07A9C7A619E3C941004ABC10 /* FFProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProgressIndicatorView.m; sourceTree = "<group>"; };
 		07B2F40E1A8BE10000F854FC /* LayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
@@ -117,6 +121,9 @@
 		07E87EE71C7D8B4500D88243 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
 		07E930881C96AC85008D1CE3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
+		07F830001DAA7F7600DBCBAA /* FFUIKit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FFUIKit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFUIKit_Tests.swift; sourceTree = "<group>"; };
+		07F830041DAA7F7600DBCBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FF5E5B1A376B91006928A9 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,10 +136,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07A9C78F19E3C7C4004ABC10 /* Frameworks */ = {
+		07F82FFD1DAA7F7600DBCBAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F830051DAA7F7600DBCBAA /* FFUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				07A9C78919E3C7C4004ABC10 /* FFUIKit */,
-				07A9C79319E3C7C4004ABC10 /* FFUIKitTests */,
+				07F830011DAA7F7600DBCBAA /* FFUIKit Tests */,
 				07B37F461A3B563E00911042 /* Frameworks */,
 				07A9C78819E3C7C4004ABC10 /* Products */,
 			);
@@ -222,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */,
-				07A9C79219E3C7C4004ABC10 /* FFUIKitTests.xctest */,
+				07F830001DAA7F7600DBCBAA /* FFUIKit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,23 +255,6 @@
 			children = (
 				07DB3A311C7D9CBB00D4268A /* FFUIKitPlayground.playground */,
 				07A9C78B19E3C7C4004ABC10 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		07A9C79319E3C7C4004ABC10 /* FFUIKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				07A9C79619E3C7C4004ABC10 /* FFUIKitTests.m */,
-				07A9C79419E3C7C4004ABC10 /* Supporting Files */,
-			);
-			path = FFUIKitTests;
-			sourceTree = "<group>";
-		};
-		07A9C79419E3C7C4004ABC10 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				07A9C79519E3C7C4004ABC10 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -317,6 +308,15 @@
 			name = Licences;
 			sourceTree = "<group>";
 		};
+		07F830011DAA7F7600DBCBAA /* FFUIKit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */,
+				07F830041DAA7F7600DBCBAA /* Info.plist */,
+			);
+			path = "FFUIKit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -351,21 +351,22 @@
 			productReference = 07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		07A9C79119E3C7C4004ABC10 /* FFUIKitTests */ = {
+		07F82FFF1DAA7F7600DBCBAA /* FFUIKit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07A9C79D19E3C7C4004ABC10 /* Build configuration list for PBXNativeTarget "FFUIKitTests" */;
+			buildConfigurationList = 07F830081DAA7F7600DBCBAA /* Build configuration list for PBXNativeTarget "FFUIKit Tests" */;
 			buildPhases = (
-				07A9C78E19E3C7C4004ABC10 /* Sources */,
-				07A9C78F19E3C7C4004ABC10 /* Frameworks */,
-				07A9C79019E3C7C4004ABC10 /* Resources */,
+				07F82FFC1DAA7F7600DBCBAA /* Sources */,
+				07F82FFD1DAA7F7600DBCBAA /* Frameworks */,
+				07F82FFE1DAA7F7600DBCBAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				07F830071DAA7F7600DBCBAA /* PBXTargetDependency */,
 			);
-			name = FFUIKitTests;
-			productName = FFUIKitTests;
-			productReference = 07A9C79219E3C7C4004ABC10 /* FFUIKitTests.xctest */;
+			name = "FFUIKit Tests";
+			productName = "FFUIKit Tests";
+			productReference = 07F830001DAA7F7600DBCBAA /* FFUIKit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -374,6 +375,7 @@
 		07A9C77E19E3C7C4004ABC10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Florian Friedrich";
 				TargetAttributes = {
@@ -383,8 +385,10 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
-					07A9C79119E3C7C4004ABC10 = {
-						CreatedOnToolsVersion = 6.0.1;
+					07F82FFF1DAA7F7600DBCBAA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8AVR59FNSV;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -407,7 +411,7 @@
 			projectRoot = "";
 			targets = (
 				07A9C78619E3C7C4004ABC10 /* FFUIKit */,
-				07A9C79119E3C7C4004ABC10 /* FFUIKitTests */,
+				07F82FFF1DAA7F7600DBCBAA /* FFUIKit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -451,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07A9C79019E3C7C4004ABC10 /* Resources */ = {
+		07F82FFE1DAA7F7600DBCBAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,16 +502,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07A9C78E19E3C7C4004ABC10 /* Sources */ = {
+		07F82FFC1DAA7F7600DBCBAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A9C7A919E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
-				07A9C79719E3C7C4004ABC10 /* FFUIKitTests.m in Sources */,
+				07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07F830071DAA7F7600DBCBAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A9C78619E3C7C4004ABC10 /* FFUIKit */;
+			targetProxy = 07F830061DAA7F7600DBCBAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		07A9C79819E3C7C4004ABC10 /* Debug */ = {
@@ -647,27 +658,41 @@
 			};
 			name = Release;
 		};
-		07A9C79E19E3C7C4004ABC10 /* Debug */ = {
+		07F830091DAA7F7600DBCBAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FFUIKitTests/Info.plist;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8AVR59FNSV;
+				INFOPLIST_FILE = "FFUIKit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.FFUIKit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		07A9C79F19E3C7C4004ABC10 /* Release */ = {
+		07F8300A1DAA7F7600DBCBAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FFUIKitTests/Info.plist;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8AVR59FNSV;
+				INFOPLIST_FILE = "FFUIKit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ffried.FFUIKit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -692,14 +717,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07A9C79D19E3C7C4004ABC10 /* Build configuration list for PBXNativeTarget "FFUIKitTests" */ = {
+		07F830081DAA7F7600DBCBAA /* Build configuration list for PBXNativeTarget "FFUIKit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07A9C79E19E3C7C4004ABC10 /* Debug */,
-				07A9C79F19E3C7C4004ABC10 /* Release */,
+				07F830091DAA7F7600DBCBAA /* Debug */,
+				07F8300A1DAA7F7600DBCBAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,15 +20,49 @@
                ReferencedContainer = "container:FFUIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07F82FFF1DAA7F7600DBCBAA"
+               BuildableName = "FFUIKit Tests.xctest"
+               BlueprintName = "FFUIKit Tests"
+               ReferencedContainer = "container:FFUIKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07F82FFF1DAA7F7600DBCBAA"
+               BuildableName = "FFUIKit Tests.xctest"
+               BlueprintName = "FFUIKit Tests"
+               ReferencedContainer = "container:FFUIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07A9C78619E3C7C4004ABC10"
+            BuildableName = "FFUIKit.framework"
+            BlueprintName = "FFUIKit"
+            ReferencedContainer = "container:FFUIKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
