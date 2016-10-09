@@ -724,6 +724,7 @@
 				07F8300A1DAA7F7600DBCBAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
