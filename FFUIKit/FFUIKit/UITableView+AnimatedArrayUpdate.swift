@@ -165,7 +165,7 @@ public extension UITableView {
     #endif
     
     #if swift(>=3)
-    public func update<T: Equatable>(from oldRows: [T] = [], to newRows: [T], in section: Int = 0, animated: Bool = true) {
+    public func update<T: Equatable>(from oldRows: [T] = [], to newRows: [T], in section: Int, animated: Bool = true) {
         let animation: UITableViewRowAnimation = (animated) ? .automatic : .none
         if oldRows.count <= 0 {
             let toAddIndexPaths = (0..<newRows.count).map { IndexPath(row: $0, section: section) }
