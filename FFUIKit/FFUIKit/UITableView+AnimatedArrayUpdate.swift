@@ -29,9 +29,9 @@ public protocol UITableViewSectionObject: Equatable {
     
     var rows: [UITableViewRowObject] { get }
     #if swift(>=3)
-    func needsReload<S: UITableViewSectionObject>(from sectionObject: S) -> Bool
+    func needsReload(from sectionObject: Self) -> Bool
     #else
-    func needsReloadFrom<S: UITableViewSectionObject>(sectionObject: S) -> Bool
+    func needsReloadFrom(sectionObject: Self) -> Bool
     #endif
 }
 
