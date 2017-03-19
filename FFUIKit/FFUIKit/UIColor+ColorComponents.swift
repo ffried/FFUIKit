@@ -18,21 +18,13 @@
 //  limitations under the License.
 //
 
-import UIKit
+import class UIKit.UIColor
 
 public extension UIColor {
-    
-    #if swift(>=3.0)
     private final func updated(components: ColorComponents) -> ColorComponents? {
         var comps = components
         return comps.update(from: self) ? comps : nil
     }
-    #else
-    private final func updated(components components: ColorComponents) -> ColorComponents? {
-        var comps = components
-        return comps.updateFromColor(self) ? comps : nil
-    }
-    #endif
     
     public final var rgbaComponents: ColorComponents? {
         return updated(components: ColorComponents.blackRGBA)
@@ -51,24 +43,13 @@ public extension UIColor {
     }
     
     public convenience init(components: ColorComponents) {
-        #if swift(>=3.0)
-            switch components {
-            case .rgba(let red, let green, let blue, let alpha):
-                self.init(red: red, green: green, blue: blue, alpha: alpha)
-            case .hsba(let hue, let saturation, let brightness, let alpha):
-                self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-            case .bwa(let white, let alpha):
-                self.init(white: white, alpha: alpha)
-            }
-        #else
-            switch components {
-            case .RGBA(let red, let green, let blue, let alpha):
-                self.init(red: red, green: green, blue: blue, alpha: alpha)
-            case .HSBA(let hue, let saturation, let brightness, let alpha):
-                self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-            case .BWA(let white, let alpha):
-                self.init(white: white, alpha: alpha)
-            }
-        #endif
+        switch components {
+        case .rgba(let red, let green, let blue, let alpha):
+            self.init(red: red, green: green, blue: blue, alpha: alpha)
+        case .hsba(let hue, let saturation, let brightness, let alpha):
+            self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+        case .bwa(let white, let alpha):
+            self.init(white: white, alpha: alpha)
+        }
     }
 }

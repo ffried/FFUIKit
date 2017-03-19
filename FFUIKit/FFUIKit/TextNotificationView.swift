@@ -17,12 +17,16 @@
 //  limitations under the License.
 //
 
-import UIKit
+import class Foundation.NSCoder
+import struct CoreGraphics.CGRect
+import class UIKit.UIView
+import class UIKit.UILabel
+import FFFoundation
 
 public final class TextNotificationView: UIView, NotificationViewType {
     public let textLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.enableAutoLayout()
         label.numberOfLines = 0
         return label
     }()
@@ -42,14 +46,10 @@ public final class TextNotificationView: UIView, NotificationViewType {
     }
     
     private final func initialize() {
-        translatesAutoresizingMaskIntoConstraints = false
+        enableAutoLayout()
         addSubview(textLabel)
         let views = ["label": textLabel]
-        #if swift(>=3.0)
-            ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraints(with: views).activate()
-        #else
-            ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraintsWithViews(views).activate()
-        #endif
+        ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraints(with: views).activate()
         layoutIfNeeded()
     }
 }

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FFUIKit.xcodeproj">
+      location = "self:/Users/florianfriedrich/Documents/Projects/FFUIKit/FFUIKit/FFUIKit.xcodeproj">
    </FileRef>
 </Workspace>

@@ -28,5 +28,5 @@ public protocol InformedNotificationViewType: NotificationViewType {
     func willDisappear(animated: Bool)
     func didDisappear(animated: Bool)
     
-    func didReceiveTouch(sender: AnyObject?)
+    func didReceiveTouch(sender: Any?)
 }
