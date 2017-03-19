@@ -18,44 +18,38 @@
 //  limitations under the License.
 //
 
-import UIKit
+import enum CoreGraphics.CGImageAlphaInfo
+import struct CoreGraphics.CGPoint
+import struct CoreGraphics.CGRect
+import class UIKit.UIImage
+import class UIKit.UIGraphicsImageRenderer
+import class UIKit.UIGraphicsImageRendererFormat
+
+// Pre iOS 10
+import func UIKit.UIGraphicsBeginImageContextWithOptions
+import func UIKit.UIGraphicsEndImageContext
+import func UIKit.UIGraphicsGetImageFromCurrentImageContext
 
 public extension UIImage {
     public final var hasAlpha: Bool {
-        #if swift(>=3.0)
-            let alpha = cgImage?.alphaInfo
-            let allowedValues: [CGImageAlphaInfo] = [.first, .last, .premultipliedFirst, .premultipliedLast]
-            return alpha.map { allowedValues.contains($0) } ?? false
-        #else
-            let alpha = CGImageGetAlphaInfo(CGImage)
-            let allowedValues: [CGImageAlphaInfo] = [.First, .Last, .PremultipliedFirst, .PremultipliedLast]
-            return allowedValues.contains(alpha)
-        #endif
+        let alpha = cgImage?.alphaInfo
+        let allowedValues: [CGImageAlphaInfo] = [.first, .last, .premultipliedFirst, .premultipliedLast]
+        return alpha.map { allowedValues.contains($0) } ?? false
     }
     
     public final var normalizedImage: UIImage {
-        #if swift(>=3.0)
-            guard imageOrientation != .up else { return self }
-            if #available(iOS 10, *) {
-                let format = UIGraphicsImageRendererFormat.default()
-                format.opaque = !hasAlpha
-                format.scale = scale
-                let renderer = UIGraphicsImageRenderer(size: size, format: format)
-                return renderer.image { _ in
-                    draw(in: CGRect(origin: CGPoint.zero, size: size))
-                }
-            } else {
-                UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-                defer { UIGraphicsEndImageContext() }
-                draw(in: CGRect(origin: CGPoint.zero, size: size))
-                return UIGraphicsGetImageFromCurrentImageContext() ?? self
-            }
-        #else
-            guard imageOrientation != .Up else { return self }
+        guard imageOrientation != .up else { return self }
+        if #available(iOS 10, *) {
+            let format = UIGraphicsImageRendererFormat.default()
+            format.opaque = !hasAlpha
+            format.scale = scale
+            let renderer = UIGraphicsImageRenderer(size: size, format: format)
+            return renderer.image { _ in draw(in: CGRect(origin: .zero, size: size)) }
+        } else {
             UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
             defer { UIGraphicsEndImageContext() }
-            drawInRect(CGRect(origin: CGPointZero, size: size))
-            return UIGraphicsGetImageFromCurrentImageContext()
-        #endif
+            draw(in: CGRect(origin: .zero, size: size))
+            return UIGraphicsGetImageFromCurrentImageContext() ?? self
+        }
     }
 }

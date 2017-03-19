@@ -18,56 +18,43 @@
 //  limitations under the License.
 //
 
-import UIKit
+import struct Foundation.IndexPath
+import enum UIKit.UIStatusBarStyle
+import enum UIKit.UITableViewCellAccessoryType
+import class UIKit.UIColor
+import class UIKit.UIView
+import class UIKit.UITableViewCell
+import class UIKit.UITableView
+import class UIKit.UITableViewController
 
 public class LicensesTableViewController: UITableViewController {
     
     private let LicenseCellReuseIdentifier = "LicenseCell"
     
-    #if swift(>=3)
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         get { return _preferredStatusBarStyle }
         set { _preferredStatusBarStyle = newValue }
     }
-    #else
-    private var _preferredStatusBarStyle: UIStatusBarStyle = .Default
-    public func setPreferredStatusBarStyle(style: UIStatusBarStyle) {
-        _preferredStatusBarStyle = style
-    }
-    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return _preferredStatusBarStyle
-    }
-    #endif
+    
     public var cellBackgroundColor: UIColor? = nil
     
     public var licenses: [License] = [] {
         didSet {
-            #if swift(>=3)
-                guard isViewLoaded else { return }
-                tableView?.update(from: oldValue, to: licenses, in: 0, animated: true)
-            #else
-                guard isViewLoaded() else { return }
-                tableView?.updateFromRows(oldValue, toRows: licenses, inSection: 0, animated: true)
-            #endif
+            guard isViewLoaded else { return }
+            tableView?.update(from: oldValue, to: licenses, in: 0, animated: true)
         }
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("Licenses", comment: NSStringFromClass(LicensesTableViewController.self))
+        title = NSLocalizedString("Licenses", comment: String(describing: LicensesTableViewController.self))
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        #if swift(>=3)
-            tableView.tableFooterView?.backgroundColor = .clear
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: LicenseCellReuseIdentifier)
-        #else
-            tableView.tableFooterView?.backgroundColor = UIColor.clearColor()
-            tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: LicenseCellReuseIdentifier)
-        #endif
+        tableView.tableFooterView?.backgroundColor = .clear
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: LicenseCellReuseIdentifier)
         tableView.reloadData()
     }
     
-    #if swift(>=3)
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         assert(navigationController != nil, "LicenseViewController is not within a UINavigationController! Trouble ahead!")
@@ -77,20 +64,8 @@ public class LicensesTableViewController: UITableViewController {
             }
         }
     }
-    #else
-    override public func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        assert(navigationController != nil, "LicenseViewController is not within a UINavigationController! Trouble ahead!")
-        if clearsSelectionOnViewWillAppear {
-            if let ip = tableView.indexPathForSelectedRow {
-                tableView.deselectRowAtIndexPath(ip, animated: animated)
-            }
-        }
-    }
-    #endif
     
     // MARK: - Table view data source
-    #if swift(>=3)
     public override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
@@ -113,39 +88,7 @@ public class LicensesTableViewController: UITableViewController {
         let detailVC = LicenseDetailViewController()
         detailVC.license = licenses[indexPath.row]
         detailVC.view.backgroundColor = view.backgroundColor
-        #if swift(>=3.0)
-            detailVC.preferredStatusBarStyle = preferredStatusBarStyle
-        #else
-            detailVC.setPreferredStatusBarStyle(style: preferredStatusBarStyle())
-        #endif
+        detailVC.preferredStatusBarStyle = preferredStatusBarStyle
         navigationController!.pushViewController(detailVC, animated: true)
     }
-    #else
-    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
-        return 1
-    }
-
-    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
-        return licenses.count
-    }
-
-    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(LicenseCellReuseIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = cellBackgroundColor
-        cell.accessoryType = .DisclosureIndicator
-        cell.textLabel?.text = licenses[indexPath.row].title
-        return cell
-    }
-    
-    // MARK: - Table view delegate
-    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let detailVC = LicenseDetailViewController()
-        detailVC.license = licenses[indexPath.row]
-        detailVC.view.backgroundColor = self.view.backgroundColor
-        detailVC.setPreferredStatusBarStyle(preferredStatusBarStyle())
-        navigationController!.pushViewController(detailVC, animated: true)
-    }
-    #endif
 }

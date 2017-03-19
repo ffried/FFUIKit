@@ -18,27 +18,20 @@
 //  limitations under the License.
 //
 
-import UIKit
+import struct CoreGraphics.CGSize
+import struct UIKit.UIEdgeInsets
+import class UIKit.UILabel
 
 @IBDesignable
 public class Label: UILabel {
     @IBInspectable public var edgeInsets = UIEdgeInsets() {
         didSet { invalidateIntrinsicContentSize() }
     }
-    
-    #if swift(>=3.0)
+
     public override var intrinsicContentSize: CGSize {
         var size = super.intrinsicContentSize
         size.width += edgeInsets.left + edgeInsets.right
         size.height += edgeInsets.top + edgeInsets.bottom
         return size
     }
-    #else
-    public override func intrinsicContentSize() -> CGSize {
-        var size = super.intrinsicContentSize()
-        size.width += edgeInsets.left + edgeInsets.right
-        size.height += edgeInsets.top + edgeInsets.bottom
-        return size
-    }
-    #endif
 }

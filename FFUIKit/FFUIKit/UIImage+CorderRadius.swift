@@ -21,41 +21,26 @@
 import UIKit
 
 public extension UIImage {
-    #if swift(>=3)
     public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage? {
+        let image: UIImage?
         if #available(iOS 10, *) {
+            // TODO: Use new renderer
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
-            let rect = CGRect(origin: CGPoint.zero, size: size)
+            let rect = CGRect(origin: .zero, size: size)
             UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
             draw(in: rect)
-            return UIGraphicsGetImageFromCurrentImageContext()?
-                .resizableImage(withCapInsets: UIEdgeInsets(
-                    horizontal: cornerRadius,
-                    vertical: 0))
+            image = UIGraphicsGetImageFromCurrentImageContext()
         } else {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
-            let rect = CGRect(origin: CGPoint.zero, size: size)
+            let rect = CGRect(origin: .zero, size: size)
             UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
             draw(in: rect)
-            return UIGraphicsGetImageFromCurrentImageContext()?
-                .resizableImage(withCapInsets: UIEdgeInsets(
-                    horizontal: cornerRadius,
-                    vertical: 0))
+            image = UIGraphicsGetImageFromCurrentImageContext()
         }
+        return image?.resizableImage(withCapInsets: UIEdgeInsets(
+            horizontal: cornerRadius,
+            vertical: 0))
     }
-    #else
-    public final func imageByRoundingCornersTo(cornerRadius: CGFloat) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        let rect = CGRect(origin: CGPoint.zero, size: size)
-        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-        drawInRect(rect)
-        return UIGraphicsGetImageFromCurrentImageContext()
-            .resizableImageWithCapInsets(UIEdgeInsets(
-                horizontal: cornerRadius,
-                vertical: 0))
-    }
-    #endif
 }

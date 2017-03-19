@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-import UIKit
-import CoreGraphics
+import struct CoreGraphics.CGFloat
+import struct UIKit.UIEdgeInsets
 
 public extension UIEdgeInsets {
     public init(value: CGFloat) {

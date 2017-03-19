@@ -18,7 +18,9 @@
 //  limitations under the License.
 //
 
-import UIKit
+import struct UIKit.UIEdgeInsets
+import class UIKit.NSLayoutConstraint
+import class UIKit.UIView
 import FFFoundation
 
 extension UIView {
@@ -37,7 +39,6 @@ extension UIView {
         }
     }
     
-    #if swift(>=3)
     @discardableResult
     public final func setupFullscreen(in view: UIView, with insets: UIEdgeInsets = UIEdgeInsets(), prepare constraintPreparations: ((NSLayoutConstraint) -> Void)? = nil) -> [NSLayoutConstraint] {
         enableAutoLayout()
@@ -55,23 +56,4 @@ extension UIView {
         constraints.activate()
         return constraints
     }
-    #else
-    public final func setupFullscreenInView(view: UIView, withInsets insets: UIEdgeInsets = UIEdgeInsets(), constraintPreparations: ((NSLayoutConstraint) -> Void)? = nil) -> [NSLayoutConstraint] {
-        enableAutoLayout()
-        if superview != view {
-            if superview != nil {
-                removeFromSuperview()
-            }
-            view.addSubview(self)
-        }
-        let formats = [
-            "H:|-(==left)-[view]-(==right)-|",
-            "V:|-(==top)-[view]-(==bottom)-|"
-        ]
-        let constraints = formats.constraintsWithViews(["view": self], metrics: insets.asMetrics)
-        if let preps = constraintPreparations { constraints.forEach(preps) }
-        constraints.activate()
-        return constraints
-    }
-    #endif
 }

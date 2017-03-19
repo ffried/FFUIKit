@@ -17,14 +17,13 @@
 //  limitations under the License.
 //
 
-import UIKit
+import struct CoreGraphics.CGRect
+import class UIKit.UIPresentationController
 
 internal final class NotificationPresentationController: UIPresentationController {
-
-    #if swift(>=3.0)
     internal override var frameOfPresentedViewInContainerView: CGRect {
         presentedView?.layoutIfNeeded()
-        return presentedView?.bounds ?? CGRect.zero
+        return presentedView?.bounds ?? .zero
     }
     
     internal override var shouldPresentInFullscreen: Bool {
@@ -34,18 +33,4 @@ internal final class NotificationPresentationController: UIPresentationControlle
     internal override var shouldRemovePresentersView: Bool {
         return false
     }
-    #else
-    internal override func frameOfPresentedViewInContainerView() -> CGRect {
-        presentedView()?.layoutIfNeeded()
-        return presentedView()?.bounds ?? CGRect.zero
-    }
-    
-    internal override func shouldPresentInFullscreen() -> Bool {
-        return false
-    }
-    
-    internal override func shouldRemovePresentersView() -> Bool {
-        return false
-    }
-    #endif
 }

@@ -18,8 +18,13 @@
 //  limitations under the License.
 //
 
-import UIKit
-import FFFoundation
+import class UIKit.UIView
+import class UIKit.UIResponder
+//import class UIKit.UIViewController
+//import class UIKit.UITabBarController
+//import class UIKit.UINavigationController
+//import class UIKit.UIPageViewController
+//import FFFoundation
 
 // Waiting for https://bugs.swift.org/browse/SR-1226
 //@available(iOSApplicationExtension, unavailable)
@@ -27,64 +32,35 @@ import FFFoundation
 //@available(tvOSApplicationExtension, unavailable)
 //public func findFirstResponder() -> UIResponder? {
 //    var firstResponder: UIResponder? = nil
-//    #if swift(>=3)
 //    if let window = Application.shared.delegate?.window, let view = window {
 //        firstResponder = findFirstResponder(in: view)
 //    }
-//    #else
-//    if let window = Application.sharedApplication().delegate?.window, let view = window {
-//        firstResponder = findFirstResponderInView(view)
-//    }
-//    #endif
 //    return firstResponder
 //}
 
-#if swift(>=3)
-    public func findFirstResponder(in view: UIView) -> UIResponder? {
-        var firstResponder: UIResponder? = nil
-        if view.isFirstResponder {
-            firstResponder = view
-        } else {
-            for subview in view.subviews where firstResponder == nil {
-                if subview.isFirstResponder {
-                    firstResponder = subview
-                } else {
-                    firstResponder = findFirstResponder(in: subview)
-                }
+public func findFirstResponder(in view: UIView) -> UIResponder? {
+    var firstResponder: UIResponder? = nil
+    if view.isFirstResponder {
+        firstResponder = view
+    } else {
+        for subview in view.subviews where firstResponder == nil {
+            if subview.isFirstResponder {
+                firstResponder = subview
+            } else {
+                firstResponder = findFirstResponder(in: subview)
             }
         }
-        return firstResponder
     }
-#else
-    public func findFirstResponderInView(view: UIView) -> UIResponder? {
-        var firstResponder: UIResponder? = nil
-        if view.isFirstResponder() {
-            firstResponder = view
-        } else {
-            for subview in view.subviews {
-                if subview.isFirstResponder() {
-                    firstResponder = subview
-                    break
-                } else {
-                    firstResponder = findFirstResponderInView(subview)
-                    if firstResponder != nil { break }
-                }
-            }
-        }
-        return firstResponder
-    }
-#endif
+    return firstResponder
+}
 
+// Waiting for https://bugs.swift.org/browse/SR-1226
 //@available(iOSApplicationExtension, unavailable)
 //@available(watchOSApplicationExtension, unavailable)
 //@available(tvOSApplicationExtension, unavailable)
 //internal func findForemostViewController() -> UIViewController? {
 //    var viewController: UIViewController? = nil
-//    #if swift(>=3.0)
-//        let rootVC = Application.shared.delegate?.window??.rootViewController
-//    #else
-//        let rootVC = Application.sharedApplication().delegate?.window??.rootViewController
-//    #endif
+//    let rootVC = Application.shared.delegate?.window??.rootViewController
 //    if let vc = rootVC {
 //        if let navController = vc as? UINavigationController {
 //            viewController = navController.viewControllers.last
