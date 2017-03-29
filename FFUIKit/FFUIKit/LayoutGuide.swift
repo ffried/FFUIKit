@@ -18,16 +18,10 @@
 //  limitations under the License.
 //
 
+import class Foundation.NSObject
 import UIKit
 
-#if swift(>=3)
-    @available(iOS, introduced: 7.0)
-    public extension LayoutGuide {}
-#else
-    @available(iOS, introduced=7.0)
-    public extension LayoutGuide {}
-#endif
-    
+@available(iOS, introduced: 7.0)
 public final class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
     

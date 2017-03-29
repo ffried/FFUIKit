@@ -18,17 +18,31 @@
 //  limitations under the License.
 //
 
-import UIKit
-import ObjectiveC
-import FFFoundation
+import enum ObjectiveC.objc_AssociationPolicy
+import func ObjectiveC.objc_getAssociatedObject
+import func ObjectiveC.objc_setAssociatedObject
+import struct CoreGraphics.CGFloat
+import struct CoreGraphics.CGSize
+import struct CoreGraphics.CGPoint
+import struct CoreGraphics.CGRect
+import typealias Foundation.TimeInterval
+import class Foundation.OperationQueue
+import struct Foundation.Notification
+import class Foundation.NotificationCenter
+import class Foundation.NSValue
+import class FFFoundation.NotificationObserver
+import struct UIKit.UIEdgeInsets
+import enum UIKit.UIViewAnimationCurve
+import struct UIKit.UIViewAnimationOptions
+import class UIKit.UIView
+import class UIKit.UIScrollView
+import let UIKit.UIKeyboardFrameBeginUserInfoKey
+import let UIKit.UIKeyboardFrameEndUserInfoKey
 
 private var _UIScrollViewKeyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 public extension UIScrollView {
-    #if swift(>=3.0)
-    private typealias UserInfoDictionary = [AnyHashable: AnyObject]
-    #else
-    private typealias UserInfoDictionary = [String: AnyObject]
-    #endif
+    private typealias UserInfoDictionary = [AnyHashable: Any]
+    
     private final var notificationObservers: [NotificationObserver] {
         get {
             guard let observers = objc_getAssociatedObject(self, &_UIScrollViewKeyboardNotificationObserversKey) as? [NotificationObserver] else {
@@ -42,77 +56,35 @@ public extension UIScrollView {
     
     // MARK: Register / Unregister
     public final func registerForKeyboardNotifications() {
-        #if swift(>=3.0)
-            func block(for selector: @escaping (UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
-                return { note in if let userInfo = note.userInfo as? UserInfoDictionary { selector(userInfo) } }
-            }
+        func block(for selector: @escaping (UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
+            return { $0.userInfo.map(selector) }
+        }
         
-            let center = NotificationCenter.default
-            let queue = OperationQueue.main
-            let tuples = [
-                (NSNotification.Name.UIKeyboardWillChangeFrame, block(for: keyboardWillChangeFrame)),
-                (NSNotification.Name.UIKeyboardWillShow, block(for: keyboardWillShow)),
-                (NSNotification.Name.UIKeyboardDidHide, block(for: keyboardDidHide))
-            ]
-        #else
-            func blockForFunc(selector: (userInfo: UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
-                return { note in if let userInfo = note.userInfo as? UserInfoDictionary { selector(userInfo: userInfo) } }
-            }
-            
-            let center = NSNotificationCenter.defaultCenter()
-            let queue = NSOperationQueue.mainQueue()
-            let tuples = [
-                (UIKeyboardWillChangeFrameNotification, blockForFunc(keyboardWillChangeFrame)),
-                (UIKeyboardWillShowNotification, blockForFunc(keyboardWillShow)),
-                (UIKeyboardDidHideNotification, blockForFunc(keyboardDidHide))
-            ]
-        #endif
+        let tuples: [(Notification.Name, NotificationObserver.ObserverBlock)] = [
+            (.UIKeyboardWillChangeFrame, block(for: keyboardWillChangeFrame)),
+            (.UIKeyboardWillShow, block(for: keyboardWillShow)),
+            (.UIKeyboardDidHide, block(for: keyboardDidHide))
+        ]
         
-        for (name, block) in tuples {
-            notificationObservers.append(NotificationObserver(center: center, name: name, queue: queue, object: nil, block: block))
+        notificationObservers = tuples.map {
+            NotificationObserver(center: .default, name: $0, queue: .main, object: nil, block: $1)
         }
     }
     
-    #if swift(>=3.0)
-    @available(*, deprecated, message: "Use unregisterFromKeyboardNotifications.", renamed: "unregisterFromKeyboardNotifications")
-    public final func unregisterForKeyboardNotifications() {
-        unregisterFromKeyboardNotifications()
-    }
-    #else
-    @available(*, deprecated, message="Use unregisterFromKeyboardNotifications.", renamed="unregisterFromKeyboardNotifications")
-    public final func unregisterForKeyboardNotifications() {
-        unregisterFromKeyboardNotifications()
-    }
-    #endif
-    
     public final func unregisterFromKeyboardNotifications() {
-        #if swift(>=3.0)
-            notificationObservers.removeAll(keepingCapacity: false)
-        #else
-            notificationObservers.removeAll(keepCapacity: false)
-        #endif
+        notificationObservers.removeAll(keepingCapacity: false)
     }
     
     // MARK: Keyboard functions
     private final func keyboardWillChangeFrame(userInfo: UserInfoDictionary) {
         if keyboardVisible {
-            #if swift(>=3.0)
-                let beginFrame = rect(for: UIKeyboardFrameBeginUserInfoKey, in: userInfo)
-                let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
-                let oldHeight = keyboardHeight(from: beginFrame)
-                let newHeight = keyboardHeight(from: endFrame)
-                if newHeight != oldHeight {
-                    setInsetsTo(keyboardHeight: newHeight, animated: true, withKeyboardUserInfo: userInfo)
-                }
-            #else
-                let beginFrame = rectForKey(UIKeyboardFrameBeginUserInfoKey, inUserInfo: userInfo)
-                let endFrame = rectForKey(UIKeyboardFrameEndUserInfoKey, inUserInfo: userInfo)
-                let oldHeight = keyboardHeightFromRect(beginFrame)
-                let newHeight = keyboardHeightFromRect(endFrame)
-                if newHeight != oldHeight {
-                    setInsetsToKeyboardHeight(newHeight, animated: true, withKeyboardUserInfo: userInfo)
-                }
-            #endif
+            let beginFrame = rect(for: UIKeyboardFrameBeginUserInfoKey, in: userInfo)
+            let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
+            let oldHeight = keyboardHeight(from: beginFrame)
+            let newHeight = keyboardHeight(from: endFrame)
+            if newHeight != oldHeight {
+                setInsetsTo(keyboardHeight: newHeight, animated: true, withKeyboardUserInfo: userInfo)
+            }
         }
     }
     
@@ -120,15 +92,9 @@ public extension UIScrollView {
         if !keyboardVisible {
             saveEdgeInsets()
             keyboardVisible = true
-            #if swift(>=3.0)
-                let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
-                let endHeight = keyboardHeight(from: endFrame)
-                setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
-            #else
-                let endFrame = rectForKey(UIKeyboardFrameEndUserInfoKey, inUserInfo: userInfo)
-                let endHeight = keyboardHeightFromRect(endFrame)
-                setInsetsToKeyboardHeight(endHeight, animated: true, withKeyboardUserInfo: userInfo)
-            #endif
+            let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
+            let endHeight = keyboardHeight(from: endFrame)
+            setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
         }
     }
     
@@ -140,7 +106,6 @@ public extension UIScrollView {
     }
     
     // MARK: Height Adjustments
-    #if swift(>=3.0)
     private final func setInsetsTo(keyboardHeight height: CGFloat, animated: Bool = false, withKeyboardUserInfo userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
             var insets: UIEdgeInsets
@@ -166,33 +131,6 @@ public extension UIScrollView {
             offsetChanges()
         }
     }
-    #else
-    private final func setInsetsToKeyboardHeight(height: CGFloat, animated: Bool = false, withKeyboardUserInfo userInfo: UserInfoDictionary? = nil) {
-        let changes: () -> () = {
-            var insets: UIEdgeInsets
-            
-            insets = self.contentInset
-            insets.bottom = height
-            self.contentInset = insets
-            
-            insets = self.scrollIndicatorInsets
-            insets.bottom = height
-            self.scrollIndicatorInsets = insets
-        }
-        let offsetChanges: () -> () = {
-            if let fr = findFirstResponderInView(self) as? UIView {
-                let respFrame = self.convertRect(fr.frame, fromView: fr.superview)
-                self.scrollRectToVisible(respFrame, animated: animated)
-            }
-        }
-        if animated {
-            animate(changes, withKeyboardUserInfo: userInfo) { (finished) in offsetChanges() }
-        } else {
-            changes()
-            offsetChanges()
-        }
-    }
-    #endif
     
     // MARK: EdgeInsets
     private final func saveEdgeInsets() {
@@ -200,7 +138,6 @@ public extension UIScrollView {
         originalScrollIndicatorInsets = scrollIndicatorInsets
     }
     
-    #if swift(>=3.0)
     private final func restoreEdgeInsets(animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
             self.contentInset = self.originalContentInsets
@@ -212,24 +149,10 @@ public extension UIScrollView {
             changes()
         }
     }
-    #else
-    private final func restoreEdgeInsets(animated animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
-        let changes: () -> () = {
-            self.contentInset = self.originalContentInsets
-            self.scrollIndicatorInsets = self.originalScrollIndicatorInsets
-        }
-        if animated {
-            animate(changes, withKeyboardUserInfo: userInfo, completion: nil)
-        } else {
-            changes()
-        }
-    }
-    #endif
     
     // MARK: Helpers
-    #if swift(>=3.0)
     private final func rect(for key: String, in userInfo: UserInfoDictionary) -> CGRect {
-        return (userInfo[key] as? NSValue)?.cgRectValue ?? CGRect.zero
+        return (userInfo[key] as? NSValue)?.cgRectValue ?? .zero
     }
     
     private final func keyboardHeight(from rect: CGRect) -> CGFloat {
@@ -256,42 +179,11 @@ public extension UIScrollView {
             animations()
             }, completion: completion)
     }
-    #else
-    private final func rectForKey(key: String, inUserInfo userInfo: UserInfoDictionary) -> CGRect {
-        return (userInfo[key] as? NSValue)?.CGRectValue() ?? CGRectZero
-    }
-
-    private final func keyboardHeightFromRect(rect: CGRect) -> CGFloat {
-        var height: CGFloat = 0.0
-        if let w = window {
-            let windowFrame = w.convertRect(bounds, fromView: self)
-            let keyboardFrame = CGRectIntersection(windowFrame, rect)
-            let coveredFrame = w.convertRect(keyboardFrame, toView: self)
-            height = coveredFrame.size.height
-        }
-        return height
-    }
-    
-    private final func animate(animations: () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((finished: Bool) -> ())? = nil) {
-        var duration: NSTimeInterval = 1.0/3.0
-        var curve: UIViewAnimationCurve = .Linear
-        let options: UIViewAnimationOptions = [.BeginFromCurrentState, .AllowAnimatedContent, .AllowUserInteraction]
-        if let info = userInfo {
-            if let d = info[UIKeyboardAnimationDurationUserInfoKey] as? NSTimeInterval { duration = d }
-            if let c = UIViewAnimationCurve(rawValue: (info[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
-        }
-        UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: {
-            UIView.setAnimationCurve(curve)
-            animations()
-        }, completion: completion)
-    }
-    #endif
 }
 
 private var _UIScrollViewOriginalContentInsetsKey = "OriginalContentInsets"
 private var _UIScrollViewOriginalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
 private var _UIScrollViewKeyboardVisibleKey = "KeyboardVisible"
-#if swift(>=3.0)
 fileprivate extension UIScrollView {
     fileprivate final var originalContentInsets: UIEdgeInsets {
         get {
@@ -320,33 +212,3 @@ fileprivate extension UIScrollView {
         }
     }
 }
-#else
-private extension UIScrollView {
-    private final var originalContentInsets: UIEdgeInsets {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
-    private final var originalScrollIndicatorInsets: UIEdgeInsets {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.UIEdgeInsetsValue() ?? UIEdgeInsetsZero
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(UIEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
-    private final var keyboardVisible: Bool {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey) as? Bool) ?? false
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
-        }
-    }
-}
-#endif
