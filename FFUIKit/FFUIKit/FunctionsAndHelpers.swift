@@ -26,32 +26,9 @@ import class UIKit.UIResponder
 //import class UIKit.UIPageViewController
 //import FFFoundation
 
-// Waiting for https://bugs.swift.org/browse/SR-1226
-//@available(iOSApplicationExtension, unavailable)
-//@available(watchOSApplicationExtension, unavailable)
-//@available(tvOSApplicationExtension, unavailable)
-//public func findFirstResponder() -> UIResponder? {
-//    var firstResponder: UIResponder? = nil
-//    if let window = Application.shared.delegate?.window, let view = window {
-//        firstResponder = findFirstResponder(in: view)
-//    }
-//    return firstResponder
-//}
-
+@available(*, deprecated: 2.0, message: "Use UIResponder.firstResponder(in:)", renamed: "UIResponder.firstResponder(in:)")
 public func findFirstResponder(in view: UIView) -> UIResponder? {
-    var firstResponder: UIResponder? = nil
-    if view.isFirstResponder {
-        firstResponder = view
-    } else {
-        for subview in view.subviews where firstResponder == nil {
-            if subview.isFirstResponder {
-                firstResponder = subview
-            } else {
-                firstResponder = findFirstResponder(in: subview)
-            }
-        }
-    }
-    return firstResponder
+    return .firstResponder(in: view)
 }
 
 // Waiting for https://bugs.swift.org/browse/SR-1226

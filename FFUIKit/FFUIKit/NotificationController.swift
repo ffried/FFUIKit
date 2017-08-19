@@ -30,12 +30,17 @@ import class UIKit.UIViewController
 import class UIKit.UIPresentationController
 import typealias FFFoundation.AnyTimer
 
-public enum NotificationAutoDismissType {
-    case none
-    case afterDuration(TimeInterval)
+fileprivate protocol NotificationControllerProtocol: class {
+    func dismissNotification(animated: Bool, completion: (() -> ())?)
 }
 
-public final class NotificationController<NotificationView: NotificationViewType>: UIViewController, UIViewControllerTransitioningDelegate where NotificationView: UIView {
+public final class NotificationController<NotificationView: NotificationViewType>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol where NotificationView: UIView {
+    
+    public enum AutoDismissType {
+        case none
+        case afterDuration(TimeInterval)
+    }
+    
     public typealias `Type` = NotificationType<NotificationView>
     
     public let notificationView: NotificationView = NotificationView()
@@ -61,7 +66,7 @@ public final class NotificationController<NotificationView: NotificationViewType
         set { tapGestureRecognizer.isEnabled = newValue }
     }
     
-    public let autoDismissType: NotificationAutoDismissType
+    public let autoDismissType: AutoDismissType
     private lazy var timer: AnyTimer? = {
         switch self.autoDismissType {
         case .none:
@@ -76,7 +81,7 @@ public final class NotificationController<NotificationView: NotificationViewType
     }()
     
     // MARK: - Initalizer
-    public init(type: Type = .default, autoDismissType: NotificationAutoDismissType = .none) {
+    public init(type: Type = .default, autoDismissType: AutoDismissType = .none) {
         notificationType = type
         self.autoDismissType = autoDismissType
         super.init(nibName: nil, bundle: nil)
@@ -142,7 +147,8 @@ public final class NotificationController<NotificationView: NotificationViewType
         let presentationBlock = {
             source.present(self, animated: animated, completion: completion)
         }
-        if let note = source.presentedViewController as? NotificationController {
+        // We need to cast to the protocol instead of the class, because a different NotificationView could be used.
+        if let note = source.presentedViewController as? NotificationControllerProtocol {
             note.dismissNotification(animated: animated, completion: presentationBlock)
         } else {
             presentationBlock()
@@ -154,17 +160,18 @@ public final class NotificationController<NotificationView: NotificationViewType
     
     public override var transitioningDelegate: UIViewControllerTransitioningDelegate? {
         get { return self }
-        set {}
+        set { /* NoOp */ }
     }
     
     public override var modalPresentationStyle: UIModalPresentationStyle {
         get { return .custom }
-        set {}
+        set { /* NoOp */ }
     }
     
     @objc(animationControllerForPresentedController:presentingController:sourceController:)
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if presented is NotificationController {
+        // TODO: Can this be replaced with `presented === self`?
+        if presented is NotificationControllerProtocol {
             return animationController
         }
         return nil
@@ -172,7 +179,8 @@ public final class NotificationController<NotificationView: NotificationViewType
     
     @objc(animationControllerForDismissedController:)
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if dismissed is NotificationController {
+        // TODO: Can this be replaced with `dismissed === self`?
+        if dismissed is NotificationControllerProtocol {
             return animationController
         }
         return nil
@@ -180,7 +188,8 @@ public final class NotificationController<NotificationView: NotificationViewType
     
     @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        if presented is NotificationController {
+        // TODO: Can this be replaced with `presented === self`?
+        if presented is NotificationControllerProtocol {
             return NotificationPresentationController(presentedViewController: presented, presenting:  presenting)
         }
         return nil

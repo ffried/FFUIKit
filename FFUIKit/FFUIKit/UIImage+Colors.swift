@@ -88,7 +88,7 @@ public extension UIImage {
     
     public final func imageTinted(with color: UIColor) -> UIImage? {
         func draw(cgImage: CGImage, with rect: CGRect, in context: CGContext) {
-            // translate/flip the graphics context (for transforming from CG* coords to UI* coords)
+            // translate/flip the graphics context (for transforming from CG* coords to UI* coordinates)
             context.translateBy(x: 0.0, y: -1.0)
             context.scaleBy(x: 1.0, y: -1.0)
             

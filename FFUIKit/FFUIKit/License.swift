@@ -46,7 +46,7 @@ public struct License: Hashable {
         self.init(title: title, licenseFilePath: u)
     }
     
-    private mutating func readContents() -> NSAttributedString? {
+    private func readContents() -> NSAttributedString? {
         let content: NSAttributedString?
         do {
             if #available(iOS 9.0, *) {

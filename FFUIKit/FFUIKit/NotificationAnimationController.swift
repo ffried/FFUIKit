@@ -49,8 +49,8 @@ internal final class NotificationAnimationController: NSObject, UIViewController
     
     @objc(animateTransition:)
     internal func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
-            let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
+        guard let fromVC = transitionContext.viewController(forKey: .from),
+            let toVC = transitionContext.viewController(forKey: .to)
             else { return }
         
         let presenting = toVC.isBeingPresented
