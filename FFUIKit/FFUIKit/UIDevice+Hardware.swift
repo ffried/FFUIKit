@@ -90,6 +90,12 @@ fileprivate extension UIDevice {
         "iPad6,4"   : "iPad Pro (9.7\") (Cellular)",
         "iPad6,7"   : "iPad Pro (12.9\") (WiFi)",
         "iPad6,8"   : "iPad Pro (12.9\") (Cellular)",
+        "iPad6,11"  : "iPad (9.7\" 5th Gen) (WiFi)",
+        "iPad6,12"  : "iPad (9.7\" 5th Gen) (Cellular)",
+        "iPad7,1"   : "iPad Pro 2nd Gen (12.9\") (WiFi)",
+        "iPad7,2"   : "iPad Pro 2nd Gen (12.9\") (Cellular)",
+        "iPad7,3"   : "iPad Pro (10.5\") (WiFi)",
+        "iPad7,4"   : "iPad Pro (10.5\") (Cellular)",
         
         "AppleTV2,1": "Apple TV 2G",
         "AppleTV3,1": "Apple TV 3G",
