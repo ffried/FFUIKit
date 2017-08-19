@@ -66,9 +66,7 @@ public extension UIScrollView {
             (.UIKeyboardDidHide, block(for: keyboardDidHide))
         ]
         
-        notificationObservers = tuples.map {
-            NotificationObserver(center: .default, name: $0, queue: .main, object: nil, block: $1)
-        }
+        notificationObservers = tuples.map { .init(center: .default, name: $0, queue: .main, object: nil, block: $1) }
     }
     
     public final func unregisterFromKeyboardNotifications() {
@@ -119,7 +117,7 @@ public extension UIScrollView {
             self.scrollIndicatorInsets = insets
         }
         let offsetChanges: () -> () = {
-            if let fr = findFirstResponder(in: self) as? UIView {
+            if let fr = UIResponder.firstResponder(in: self) as? UIView {
                 let respFrame = self.convert(fr.frame, from: fr.superview)
                 self.scrollRectToVisible(respFrame, animated: animated)
             }
