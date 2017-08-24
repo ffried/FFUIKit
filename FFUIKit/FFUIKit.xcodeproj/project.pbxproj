@@ -36,6 +36,7 @@
 		07E87EE61C7D8ACB00D88243 /* UIColor+ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE51C7D8ACB00D88243 /* UIColor+ColorComponents.swift */; };
 		07E87EE81C7D8B4500D88243 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE71C7D8B4500D88243 /* ColorComponents.swift */; };
 		07E930891C96AC85008D1CE3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E930881C96AC85008D1CE3 /* NotificationType.swift */; };
+		07F0EEF31F4E9AE90034812E /* UIResponder+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0EEF21F4E9AE90034812E /* UIResponder+FirstResponder.swift */; };
 		07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */; };
 		07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */; };
 		07F830051DAA7F7600DBCBAA /* FFUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */; };
@@ -98,6 +99,7 @@
 		07E87EE51C7D8ACB00D88243 /* UIColor+ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorComponents.swift"; sourceTree = "<group>"; };
 		07E87EE71C7D8B4500D88243 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
 		07E930881C96AC85008D1CE3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		07F0EEF21F4E9AE90034812E /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
 		07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		07F830001DAA7F7600DBCBAA /* FFUIKit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FFUIKit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFUIKit_Tests.swift; sourceTree = "<group>"; };
@@ -176,15 +178,16 @@
 		076576911A73C80F00EEA793 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				07DB3A351C7DB11C00D4268A /* UIImage */,
 				07E87EE31C7D8A9F00D88243 /* UIColor */,
-				0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */,
+				07DB3A351C7DB11C00D4268A /* UIImage */,
 				0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */,
-				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
-				071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */,
-				07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */,
-				07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */,
+				0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */,
 				07CCBAE91C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift */,
+				07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */,
+				07DB3A331C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift */,
+				07F0EEF21F4E9AE90034812E /* UIResponder+FirstResponder.swift */,
+				071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */,
+				07BD73871A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift */,
 				07CCBAE61C905FFB00F0D8D1 /* UIView+AutoLayout.swift */,
 			);
 			name = Categories;
@@ -447,6 +450,7 @@
 				07E87EE61C7D8ACB00D88243 /* UIColor+ColorComponents.swift in Sources */,
 				0732337F1C84971A007F708D /* UIImage+FixOrientation.swift in Sources */,
 				0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */,
+				07F0EEF31F4E9AE90034812E /* UIResponder+FirstResponder.swift in Sources */,
 				07A9C7A819E3C941004ABC10 /* FFProgressIndicatorView.m in Sources */,
 				07532EFA1C96A48F00B4655B /* TextNotificationView.swift in Sources */,
 				07CCBAEA1C90602000F0D8D1 /* UIEdgeInsets+AutoLayout.swift in Sources */,
