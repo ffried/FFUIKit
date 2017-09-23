@@ -43,14 +43,12 @@ public final class NotificationController<View: NotificationView>: UIViewControl
         case afterDuration(TimeInterval)
     }
     
-    public typealias `Type` = NotificationType<View>
-    
     public let notificationView: View = View()
     var noteView: NotificationView { return notificationView }
     
-    public var notificationType: Type {
+    public var style: NotificationStyle {
         didSet {
-            notificationType.configure(notificationView: notificationView)
+            notificationView.configure(for: style)
             setNeedsStatusBarAppearanceUpdate()
         }
     }
@@ -81,14 +79,14 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }()
     
     // MARK: - Initalizer
-    public init(type: Type = .default, autoDismissType: AutoDismissType = .none) {
-        notificationType = type
+    public init(style: NotificationStyle = .default, autoDismissType: AutoDismissType = .none) {
+        self.style = style
         self.autoDismissType = autoDismissType
         super.init(nibName: nil, bundle: nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        notificationType = .default
+        style = .default
         autoDismissType = .none
         super.init(coder: aDecoder)
     }
@@ -96,10 +94,10 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     // MARK: - View Lifecycle
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.enableAutoLayout()
         view.backgroundColor = .clear
-        notificationType.configure(notificationView: notificationView)
         notificationView.addGestureRecognizer(tapGestureRecognizer)
+        notificationView.configure(for: style)
         notificationView.setupFullscreen(in: view)
     }
     
@@ -130,7 +128,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (notificationView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
+        return (notificationView.backgroundView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
     }
     
     // MARK: - Actions

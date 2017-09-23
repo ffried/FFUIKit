@@ -50,4 +50,9 @@ public final class TextNotificationView: NotificationView {
         let views = ["label": textLabel]
         ["H:|-15-[label]-15-|", "V:|-5-[label]-5-|"].constraints(with: views).activate()
     }
+    
+    public override func configure(for style: NotificationStyle) {
+        super.configure(for: style)
+        textLabel.textColor = style.suggestedTextColor
+    }
 }

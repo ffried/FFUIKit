@@ -72,7 +72,8 @@ internal final class NotificationAnimationController: NSObject, UIViewController
             container.layoutIfNeeded()
         }
         
-        let options: UIViewAnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction, .curveEaseInOut]
+        let curveOption: UIViewAnimationOptions = presenting ? .curveEaseOut : .curveEaseIn
+        let options: UIViewAnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction, curveOption]
         let duration = transitionDuration(using: transitionContext)
         let animations = {
             if presenting {
@@ -94,7 +95,7 @@ internal final class NotificationAnimationController: NSObject, UIViewController
         }
         if transitionContext.isAnimated {
             if presenting {
-                //            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1, options: options, animations: animations, completion: completion)
+//                UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1, options: options, animations: animations, completion: completion)
                 UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: animations, completion: completion)
             } else {
                 UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: animations, completion: completion)

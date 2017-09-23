@@ -71,6 +71,10 @@ open class NotificationView: UIView {
         contentViewTopConstraint.isActive = true
         otherConstraints.activate()
     }
+    
+    open func configure(for style: NotificationStyle) {
+        backgroundView.backgroundColor = style.suggestedBackgroundColor
+    }
 
     internal func _willAppear(animated: Bool) { willAppear(animated: animated) }
     internal func _didAppear(animated: Bool) { didAppear(animated: animated) }
