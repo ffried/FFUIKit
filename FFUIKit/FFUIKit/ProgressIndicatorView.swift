@@ -6,8 +6,10 @@
 //  Copyright © 2017 Florian Friedrich. All rights reserved.
 //
 
+import class Foundation.NSCoder
+import typealias Foundation.TimeInterval
 import UIKit
-import FFFoundation
+import enum FFFoundation.Angle
 
 fileprivate extension CALayer.AnimationKey {
     static let rotation = CALayer.AnimationKey(rawValue: "FFProgressIndicatorAnimation")
