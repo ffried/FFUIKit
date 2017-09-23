@@ -103,6 +103,7 @@ public final class ProgressIndicatorView: UIControl {
     // MARK: - Overrides
     public override func layoutSubviews() {
         super.layoutSubviews()
+        stopButtonView.layer.cornerRadius = stopButtonView.bounds.height / 10
         if circleLayer.lineWidth != progressBarStrokeWidth {
             circleLayer.lineWidth = progressBarStrokeWidth
         }
