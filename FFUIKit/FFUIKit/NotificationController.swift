@@ -30,23 +30,23 @@ import class UIKit.UIViewController
 import class UIKit.UIPresentationController
 import typealias FFFoundation.AnyTimer
 
-fileprivate protocol NotificationControllerProtocol: class {
+internal protocol NotificationControllerProtocol: class {
+    var noteView: NotificationView { get }
+
     func dismissNotification(animated: Bool, completion: (() -> ())?)
 }
 
-public final class NotificationController<NotificationView: NotificationViewType>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol where NotificationView: UIView {
+public final class NotificationController<View: NotificationView>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol {
     
     public enum AutoDismissType {
         case none
         case afterDuration(TimeInterval)
     }
     
-    public typealias `Type` = NotificationType<NotificationView>
+    public typealias `Type` = NotificationType<View>
     
-    public let notificationView: NotificationView = NotificationView()
-    private var informedNotificationView: InformedNotificationViewType? {
-        return notificationView as? InformedNotificationViewType
-    }
+    public let notificationView: View = View()
+    var noteView: NotificationView { return notificationView }
     
     public var notificationType: Type {
         didSet {
@@ -105,23 +105,23 @@ public final class NotificationController<NotificationView: NotificationViewType
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        informedNotificationView?.willAppear(animated: animated)
+        notificationView._willAppear(animated: animated)
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        informedNotificationView?.didAppear(animated: animated)
+        notificationView._didAppear(animated: animated)
         timer?.schedule()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        informedNotificationView?.willDisappear(animated: animated)
+        notificationView._willDisappear(animated: animated)
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        informedNotificationView?.didDisappear(animated: animated)
+        notificationView._didDisappear(animated: animated)
     }
     
     // MARK: - Status Bar
@@ -134,7 +134,8 @@ public final class NotificationController<NotificationView: NotificationViewType
     }
     
     // MARK: - Actions
-    @objc internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
+    @objc dynamic internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
+        notificationView._didReceiveTouch(sender: recognizer)
         dismissNotification()
     }
     

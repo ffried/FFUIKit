@@ -19,7 +19,7 @@
 		07532EF91C96A48F00B4655B /* NotificationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF51C96A48F00B4655B /* NotificationPresentationController.swift */; };
 		07532EFA1C96A48F00B4655B /* TextNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF61C96A48F00B4655B /* TextNotificationView.swift */; };
 		07532EFB1C96A48F00B4655B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF71C96A48F00B4655B /* NotificationController.swift */; };
-		07532EFE1C96A5CC00B4655B /* NotificationViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EFD1C96A5CC00B4655B /* NotificationViewType.swift */; };
+		07532EFE1C96A5CC00B4655B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EFD1C96A5CC00B4655B /* NotificationView.swift */; };
 		0765768F1A73C6D300EEA793 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A9C7A719E3C941004ABC10 /* FFProgressIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C7A519E3C941004ABC10 /* FFProgressIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,7 +33,6 @@
 		07DB3A371C7DB13500D4268A /* UIImage+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A361C7DB13500D4268A /* UIImage+Colors.swift */; };
 		07DB3A391C7DB80300D4268A /* UIImage+ColorImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A381C7DB80300D4268A /* UIImage+ColorImages.swift */; };
 		07DB3A3B1C7DB9B800D4268A /* UIImage+CorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3A3A1C7DB9B800D4268A /* UIImage+CorderRadius.swift */; };
-		07E2E3501F4898B60099EB86 /* UIResponder+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2E34F1F4898B60099EB86 /* UIResponder+FirstResponder.swift */; };
 		07E87EE61C7D8ACB00D88243 /* UIColor+ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE51C7D8ACB00D88243 /* UIColor+ColorComponents.swift */; };
 		07E87EE81C7D8B4500D88243 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE71C7D8B4500D88243 /* ColorComponents.swift */; };
 		07E930891C96AC85008D1CE3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E930881C96AC85008D1CE3 /* NotificationType.swift */; };
@@ -81,7 +80,7 @@
 		07532EF51C96A48F00B4655B /* NotificationPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPresentationController.swift; sourceTree = "<group>"; };
 		07532EF61C96A48F00B4655B /* TextNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNotificationView.swift; sourceTree = "<group>"; };
 		07532EF71C96A48F00B4655B /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		07532EFD1C96A5CC00B4655B /* NotificationViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewType.swift; sourceTree = "<group>"; };
+		07532EFD1C96A5CC00B4655B /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		0765768E1A73C6D300EEA793 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,7 +96,6 @@
 		07DB3A361C7DB13500D4268A /* UIImage+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Colors.swift"; sourceTree = "<group>"; };
 		07DB3A381C7DB80300D4268A /* UIImage+ColorImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ColorImages.swift"; sourceTree = "<group>"; };
 		07DB3A3A1C7DB9B800D4268A /* UIImage+CorderRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CorderRadius.swift"; sourceTree = "<group>"; };
-		07E2E34F1F4898B60099EB86 /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
 		07E87EE51C7D8ACB00D88243 /* UIColor+ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorComponents.swift"; sourceTree = "<group>"; };
 		07E87EE71C7D8B4500D88243 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
 		07E930881C96AC85008D1CE3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
@@ -171,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				07E930881C96AC85008D1CE3 /* NotificationType.swift */,
-				07532EFD1C96A5CC00B4655B /* NotificationViewType.swift */,
+				07532EFD1C96A5CC00B4655B /* NotificationView.swift */,
 				07532EF61C96A48F00B4655B /* TextNotificationView.swift */,
 			);
 			name = Notifications;
@@ -444,7 +442,7 @@
 				0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */,
 				07BD73881A7D129700213C49 /* UITableView+AnimatedArrayUpdate.swift in Sources */,
 				07DB3A341C7DAF7200D4268A /* UIImageView+AnimatedImageChange.swift in Sources */,
-				07532EFE1C96A5CC00B4655B /* NotificationViewType.swift in Sources */,
+				07532EFE1C96A5CC00B4655B /* NotificationView.swift in Sources */,
 				07CCBAE71C905FFB00F0D8D1 /* UIView+AutoLayout.swift in Sources */,
 				07085BE71A7CEEC40057E65B /* LicenseDetailViewController.swift in Sources */,
 				07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */,
