@@ -26,7 +26,7 @@ public final class ProgressIndicatorView: UIControl {
     @IBInspectable public var hidesWhenStopped: Bool = true {
         didSet { isHidden = hidesWhenStopped && !isAnimating }
     }
-    @IBInspectable public var isStopButtonVisible: Bool {
+    @IBInspectable public var showsStopButton: Bool {
         get { return !stopButtonView.isHidden }
         set { stopButtonView.isHidden = !newValue }
     }
