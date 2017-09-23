@@ -23,9 +23,12 @@ public final class ProgressIndicatorView: UIControl {
         set { return gap = .degrees(newValue) }
     }
     @IBInspectable public var rotationDuration: TimeInterval = 1.0
-    @IBInspectable public var stopButtonVisible: Bool = true
     @IBInspectable public var hidesWhenStopped: Bool = true {
         didSet { isHidden = hidesWhenStopped && !isAnimating }
+    }
+    @IBInspectable public var stopButtonVisible: Bool {
+        get { return !stopButtonView.isHidden }
+        set { stopButtonView.isHidden = !stopButtonVisible }
     }
     
     public var gap: Angle<CGFloat> = .degrees(45)
