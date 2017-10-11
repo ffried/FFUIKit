@@ -25,68 +25,35 @@ import class UIKit.UIColor
 public extension UIColor {
     public convenience init(hexString hex: String) {
         let rawHex: String
-        #if swift(>=4.0)
-            switch true {
-            case hex.hasPrefix("#"):
-                rawHex = String(hex[hex.index(hex.startIndex, offsetBy: "#".count)...])
-            case hex.hasPrefix("0x"):
-                rawHex = String(hex[hex.index(hex.startIndex, offsetBy: "0x".count)...])
-            default:
-                rawHex = hex
-            }
-        #else
-            switch true {
-            case hex.hasPrefix("#"):
-                rawHex = hex.substring(from: hex.index(hex.startIndex, offsetBy: "#".characters.count))
-            case hex.hasPrefix("0x"):
-                rawHex = hex.substring(from: hex.index(hex.startIndex, offsetBy: "0x".characters.count))
-            default:
-                rawHex = hex
-            }
-        #endif
+        switch true {
+        case hex.hasPrefix("#"):
+            rawHex = String(hex[hex.index(hex.startIndex, offsetBy: "#".count)...])
+        case hex.hasPrefix("0x"):
+            rawHex = String(hex[hex.index(hex.startIndex, offsetBy: "0x".count)...])
+        default:
+            rawHex = hex
+        }
         
-        let charCount: Int
-        #if swift(>=4.0)
-            charCount = rawHex.count
-        #else
-            charCount = rawHex.characters.count
-        #endif
+        let charCount = rawHex.count
         assert((charCount == 6 || charCount == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
         
         var startIndex = rawHex.startIndex
         var endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let redHex: String
-        #if swift(>=4.0)
-            redHex = String(rawHex[startIndex..<endIndex])
-        #else
-            redHex = rawHex.substring(with: startIndex..<endIndex)
-        #endif
+        let redHex = String(rawHex[startIndex..<endIndex])
         
         startIndex = endIndex
         endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let greenHex: String
-        #if swift(>=4.0)
-            greenHex = String(rawHex[startIndex..<endIndex])
-        #else
-            greenHex = rawHex.substring(with: startIndex..<endIndex)
-        #endif
+        let greenHex = String(rawHex[startIndex..<endIndex])
+
         startIndex = endIndex
         endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let blueHex: String
-        #if swift(>=4.0)
-            blueHex = String(rawHex[startIndex..<endIndex])
-        #else
-            blueHex = rawHex.substring(with: startIndex..<endIndex)
-        #endif
+        let blueHex = String(rawHex[startIndex..<endIndex])
+
         var alphaHex = ""
         if charCount == 8 {
             startIndex = endIndex
             endIndex = rawHex.index(startIndex, offsetBy: 2)
-            #if swift(>=4.0)
-                alphaHex = String(rawHex[startIndex..<endIndex])
-            #else
-                alphaHex = rawHex.substring(with: startIndex..<endIndex)
-            #endif
+            alphaHex = String(rawHex[startIndex..<endIndex])
         }
         
         var r: UInt32 = 0

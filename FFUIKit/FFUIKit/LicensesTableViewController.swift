@@ -58,10 +58,8 @@ public class LicensesTableViewController: UITableViewController {
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         assert(navigationController != nil, "LicenseViewController is not within a UINavigationController! Trouble ahead!")
-        if clearsSelectionOnViewWillAppear {
-            if let ip = tableView.indexPathForSelectedRow {
-                tableView.deselectRow(at: ip, animated: animated)
-            }
+        if clearsSelectionOnViewWillAppear, let ip = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: ip, animated: animated)
         }
     }
     

@@ -39,19 +39,19 @@ import class UIKit.UIScrollView
 import let UIKit.UIKeyboardFrameBeginUserInfoKey
 import let UIKit.UIKeyboardFrameEndUserInfoKey
 
-private var _UIScrollViewKeyboardNotificationObserversKey = "KeyboardNotificationsObserver"
+private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 public extension UIScrollView {
     private typealias UserInfoDictionary = [AnyHashable: Any]
     
     private final var notificationObservers: [NotificationObserver] {
         get {
-            guard let observers = objc_getAssociatedObject(self, &_UIScrollViewKeyboardNotificationObserversKey) as? [NotificationObserver] else {
-                self.notificationObservers = [NotificationObserver]() // Associates them
+            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? [NotificationObserver] else {
+                self.notificationObservers = [] // Associates them
                 return self.notificationObservers // returns the newly associated object
             }
             return observers
         }
-        set { objc_setAssociatedObject(self, &_UIScrollViewKeyboardNotificationObserversKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        set { objc_setAssociatedObject(self, &_keyboardNotificationObserversKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
     // MARK: Register / Unregister
@@ -179,34 +179,22 @@ public extension UIScrollView {
     }
 }
 
-private var _UIScrollViewOriginalContentInsetsKey = "OriginalContentInsets"
-private var _UIScrollViewOriginalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
-private var _UIScrollViewKeyboardVisibleKey = "KeyboardVisible"
+private var _originalContentInsetsKey = "OriginalContentInsets"
+private var _originalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
+private var _keyboardVisibleKey = "KeyboardVisible"
 fileprivate extension UIScrollView {
     fileprivate final var originalContentInsets: UIEdgeInsets {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalContentInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+        get { return (objc_getAssociatedObject(self, &_originalContentInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? .zero }
+        set { objc_setAssociatedObject(self, &_originalContentInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
     fileprivate final var originalScrollIndicatorInsets: UIEdgeInsets {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? UIEdgeInsets.zero
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewOriginalScrollIndicatorInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+        get { return (objc_getAssociatedObject(self, &_originalScrollIndicatorInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? .zero }
+        set { objc_setAssociatedObject(self, &_originalScrollIndicatorInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
     fileprivate final var keyboardVisible: Bool {
-        get {
-            return (objc_getAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey) as? Bool) ?? false
-        }
-        set {
-            objc_setAssociatedObject(self, &_UIScrollViewKeyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
-        }
+        get { return (objc_getAssociatedObject(self, &_keyboardVisibleKey) as? Bool) ?? false }
+        set { objc_setAssociatedObject(self, &_keyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
     }
 }

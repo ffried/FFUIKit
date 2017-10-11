@@ -69,7 +69,7 @@ public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
     }
 
     @objc(textView:shouldInteractWithURL:inRange:)
-    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+    public dynamic func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
         return true
     }
 }
