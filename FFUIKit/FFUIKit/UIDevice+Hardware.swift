@@ -45,6 +45,12 @@ fileprivate extension UIDevice {
         "iPhone9,2" : "iPhone 7 Plus",
         "iPhone9,3" : "iPhone 7",
         "iPhone9,4" : "iPhone 7 Plus",
+        "iPhone10,1": "iPhone 8",
+        "iPhone10,2": "iPhone 8 Plus",
+        "iPhone10,3": "iPhone X",
+        "iPhone10,4": "iPhone 8",
+        "iPhone10,5": "iPhone 8 Plus",
+        "iPhone10,6": "iPhone X",
         
         "Watch1,1"  : "Apple Watch 38mm",
         "Watch1,2"  : "Apple Watch 42mm",
@@ -52,6 +58,10 @@ fileprivate extension UIDevice {
         "Watch2,7"  : "Apple Watch Series 1 42mm",
         "Watch2,3"  : "Apple Watch Series 2 38mm",
         "Watch2,4"  : "Apple Watch Series 2 42mm",
+        "Watch3,1"  : "Apple Watch Series 3 38mm (Cellular)",
+        "Watch3,2"  : "Apple Watch Series 3 42mm (Cellular)",
+        "Watch3,3"  : "Apple Watch Series 3 38mm",
+        "Watch3,4"  : "Apple Watch Series 3 42mm",
         
         "iPod1,1"   : "iPod Touch 1G",
         "iPod2,1"   : "iPod Touch 2G",
@@ -101,9 +111,14 @@ fileprivate extension UIDevice {
         "AppleTV3,1": "Apple TV 3G",
         "AppleTV3,2": "Apple TV 3G",
         "AppleTV5,3": "Apple TV 4G",
+        "AppleTV6,2": "Apple TV 4K",
         
         "i386"      : "Simulator",
-        "x86_64"    : "Simulator"
+        "x86_64"    : "Simulator",
+
+        "AirPods1,1": "AirPods",
+
+        "AudioAccessory1,1": "HomePod",
     ]
 }
 

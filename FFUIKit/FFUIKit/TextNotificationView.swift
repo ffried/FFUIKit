@@ -23,7 +23,7 @@ import class UIKit.UIView
 import class UIKit.UILabel
 import FFFoundation
 
-public final class TextNotificationView: UIView, NotificationViewType {
+public final class TextNotificationView: NotificationView {
     public let textLabel: UILabel = {
         let label = UILabel()
         label.enableAutoLayout()
@@ -46,10 +46,13 @@ public final class TextNotificationView: UIView, NotificationViewType {
     }
     
     private final func initialize() {
-        enableAutoLayout()
-        addSubview(textLabel)
+        contentView.addSubview(textLabel)
         let views = ["label": textLabel]
-        ["H:|-5-[label]-5-|", "V:|-25-[label]-5-|"].constraints(with: views).activate()
-        layoutIfNeeded()
+        ["H:|-15-[label]-15-|", "V:|-5-[label]-5-|"].constraints(with: views).activate()
+    }
+    
+    public override func configure(for style: NotificationStyle) {
+        super.configure(for: style)
+        textLabel.textColor = style.suggestedTextColor
     }
 }

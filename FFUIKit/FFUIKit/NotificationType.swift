@@ -1,5 +1,5 @@
 //
-//  NotificationType.swift
+//  NotificationStyle.swift
 //  FFUIKit
 //
 //  Created by Florian Friedrich on 14/03/16.
@@ -7,49 +7,48 @@
 //
 
 import struct CoreGraphics.CGFloat
-import class UIKit.UIView
 import class UIKit.UIColor
 
-public enum NotificationType<NotificationView: NotificationViewType> where NotificationView: UIView {
-    
+public enum NotificationStyle {
     case `default` // White
     case warning // Yellow
     case failure // Red
     case success // Green
     case info    // Blue
-    case custom(viewConfiguration: (NotificationView) -> Void) // Whatever you like
+    case custom // Whatever you like
     
-    internal func configure(notificationView view: NotificationView) {
-        let backgroundColor: UIColor
-        let textColor: UIColor
+    public var suggestedBackgroundColor: UIColor {
         let alpha: CGFloat = 0.85
         switch self {
         case .default:
-            backgroundColor = UIColor.lightGray.withAlphaComponent(alpha)
-            textColor = .black
+            return UIColor.lightGray.withAlphaComponent(alpha)
         case .warning:
-            backgroundColor = UIColor.yellow.withAlphaComponent(alpha)
-            textColor = .black
+            return UIColor.yellow.withAlphaComponent(alpha)
         case .failure:
-            backgroundColor = UIColor.red.withAlphaComponent(alpha)
-            textColor = .white
+            return UIColor.red.withAlphaComponent(alpha)
         case .success:
-            backgroundColor = UIColor.green.withAlphaComponent(alpha)
-            textColor = .black
+            return UIColor.green.withAlphaComponent(alpha)
         case .info:
-            backgroundColor = UIColor.blue.withAlphaComponent(alpha)
-            textColor = .white
-        case .custom(_):
-            backgroundColor = .clear
-            textColor = .black
+            return UIColor.blue.withAlphaComponent(alpha)
+        case .custom:
+            return .white
         }
-        if case NotificationType.custom(let configuration) = self {
-            configuration(view)
-        } else {
-            view.backgroundColor = backgroundColor
-            if let textNotificationView = view as? TextNotificationView {
-                textNotificationView.textLabel.textColor = textColor
-            }
+    }
+    
+    public var suggestedTextColor: UIColor {
+        switch self {
+        case .default:
+            return .black
+        case .warning:
+            return .black
+        case .failure:
+            return .white
+        case .success:
+            return .black
+        case .info:
+            return .white
+        case .custom:
+            return .black
         }
     }
 }

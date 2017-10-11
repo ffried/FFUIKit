@@ -30,27 +30,25 @@ import class UIKit.UIViewController
 import class UIKit.UIPresentationController
 import typealias FFFoundation.AnyTimer
 
-fileprivate protocol NotificationControllerProtocol: class {
+internal protocol NotificationControllerProtocol: class {
+    var noteView: NotificationView { get }
+
     func dismissNotification(animated: Bool, completion: (() -> ())?)
 }
 
-public final class NotificationController<NotificationView: NotificationViewType>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol where NotificationView: UIView {
+public final class NotificationController<View: NotificationView>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol {
     
     public enum AutoDismissType {
         case none
         case afterDuration(TimeInterval)
     }
     
-    public typealias `Type` = NotificationType<NotificationView>
+    public let notificationView: View = View()
+    var noteView: NotificationView { return notificationView }
     
-    public let notificationView: NotificationView = NotificationView()
-    private var informedNotificationView: InformedNotificationViewType? {
-        return notificationView as? InformedNotificationViewType
-    }
-    
-    public var notificationType: Type {
+    public var style: NotificationStyle {
         didSet {
-            notificationType.configure(notificationView: notificationView)
+            notificationView.configure(for: style)
             setNeedsStatusBarAppearanceUpdate()
         }
     }
@@ -81,14 +79,14 @@ public final class NotificationController<NotificationView: NotificationViewType
     }()
     
     // MARK: - Initalizer
-    public init(type: Type = .default, autoDismissType: AutoDismissType = .none) {
-        notificationType = type
+    public init(style: NotificationStyle = .default, autoDismissType: AutoDismissType = .none) {
+        self.style = style
         self.autoDismissType = autoDismissType
         super.init(nibName: nil, bundle: nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        notificationType = .default
+        style = .default
         autoDismissType = .none
         super.init(coder: aDecoder)
     }
@@ -96,32 +94,32 @@ public final class NotificationController<NotificationView: NotificationViewType
     // MARK: - View Lifecycle
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.enableAutoLayout()
         view.backgroundColor = .clear
-        notificationType.configure(notificationView: notificationView)
         notificationView.addGestureRecognizer(tapGestureRecognizer)
+        notificationView.configure(for: style)
         notificationView.setupFullscreen(in: view)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        informedNotificationView?.willAppear(animated: animated)
+        notificationView._willAppear(animated: animated)
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        informedNotificationView?.didAppear(animated: animated)
+        notificationView._didAppear(animated: animated)
         timer?.schedule()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        informedNotificationView?.willDisappear(animated: animated)
+        notificationView._willDisappear(animated: animated)
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        informedNotificationView?.didDisappear(animated: animated)
+        notificationView._didDisappear(animated: animated)
     }
     
     // MARK: - Status Bar
@@ -130,11 +128,12 @@ public final class NotificationController<NotificationView: NotificationViewType
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (notificationView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
+        return (notificationView.backgroundView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
     }
     
     // MARK: - Actions
-    @objc internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
+    @objc dynamic internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
+        notificationView._didReceiveTouch(sender: recognizer)
         dismissNotification()
     }
     

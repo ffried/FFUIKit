@@ -18,18 +18,11 @@
 //  limitations under the License.
 //
 
-import class UIKit.UIView
-import class UIKit.UIResponder
 //import class UIKit.UIViewController
 //import class UIKit.UITabBarController
 //import class UIKit.UINavigationController
 //import class UIKit.UIPageViewController
 //import FFFoundation
-
-@available(*, deprecated: 2.0, message: "Use UIResponder.firstResponder(in:)", renamed: "UIResponder.firstResponder(in:)")
-public func findFirstResponder(in view: UIView) -> UIResponder? {
-    return .firstResponder(in: view)
-}
 
 // Waiting for https://bugs.swift.org/browse/SR-1226
 //@available(iOSApplicationExtension, unavailable)
