@@ -16,7 +16,7 @@ fileprivate extension CALayer.AnimationKey {
 }
 
 @IBDesignable
-public final class ProgressIndicatorView: UIControl {
+public final class ProgressIndicatorView: TouchAwareControl {
     
     @IBInspectable public var gapInDegrees: CGFloat {
         get { return gap.asDegrees.value }
@@ -114,22 +114,24 @@ public final class ProgressIndicatorView: UIControl {
     
     public override func tintColorDidChange() {
         super.tintColorDidChange()
-        stopButtonView.backgroundColor = tintColor
-        circleLayer.strokeColor = tintColor.cgColor
+        if isEnabled {
+            set(color: tintColor)
+        }
     }
     
     // MARK: - Animations
     public func startAnimating() {
         guard !isAnimating else { return }
-        isAnimating = true
+        defer { isAnimating = true }
         if isHidden {
             setHidden(false, animated: true)
         }
         animate()
     }
-    
+
     public func stopAnimating() {
         guard isAnimating else { return }
+        defer { isAnimating = false }
         if hidesWhenStopped {
             setHidden(true, animated: true, completion: { finished in
                 self.circleLayer.removeAnimation(for: .rotation)
@@ -139,7 +141,7 @@ public final class ProgressIndicatorView: UIControl {
         }
     }
     
-    func animate() {
+    private func animate() {
         let animation = CAKeyframeAnimation(keyPath: #keyPath(CAShapeLayer.path))
         let stepCount = 1000
         animation.values = (0..<stepCount).map { bezierPath(forPercent: CGFloat($0) / CGFloat(stepCount)).cgPath }
@@ -176,15 +178,47 @@ public final class ProgressIndicatorView: UIControl {
         let (startAngle, endAngle) = (percentAngle - gap, percentAngle)
         return UIBezierPath(arcCenter: progressBarFrame.center,
                             radius: progressBarFrame.width / 2,
-                            startAngle: startAngle.asRadians.value,
-                            endAngle: endAngle.asRadians.value,
+                            startAngle: -startAngle.asRadians.value,
+                            endAngle: -endAngle.asRadians.value,
                             clockwise: true)
         
+    }
+
+    private func set(color: UIColor) {
+        stopButtonView.backgroundColor = color
+        circleLayer.strokeColor = color.cgColor
     }
     
     // MARK: - Actions
     @objc dynamic private func stopButtonPressed(sender: Any?) {
         guard isAnimating else { return }
         sendActions(for: .touchUpInside)
+    }
+
+    // MARK: - State
+    public override var isEnabled: Bool {
+        didSet { updateVisuals() }
+    }
+
+    public override var isSelected: Bool {
+        didSet { updateVisuals() }
+    }
+
+    public override var isHighlighted: Bool {
+        didSet { updateVisuals() }
+    }
+
+    private func updateVisuals() {
+        let changes = {
+            self.alpha = self.isHighlighted ? 0.2 : 1.0
+            self.set(color: self.isEnabled ? self.tintColor : .lightGray)
+        }
+        if superview != nil && !isTrackingTouchInside {
+            UIView.animate(withDuration: 0.25, delay: 0.0,
+                           options: [.beginFromCurrentState, .allowAnimatedContent],
+                           animations: changes, completion: nil)
+        } else {
+            changes()
+        }
     }
 }
