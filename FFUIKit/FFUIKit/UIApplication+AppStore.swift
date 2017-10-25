@@ -19,6 +19,8 @@
 //
 
 import struct Foundation.URL
+import struct Foundation.URLComponents
+import struct Foundation.URLQueryItem
 import class Foundation.Bundle
 import class UIKit.UIApplication
 
