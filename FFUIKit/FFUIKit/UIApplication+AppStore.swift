@@ -19,6 +19,8 @@
 //
 
 import struct Foundation.URL
+import struct Foundation.URLComponents
+import struct Foundation.URLQueryItem
 import class Foundation.Bundle
 import class UIKit.UIApplication
 
@@ -26,8 +28,8 @@ import class UIKit.UIApplication
 public let FFUIKitiTunesIdentifierInfoDictionaryKey: String = "FFUIKitiTunesIdentifier"
 
 public extension UIApplication {
-    private final var iTunesBaseURL: String {
-        return "https://itunes.apple.com/"
+    private final var iTunesBaseURL: URL {
+        return URL(string: "https://itunes.apple.com")!
     }
     
     /// Returns the value for "FFUIKitiTunesIdentifier" in info plist
@@ -37,12 +39,12 @@ public extension UIApplication {
     
     public final var iTunesURL: URL {
         let appID = iTunesIdentifier ?? ""
-        return URL(string: "\(iTunesBaseURL)app/id\(appID)")!
+        return iTunesBaseURL.appendingPathComponent("app").appendingPathComponent("id\(appID)")
     }
     
     public final var iTunesRatingURL: URL {
-        let appID = iTunesIdentifier ?? ""
-        let urlString = "\(iTunesBaseURL)WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=\(appID)"
-        return URL(string: urlString)!
+        var comps = URLComponents(url: iTunesURL, resolvingAgainstBaseURL: false)!
+        comps.queryItems = [URLQueryItem(name: "action", value: "write-review")]
+        return comps.url!
     }
 }
