@@ -14,7 +14,6 @@
 		071B65BD1A97EFBE00C19418 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */; };
 		0721BAFE1A6AC05100733CF7 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */; };
 		0721BB041A6AC59000733CF7 /* UIApplication+AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */; };
-		072406D01E7EDA5000A1AC3F /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072406CD1E7EDA2700A1AC3F /* FFFoundation.framework */; };
 		0732337F1C84971A007F708D /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732337E1C84971A007F708D /* UIImage+FixOrientation.swift */; };
 		075045F81F4975AF00BAD3B3 /* ProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075045F71F4975AF00BAD3B3 /* ProgressIndicatorView.swift */; };
 		07532EF81C96A48F00B4655B /* NotificationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07532EF41C96A48F00B4655B /* NotificationAnimationController.swift */; };
@@ -39,6 +38,7 @@
 		07E87EE81C7D8B4500D88243 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E87EE71C7D8B4500D88243 /* ColorComponents.swift */; };
 		07E930891C96AC85008D1CE3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E930881C96AC85008D1CE3 /* NotificationType.swift */; };
 		07F0EEF31F4E9AE90034812E /* UIResponder+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0EEF21F4E9AE90034812E /* UIResponder+FirstResponder.swift */; };
+		07F2F45D1FB03B770064559C /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2F45E1FB03B770064559C /* FFFoundation.framework */; };
 		07F662E71C60C0C6004ECF5F /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */; };
 		07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */; };
 		07F830051DAA7F7600DBCBAA /* FFUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */; };
@@ -46,20 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		072406CC1E7EDA2700A1AC3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 072406C71E7EDA2600A1AC3F /* FFFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_36;
-			remoteInfo = FFFoundation;
-		};
-		072406CE1E7EDA2700A1AC3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 072406C71E7EDA2600A1AC3F /* FFFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_37;
-			remoteInfo = FFFoundationTests;
-		};
 		07F830061DAA7F7600DBCBAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07A9C77E19E3C7C4004ABC10 /* Project object */;
@@ -77,7 +63,6 @@
 		071B65BC1A97EFBE00C19418 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 		0721BAFD1A6AC05100733CF7 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0721BB031A6AC59000733CF7 /* UIApplication+AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+AppStore.swift"; sourceTree = "<group>"; };
-		072406C71E7EDA2600A1AC3F /* FFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FFFoundation.xcodeproj; path = ../Submodules/FFFoundation/FFFoundation.xcodeproj; sourceTree = "<group>"; };
 		0732337E1C84971A007F708D /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
 		075045F71F4975AF00BAD3B3 /* ProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorView.swift; sourceTree = "<group>"; };
 		07532EF41C96A48F00B4655B /* NotificationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationAnimationController.swift; sourceTree = "<group>"; };
@@ -104,6 +89,7 @@
 		07E87EE71C7D8B4500D88243 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
 		07E930881C96AC85008D1CE3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		07F0EEF21F4E9AE90034812E /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
+		07F2F45E1FB03B770064559C /* FFFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FFFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F662E61C60C0C6004ECF5F /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		07F830001DAA7F7600DBCBAA /* FFUIKit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FFUIKit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFUIKit_Tests.swift; sourceTree = "<group>"; };
@@ -116,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072406D01E7EDA5000A1AC3F /* FFFoundation.framework in Frameworks */,
+				07F2F45D1FB03B770064559C /* FFFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,15 +134,6 @@
 				07E87EE71C7D8B4500D88243 /* ColorComponents.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		072406C81E7EDA2600A1AC3F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				072406CD1E7EDA2700A1AC3F /* FFFoundation.framework */,
-				072406CF1E7EDA2700A1AC3F /* FFFoundationTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		07532EF21C96A45C00B4655B /* NotificationViewController */ = {
@@ -215,8 +192,8 @@
 			children = (
 				07A9C78919E3C7C4004ABC10 /* FFUIKit */,
 				07F830011DAA7F7600DBCBAA /* FFUIKit Tests */,
-				07B37F461A3B563E00911042 /* Frameworks */,
 				07A9C78819E3C7C4004ABC10 /* Products */,
+				07F2F45C1FB03B770064559C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,14 +228,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07B37F461A3B563E00911042 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				072406C71E7EDA2600A1AC3F /* FFFoundation.xcodeproj */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		07DB3A351C7DB11C00D4268A /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +255,14 @@
 				07085BE61A7CEEC40057E65B /* LicenseDetailViewController.swift */,
 			);
 			name = Licences;
+			sourceTree = "<group>";
+		};
+		07F2F45C1FB03B770064559C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07F2F45E1FB03B770064559C /* FFFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		07F830011DAA7F7600DBCBAA /* FFUIKit Tests */ = {
@@ -380,12 +357,6 @@
 			mainGroup = 07A9C77D19E3C7C4004ABC10;
 			productRefGroup = 07A9C78819E3C7C4004ABC10 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 072406C81E7EDA2600A1AC3F /* Products */;
-					ProjectRef = 072406C71E7EDA2600A1AC3F /* FFFoundation.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				07A9C78619E3C7C4004ABC10 /* FFUIKit */,
@@ -393,23 +364,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		072406CD1E7EDA2700A1AC3F /* FFFoundation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FFFoundation.framework;
-			remoteRef = 072406CC1E7EDA2700A1AC3F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		072406CF1E7EDA2700A1AC3F /* FFFoundationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FFFoundationTests.xctest;
-			remoteRef = 072406CE1E7EDA2700A1AC3F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		07A9C78519E3C7C4004ABC10 /* Resources */ = {
