@@ -127,7 +127,7 @@ public extension UIDevice {
         var size = Int()
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         let machine = UnsafeMutablePointer<CChar>.allocate(capacity: size)
-        defer { machine.deallocate(capacity: size) }
+        defer { machine.deallocate() }
         sysctlbyname("hw.machine", machine, &size, nil, 0)
         return String(cString: machine)
     }
