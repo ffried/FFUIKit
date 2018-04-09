@@ -67,6 +67,9 @@ public extension UIColor {
             Scanner(string: alphaHex).scanHexInt32(&a)
         }
         
-        self.init(red: (CGFloat(r) / 255.0), green: (CGFloat(g) / 255.0), blue: (CGFloat(b) / 255.0), alpha: (CGFloat(a) / 255.0))
+        self.init(red: (CGFloat(r) / 255.0),
+                  green: (CGFloat(g) / 255.0),
+                  blue: (CGFloat(b) / 255.0),
+                  alpha: (CGFloat(a) / 255.0))
     }
 }

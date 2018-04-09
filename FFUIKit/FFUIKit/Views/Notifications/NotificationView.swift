@@ -53,19 +53,12 @@ open class NotificationView: UIView {
                 contentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
                 contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
             ]
-        } else if #available(iOS 9.0, *) {
+        } else {
             contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
             otherConstraints = [
                 contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
-            ]
-        } else {
-            contentViewTopConstraint = NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 0, constant: 0)
-            otherConstraints = [
-                NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 0, constant: 0),
-                NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 0, constant: 0),
-                NSLayoutConstraint(item: contentView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 0, constant: 0)
             ]
         }
         contentViewTopConstraint.isActive = true

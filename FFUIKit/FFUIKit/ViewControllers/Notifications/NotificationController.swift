@@ -53,11 +53,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
         }
     }
     
-    public private(set) lazy var tapGestureRecognizer: UITapGestureRecognizer = {
-        let recognizer = UITapGestureRecognizer()
-        recognizer.addTarget(self, action: #selector(NotificationController.didTapNotification(_:)))
-        return recognizer
-    }()
+    public private(set) lazy var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapNotification(_:)))
     
     public var dismissOnTap: Bool {
         get { return tapGestureRecognizer.isEnabled }
@@ -66,7 +62,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     
     public let autoDismissType: AutoDismissType
     private lazy var timer: AnyTimer? = {
-        switch self.autoDismissType {
+        switch autoDismissType {
         case .none:
             return nil
         case .afterDuration(let duration):

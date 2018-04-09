@@ -33,13 +33,8 @@ internal final class NotificationAnimationController: NSObject, UIViewController
     private var originalVCContainer: UIView!
     
     private final func setupTopBottomConstraints(for view: UIView) {
-        if #available(iOS 9.0, *) {
-            topConstraint = view.superview?.topAnchor.constraint(equalTo: view.topAnchor)
-            bottomConstraint = view.superview?.topAnchor.constraint(equalTo: view.bottomAnchor)
-        } else {
-            topConstraint = NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: view.superview, attribute: .top, multiplier: 1.0, constant: 0.0)
-            bottomConstraint = NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: view.superview, attribute: .top, multiplier: 1.0, constant: 0.0)
-        }
+        topConstraint = view.superview?.topAnchor.constraint(equalTo: view.topAnchor)
+        bottomConstraint = view.superview?.topAnchor.constraint(equalTo: view.bottomAnchor)
     }
     
     @objc(transitionDuration:)

@@ -26,9 +26,12 @@ public extension UIImage {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let alphaInfo: CGImageAlphaInfo = .premultipliedLast
         let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
-        guard let context = CGContext(data: nil, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        guard let context = CGContext(data: nil,
+                                      width: 1, height: 1,
+                                      bitsPerComponent: 8, bytesPerRow: 4,
+                                      space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
             else { return nil }
-        context.draw(cgImage, in: CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1)))
+        context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1)))
         
         guard let data = context.data else { return nil }
         let rgba = data.assumingMemoryBound(to: UInt8.self)
@@ -59,7 +62,7 @@ public extension UIImage {
         let size = CGSize(width: 1, height: 1)
         if #available(iOS 10, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
-            let rgba = renderer.pngData(actions: { (context) in
+            let rgba = renderer.pngData(actions: { context in
                 context.cgContext.interpolationQuality = .medium
                 draw(in: CGRect(origin: .zero, size: size), blendMode: .copy, alpha: 1.0)
             })

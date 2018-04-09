@@ -45,7 +45,7 @@ public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
         tv.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: -10.0)
         tv.clipsToBounds = false
         return tv
-        }()
+    }()
     
     public var license: License! {
         didSet {
@@ -61,11 +61,13 @@ public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
         if license != nil { updateContents() }
     }
     
-    deinit { textView.delegate = nil }
+    deinit {
+        textView.delegate = nil
+    }
     
     private func updateContents() {
         title = license.title
-        textView.attributedText = license.licenseContent
+        textView.attributedText = license.content.value
     }
 
     @objc(textView:shouldInteractWithURL:inRange:)
