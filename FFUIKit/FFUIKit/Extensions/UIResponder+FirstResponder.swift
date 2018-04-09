@@ -20,16 +20,16 @@
 
 import class UIKit.UIResponder
 import class UIKit.UIView
+import FFFoundation
 
 public extension UIResponder {
-//     Waiting for https://bugs.swift.org/browse/SR-1226
-//    @available(iOSApplicationExtension, unavailable)
-//    @available(watchOSApplicationExtension, unavailable)
-//    @available(tvOSApplicationExtension, unavailable)
-//    public static func findFirstResponder() -> UIResponder? {
-//        return Application.shared.delegate?.window?.flatMap(firstResponder)
-//    }
-    
+    @available(iOSApplicationExtension, unavailable)
+    @available(watchOSApplicationExtension, unavailable)
+    @available(tvOSApplicationExtension, unavailable)
+    public static func findFirstResponder() -> UIResponder? {
+        return Application.shared.delegate?.window?.flatMap(firstResponder)
+    }
+
     public static func firstResponder(in view: UIView) -> UIResponder? {
         guard !view.isFirstResponder else { return view }
         var firstResponder: UIResponder? = nil

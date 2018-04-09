@@ -27,15 +27,15 @@ public extension UIColor {
     }
     
     public final var rgbaComponents: ColorComponents? {
-        return updated(components: ColorComponents.blackRGBA)
+        return updated(components: .blackRGBA)
     }
     
     public final var hsbaComponents: ColorComponents? {
-        return updated(components: ColorComponents.blackHSBA)
+        return updated(components: .blackHSBA)
     }
     
     public final var bwaComponents: ColorComponents? {
-        return updated(components: ColorComponents.blackBWA)
+        return updated(components: .blackBWA)
     }
     
     public final var components: ColorComponents? {

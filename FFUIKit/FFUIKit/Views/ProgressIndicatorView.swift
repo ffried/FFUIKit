@@ -38,9 +38,9 @@ public final class ProgressIndicatorView: TouchAwareControl {
         let layer = CAShapeLayer()
         layer.fillColor = UIColor.clear.cgColor
         layer.contentsScale = UIScreen.main.scale
-        layer.strokeColor = self.tintColor.cgColor
-        layer.lineWidth = self.progressBarStrokeWidth
-        layer.path = self.bezierPath(forPercent: 0).cgPath
+        layer.strokeColor = tintColor.cgColor
+        layer.lineWidth = progressBarStrokeWidth
+        layer.path = bezierPath(forPercent: 0).cgPath
         return layer
     }()
     
@@ -48,19 +48,9 @@ public final class ProgressIndicatorView: TouchAwareControl {
         let view = UIView()
         view.enableAutoLayout()
         view.isUserInteractionEnabled = true
-        view.backgroundColor = self.tintColor
-        
-        if #available(iOS 9, *) {
-            view.widthAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-        } else {
-            NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
-        }
-        
-        let touchRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProgressIndicatorView.stopButtonPressed))
-        touchRecognizer.numberOfTapsRequired = 1
-        touchRecognizer.numberOfTouchesRequired = 1
-        view.addGestureRecognizer(touchRecognizer)
-        
+        view.backgroundColor = tintColor
+        view.widthAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(stopButtonPressed(sender:))))
         return view
     }()
     

@@ -43,9 +43,6 @@ extension UIView {
     public final func setupFullscreen(in view: UIView, with insets: UIEdgeInsets = .init(), prepare constraintPreparations: ((NSLayoutConstraint) -> Void)? = nil) -> [NSLayoutConstraint] {
         enableAutoLayout()
         if superview != view {
-            if superview != nil {
-                removeFromSuperview()
-            }
             view.addSubview(self)
         }
         let constraints = [

@@ -29,7 +29,7 @@ import class UIKit.UITableViewController
 
 public class LicensesTableViewController: UITableViewController {
     
-    private let LicenseCellReuseIdentifier = "LicenseCell"
+    private let licenseCellReuseIdentifier = "LicenseCell"
     
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -49,9 +49,9 @@ public class LicensesTableViewController: UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Licenses", comment: String(describing: LicensesTableViewController.self))
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.tableFooterView?.backgroundColor = .clear
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: LicenseCellReuseIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: licenseCellReuseIdentifier)
         tableView.reloadData()
     }
     
@@ -65,7 +65,6 @@ public class LicensesTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
@@ -74,7 +73,7 @@ public class LicensesTableViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: LicenseCellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: licenseCellReuseIdentifier, for: indexPath)
         cell.backgroundColor = cellBackgroundColor
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = licenses[indexPath.row].title
