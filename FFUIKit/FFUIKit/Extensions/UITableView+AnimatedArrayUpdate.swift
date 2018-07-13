@@ -33,7 +33,7 @@ public protocol UITableViewSectionObject: Equatable {
 
 public extension UITableView {
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true) {
-        let animation: UITableViewRowAnimation = animated ? .automatic : .none
+        let animation: UITableView.RowAnimation = animated ? .automatic : .none
         
         guard !oldSections.isEmpty else {
             beginUpdates()
@@ -94,7 +94,7 @@ public extension UITableView {
     }
     
     public func update<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true) {
-        let animation: UITableViewRowAnimation = animated ? .automatic : .none
+        let animation: UITableView.RowAnimation = animated ? .automatic : .none
         guard !oldRows.isEmpty else {
             let toAddIndexPaths = (0..<newRows.count).map { IndexPath(row: $0, section: section) }
             beginUpdates()
@@ -115,7 +115,7 @@ public extension UITableView {
     }
     
     // MARK: - Helpers
-    private func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: UITableViewRowAnimation) {
+    private func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: UITableView.RowAnimation) {
         // Remove rows
         let toDeleteIndexes = oldRows.enumerated().filter { !newRows.contains($1) }.map { $0.offset }
         toDeleteIndexes.reversed().forEach { results.remove(at: $0) }
@@ -129,7 +129,7 @@ public extension UITableView {
         insertRows(at: toAddIndexPaths, with: animation)
     }
     
-    private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: UITableViewRowAnimation) {
+    private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: UITableView.RowAnimation) {
         for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
             guard let oldIdx = results.index(of: row), oldIdx != idx else { continue }
             let oldIndexPath = IndexPath(row: oldIdx, section: section)

@@ -39,6 +39,7 @@
 		0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C944207B994B00F9F0A8 /* NotificationAnimationController.swift */; };
 		0762C94A207B994B00F9F0A8 /* NotificationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C945207B994B00F9F0A8 /* NotificationPresentationController.swift */; };
 		0762C94C207B998100F9F0A8 /* UIViewController+Foremost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */; };
+		077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C040D20F8B3B50074BEFA /* SwiftSupport.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07F2F45D1FB03B770064559C /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2F45E1FB03B770064559C /* FFFoundation.framework */; };
 		07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */; };
@@ -88,6 +89,7 @@
 		0762C944207B994B00F9F0A8 /* NotificationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationAnimationController.swift; sourceTree = "<group>"; };
 		0762C945207B994B00F9F0A8 /* NotificationPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPresentationController.swift; sourceTree = "<group>"; };
 		0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Foremost.swift"; sourceTree = "<group>"; };
+		077C040D20F8B3B50074BEFA /* SwiftSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSupport.swift; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				0762C90C207B98CE00F9F0A8 /* UIImage */,
 				0762C91A207B98CE00F9F0A8 /* CALayer+AnimationKey.swift */,
 				0762C91B207B98CE00F9F0A8 /* CGRect+Helpers.swift */,
+				077C040D20F8B3B50074BEFA /* SwiftSupport.swift */,
 				0762C917207B98CE00F9F0A8 /* UIApplication+AppStore.swift */,
 				0762C914207B98CE00F9F0A8 /* UIDevice+Hardware.swift */,
 				0762C915207B98CE00F9F0A8 /* UIEdgeInsets+AutoLayout.swift */,
@@ -417,6 +420,7 @@
 				0762C946207B994B00F9F0A8 /* LicenseDetailViewController.swift in Sources */,
 				0762C93D207B990F00F9F0A8 /* TextNotificationView.swift in Sources */,
 				0762C931207B98F400F9F0A8 /* NotificationType.swift in Sources */,
+				077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */,
 				0762C939207B990F00F9F0A8 /* Label.swift in Sources */,
 				0762C925207B98CE00F9F0A8 /* UIDevice+Hardware.swift in Sources */,
 			);

@@ -59,11 +59,11 @@ public extension UIScrollView {
         func block(for selector: @escaping (UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
             return { $0.userInfo.map(selector) }
         }
-        
+
         let tuples: [(Notification.Name, NotificationObserver.ObserverBlock)] = [
-            (.UIKeyboardWillChangeFrame, block(for: keyboardWillChangeFrame)),
-            (.UIKeyboardWillShow, block(for: keyboardWillShow)),
-            (.UIKeyboardDidHide, block(for: keyboardDidHide))
+            (UIResponder.keyboardWillChangeFrameNotification, block(for: keyboardWillChangeFrame)),
+            (UIResponder.keyboardWillShowNotification, block(for: keyboardWillShow)),
+            (UIResponder.keyboardDidHideNotification, block(for: keyboardDidHide))
         ]
         
         notificationObservers = tuples.map { .init(center: .default, name: $0, queue: .main, object: nil, block: $1) }
@@ -76,8 +76,8 @@ public extension UIScrollView {
     // MARK: Keyboard functions
     private final func keyboardWillChangeFrame(userInfo: UserInfoDictionary) {
         if keyboardVisible {
-            let beginFrame = rect(for: UIKeyboardFrameBeginUserInfoKey, in: userInfo)
-            let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
+            let beginFrame = rect(for: UIResponder.keyboardFrameBeginUserInfoKey, in: userInfo)
+            let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
             let oldHeight = keyboardHeight(from: beginFrame)
             let newHeight = keyboardHeight(from: endFrame)
             if newHeight != oldHeight {
@@ -90,7 +90,7 @@ public extension UIScrollView {
         if !keyboardVisible {
             saveEdgeInsets()
             keyboardVisible = true
-            let endFrame = rect(for: UIKeyboardFrameEndUserInfoKey, in: userInfo)
+            let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
             let endHeight = keyboardHeight(from: endFrame)
             setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
         }
@@ -166,11 +166,11 @@ public extension UIScrollView {
     
     private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
         var duration: TimeInterval = 1.0 / 3.0
-        var curve: UIViewAnimationCurve = .linear
-        let options: UIViewAnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
+        var curve: UIView.AnimationCurve = .linear
+        let options: UIView.AnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
         if let info = userInfo {
-            if let d = info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval { duration = d }
-            if let c = UIViewAnimationCurve(rawValue: (info[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
+            if let d = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval { duration = d }
+            if let c = UIView.AnimationCurve(rawValue: (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? UIView.AnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
         }
         UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: {
             UIView.setAnimationCurve(curve)
