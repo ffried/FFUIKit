@@ -19,7 +19,6 @@
 //
 
 import typealias Foundation.TimeInterval
-import struct UIKit.UIViewAnimationOptions
 import class UIKit.UIView
 import class UIKit.UIImage
 import class UIKit.UIImageView
@@ -32,7 +31,7 @@ public extension UIImageView {
         if !animated {
             change()
         } else {
-            let options: UIViewAnimationOptions = [.transitionCrossDissolve, .beginFromCurrentState, .allowUserInteraction]
+            let options: UIView.AnimationOptions = [.transitionCrossDissolve, .beginFromCurrentState, .allowUserInteraction]
             UIView.transition(with: self, duration: animationDuration, options: options, animations: change, completion: nil)
         }
     }
