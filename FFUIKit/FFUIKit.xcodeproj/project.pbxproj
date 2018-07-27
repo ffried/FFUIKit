@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0747F31B210B519C009BFDAD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F31A210B519C009BFDAD /* Logging.swift */; };
 		0762C908207B988C00F9F0A8 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C905207B988B00F9F0A8 /* License.swift */; };
 		0762C909207B988C00F9F0A8 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C906207B988B00F9F0A8 /* LayoutGuide.swift */; };
 		0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C907207B988B00F9F0A8 /* ColorComponents.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0747F31A210B519C009BFDAD /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		0762C905207B988B00F9F0A8 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		0762C906207B988B00F9F0A8 /* LayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
 		0762C907207B988B00F9F0A8 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				0762C93E207B994B00F9F0A8 /* ViewControllers */,
 				07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */,
 				07A9C78A19E3C7C4004ABC10 /* Supporting Files */,
+				0747F31A210B519C009BFDAD /* Logging.swift */,
 			);
 			path = FFUIKit;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				0762C920207B98CE00F9F0A8 /* UIImage+Colors.swift in Sources */,
 				0762C908207B988C00F9F0A8 /* License.swift in Sources */,
 				0762C923207B98CE00F9F0A8 /* UIColor+ColorComponents.swift in Sources */,
+				0747F31B210B519C009BFDAD /* Logging.swift in Sources */,
 				0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */,
 				0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */,
 				0762C93B207B990F00F9F0A8 /* ProgressIndicatorView.swift in Sources */,
@@ -492,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -543,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

@@ -21,13 +21,18 @@
 import struct Foundation.URL
 import class Foundation.Bundle
 import class Foundation.NSAttributedString
+#if canImport(os)
+import func os.os_log
+#else
+import func FFFoundation.os_log
+#endif
 
 fileprivate extension NSAttributedString {
     convenience init?(licenseFile: URL) {
         do {
             try self.init(url: licenseFile, options: [:], documentAttributes: nil)
         } catch {
-            print("FFUIKit: Failed to read license content: \(error)")
+            os_log("Failed to read license content: %@", log: .ffUIKit, type: .error, String(describing: error))
             return nil
         }
     }
