@@ -393,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0747F31B210B519C009BFDAD /* Logging.swift in Sources */,
 				0762C948207B994B00F9F0A8 /* NotificationController.swift in Sources */,
 				0762C924207B98CE00F9F0A8 /* UIColor+Hex.swift in Sources */,
 				0762C922207B98CE00F9F0A8 /* UIImage+FixOrientation.swift in Sources */,
@@ -414,7 +415,6 @@
 				0762C920207B98CE00F9F0A8 /* UIImage+Colors.swift in Sources */,
 				0762C908207B988C00F9F0A8 /* License.swift in Sources */,
 				0762C923207B98CE00F9F0A8 /* UIColor+ColorComponents.swift in Sources */,
-				0747F31B210B519C009BFDAD /* Logging.swift in Sources */,
 				0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */,
 				0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */,
 				0762C93B207B990F00F9F0A8 /* ProgressIndicatorView.swift in Sources */,
