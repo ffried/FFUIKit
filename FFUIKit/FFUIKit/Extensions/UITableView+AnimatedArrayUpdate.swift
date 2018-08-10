@@ -23,17 +23,21 @@ import struct Foundation.IndexPath
 import enum UIKit.UITableViewRowAnimation
 import class UIKit.UITableView
 
-public protocol UITableViewSectionObject: Equatable {
-    associatedtype UITableViewRowObject: Equatable
+public protocol UITableViewReloadableObject: Equatable {
+    func needsReload(from other: Self) -> Bool
+}
+
+//public protocol UITableViewRowObject: UITableViewReloadableObject {}
+
+public protocol UITableViewSectionObject: UITableViewReloadableObject {
+    associatedtype Row: Equatable // UITableViewRowObject
     
-    var rows: [UITableViewRowObject] { get }
-    
-    func needsReload(from sectionObject: Self) -> Bool
+    var rows: [Row] { get }
 }
 
 public extension UITableView {
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true) {
-        let animation: UITableView.RowAnimation = animated ? .automatic : .none
+        let animation: RowAnimation = animated ? .automatic : .none
         
         guard !oldSections.isEmpty else {
             beginUpdates()
@@ -43,15 +47,14 @@ public extension UITableView {
         }
         
         var sectionResults = Array<Section>(oldSections)
-        var rowResults = [Optional<Array<Section.UITableViewRowObject>>]()
+        var rowResults = [Optional<Array<Section.Row>>]()
         
         beginUpdates()
         
         // Remove sections
-        let toRemoveIndexes = oldSections.enumerated().filter { !newSections.contains($1) }.map { $0.offset }
-        toRemoveIndexes.reversed().forEach { sectionResults.remove(at: $0) }
-        let toRemoveSections = toRemoveIndexes.reduce(IndexSet()) { $0.union(IndexSet(integer: $1)) }
-        deleteSections(toRemoveSections, with: animation)
+        let toRemove = oldSections.enumerated().filter { !newSections.contains($1) }
+        sectionResults.removeAll { section in toRemove.contains { $0.element == section } }
+        deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
         
         // Add sections
         var toAddSections = IndexSet()
@@ -87,14 +90,16 @@ public extension UITableView {
                 }
                 if let results = rowResults[resultIdx] {
                     move(from: oldSections[oldIdx].rows, to: section.rows, withPreviousResults: results, in: idx, with: animation)
-                }
+                }/* else {
+                 // Reload Rows if section does not reload it.
+                } */
             }
         }
         endUpdates()
     }
     
     public func update<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true) {
-        let animation: UITableView.RowAnimation = animated ? .automatic : .none
+        let animation: RowAnimation = animated ? .automatic : .none
         guard !oldRows.isEmpty else {
             let toAddIndexPaths = (0..<newRows.count).map { IndexPath(row: $0, section: section) }
             beginUpdates()
@@ -115,11 +120,11 @@ public extension UITableView {
     }
     
     // MARK: - Helpers
-    private func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: UITableView.RowAnimation) {
+    private func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: RowAnimation) {
         // Remove rows
-        let toDeleteIndexes = oldRows.enumerated().filter { !newRows.contains($1) }.map { $0.offset }
-        toDeleteIndexes.reversed().forEach { results.remove(at: $0) }
-        let toRemoveIndexPaths = toDeleteIndexes.map { IndexPath(row: $0, section: section) }
+        let toDelete = oldRows.enumerated().filter { !newRows.contains($1) }
+        results.removeAll { row in toDelete.contains { $0.element == row } }
+        let toRemoveIndexPaths = toDelete.map { IndexPath(row: $0.offset, section: section) }
         deleteRows(at: toRemoveIndexPaths, with: animation)
         
         // Add rows
@@ -129,7 +134,7 @@ public extension UITableView {
         insertRows(at: toAddIndexPaths, with: animation)
     }
     
-    private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: UITableView.RowAnimation) {
+    private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
         for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
             guard let oldIdx = results.index(of: row), oldIdx != idx else { continue }
             let oldIndexPath = IndexPath(row: oldIdx, section: section)
