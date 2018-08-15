@@ -20,7 +20,44 @@
 
 import UIKit
 
+fileprivate extension ColorComponents {
+    var intensity: CGFloat {
+        return brightness * saturation
+    }
+
+    var saturation: CGFloat {
+        switch self {
+        case .rgba(_):
+            return color.hsbaComponents?.saturation ?? 0
+        case .hsba(_, let saturation, _, _):
+            return saturation
+        case .bwa(let white, _):
+            return white
+        }
+    }
+}
+
 public extension UIImage {
+    private func color<I: UnsignedInteger>(from r: I, g: I, b: I, a: I) -> UIColor {
+        if a > 0 {
+            let alpha = CGFloat(a) / 255.0
+            let multiplier = alpha / 255.0
+            return UIColor(
+                red: CGFloat(r) * multiplier,
+                green: CGFloat(g) * multiplier,
+                blue: CGFloat(b) * multiplier,
+                alpha: alpha
+            )
+        } else {
+            return UIColor(
+                red: CGFloat(r) / 255.0,
+                green: CGFloat(g) / 255.0,
+                blue: CGFloat(b) / 255.0,
+                alpha: CGFloat(a) / 255.0
+            )
+        }
+    }
+
     public final var averageColor: UIColor? {
         guard let cgImage = cgImage else { return nil }
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -36,57 +73,30 @@ public extension UIImage {
         guard let data = context.data else { return nil }
         let rgba = data.assumingMemoryBound(to: UInt8.self)
         
-        let color: UIColor
-        if rgba[3] > 0 {
-            let alpha: CGFloat = CGFloat(rgba[3]) / 255.0
-            let multiplier: CGFloat = alpha / 255.0
-            color = UIColor(
-                red: CGFloat(rgba[0]) * multiplier,
-                green: CGFloat(rgba[1]) * multiplier,
-                blue: CGFloat(rgba[2]) * multiplier,
-                alpha: alpha
-            )
-        } else {
-            color = UIColor(
-                red: CGFloat(rgba[0]) / 255.0,
-                green: CGFloat(rgba[1]) / 255.0,
-                blue: CGFloat(rgba[2]) / 255.0,
-                alpha: CGFloat(rgba[3]) / 255.0
-            )
-        }
-        return color
+        return color(from: rgba[0], g: rgba[1], b: rgba[2], a: rgba[3])
     }
-    
-    // Draws the image onto a rect of {0, 0, 1, 1} and returns the resulting color mix.
-    public final var mergedColor: UIColor? {
-        let size = CGSize(width: 1, height: 1)
-        if #available(iOS 10, *) {
-            let renderer = UIGraphicsImageRenderer(size: size)
-            let rgba = renderer.pngData(actions: { context in
-                context.cgContext.interpolationQuality = .medium
-                draw(in: CGRect(origin: .zero, size: size), blendMode: .copy, alpha: 1.0)
-            })
-            return UIColor(
-                red: CGFloat(rgba[0]) / 255.0,
-                green: CGFloat(rgba[1]) / 255.0,
-                blue: CGFloat(rgba[2]) / 255.0,
-                alpha: CGFloat(rgba[3]) / 255.0
-            )
-        } else {
-            UIGraphicsBeginImageContext(size)
-            defer { UIGraphicsEndImageContext() }
-            guard let context = UIGraphicsGetCurrentContext() else { return nil }
-            context.interpolationQuality = .medium
-            draw(in: CGRect(origin: .zero, size: size), blendMode: .copy, alpha: 1.0)
-            guard let data = context.data else { return nil }
-            let rgba = data.assumingMemoryBound(to: UInt8.self)
-            return UIColor(
-                red: CGFloat(rgba[0]) / 255.0,
-                green: CGFloat(rgba[1]) / 255.0,
-                blue: CGFloat(rgba[2]) / 255.0,
-                alpha: CGFloat(rgba[3]) / 255.0
-            )
+
+    public final var colors: [UIColor] {
+        guard let cgImage = cgImage else { return [] }
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let alphaInfo: CGImageAlphaInfo = .premultipliedLast
+        let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
+        guard let context = CGContext(data: nil,
+                                      width: cgImage.width, height: cgImage.height,
+                                      bitsPerComponent: 8, bytesPerRow: 4,
+                                      space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+            else { return [] }
+        context.draw(cgImage, in: CGRect(origin: .zero, size: size))
+
+        guard let data = context.data else { return [] }
+        let rgba = data.assumingMemoryBound(to: UInt8.self)
+        return stride(from: 0, to: cgImage.width * cgImage.height * context.bytesPerRow, by: context.bytesPerRow).map {
+            color(from: rgba[$0/* + 0*/], g: rgba[$0 + 1], b: rgba[$0 + 2], a: rgba[$0 + 3])
         }
+    }
+
+    public final var mostIntenseColor: UIColor? {
+        return colors.max { ($0.hsbaComponents?.intensity ?? 0) < ($1.hsbaComponents?.intensity ?? 0) }
     }
     
     public final func imageTinted(with color: UIColor) -> UIImage? {
