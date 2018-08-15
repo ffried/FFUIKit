@@ -62,11 +62,23 @@ public enum ColorComponents {
     
     // Extracts the alpha value.
     public var alpha: CGFloat {
-        switch self {
-        case .rgba(_, _, _, let alpha),
-        .hsba(_, _, _, let alpha),
-        .bwa(_, let alpha):
-            return alpha
+        get {
+            switch self {
+            case .rgba(_, _, _, let alpha),
+                 .hsba(_, _, _, let alpha),
+                 .bwa(_, let alpha):
+                return alpha
+            }
+        }
+        set {
+            switch self {
+            case .rgba(let red, let green, let blue, _):
+                self = .rgba(red: red, green: green, blue: blue, alpha: newValue)
+            case .hsba(let hue, let saturation, let brightness, _):
+                self = .hsba(hue: hue, saturation: saturation, brightness: brightness, alpha: newValue)
+            case .bwa(let white, _):
+                self = .bwa(white: white, alpha: newValue)
+            }
         }
     }
     
