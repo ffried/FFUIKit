@@ -22,7 +22,7 @@ import UIKit
 
 fileprivate extension ColorComponents {
     var intensity: CGFloat {
-        return brightness * saturation
+        return brightness + saturation
     }
 
     var saturation: CGFloat {
@@ -65,26 +65,6 @@ public extension UIImage {
         }
     }
 
-    private func color<I: UnsignedInteger>(from r: I, g: I, b: I, a: I) -> UIColor {
-        if a > 0 {
-            let alpha = CGFloat(a) / 255.0
-            let multiplier = alpha / 255.0
-            return UIColor(
-                red: CGFloat(r) * multiplier,
-                green: CGFloat(g) * multiplier,
-                blue: CGFloat(b) * multiplier,
-                alpha: alpha
-            )
-        } else {
-            return UIColor(
-                red: CGFloat(r) / 255.0,
-                green: CGFloat(g) / 255.0,
-                blue: CGFloat(b) / 255.0,
-                alpha: CGFloat(a) / 255.0
-            )
-        }
-    }
-
     public final var averageColor: UIColor? {
         guard let cgImage = cgImage else { return nil }
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -100,7 +80,7 @@ public extension UIImage {
         guard let data = context.data else { return nil }
         let rgba = data.assumingMemoryBound(to: UInt8.self)
         
-        return color(from: rgba[0], g: rgba[1], b: rgba[2], a: rgba[3])
+        return SimpleColor(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]).uiColor
     }
 
     private final var simpleColors: Set<SimpleColor<UInt8>> {
