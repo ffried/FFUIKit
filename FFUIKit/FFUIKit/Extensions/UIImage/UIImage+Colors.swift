@@ -38,6 +38,33 @@ fileprivate extension ColorComponents {
 }
 
 public extension UIImage {
+    private struct SimpleColor<Val: UnsignedInteger>: Hashable {
+        let red: Val
+        let green: Val
+        let blue: Val
+        let alpha: Val
+
+        var uiColor: UIColor {
+            if alpha > 0 {
+                let a = CGFloat(alpha) / 255.0
+                let multiplier = a / 255.0
+                return UIColor(
+                    red: CGFloat(red) * multiplier,
+                    green: CGFloat(green) * multiplier,
+                    blue: CGFloat(blue) * multiplier,
+                    alpha: a
+                )
+            } else {
+                return UIColor(
+                    red: CGFloat(red) / 255.0,
+                    green: CGFloat(green) / 255.0,
+                    blue: CGFloat(blue) / 255.0,
+                    alpha: CGFloat(alpha) / 255.0
+                )
+            }
+        }
+    }
+
     private func color<I: UnsignedInteger>(from r: I, g: I, b: I, a: I) -> UIColor {
         if a > 0 {
             let alpha = CGFloat(a) / 255.0
@@ -76,23 +103,28 @@ public extension UIImage {
         return color(from: rgba[0], g: rgba[1], b: rgba[2], a: rgba[3])
     }
 
-    public final var colors: [UIColor] {
+    private final var simpleColors: Set<SimpleColor<UInt8>> {
         guard let cgImage = cgImage else { return [] }
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let alphaInfo: CGImageAlphaInfo = .premultipliedLast
         let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
         guard let context = CGContext(data: nil,
                                       width: cgImage.width, height: cgImage.height,
-                                      bitsPerComponent: 8, bytesPerRow: 4,
+                                      bitsPerComponent: 8, bytesPerRow: 0,
                                       space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
             else { return [] }
         context.draw(cgImage, in: CGRect(origin: .zero, size: size))
 
         guard let data = context.data else { return [] }
         let rgba = data.assumingMemoryBound(to: UInt8.self)
-        return stride(from: 0, to: cgImage.width * cgImage.height * context.bytesPerRow, by: context.bytesPerRow).map {
-            color(from: rgba[$0/* + 0*/], g: rgba[$0 + 1], b: rgba[$0 + 2], a: rgba[$0 + 3])
+
+        return stride(from: 0, to: cgImage.width * cgImage.height * 4, by: 4).reduce(into: Set<SimpleColor>()) {
+            $0.insert(SimpleColor(red: rgba[$1/* + 0*/], green: rgba[$1 + 1], blue: rgba[$1 + 2], alpha: rgba[$1 + 3]))
         }
+    }
+
+    public final var colors: [UIColor] {
+        return simpleColors.map { $0.uiColor }
     }
 
     public final var mostIntenseColor: UIColor? {
