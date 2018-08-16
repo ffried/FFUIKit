@@ -53,7 +53,7 @@ public enum ColorComponents {
         switch self {
         case .rgba(let red, let green, let blue, _):
             return red * 0.299 + green * 0.587 + blue * 0.114
-        case .hsba(_, let brightness, _, _):
+        case .hsba(_, _, let brightness, _):
             return brightness
         case .bwa(let white, _):
             return white
