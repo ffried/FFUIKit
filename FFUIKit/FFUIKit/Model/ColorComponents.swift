@@ -21,7 +21,7 @@
 import class UIKit.UIColor
 import struct CoreGraphics.CGFloat
 
-public enum ColorComponents {
+public enum ColorComponents: Hashable, Codable {
     public static let blackRGBA: ColorComponents = .rgba(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     public static let blackHSBA: ColorComponents = .hsba(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 1.0)
     public static let blackBWA:  ColorComponents = .bwa(white: 0.0, alpha: 1.0)
@@ -29,24 +29,6 @@ public enum ColorComponents {
     case rgba(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
     case hsba(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
     case bwa(white: CGFloat, alpha: CGFloat)
-    
-    public var color: UIColor { return UIColor(components: self) }
-
-    public mutating func update(from color: UIColor) -> Bool {
-        var updated = false
-        switch self {
-        case .rgba(var red, var green, var blue, var alpha):
-            updated = color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-            self = .rgba(red: red, green: green, blue: blue, alpha: alpha)
-        case .hsba(var hue, var saturation, var brightness, var alpha):
-            updated = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-            self = .hsba(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-        case .bwa(var white, var alpha):
-            updated = color.getWhite(&white, alpha: &alpha)
-            self = .bwa(white: white, alpha: alpha)
-        }
-        return updated
-    }
     
     // Extract brightness. Alpha is ignored. Calculated according to http://www.w3.org/WAI/ER/WD-AERT/#color-contrast for RGBA.
     public var brightness: CGFloat {
@@ -105,7 +87,27 @@ public enum ColorComponents {
             self = .bwa(white: applyChange(to: white), alpha: alpha)
         }
     }
-    
+}
+
+extension ColorComponents {
+    public var color: UIColor { return UIColor(components: self) }
+
+    public mutating func update(from color: UIColor) -> Bool {
+        var updated = false
+        switch self {
+        case .rgba(var red, var green, var blue, var alpha):
+            updated = color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+            self = .rgba(red: red, green: green, blue: blue, alpha: alpha)
+        case .hsba(var hue, var saturation, var brightness, var alpha):
+            updated = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+            self = .hsba(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+        case .bwa(var white, var alpha):
+            updated = color.getWhite(&white, alpha: &alpha)
+            self = .bwa(white: white, alpha: alpha)
+        }
+        return updated
+    }
+
     // Will try in the following order:
     // - rgba
     // - hsba
@@ -122,6 +124,60 @@ public enum ColorComponents {
             self = bwaTest
         } else {
             return nil
+        }
+    }
+}
+
+extension ColorComponents {
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case alpha
+        case red, green, blue
+        case hue, saturation, brightness
+        case white
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        switch try container.decode(String.self, forKey: .kind) {
+        case "rgba":
+            self = try .rgba(red: container.decode(CGFloat.self, forKey: .red),
+                             green: container.decode(CGFloat.self, forKey: .green),
+                             blue: container.decode(CGFloat.self, forKey: .blue),
+                             alpha: container.decode(CGFloat.self, forKey: .alpha))
+        case "hsba":
+            self = try .hsba(hue: container.decode(CGFloat.self, forKey: .hue),
+                             saturation: container.decode(CGFloat.self, forKey: .saturation),
+                             brightness: container.decode(CGFloat.self, forKey: .brightness),
+                             alpha: container.decode(CGFloat.self, forKey: .alpha))
+        case "bwa":
+            self = try .bwa(white: container.decode(CGFloat.self, forKey: .white),
+                            alpha: container.decode(CGFloat.self, forKey: .alpha))
+        case let otherKind:
+            throw DecodingError.dataCorruptedError(forKey: .kind, in: container,
+                                                   debugDescription: "Cannot create \(ColorComponents.self) with kind \"\(otherKind)\"!")
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .rgba(let red, let green, let blue, let alpha):
+            try container.encode("rgba", forKey: .kind)
+            try container.encode(red, forKey: .red)
+            try container.encode(green, forKey: .green)
+            try container.encode(blue, forKey: .blue)
+            try container.encode(alpha, forKey: .alpha)
+        case .hsba(let hue, let saturation, let brightness, let alpha):
+            try container.encode("hsba", forKey: .kind)
+            try container.encode(hue, forKey: .hue)
+            try container.encode(saturation, forKey: .saturation)
+            try container.encode(brightness, forKey: .brightness)
+            try container.encode(alpha, forKey: .alpha)
+        case .bwa(let white, let alpha):
+            try container.encode("bwa", forKey: .kind)
+            try container.encode(white, forKey: .white)
+            try container.encode(alpha, forKey: .alpha)
         }
     }
 }
