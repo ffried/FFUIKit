@@ -19,98 +19,189 @@
 //
 
 import UIKit
+import ObjectiveC
+import FFFoundation
 
-fileprivate extension ColorComponents {
-    var intensity: CGFloat {
-        return brightness + saturation
-    }
+fileprivate protocol Storable {}
+extension Storable { mutating func stored() -> Self { return self } }
 
-    var saturation: CGFloat {
-        switch self {
-        case .rgba(_):
-            return color.hsbaComponents?.saturation ?? 0
-        case .hsba(_, let saturation, _, _):
-            return saturation
-        case .bwa(let white, _):
-            return white
-        }
-    }
-}
+extension Set: Storable {}
+extension Array: Storable {}
+extension Optional: Storable {}
+extension UIColor: Storable {}
+
+private var UIImage_averageColorKey = "UIImage.averageColor"
+private var UIImage_mostIntenseColorByQualityKey = "UIImage.mostIntenseColorByQuality"
+private var UIImage_simpleColorsByQualityKey = "UIImage.simpleColorsByQuality"
+private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
 
 public extension UIImage {
     private struct SimpleColor<Val: UnsignedInteger>: Hashable {
-        let red: Val
-        let green: Val
-        let blue: Val
-        let alpha: Val
+        let raw: (red: Val, green: Val, blue: Val, alpha: Val)
+
+        let rgba: Ref<Lazy<(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)>>
+        let hsba: Ref<Lazy<(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)>>
 
         var uiColor: UIColor {
-            if alpha > 0 {
-                let a = CGFloat(alpha) / 255.0
-                let multiplier = a / 255.0
-                return UIColor(
-                    red: CGFloat(red) * multiplier,
-                    green: CGFloat(green) * multiplier,
-                    blue: CGFloat(blue) * multiplier,
-                    alpha: a
-                )
-            } else {
-                return UIColor(
+            return UIColor(red: rgba.nestedValue.red,
+                           green: rgba.nestedValue.green,
+                           blue: rgba.nestedValue.blue,
+                           alpha: rgba.nestedValue.alpha)
+        }
+
+        var intensity: CGFloat {
+            return hsba.nestedValue.saturation + hsba.nestedValue.brightness
+        }
+
+        #if swift(>=4.2)
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(raw.red)
+            hasher.combine(raw.green)
+            hasher.combine(raw.blue)
+            hasher.combine(raw.alpha)
+        }
+        #else
+        var hashValue: Int { return raw.red.hashValue ^ raw.green.hashValue ^ raw.blue.hashValue ^ raw.alpha.hashValue }
+        #endif
+
+        init(red: Val, green: Val, blue: Val, alpha: Val) {
+            raw = (red, green, blue, alpha)
+
+            let rgbaRef = Ref(value: Lazy<(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)>({
+                return (
                     red: CGFloat(red) / 255.0,
                     green: CGFloat(green) / 255.0,
                     blue: CGFloat(blue) / 255.0,
                     alpha: CGFloat(alpha) / 255.0
                 )
-            }
+            }))
+            rgba = rgbaRef
+            hsba = Ref(value: Lazy({
+                let values = rgbaRef.nestedValue
+                let minVal = min(values.red, values.green, values.blue)
+                let maxVal = max(values.red, values.green, values.blue)
+                let delta = maxVal - minVal
+                let brightness = maxVal
+                let saturation = delta.isZero ? 0 : delta / maxVal
+                let hue: CGFloat
+                switch maxVal {
+                case values.red:
+                    hue = (values.green - values.blue) / delta
+                case values.green:
+                    hue = 2 + (values.blue - values.red) / delta
+                case values.blue:
+                    hue = 4 + (values.red - values.green) / delta
+                default:
+                    fatalError("max should always be one of rgb!")
+                }
+                return (hue, saturation, brightness, values.alpha)
+            }))
         }
+
+        public static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
+            return lhs.raw == rhs.raw
+        }
+    }
+
+    private final func getAssoc<T>(for key: inout String) -> T? {
+        return objc_getAssociatedObject(self, &key) as? T
+    }
+
+    private final func setAssoc<T>(_ val: T?, for key: inout String, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
+        objc_setAssociatedObject(self, &key, val, policy)
+    }
+
+    private final func storedValue<T>(for key: inout String, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
+        if let val: T = getAssoc(for: &key) { return val }
+        let val = generator()
+        setAssoc(val, for: &key, policy: policy)
+        return val
+    }
+
+    private final func storedValue<T>(for key: inout String, generatedBy generator: () -> T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T? {
+        if let val: T = getAssoc(for: &key) { return val }
+        let val = generator()
+        setAssoc(val, for: &key, policy: policy)
+        return val
     }
 
     public final var averageColor: UIColor? {
-        guard let cgImage = cgImage else { return nil }
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let alphaInfo: CGImageAlphaInfo = .premultipliedLast
-        let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
-        guard let context = CGContext(data: nil,
-                                      width: 1, height: 1,
-                                      bitsPerComponent: 8, bytesPerRow: 4,
-                                      space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
-            else { return nil }
-        context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1)))
-        
-        guard let data = context.data else { return nil }
-        let rgba = data.assumingMemoryBound(to: UInt8.self)
-        
-        return SimpleColor(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]).uiColor
+        func getAverageColor() -> UIColor? {
+            guard let cgImage = cgImage else { return nil }
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            let alphaInfo: CGImageAlphaInfo = .premultipliedLast
+            let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
+            guard let context = CGContext(data: nil,
+                                          width: 1, height: 1,
+                                          bitsPerComponent: 8, bytesPerRow: 4,
+                                          space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+                else { return nil }
+            context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1)))
+
+            guard let data = context.data else { return nil }
+            let rgba = data.assumingMemoryBound(to: UInt8.self)
+
+            return SimpleColor(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]).uiColor
+        }
+        return storedValue(for: &UIImage_averageColorKey, generatedBy: getAverageColor)
+    }
+
+    private final var simpleColorsByQuality: Dictionary<CGFloat, Set<SimpleColor<UInt8>>> {
+        get { return storedValue(for: &UIImage_simpleColorsByQualityKey, generatedBy: { [:] }) }
+        set { setAssoc(newValue, for: &UIImage_simpleColorsByQualityKey) }
+    }
+    private final func simpleColors(quality: CGFloat) -> Set<SimpleColor<UInt8>> {
+        func getSimpleColors(quality: CGFloat) -> Set<SimpleColor<UInt8>> {
+            guard let cgImage = cgImage else { return [] }
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            let alphaInfo: CGImageAlphaInfo = .premultipliedLast
+            let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
+            let size = CGSize(width: cgImage.width, height: cgImage.height).applying(CGAffineTransform(scaleX: quality, y: quality))
+            guard let context = CGContext(data: nil,
+                                          width: .init(size.width), height: .init(size.height),
+                                          bitsPerComponent: 8, bytesPerRow: 0,
+                                          space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+                else { return [] }
+            context.draw(cgImage, in: CGRect(origin: .zero, size: size))
+
+            guard let data = context.data else { return [] }
+            let rgba = data.assumingMemoryBound(to: UInt8.self)
+
+            return stride(from: 0, to: context.width * context.height * 4, by: 4).reduce(into: []) {
+                $0.insert(SimpleColor(red: rgba[$1/* + 0*/], green: rgba[$1 + 1], blue: rgba[$1 + 2], alpha: rgba[$1 + 3]))
+            }
+        }
+        return simpleColorsByQuality[quality, default: getSimpleColors(quality: quality)].stored()
     }
 
     private final var simpleColors: Set<SimpleColor<UInt8>> {
-        guard let cgImage = cgImage else { return [] }
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let alphaInfo: CGImageAlphaInfo = .premultipliedLast
-        let bitmapInfo: CGBitmapInfo = [CGBitmapInfo(rawValue: alphaInfo.rawValue), .byteOrder32Big]
-        guard let context = CGContext(data: nil,
-                                      width: cgImage.width, height: cgImage.height,
-                                      bitsPerComponent: 8, bytesPerRow: 0,
-                                      space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
-            else { return [] }
-        context.draw(cgImage, in: CGRect(origin: .zero, size: size))
+        return simpleColors(quality: 1)
+    }
 
-        guard let data = context.data else { return [] }
-        let rgba = data.assumingMemoryBound(to: UInt8.self)
-
-        return stride(from: 0, to: cgImage.width * cgImage.height * 4, by: 4).reduce(into: Set<SimpleColor>()) {
-            $0.insert(SimpleColor(red: rgba[$1/* + 0*/], green: rgba[$1 + 1], blue: rgba[$1 + 2], alpha: rgba[$1 + 3]))
-        }
+    private final var colorsByQuality: Dictionary<CGFloat, [UIColor]> {
+        get { return storedValue(for: &UIImage_colorsByQualityKey, generatedBy: { [:] }) }
+        set { setAssoc(newValue, for: &UIImage_colorsByQualityKey) }
+    }
+    public final func colors(quality: CGFloat) -> [UIColor] {
+        return colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor }].stored()
     }
 
     public final var colors: [UIColor] {
-        return simpleColors.map { $0.uiColor }
+        return colors(quality: 1)
+    }
+
+    private final var mostIntenseColorByQuality: Dictionary<CGFloat, UIColor?> {
+        get { return storedValue(for: &UIImage_mostIntenseColorByQualityKey, generatedBy: { [:] }) }
+        set { setAssoc(newValue, for: &UIImage_mostIntenseColorByQualityKey) }
+    }
+    public final func mostIntenseColor(quality: CGFloat) -> UIColor? {
+        return mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor].stored()
     }
 
     public final var mostIntenseColor: UIColor? {
-        return colors.max { ($0.hsbaComponents?.intensity ?? 0) < ($1.hsbaComponents?.intensity ?? 0) }
+        return mostIntenseColor(quality: 1)
     }
-    
+
     public final func imageTinted(with color: UIColor) -> UIImage? {
         func draw(cgImage: CGImage, with rect: CGRect, in context: CGContext) {
             // translate/flip the graphics context (for transforming from CG* coords to UI* coordinates)
