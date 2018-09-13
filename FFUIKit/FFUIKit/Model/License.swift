@@ -43,20 +43,23 @@ public struct License: Hashable {
     public let file: URL
     public let content: Lazy<NSAttributedString?>
 
-    public var hashValue: Int { return title.hashValue ^ file.hashValue }
-    
-    public static func ==(lhs: License, rhs: License) -> Bool {
-        return (lhs.title, lhs.file) == (rhs.title, rhs.file)
-    }
-    
     public init(title: String, file: URL) {
         self.title = title
         self.file = file
         self.content = Lazy { NSAttributedString(licenseFile: file) }
     }
-    
+
     public init?(title: String, fileExtension: String) {
         guard let url = Bundle.main.url(forResource: title, withExtension: fileExtension) else { return nil }
         self.init(title: title, file: url)
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+        hasher.combine(file)
+    }
+    
+    public static func ==(lhs: License, rhs: License) -> Bool {
+        return (lhs.title, lhs.file) == (rhs.title, rhs.file)
     }
 }

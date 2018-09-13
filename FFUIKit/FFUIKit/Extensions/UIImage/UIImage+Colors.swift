@@ -53,16 +53,12 @@ public extension UIImage {
             return hsba.nestedValue.saturation + hsba.nestedValue.brightness
         }
 
-        #if swift(>=4.2)
         func hash(into hasher: inout Hasher) {
             hasher.combine(raw.red)
             hasher.combine(raw.green)
             hasher.combine(raw.blue)
             hasher.combine(raw.alpha)
         }
-        #else
-        var hashValue: Int { return raw.red.hashValue ^ raw.green.hashValue ^ raw.blue.hashValue ^ raw.alpha.hashValue }
-        #endif
 
         init(red: Val, green: Val, blue: Val, alpha: Val) {
             raw = (red, green, blue, alpha)

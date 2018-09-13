@@ -22,13 +22,8 @@
 import CoreGraphics
 
 public extension CGRect {
-    #if swift(>=4.2)
     @inlinable
     public var center: CGPoint { return CGPoint(x: midX, y: midY) }
-    #else
-    @_inlineable
-    public var center: CGPoint { return CGPoint(x: midX, y: midY) }
-    #endif
 }
 
 public extension CGPoint {
