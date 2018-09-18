@@ -2,9 +2,14 @@ branches:
   only:
     - master
     - develop
-language: swift
+
 os: osx
 osx_image: xcode10
-xcode_project: FFUIKit/FFUIKit.xcworkspace
-xcode_scheme: FFUIKit
-xcode_destination: platform=iOS Simulator,OS=12.0,name=iPad Pro (9.7-inch)
+language: swift
+
+env:
+  global:
+    - XCODE_WORKSPACE="FFUIKit/FFUIKit.xcworkspace"
+    - XCODE_SCHEME=FFUIKit
+    - XCODE_DESTINATION="platform=iOS Simulator,OS=12.0,name=iPad Pro (9.7-inch)"
+script: ./scripts/build_xcode.sh
