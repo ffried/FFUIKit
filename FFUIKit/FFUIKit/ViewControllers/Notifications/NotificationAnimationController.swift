@@ -82,22 +82,22 @@ internal final class NotificationAnimationController: NSObject, UIViewController
             }
             container.layoutIfNeeded()
         }
-        let completion = { (finished: Bool) in
+        let completion = { (pos: UIViewAnimatingPosition) in
             if !presenting {
                 self.originalVCContainer.addSubview(vcView)
             }
-            transitionContext.completeTransition(finished)
+            transitionContext.completeTransition(pos == .end)
         }
         if transitionContext.isAnimated {
             if presenting {
 //                UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1, options: options, animations: animations, completion: completion)
-                UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: animations, completion: completion)
+                UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: options, animations: animations, completion: completion)
             } else {
-                UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: animations, completion: completion)
+                UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: options, animations: animations, completion: completion)
             }
         } else {
             animations()
-            completion(true)
+            completion(.end)
         }
     }
 }

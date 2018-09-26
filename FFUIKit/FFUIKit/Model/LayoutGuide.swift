@@ -21,7 +21,7 @@
 import class Foundation.NSObject
 import UIKit
 
-@available(iOS, introduced: 7.0)
+@available(iOS, introduced: 7.0, deprecated: 9.0, message: "Please use UILayoutGuide instead!")
 public final class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
     

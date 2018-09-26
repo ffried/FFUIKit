@@ -21,25 +21,26 @@
 import UIKit
 
 public extension UIImage {
-    public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage? {
-        let image: UIImage?
+    public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage {
+        let image: UIImage
         if #available(iOS 10, *) {
-            // TODO: Use new renderer
-            UIGraphicsBeginImageContextWithOptions(size, false, scale)
-            defer { UIGraphicsEndImageContext() }
             let rect = CGRect(origin: .zero, size: size)
-            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-            draw(in: rect)
-            image = UIGraphicsGetImageFromCurrentImageContext()
+            let options = UIGraphicsImageRendererFormat.default()
+            options.opaque = false
+            options.scale = scale
+            image = UIGraphicsImageRenderer(bounds: rect, format: options).image { ctx in
+                UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+                draw(in: rect)
+            }
         } else {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
             let rect = CGRect(origin: .zero, size: size)
             UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
             draw(in: rect)
-            image = UIGraphicsGetImageFromCurrentImageContext()
+            image = UIGraphicsGetImageFromCurrentImageContext()!
         }
-        return image?.resizableImage(withCapInsets: UIEdgeInsets(
+        return image.resizableImage(withCapInsets: UIEdgeInsets(
             horizontal: cornerRadius,
             vertical: 0))
     }

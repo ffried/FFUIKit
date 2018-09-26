@@ -28,7 +28,7 @@
 		0762C92D207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91C207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift */; };
 		0762C92E207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91D207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift */; };
 		0762C92F207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91E207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift */; };
-		0762C931207B98F400F9F0A8 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C930207B98F400F9F0A8 /* NotificationType.swift */; };
+		0762C931207B98F400F9F0A8 /* NotificationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C930207B98F400F9F0A8 /* NotificationStyle.swift */; };
 		0762C939207B990F00F9F0A8 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C933207B990F00F9F0A8 /* Label.swift */; };
 		0762C93A207B990F00F9F0A8 /* TouchAwareControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C934207B990F00F9F0A8 /* TouchAwareControl.swift */; };
 		0762C93B207B990F00F9F0A8 /* ProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C935207B990F00F9F0A8 /* ProgressIndicatorView.swift */; };
@@ -79,7 +79,7 @@
 		0762C91C207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
 		0762C91D207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 		0762C91E207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+AnimatedArrayUpdate.swift"; sourceTree = "<group>"; };
-		0762C930207B98F400F9F0A8 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		0762C930207B98F400F9F0A8 /* NotificationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationStyle.swift; sourceTree = "<group>"; };
 		0762C933207B990F00F9F0A8 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		0762C934207B990F00F9F0A8 /* TouchAwareControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchAwareControl.swift; sourceTree = "<group>"; };
 		0762C935207B990F00F9F0A8 /* ProgressIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorView.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 				0762C907207B988B00F9F0A8 /* ColorComponents.swift */,
 				0762C906207B988B00F9F0A8 /* LayoutGuide.swift */,
 				0762C905207B988B00F9F0A8 /* License.swift */,
-				0762C930207B98F400F9F0A8 /* NotificationType.swift */,
+				0762C930207B98F400F9F0A8 /* NotificationStyle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 				0762C928207B98CE00F9F0A8 /* UIApplication+AppStore.swift in Sources */,
 				0762C946207B994B00F9F0A8 /* LicenseDetailViewController.swift in Sources */,
 				0762C93D207B990F00F9F0A8 /* TextNotificationView.swift in Sources */,
-				0762C931207B98F400F9F0A8 /* NotificationType.swift in Sources */,
+				0762C931207B98F400F9F0A8 /* NotificationStyle.swift in Sources */,
 				077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */,
 				0762C939207B990F00F9F0A8 /* Label.swift in Sources */,
 				0762C925207B98CE00F9F0A8 /* UIDevice+Hardware.swift in Sources */,

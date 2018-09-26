@@ -25,7 +25,7 @@ public extension CALayer {
     }
     
     public func animationKeys() -> [AnimationKey]? {
-        return animationKeys()?.map { AnimationKey(rawValue: $0) }
+        return animationKeys()?.map(AnimationKey.init(rawValue:))
     }
     
     public func animation(for key: AnimationKey) -> CAAnimation? {
