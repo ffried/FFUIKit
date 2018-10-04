@@ -27,7 +27,7 @@ import class UIKit.UIColor
 import class UIKit.UIView
 import class UIKit.UITextView
 
-public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
+public final class LicenseDetailViewController: UIViewController, UITextViewDelegate {
     
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {

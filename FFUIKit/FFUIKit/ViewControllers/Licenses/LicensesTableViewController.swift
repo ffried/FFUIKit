@@ -27,7 +27,7 @@ import class UIKit.UITableViewCell
 import class UIKit.UITableView
 import class UIKit.UITableViewController
 
-public class LicensesTableViewController: UITableViewController {
+public final class LicensesTableViewController: UITableViewController {
     
     private let licenseCellReuseIdentifier = "LicenseCell"
     
