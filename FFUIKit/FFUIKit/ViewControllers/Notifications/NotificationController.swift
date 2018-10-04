@@ -66,7 +66,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
         case .none:
             return nil
         case .afterDuration(let duration):
-            let timer = AnyTimer(interval: duration) { [unowned self] timer in
+            let timer = AnyTimer(interval: duration) { [unowned self] _ in
                 self.dismissNotification()
             }
             timer.tolerance = 0.5
@@ -124,7 +124,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (notificationView.backgroundView.backgroundColor?.components?.isDarkColor ?? false) ? .lightContent : .default
+        return (notificationView.backgroundView.backgroundColor?.hsbaComponents?.isDarkColor ?? false) ? .lightContent : .default
     }
     
     // MARK: - Actions

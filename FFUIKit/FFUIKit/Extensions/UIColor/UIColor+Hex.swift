@@ -22,6 +22,16 @@ import class Foundation.Scanner
 import struct CoreGraphics.CGFloat
 import class UIKit.UIColor
 
+fileprivate extension RGBA {
+    func hex(includeAlpha: Bool, uppercase: Bool) -> String {
+        func toHex(_ value: Value) -> String {
+            let str = String(UInt(value * 255), radix: 16, uppercase: uppercase)
+            return str.count == 2 ? str : "0" + str
+        }
+        return toHex(red) + toHex(green) + toHex(blue) + (includeAlpha ? toHex(alpha) : "")
+    }
+}
+
 public extension UIColor {
     public convenience init(hexString hex: String) {
         let rawHex: String
@@ -71,5 +81,9 @@ public extension UIColor {
                   green: (CGFloat(g) / 255.0),
                   blue: (CGFloat(b) / 255.0),
                   alpha: (CGFloat(a) / 255.0))
+    }
+
+    public func rgbaHex(prefix: String = "", postfix: String = "", uppercase: Bool = false) -> String? {
+        return rgbaComponents.map { prefix + $0.hex(includeAlpha: true, uppercase: uppercase) + postfix }
     }
 }

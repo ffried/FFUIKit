@@ -21,35 +21,11 @@
 import class UIKit.UIColor
 
 public extension UIColor {
-    private final func updated(components: ColorComponents) -> ColorComponents? {
-        var comps = components
-        return comps.update(from: self) ? comps : nil
-    }
+    public final var rgbaComponents: RGBA? { return RGBA(color: self) }
+    public final var hsbaComponents: HSBA? { return HSBA(color: self) }
+    public final var bwaComponents: BWA? { return BWA(color: self) }
     
-    public final var rgbaComponents: ColorComponents? {
-        return updated(components: .blackRGBA)
-    }
-    
-    public final var hsbaComponents: ColorComponents? {
-        return updated(components: .blackHSBA)
-    }
-    
-    public final var bwaComponents: ColorComponents? {
-        return updated(components: .blackBWA)
-    }
-    
-    public final var components: ColorComponents? {
-        return ColorComponents(color: self)
-    }
-    
-    public convenience init(components: ColorComponents) {
-        switch components {
-        case .rgba(let red, let green, let blue, let alpha):
-            self.init(red: red, green: green, blue: blue, alpha: alpha)
-        case .hsba(let hue, let saturation, let brightness, let alpha):
-            self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-        case .bwa(let white, let alpha):
-            self.init(white: white, alpha: alpha)
-        }
+    public convenience init<Components: ColorComponents>(components: Components) {
+        self.init(cgColor: components.color.cgColor)
     }
 }
