@@ -30,7 +30,7 @@ public final class TextNotificationView: NotificationView {
         label.numberOfLines = 0
         return label
     }()
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -39,18 +39,18 @@ public final class TextNotificationView: NotificationView {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     public override func awakeFromNib() {
         super.awakeFromNib()
         initialize()
     }
-    
+
     private final func initialize() {
         contentView.addSubview(textLabel)
         let views = ["label": textLabel]
         ["H:|-15-[label]-15-|", "V:|-5-[label]-5-|"].constraints(with: views).activate()
     }
-    
+
     public override func configure(for style: NotificationStyle) {
         super.configure(for: style)
         textLabel.textColor = style.suggestedTextColor

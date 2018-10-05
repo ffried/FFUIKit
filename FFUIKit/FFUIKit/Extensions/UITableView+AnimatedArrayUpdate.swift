@@ -27,7 +27,7 @@ public protocol UITableViewReloadableObject: Equatable {
     func needsReload(from other: Self) -> Bool
 }
 
-//public protocol UITableViewRowObject: UITableViewReloadableObject {}
+// public protocol UITableViewRowObject: UITableViewReloadableObject {}
 
 public protocol UITableViewSectionObject: UITableViewReloadableObject {
     associatedtype Row: Equatable // UITableViewRowObject

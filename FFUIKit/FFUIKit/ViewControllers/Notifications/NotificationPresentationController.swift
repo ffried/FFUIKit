@@ -25,11 +25,11 @@ internal final class NotificationPresentationController: UIPresentationControlle
         presentedView?.layoutIfNeeded()
         return presentedView?.bounds ?? .zero
     }
-    
+
     internal override var shouldPresentInFullscreen: Bool {
         return false
     }
-    
+
     internal override var shouldRemovePresentersView: Bool {
         return false
     }
