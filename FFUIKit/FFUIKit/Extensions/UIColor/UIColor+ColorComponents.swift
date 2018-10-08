@@ -24,7 +24,7 @@ public extension UIColor {
     public final var rgbaComponents: RGBA? { return RGBA(color: self) }
     public final var hsbaComponents: HSBA? { return HSBA(color: self) }
     public final var bwaComponents: BWA? { return BWA(color: self) }
-    
+
     public convenience init<Components: ColorComponents>(components: Components) {
         self.init(cgColor: components.color.cgColor)
     }

@@ -43,14 +43,14 @@ public extension UIColor {
         default:
             rawHex = hex
         }
-        
+
         let charCount = rawHex.count
         assert((charCount == 6 || charCount == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
-        
+
         var startIndex = rawHex.startIndex
         var endIndex = rawHex.index(startIndex, offsetBy: 2)
         let redHex = String(rawHex[startIndex..<endIndex])
-        
+
         startIndex = endIndex
         endIndex = rawHex.index(startIndex, offsetBy: 2)
         let greenHex = String(rawHex[startIndex..<endIndex])
@@ -65,7 +65,7 @@ public extension UIColor {
             endIndex = rawHex.index(startIndex, offsetBy: 2)
             alphaHex = String(rawHex[startIndex..<endIndex])
         }
-        
+
         var r: UInt32 = 0
         var g: UInt32 = 0
         var b: UInt32 = 0
@@ -76,7 +76,7 @@ public extension UIColor {
         if !alphaHex.isEmpty {
             Scanner(string: alphaHex).scanHexInt32(&a)
         }
-        
+
         self.init(red: (CGFloat(r) / 255.0),
                   green: (CGFloat(g) / 255.0),
                   blue: (CGFloat(b) / 255.0),

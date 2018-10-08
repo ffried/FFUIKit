@@ -75,7 +75,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
     private func initialize() {
         layer.addSublayer(circleLayer)
         addSubview(stopButtonView)
-        
+
         let constraints: [NSLayoutConstraint]
         if #available(iOS 9, *) {
             constraints = [
