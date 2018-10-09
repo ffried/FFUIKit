@@ -27,18 +27,18 @@ import class UIKit.UITableViewCell
 import class UIKit.UITableView
 import class UIKit.UITableViewController
 
-public class LicensesTableViewController: UITableViewController {
-    
+public final class LicensesTableViewController: UITableViewController {
+
     private let licenseCellReuseIdentifier = "LicenseCell"
-    
+
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         get { return _preferredStatusBarStyle }
         set { _preferredStatusBarStyle = newValue }
     }
-    
+
     public var cellBackgroundColor: UIColor? = nil
-    
+
     public var licenses: [License] = [] {
         didSet {
             guard isViewLoaded else { return }
@@ -54,7 +54,7 @@ public class LicensesTableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: licenseCellReuseIdentifier)
         tableView.reloadData()
     }
-    
+
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         assert(navigationController != nil, "LicenseViewController is not within a UINavigationController! Trouble ahead!")
@@ -62,16 +62,16 @@ public class LicensesTableViewController: UITableViewController {
             tableView.deselectRow(at: ip, animated: animated)
         }
     }
-    
+
     // MARK: - Table view data source
     public override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return licenses.count
     }
-    
+
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: licenseCellReuseIdentifier, for: indexPath)
         cell.backgroundColor = cellBackgroundColor
@@ -79,7 +79,7 @@ public class LicensesTableViewController: UITableViewController {
         cell.textLabel?.text = licenses[indexPath.row].title
         return cell
     }
-    
+
     // MARK: - Table view delegate
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = LicenseDetailViewController()

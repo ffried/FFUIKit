@@ -17,7 +17,7 @@ fileprivate extension CALayer.AnimationKey {
 
 @IBDesignable
 public final class ProgressIndicatorView: TouchAwareControl {
-    
+
     @IBInspectable public var gapInDegrees: CGFloat {
         get { return gap.asDegrees.value }
         set { return gap = .degrees(newValue) }
@@ -30,10 +30,10 @@ public final class ProgressIndicatorView: TouchAwareControl {
         get { return !stopButtonView.isHidden }
         set { stopButtonView.isHidden = !newValue }
     }
-    
+
     public var gap: Angle<CGFloat> = .degrees(45)
     public private(set) var isAnimating: Bool = false
-    
+
     private lazy var circleLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.fillColor = UIColor.clear.cgColor
@@ -43,7 +43,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         layer.path = bezierPath(forPercent: 0).cgPath
         return layer
     }()
-    
+
     private lazy var stopButtonView: UIView = {
         let view = UIView()
         view.enableAutoLayout()
@@ -53,29 +53,29 @@ public final class ProgressIndicatorView: TouchAwareControl {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(stopButtonPressed(sender:))))
         return view
     }()
-    
+
     private var progressBarStrokeWidth: CGFloat { return frame.width / 12.5 }
     private var progressBarFrame: CGRect {
         let sideLength = bounds.width - progressBarStrokeWidth * 2
         let spacing = (bounds.width - sideLength) / 2
         return CGRect(origin: CGPoint(pointValue: spacing), size: CGSize(sideLength: sideLength))
     }
-    
+
     // MARK: - Initializers
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
     }
-    
+
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
-    
+
     private func initialize() {
         layer.addSublayer(circleLayer)
         addSubview(stopButtonView)
-        
+
         let constraints: [NSLayoutConstraint]
         if #available(iOS 9, *) {
             constraints = [
@@ -92,7 +92,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         }
         constraints.activate()
     }
-    
+
     // MARK: - Overrides
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -101,14 +101,14 @@ public final class ProgressIndicatorView: TouchAwareControl {
             circleLayer.lineWidth = progressBarStrokeWidth
         }
     }
-    
+
     public override func tintColorDidChange() {
         super.tintColorDidChange()
         if isEnabled {
             set(color: tintColor)
         }
     }
-    
+
     // MARK: - Animations
     public func startAnimating() {
         guard !isAnimating else { return }
@@ -130,7 +130,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
             circleLayer.removeAnimation(for: .rotation)
         }
     }
-    
+
     private func animate() {
         let animation = CAKeyframeAnimation(keyPath: #keyPath(CAShapeLayer.path))
         let stepCount = 1000
@@ -139,7 +139,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         animation.repeatCount = .infinity
         circleLayer.add(animation, for: .rotation)
     }
-    
+
     // MARK: - Hiding
     private func setHidden(_ hidden: Bool, animated: Bool = true, completion: ((Bool) -> ())? = nil) {
         guard hidden != isHidden else { completion?(true); return }
@@ -161,7 +161,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
             completion?(finished)
         }
     }
-    
+
     // MARK: - Helpers
     private func bezierPath(forPercent percent: CGFloat) -> UIBezierPath {
         let percentAngle: Angle = .degrees(-percent) * .radians(.pi * 2) + .degrees(90)

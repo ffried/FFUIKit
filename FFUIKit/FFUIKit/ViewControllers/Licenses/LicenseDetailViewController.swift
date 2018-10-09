@@ -27,14 +27,14 @@ import class UIKit.UIColor
 import class UIKit.UIView
 import class UIKit.UITextView
 
-public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
-    
+public final class LicenseDetailViewController: UIViewController, UITextViewDelegate {
+
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         get { return _preferredStatusBarStyle }
         set { _preferredStatusBarStyle = newValue }
     }
-    
+
     private let textView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +46,7 @@ public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
         tv.clipsToBounds = false
         return tv
     }()
-    
+
     public var license: License! {
         didSet {
             if isViewLoaded { updateContents() }
@@ -60,11 +60,11 @@ public class LicenseDetailViewController: UIViewController, UITextViewDelegate {
         textView.delegate = self
         if license != nil { updateContents() }
     }
-    
+
     deinit {
         textView.delegate = nil
     }
-    
+
     private func updateContents() {
         title = license.title
         textView.attributedText = license.content.value

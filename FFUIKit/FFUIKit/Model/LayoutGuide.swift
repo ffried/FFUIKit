@@ -24,24 +24,24 @@ import UIKit
 @available(iOS, introduced: 7.0, deprecated: 9.0, message: "Please use UILayoutGuide instead!")
 public final class LayoutGuide: NSObject, UILayoutSupport {
     public private(set) var length: CGFloat
-    
+
     public private(set) var originalGuide: UILayoutSupport
     public required init(originalGuide: UILayoutSupport, length: CGFloat = 0.0) {
         self.originalGuide = originalGuide
         self.length = length
         super.init()
     }
-    
+
     @available(iOS 9.0, *)
     public var topAnchor: NSLayoutYAxisAnchor {
         return originalGuide.topAnchor
     }
-    
+
     @available(iOS 9.0, *)
     public var bottomAnchor: NSLayoutYAxisAnchor {
         return originalGuide.bottomAnchor
     }
-    
+
     @available(iOS 9.0, *)
     public var heightAnchor: NSLayoutDimension {
         return originalGuide.heightAnchor

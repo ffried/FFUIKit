@@ -31,17 +31,17 @@ public extension UIApplication {
     private final var iTunesBaseURL: URL {
         return URL(string: "https://itunes.apple.com")!
     }
-    
+
     /// Returns the value for "FFUIKitiTunesIdentifier" in info plist
     public final var iTunesIdentifier: String? {
         return Bundle.main.infoDictionary?[FFUIKitiTunesIdentifierInfoDictionaryKey] as? String
     }
-    
+
     public final var iTunesURL: URL {
         let appID = iTunesIdentifier ?? ""
         return iTunesBaseURL.appendingPathComponent("app").appendingPathComponent("id\(appID)")
     }
-    
+
     public final var iTunesRatingURL: URL {
         var comps = URLComponents(url: iTunesURL, resolvingAgainstBaseURL: false)!
         comps.queryItems = [URLQueryItem(name: "action", value: "write-review")]

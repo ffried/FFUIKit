@@ -39,19 +39,11 @@ public extension UIImage {
     private struct SimpleColor<Val: UnsignedInteger>: Hashable {
         let raw: (red: Val, green: Val, blue: Val, alpha: Val)
 
-        let rgba: Ref<Lazy<(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)>>
-        let hsba: Ref<Lazy<(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)>>
+        let rgba: Ref<Lazy<RGBA>>
+        let hsba: Ref<Lazy<HSBA>>
 
-        var uiColor: UIColor {
-            return UIColor(red: rgba.nestedValue.red,
-                           green: rgba.nestedValue.green,
-                           blue: rgba.nestedValue.blue,
-                           alpha: rgba.nestedValue.alpha)
-        }
-
-        var intensity: CGFloat {
-            return hsba.nestedValue.saturation + hsba.nestedValue.brightness
-        }
+        var uiColor: UIColor { return rgba.nestedValue.color }
+        var intensity: CGFloat { return hsba.nestedValue.saturation + hsba.nestedValue.brightness }
 
         func hash(into hasher: inout Hasher) {
             hasher.combine(raw.red)
@@ -63,8 +55,8 @@ public extension UIImage {
         init(red: Val, green: Val, blue: Val, alpha: Val) {
             raw = (red, green, blue, alpha)
 
-            let rgbaRef = Ref(value: Lazy<(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)>({
-                return (
+            let rgbaRef = Ref(value: Lazy({
+                return RGBA(
                     red: CGFloat(red) / 255.0,
                     green: CGFloat(green) / 255.0,
                     blue: CGFloat(blue) / 255.0,
@@ -72,26 +64,7 @@ public extension UIImage {
                 )
             }))
             rgba = rgbaRef
-            hsba = Ref(value: Lazy({
-                let values = rgbaRef.nestedValue
-                let minVal = min(values.red, values.green, values.blue)
-                let maxVal = max(values.red, values.green, values.blue)
-                let delta = maxVal - minVal
-                let brightness = maxVal
-                let saturation = delta.isZero ? 0 : delta / maxVal
-                let hue: CGFloat
-                switch maxVal {
-                case values.red:
-                    hue = (values.green - values.blue) / delta
-                case values.green:
-                    hue = 2 + (values.blue - values.red) / delta
-                case values.blue:
-                    hue = 4 + (values.red - values.green) / delta
-                default:
-                    fatalError("max should always be one of rgb!")
-                }
-                return (hue, saturation, brightness, values.alpha)
-            }))
+            hsba = Ref(value: Lazy({ rgbaRef.nestedValue.toHSBA() }))
         }
 
         public static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
