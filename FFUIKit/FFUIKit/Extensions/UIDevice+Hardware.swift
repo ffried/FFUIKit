@@ -51,8 +51,8 @@ fileprivate extension UIDevice {
         "iPhone10,5"       : "iPhone 8 Plus",
         "iPhone10,6"       : "iPhone X (GSM)",
         "iPhone11,2"       : "iPhone XS",
-        "iPhone11,4"       : "iPhone XS Max",
-        "iPhone11,6"       : "iPhone XS Max (China)",
+        "iPhone11,4"       : "iPhone XS Max (China)",
+        "iPhone11,6"       : "iPhone XS Max",
         "iPhone11,8"       : "iPhone XR",
         
         "Watch1,1"         : "Apple Watch 38mm",
