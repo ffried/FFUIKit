@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0735667F21B599280095E649 /* UIStoryboard+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */; };
 		0747F31B210B519C009BFDAD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F31A210B519C009BFDAD /* Logging.swift */; };
 		0762C908207B988C00F9F0A8 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C905207B988B00F9F0A8 /* License.swift */; };
 		0762C909207B988C00F9F0A8 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C906207B988B00F9F0A8 /* LayoutGuide.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifier.swift"; sourceTree = "<group>"; };
 		0747F31A210B519C009BFDAD /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		0762C905207B988B00F9F0A8 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		0762C906207B988B00F9F0A8 /* LayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				0762C91E207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift */,
 				0762C918207B98CE00F9F0A8 /* UIView+AutoLayout.swift */,
 				0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */,
+				0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				0762C924207B98CE00F9F0A8 /* UIColor+Hex.swift in Sources */,
 				0762C922207B98CE00F9F0A8 /* UIImage+FixOrientation.swift in Sources */,
 				0762C92E207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift in Sources */,
+				0735667F21B599280095E649 /* UIStoryboard+Identifier.swift in Sources */,
 				0762C921207B98CE00F9F0A8 /* UIImage+ColorImages.swift in Sources */,
 				0762C92D207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift in Sources */,
 				0762C93C207B990F00F9F0A8 /* NotificationView.swift in Sources */,
