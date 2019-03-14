@@ -37,37 +37,54 @@ private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
 
 public extension UIImage {
     private struct SimpleColor<Val: UnsignedInteger>: Hashable {
-        let raw: (red: Val, green: Val, blue: Val, alpha: Val)
+        struct RawValues: Hashable {
+            let rgb: (red: Val, green: Val, blue: Val)
+            let alpha: Val
 
-        let rgba: Ref<Lazy<RGBA>>
-        let hsba: Ref<Lazy<HSBA>>
+            func hash(into hasher: inout Hasher) {
+                hasher.combine(rgb.red)
+                hasher.combine(rgb.green)
+                hasher.combine(rgb.blue)
+                hasher.combine(alpha)
+            }
 
-        var uiColor: UIColor { return rgba.nestedValue.color }
-        var intensity: CGFloat { return hsba.nestedValue.saturation + hsba.nestedValue.brightness }
+            init(red: Val, green: Val, blue: Val, alpha: Val) {
+                self.rgb = (red, green, blue)
+                self.alpha = alpha
+            }
+
+            static func ==(lhs: RawValues, rhs: RawValues) -> Bool {
+                return lhs.rgb == rhs.rgb && lhs.alpha == rhs.alpha
+            }
+        }
+        let raw: RawValues
+
+        let rgba: Lazy<RGBA>
+        let hsba: Lazy<HSBA>
+
+        var uiColor: UIColor { return rgba.value.color }
+        var intensity: CGFloat { return hsba.value.saturation + hsba.value.brightness }
 
         func hash(into hasher: inout Hasher) {
-            hasher.combine(raw.red)
-            hasher.combine(raw.green)
-            hasher.combine(raw.blue)
-            hasher.combine(raw.alpha)
+            hasher.combine(raw)
         }
 
-        init(red: Val, green: Val, blue: Val, alpha: Val) {
-            raw = (red, green, blue, alpha)
+        init(rawValues: RawValues) {
+            raw = rawValues
 
-            let rgbaRef = Ref(value: Lazy({
-                return RGBA(
-                    red: CGFloat(red) / 255.0,
-                    green: CGFloat(green) / 255.0,
-                    blue: CGFloat(blue) / 255.0,
-                    alpha: CGFloat(alpha) / 255.0
+            let lazyRGBA = Lazy {
+                RGBA(
+                    red: CGFloat(rawValues.rgb.red) / 255.0,
+                    green: CGFloat(rawValues.rgb.green) / 255.0,
+                    blue: CGFloat(rawValues.rgb.blue) / 255.0,
+                    alpha: CGFloat(rawValues.alpha) / 255.0
                 )
-            }))
-            rgba = rgbaRef
-            hsba = Ref(value: Lazy({ rgbaRef.nestedValue.toHSBA() }))
+            }
+            rgba = lazyRGBA
+            hsba = Lazy { lazyRGBA.value.toHSBA() }
         }
 
-        public static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
+        static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
             return lhs.raw == rhs.raw
         }
     }
@@ -110,7 +127,7 @@ public extension UIImage {
             guard let data = context.data else { return nil }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
 
-            return SimpleColor(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]).uiColor
+            return SimpleColor(rawValues: .init(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])).uiColor
         }
         return storedValue(for: &UIImage_averageColorKey, generatedBy: getAverageColor)
     }
@@ -136,9 +153,10 @@ public extension UIImage {
             guard let data = context.data else { return [] }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
 
-            return stride(from: 0, to: context.width * context.height * 4, by: 4).reduce(into: []) {
-                $0.insert(SimpleColor(red: rgba[$1/* + 0*/], green: rgba[$1 + 1], blue: rgba[$1 + 2], alpha: rgba[$1 + 3]))
+            let rawValues = stride(from: 0, to: context.width * context.height * 4, by: 4).reduce(into: Set<SimpleColor.RawValues>()) {
+                $0.insert(.init(red: rgba[$1/* + 0*/], green: rgba[$1 + 1], blue: rgba[$1 + 2], alpha: rgba[$1 + 3]))
             }
+            return Set(rawValues.map(SimpleColor.init))
         }
         return simpleColorsByQuality[quality, default: getSimpleColors(quality: quality)].stored()
     }
@@ -176,17 +194,17 @@ public extension UIImage {
             // translate/flip the graphics context (for transforming from CG* coords to UI* coordinates)
             context.translateBy(x: 0.0, y: -1.0)
             context.scaleBy(x: 1.0, y: -1.0)
-            
+
             context.setBlendMode(.colorBurn)
             context.draw(cgImage, in: rect)
             context.clip(to: rect, mask: cgImage)
             context.addRect(rect)
             context.drawPath(using: .fill)
         }
-        
+
         guard let cgImage = cgImage else { return nil }
         let rect = CGRect(origin: .zero, size: size)
-        
+
         if #available(iOS 10, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             return renderer.image {
@@ -197,10 +215,10 @@ public extension UIImage {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
             guard let context = UIGraphicsGetCurrentContext() else { return nil }
-            
+
             color.setFill()
             draw(cgImage: cgImage, with: rect, in: context)
-            
+
             return UIGraphicsGetImageFromCurrentImageContext()
         }
     }
