@@ -22,7 +22,7 @@ import class UIKit.UIResponder
 import class UIKit.UIView
 import FFFoundation
 
-public extension UIResponder {
+extension UIResponder {
     @available(iOSApplicationExtension, unavailable)
     @available(watchOSApplicationExtension, unavailable)
     @available(tvOSApplicationExtension, unavailable)

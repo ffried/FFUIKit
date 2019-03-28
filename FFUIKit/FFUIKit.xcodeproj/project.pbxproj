@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071F302922436B9D00F23109 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F302822436B9D00F23109 /* UIImage+Scaling.swift */; };
 		0735667F21B599280095E649 /* UIStoryboard+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */; };
 		0747F31B210B519C009BFDAD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F31A210B519C009BFDAD /* Logging.swift */; };
 		0762C908207B988C00F9F0A8 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C905207B988B00F9F0A8 /* License.swift */; };
@@ -25,7 +26,7 @@
 		0762C929207B98CE00F9F0A8 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C918207B98CE00F9F0A8 /* UIView+AutoLayout.swift */; };
 		0762C92A207B98CE00F9F0A8 /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C919207B98CE00F9F0A8 /* UIEdgeInsets+Init.swift */; };
 		0762C92B207B98CE00F9F0A8 /* CALayer+AnimationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91A207B98CE00F9F0A8 /* CALayer+AnimationKey.swift */; };
-		0762C92C207B98CE00F9F0A8 /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91B207B98CE00F9F0A8 /* CGRect+Helpers.swift */; };
+		0762C92C207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91B207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift */; };
 		0762C92D207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91C207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift */; };
 		0762C92E207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91D207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift */; };
 		0762C92F207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C91E207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift */; };
@@ -41,6 +42,7 @@
 		0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C944207B994B00F9F0A8 /* NotificationAnimationController.swift */; };
 		0762C94A207B994B00F9F0A8 /* NotificationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C945207B994B00F9F0A8 /* NotificationPresentationController.swift */; };
 		0762C94C207B998100F9F0A8 /* UIViewController+Foremost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */; };
+		07783C7821E4AECA00585133 /* UIImageView+Scales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07783C7721E4AECA00585133 /* UIImageView+Scales.swift */; };
 		077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C040D20F8B3B50074BEFA /* SwiftSupport.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07F2F45D1FB03B770064559C /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2F45E1FB03B770064559C /* FFFoundation.framework */; };
@@ -59,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071F302822436B9D00F23109 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifier.swift"; sourceTree = "<group>"; };
 		0747F31A210B519C009BFDAD /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		0762C905207B988B00F9F0A8 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
@@ -77,7 +80,7 @@
 		0762C918207B98CE00F9F0A8 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		0762C919207B98CE00F9F0A8 /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		0762C91A207B98CE00F9F0A8 /* CALayer+AnimationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+AnimationKey.swift"; sourceTree = "<group>"; };
-		0762C91B207B98CE00F9F0A8 /* CGRect+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
+		0762C91B207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Helpers.swift"; sourceTree = "<group>"; };
 		0762C91C207B98CE00F9F0A8 /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
 		0762C91D207B98CE00F9F0A8 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 		0762C91E207B98CE00F9F0A8 /* UITableView+AnimatedArrayUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+AnimatedArrayUpdate.swift"; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		0762C944207B994B00F9F0A8 /* NotificationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationAnimationController.swift; sourceTree = "<group>"; };
 		0762C945207B994B00F9F0A8 /* NotificationPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPresentationController.swift; sourceTree = "<group>"; };
 		0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Foremost.swift"; sourceTree = "<group>"; };
+		07783C7721E4AECA00585133 /* UIImageView+Scales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Scales.swift"; sourceTree = "<group>"; };
 		077C040D20F8B3B50074BEFA /* SwiftSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSupport.swift; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,7 +144,7 @@
 				0762C911207B98CE00F9F0A8 /* UIColor */,
 				0762C90C207B98CE00F9F0A8 /* UIImage */,
 				0762C91A207B98CE00F9F0A8 /* CALayer+AnimationKey.swift */,
-				0762C91B207B98CE00F9F0A8 /* CGRect+Helpers.swift */,
+				0762C91B207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift */,
 				077C040D20F8B3B50074BEFA /* SwiftSupport.swift */,
 				0762C917207B98CE00F9F0A8 /* UIApplication+AppStore.swift */,
 				0762C914207B98CE00F9F0A8 /* UIDevice+Hardware.swift */,
@@ -153,6 +157,7 @@
 				0762C918207B98CE00F9F0A8 /* UIView+AutoLayout.swift */,
 				0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */,
 				0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */,
+				07783C7721E4AECA00585133 /* UIImageView+Scales.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				0762C90E207B98CE00F9F0A8 /* UIImage+Colors.swift */,
 				0762C90D207B98CE00F9F0A8 /* UIImage+CorderRadius.swift */,
 				0762C910207B98CE00F9F0A8 /* UIImage+FixOrientation.swift */,
+				071F302822436B9D00F23109 /* UIImage+Scaling.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -340,7 +346,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Florian Friedrich";
 				TargetAttributes = {
 					07A9C78619E3C7C4004ABC10 = {
@@ -358,10 +364,11 @@
 			};
 			buildConfigurationList = 07A9C78119E3C7C4004ABC10 /* Build configuration list for PBXProject "FFUIKit" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 07A9C77D19E3C7C4004ABC10;
 			productRefGroup = 07A9C78819E3C7C4004ABC10 /* Products */;
@@ -396,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07783C7821E4AECA00585133 /* UIImageView+Scales.swift in Sources */,
 				0747F31B210B519C009BFDAD /* Logging.swift in Sources */,
 				0762C948207B994B00F9F0A8 /* NotificationController.swift in Sources */,
 				0762C924207B98CE00F9F0A8 /* UIColor+Hex.swift in Sources */,
@@ -420,9 +428,10 @@
 				0762C908207B988C00F9F0A8 /* License.swift in Sources */,
 				0762C923207B98CE00F9F0A8 /* UIColor+ColorComponents.swift in Sources */,
 				0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */,
+				071F302922436B9D00F23109 /* UIImage+Scaling.swift in Sources */,
 				0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */,
 				0762C93B207B990F00F9F0A8 /* ProgressIndicatorView.swift in Sources */,
-				0762C92C207B98CE00F9F0A8 /* CGRect+Helpers.swift in Sources */,
+				0762C92C207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift in Sources */,
 				0762C909207B988C00F9F0A8 /* LayoutGuide.swift in Sources */,
 				0762C928207B98CE00F9F0A8 /* UIApplication+AppStore.swift in Sources */,
 				0762C946207B994B00F9F0A8 /* LicenseDetailViewController.swift in Sources */,
@@ -457,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -504,7 +514,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -515,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -556,7 +567,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -1,5 +1,5 @@
 //
-//  CGRect+Helpers.swift
+//  CoreGraphics+Helpers.swift
 //  FFUIKit
 //
 //  Created by Florian Friedrich on 23.09.17.
@@ -20,19 +20,29 @@
 
 import CoreGraphics
 
-public extension CGRect {
+extension CGRect {
     @inlinable
     public var center: CGPoint { return CGPoint(x: midX, y: midY) }
 }
 
-public extension CGPoint {
+extension CGPoint {
     public init(pointValue: CGFloat) {
         self.init(x: pointValue, y: pointValue)
     }
 }
 
-public extension CGSize {
+extension CGSize {
+    @inlinable
+    public var surface: CGFloat { return width * height }
+
     public init(sideLength: CGFloat) {
         self.init(width: sideLength, height: sideLength)
+    }
+
+    public func clamped(toSurface maxSurface: CGFloat) -> CGSize {
+        let currentSurface = surface
+        guard currentSurface > maxSurface else { return self }
+        let scale = maxSurface / currentSurface
+        return applying(CGAffineTransform(scaleX: scale, y: scale))
     }
 }

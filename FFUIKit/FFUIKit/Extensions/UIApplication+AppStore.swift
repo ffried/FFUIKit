@@ -27,7 +27,7 @@ import class UIKit.UIApplication
 /// FFUIKitiTunesIdentifier
 public let FFUIKitiTunesIdentifierInfoDictionaryKey: String = "FFUIKitiTunesIdentifier"
 
-public extension UIApplication {
+extension UIApplication {
     private final var iTunesBaseURL: URL {
         return URL(string: "https://itunes.apple.com")!
     }

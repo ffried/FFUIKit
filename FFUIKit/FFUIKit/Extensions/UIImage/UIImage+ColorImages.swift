@@ -20,7 +20,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     public convenience init?(color: UIColor, size: CGSize) {
         let image: UIImage?
         if #available(iOS 10, *) {

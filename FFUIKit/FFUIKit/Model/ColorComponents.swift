@@ -36,7 +36,7 @@ public protocol ColorComponents: Hashable, Codable {
     mutating func update(from color: UIColor) -> Bool
 }
 
-public extension ColorComponents {
+extension ColorComponents {
     @inlinable
     public var isDarkColor: Bool { return brightness < 0.5 }
     @inlinable
@@ -57,7 +57,7 @@ public struct RGBA: ColorComponents {
     public var alpha: Value
 }
 
-public extension RGBA {
+extension RGBA {
     public var brightness: Value { return red * 0.299 + green * 0.587 + blue * 0.114 }
 
     public mutating func changeBrightness(by percent: CGFloat) {
@@ -82,7 +82,7 @@ public extension RGBA {
     }
 }
 
-public extension RGBA {
+extension RGBA {
     public func toHSBA() -> HSBA {
         let maxVal = max(red, green, blue)
         let delta = maxVal - min(red, green, blue)
@@ -105,7 +105,7 @@ public struct HSBA: ColorComponents {
     public var alpha: Value
 }
 
-public extension HSBA {
+extension HSBA {
     public mutating func changeBrightness(by percent: CGFloat) {
         apply(percent: percent, to: &brightness)
     }
@@ -131,7 +131,7 @@ public struct BWA: ColorComponents {
     public var alpha: Value
 }
 
-public extension BWA {
+extension BWA {
     public mutating func changeBrightness(by percent: CGFloat) {
         apply(percent: percent, to: &white)
     }
