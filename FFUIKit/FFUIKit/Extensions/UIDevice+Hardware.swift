@@ -140,7 +140,7 @@ fileprivate extension UIDevice {
     ]
 }
 
-public extension UIDevice {
+extension UIDevice {
     public final var platform: String {
         var size = Int()
         sysctlbyname("hw.machine", nil, &size, nil, 0)

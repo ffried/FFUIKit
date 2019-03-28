@@ -35,7 +35,7 @@ public protocol UITableViewSectionObject: UITableViewReloadableObject {
     var rows: [Row] { get }
 }
 
-public extension UITableView {
+extension UITableView {
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true) {
         let animation: RowAnimation = animated ? .automatic : .none
         
@@ -60,7 +60,7 @@ public extension UITableView {
         var toAddSections = IndexSet()
         var toReloadSections = IndexSet()
         for (idx, section) in newSections.enumerated() {
-            if let oldIdx = oldSections.index(of: section) {
+            if let oldIdx = oldSections.firstIndex(of: section) {
                 if section.needsReload(from: oldSections[oldIdx]) {
                     toReloadSections.insert(idx)
                     rowResults.append(nil)
@@ -83,8 +83,8 @@ public extension UITableView {
         beginUpdates()
         // Move and update sections
         for (idx, section) in newSections.enumerated() {
-            if let oldIdx = oldSections.index(of: section),
-                let resultIdx = sectionResults.index(of: section) {
+            if let oldIdx = oldSections.firstIndex(of: section),
+                let resultIdx = sectionResults.firstIndex(of: section) {
                 if idx != resultIdx {
                     moveSection(resultIdx, toSection: idx)
                 }
@@ -136,7 +136,7 @@ public extension UITableView {
     
     private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
         for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
-            guard let oldIdx = results.index(of: row), oldIdx != idx else { continue }
+            guard let oldIdx = results.firstIndex(of: row), oldIdx != idx else { continue }
             let oldIndexPath = IndexPath(row: oldIdx, section: section)
             let newIndexPath = IndexPath(row: idx, section: section)
             moveRow(at: oldIndexPath, to: newIndexPath)

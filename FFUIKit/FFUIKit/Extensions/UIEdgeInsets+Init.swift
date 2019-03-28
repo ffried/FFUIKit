@@ -21,7 +21,7 @@
 import struct CoreGraphics.CGFloat
 import struct UIKit.UIEdgeInsets
 
-public extension UIEdgeInsets {
+extension UIEdgeInsets {
     public init(value: CGFloat) {
        self.init(top: value, left: value, bottom: value, right: value)
     }

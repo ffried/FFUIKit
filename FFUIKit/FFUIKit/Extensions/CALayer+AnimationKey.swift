@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CALayer {
+extension CALayer {
     public struct AnimationKey: RawRepresentable {
         public typealias RawValue = String
         public let rawValue: String

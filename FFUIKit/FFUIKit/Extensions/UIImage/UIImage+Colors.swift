@@ -35,7 +35,7 @@ private var UIImage_mostIntenseColorByQualityKey = "UIImage.mostIntenseColorByQu
 private var UIImage_simpleColorsByQualityKey = "UIImage.simpleColorsByQuality"
 private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
 
-public extension UIImage {
+extension UIImage {
     private struct SimpleColor<Val: UnsignedInteger>: Hashable {
         struct RawValues: Hashable {
             let rgb: (red: Val, green: Val, blue: Val)
@@ -72,7 +72,7 @@ public extension UIImage {
         init(rawValues: RawValues) {
             raw = rawValues
 
-            let lazyRGBA = Lazy {
+            let lazyRGBA = Lazy<RGBA> {
                 RGBA(
                     red: CGFloat(rawValues.rgb.red) / 255.0,
                     green: CGFloat(rawValues.rgb.green) / 255.0,

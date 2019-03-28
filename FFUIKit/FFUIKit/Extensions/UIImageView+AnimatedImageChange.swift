@@ -23,7 +23,7 @@ import class UIKit.UIView
 import class UIKit.UIImage
 import class UIKit.UIImageView
 
-public extension UIImageView {
+extension UIImageView {
     public final func setImage(image: UIImage?, animated: Bool, animationDuration: TimeInterval = 1.0) {
         let change: () -> () = {
             self.image = image

@@ -20,7 +20,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage {
         let image: UIImage
         if #available(iOS 10, *) {
@@ -42,6 +42,7 @@ public extension UIImage {
         }
         return image.resizableImage(withCapInsets: UIEdgeInsets(
             horizontal: cornerRadius,
-            vertical: 0))
+            vertical: 0)
+        )
     }
 }

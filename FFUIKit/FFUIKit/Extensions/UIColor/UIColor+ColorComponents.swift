@@ -20,7 +20,7 @@
 
 import class UIKit.UIColor
 
-public extension UIColor {
+extension UIColor {
     public final var rgbaComponents: RGBA? { return RGBA(color: self) }
     public final var hsbaComponents: HSBA? { return HSBA(color: self) }
     public final var bwaComponents: BWA? { return BWA(color: self) }

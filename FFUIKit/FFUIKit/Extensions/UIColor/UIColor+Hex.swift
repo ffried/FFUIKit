@@ -32,7 +32,7 @@ fileprivate extension RGBA {
     }
 }
 
-public extension UIColor {
+extension UIColor {
     public convenience init(hexString hex: String) {
         let rawHex: String
         switch true {

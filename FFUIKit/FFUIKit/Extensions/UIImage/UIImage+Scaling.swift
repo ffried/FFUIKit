@@ -1,9 +1,9 @@
 //
-//  UIImage+FixOrientation.swift
+//  UIImage+Scaling.swift
 //  FFUIKit
 //
-//  Created by Florian Friedrich on 29/02/16.
-//  Copyright 2016 Florian Friedrich
+//  Created by Florian Friedrich on 21.03.19.
+//  Copyright © 2019 Florian Friedrich. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,9 +18,8 @@
 //  limitations under the License.
 //
 
-import enum CoreGraphics.CGImageAlphaInfo
-import struct CoreGraphics.CGPoint
 import struct CoreGraphics.CGRect
+import struct CoreGraphics.CGSize
 import class UIKit.UIImage
 import class UIKit.UIGraphicsImageRenderer
 import class UIKit.UIGraphicsImageRendererFormat
@@ -31,14 +30,7 @@ import func UIKit.UIGraphicsEndImageContext
 import func UIKit.UIGraphicsGetImageFromCurrentImageContext
 
 extension UIImage {
-    public final var hasAlpha: Bool {
-        let alpha = cgImage?.alphaInfo
-        let allowedValues: [CGImageAlphaInfo] = [.first, .last, .premultipliedFirst, .premultipliedLast]
-        return alpha.map { allowedValues.contains($0) } ?? false
-    }
-    
-    public final var normalizedImage: UIImage {
-        guard imageOrientation != .up else { return self }
+    public func scaled(to size: CGSize) -> UIImage {
         if #available(iOS 10, *) {
             let format = UIGraphicsImageRendererFormat.default()
             format.opaque = !hasAlpha
