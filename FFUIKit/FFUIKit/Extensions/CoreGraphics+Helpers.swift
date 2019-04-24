@@ -26,6 +26,7 @@ extension CGRect {
 }
 
 extension CGPoint {
+    @inlinable
     public init(pointValue: CGFloat) {
         self.init(x: pointValue, y: pointValue)
     }
@@ -35,6 +36,7 @@ extension CGSize {
     @inlinable
     public var surface: CGFloat { return width * height }
 
+    @inlinable
     public init(sideLength: CGFloat) {
         self.init(width: sideLength, height: sideLength)
     }

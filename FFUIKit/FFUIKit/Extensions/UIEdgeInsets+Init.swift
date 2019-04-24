@@ -22,10 +22,12 @@ import struct CoreGraphics.CGFloat
 import struct UIKit.UIEdgeInsets
 
 extension UIEdgeInsets {
+    @inlinable
     public init(value: CGFloat) {
        self.init(top: value, left: value, bottom: value, right: value)
     }
-    
+
+    @inlinable
     public init(horizontal: CGFloat, vertical: CGFloat) {
        self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
     }

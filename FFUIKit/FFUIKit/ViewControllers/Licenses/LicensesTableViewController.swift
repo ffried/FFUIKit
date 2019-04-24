@@ -86,6 +86,6 @@ public final class LicensesTableViewController: UITableViewController {
         detailVC.license = licenses[indexPath.row]
         detailVC.view.backgroundColor = view.backgroundColor
         detailVC.preferredStatusBarStyle = preferredStatusBarStyle
-        navigationController!.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

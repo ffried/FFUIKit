@@ -19,9 +19,8 @@ open class TouchAwareControl: UIControl {
     }
 
     open override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        let returnValue = super.continueTracking(touch, with: event)
-        isTrackingTouchInside = false
-        return returnValue
+        defer { isTrackingTouchInside = false }
+        return super.continueTracking(touch, with: event)
     }
 
     open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {

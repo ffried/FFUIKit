@@ -47,8 +47,9 @@ public final class TextNotificationView: NotificationView {
 
     private final func initialize() {
         contentView.addSubview(textLabel)
-        let views = ["label": textLabel]
-        ["H:|-15-[label]-15-|", "V:|-5-[label]-5-|"].constraints(with: views).activate()
+        ["H:|-15-[label]-15-|", "V:|-5-[label]-5-|"]
+            .constraints(with: ["label": textLabel])
+            .activate()
     }
 
     public override func configure(for style: NotificationStyle) {

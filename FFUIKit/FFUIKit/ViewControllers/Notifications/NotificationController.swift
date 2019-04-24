@@ -43,7 +43,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
         case afterDuration(TimeInterval)
     }
 
-    public let notificationView: View = View()
+    public private(set) lazy var notificationView = View()
     var noteView: NotificationView { return notificationView }
 
     public var style: NotificationStyle {
@@ -124,7 +124,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (notificationView.backgroundView.backgroundColor?.hsbaComponents?.isDarkColor ?? false) ? .lightContent : .default
+        return (notificationView.backgroundView.backgroundColor.map { HSBA<CGFloat>($0).isDarkColor } ?? false) ? .lightContent : .default
     }
 
     // MARK: - Actions

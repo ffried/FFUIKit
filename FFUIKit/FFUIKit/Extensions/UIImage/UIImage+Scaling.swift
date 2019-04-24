@@ -30,7 +30,7 @@ import func UIKit.UIGraphicsEndImageContext
 import func UIKit.UIGraphicsGetImageFromCurrentImageContext
 
 extension UIImage {
-    public func scaled(to size: CGSize) -> UIImage {
+    public final func scaled(to size: CGSize) -> UIImage {
         if #available(iOS 10, *) {
             let format = UIGraphicsImageRendererFormat.default()
             format.opaque = !hasAlpha

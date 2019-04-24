@@ -76,21 +76,11 @@ public final class ProgressIndicatorView: TouchAwareControl {
         layer.addSublayer(circleLayer)
         addSubview(stopButtonView)
 
-        let constraints: [NSLayoutConstraint]
-        if #available(iOS 9, *) {
-            constraints = [
-                stopButtonView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1 / 3.25),
-                stopButtonView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                stopButtonView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ]
-        } else {
-            constraints = [
-                NSLayoutConstraint(item: stopButtonView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1 / 3.25, constant: 0),
-                NSLayoutConstraint(item: stopButtonView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-                NSLayoutConstraint(item: stopButtonView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
-            ]
-        }
-        constraints.activate()
+        [
+            stopButtonView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1 / 3.25),
+            stopButtonView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            stopButtonView.centerYAnchor.constraint(equalTo: centerYAnchor),
+        ].activate()
     }
 
     // MARK: - Overrides
@@ -123,7 +113,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         guard isAnimating else { return }
         defer { isAnimating = false }
         if hidesWhenStopped {
-            setHidden(true, animated: true, completion: { finished in
+            setHidden(true, animated: true, completion: { _ in
                 self.circleLayer.removeAnimation(for: .rotation)
             })
         } else {
@@ -131,35 +121,27 @@ public final class ProgressIndicatorView: TouchAwareControl {
         }
     }
 
-    private func animate() {
-        let animation = CAKeyframeAnimation(keyPath: #keyPath(CAShapeLayer.path))
-        let stepCount = 1000
-        animation.values = (0..<stepCount).map { bezierPath(forPercent: CGFloat($0) / CGFloat(stepCount)).cgPath }
-        animation.duration = rotationDuration
-        animation.repeatCount = .infinity
-        circleLayer.add(animation, for: .rotation)
-    }
-
     // MARK: - Hiding
-    private func setHidden(_ hidden: Bool, animated: Bool = true, completion: ((Bool) -> ())? = nil) {
-        guard hidden != isHidden else { completion?(true); return }
+    private func setHidden(_ hidden: Bool, animated: Bool = true, completion: ((UIViewAnimatingPosition) -> ())? = nil) {
+        guard hidden != isHidden else { completion?(.end); return }
         guard animated else {
             isHidden = hidden
-            completion?(true)
+            completion?(.end)
             return
         }
         if !hidden {
             (alpha, isHidden) = (0.0, hidden)
         }
-        UIView.animate(withDuration: 0.15, animations: {
-            self.alpha = hidden ? 0.0 : 1.0
-        }) { finished in
-            if hidden {
-                self.isHidden = hidden
-                self.alpha = 1.0
-            }
-            completion?(finished)
-        }
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.15, delay: 0,
+                                                       options: [.beginFromCurrentState, .allowAnimatedContent],
+                                                       animations: { self.alpha = hidden ? 0.0 : 1.0 },
+                                                       completion: {
+                                                        if hidden {
+                                                            self.isHidden = hidden
+                                                            self.alpha = 1.0
+                                                        }
+                                                        completion?($0)
+        })
     }
 
     // MARK: - Helpers
@@ -172,6 +154,15 @@ public final class ProgressIndicatorView: TouchAwareControl {
                             endAngle: -endAngle.asRadians.value,
                             clockwise: true)
         
+    }
+
+    private func animate() {
+        let animation = CAKeyframeAnimation(keyPath: #keyPath(CAShapeLayer.path))
+        let stepCount = 1000
+        animation.values = (0..<stepCount).map { bezierPath(forPercent: CGFloat($0) / CGFloat(stepCount)).cgPath }
+        animation.duration = rotationDuration
+        animation.repeatCount = .infinity
+        circleLayer.add(animation, for: .rotation)
     }
 
     private func set(color: UIColor) {
@@ -204,9 +195,9 @@ public final class ProgressIndicatorView: TouchAwareControl {
             self.set(color: self.isEnabled ? self.tintColor : .lightGray)
         }
         if superview != nil && !isTrackingTouchInside {
-            UIView.animate(withDuration: 0.25, delay: 0.0,
-                           options: [.beginFromCurrentState, .allowAnimatedContent],
-                           animations: changes, completion: nil)
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.25, delay: 0,
+                                                           options: [.beginFromCurrentState, .allowAnimatedContent],
+                                                           animations: changes, completion: nil)
         } else {
             changes()
         }

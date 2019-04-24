@@ -36,91 +36,99 @@ public protocol UITableViewSectionObject: UITableViewReloadableObject {
 }
 
 extension UITableView {
+    private final func _performBatchUpdates(_ updates: @escaping () -> (), completion: ((Bool) -> ())? = nil) {
+        if #available(
+            iOS 11, iOSApplicationExtension 11,
+            tvOS 11, tvOSApplicationExtension 11,
+            watchOS 4, watchOSApplicationExtension 4,
+            *) {
+            performBatchUpdates(updates, completion: completion)
+        } else {
+            beginUpdates()
+            updates()
+            endUpdates()
+            completion?(true)
+        }
+    }
+
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true) {
         let animation: RowAnimation = animated ? .automatic : .none
         
         guard !oldSections.isEmpty else {
-            beginUpdates()
-            insertSections(IndexSet(0..<newSections.count), with: animation)
-            endUpdates()
-            return
+            return _performBatchUpdates({
+                self.insertSections(IndexSet(newSections.indices), with: animation)
+            })
         }
         
-        var sectionResults = Array<Section>(oldSections)
+        var sectionResults = oldSections
         var rowResults = [Optional<Array<Section.Row>>]()
-        
-        beginUpdates()
-        
-        // Remove sections
-        let toRemove = oldSections.enumerated().filter { !newSections.contains($1) }
-        sectionResults.removeAll { section in toRemove.contains { $0.element == section } }
-        deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
-        
-        // Add sections
-        var toAddSections = IndexSet()
-        var toReloadSections = IndexSet()
-        for (idx, section) in newSections.enumerated() {
-            if let oldIdx = oldSections.firstIndex(of: section) {
-                if section.needsReload(from: oldSections[oldIdx]) {
-                    toReloadSections.insert(idx)
-                    rowResults.append(nil)
+        _performBatchUpdates({
+            // Remove sections
+            let toRemove = oldSections.enumerated().filter { !newSections.contains($1) }
+            sectionResults.removeAll { section in toRemove.contains { $0.element == section } }
+            self.deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
+
+            // Add sections
+            var toAddSections = IndexSet()
+            var toReloadSections = IndexSet()
+            for (idx, section) in newSections.enumerated() {
+                if let oldIdx = oldSections.firstIndex(of: section) {
+                    if section.needsReload(from: oldSections[oldIdx]) {
+                        toReloadSections.insert(idx)
+                        rowResults.append(nil)
+                    } else {
+                        var currentRowResults = oldSections[oldIdx].rows
+                        self.insertAndDelete(from: oldSections[oldIdx].rows, to: section.rows, results: &currentRowResults, in: idx, with: animation)
+                        rowResults.append(currentRowResults)
+                    }
                 } else {
-                    var currentRowResults = oldSections[oldIdx].rows
-                    insertAndDelete(from: oldSections[oldIdx].rows, to: section.rows, results: &currentRowResults, in: idx, with: animation)
-                    rowResults.append(currentRowResults)
+                    rowResults.append(nil)
+                    sectionResults.insert(section, at: idx)
+                    toAddSections.insert(idx)
                 }
-            } else {
-                rowResults.append(nil)
-                sectionResults.insert(section, at: idx)
-                toAddSections.insert(idx)
             }
-        }
-        insertSections(toAddSections, with: animation)
-        reloadSections(toReloadSections, with: animation)
-        
-        endUpdates()
-        
-        beginUpdates()
-        // Move and update sections
-        for (idx, section) in newSections.enumerated() {
-            if let oldIdx = oldSections.firstIndex(of: section),
-                let resultIdx = sectionResults.firstIndex(of: section) {
-                if idx != resultIdx {
-                    moveSection(resultIdx, toSection: idx)
+            self.insertSections(toAddSections, with: animation)
+            self.reloadSections(toReloadSections, with: animation)
+        }) { _ in
+            self._performBatchUpdates({
+                // Move and update sections
+                for (idx, section) in newSections.enumerated() {
+                    if let oldIdx = oldSections.firstIndex(of: section),
+                        let resultIdx = sectionResults.firstIndex(of: section) {
+                        if idx != resultIdx {
+                            self.moveSection(resultIdx, toSection: idx)
+                        }
+                        if let results = rowResults[resultIdx] {
+                            self.move(from: oldSections[oldIdx].rows, to: section.rows, withPreviousResults: results, in: idx, with: animation)
+                        }/* else {
+                         // Reload Rows if section does not reload it.
+                         } */
+                    }
                 }
-                if let results = rowResults[resultIdx] {
-                    move(from: oldSections[oldIdx].rows, to: section.rows, withPreviousResults: results, in: idx, with: animation)
-                }/* else {
-                 // Reload Rows if section does not reload it.
-                } */
-            }
+            })
         }
-        endUpdates()
     }
     
     public func update<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true) {
         let animation: RowAnimation = animated ? .automatic : .none
         guard !oldRows.isEmpty else {
-            let toAddIndexPaths = (0..<newRows.count).map { IndexPath(row: $0, section: section) }
-            beginUpdates()
-            insertRows(at: toAddIndexPaths, with: animation)
-            endUpdates()
-            return
+            return _performBatchUpdates({
+                self.insertRows(at: newRows.indices.map { IndexPath(row: $0, section: section) }, with: animation)
+            })
         }
         
         var results = Array<Row>(oldRows)
-        
-        beginUpdates()
-        insertAndDelete(from: oldRows, to: newRows, results: &results, in: section, with: animation)
-        endUpdates()
-        
-        beginUpdates()
-        move(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
-        endUpdates()
+        _performBatchUpdates({
+            self.insertAndDelete(from: oldRows, to: newRows, results: &results, in: section, with: animation)
+        }) { _ in
+            self._performBatchUpdates({
+                self.move(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
+            })
+        }
     }
     
     // MARK: - Helpers
-    private func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: RowAnimation) {
+    private final func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: RowAnimation) {
         // Remove rows
         let toDelete = oldRows.enumerated().filter { !newRows.contains($1) }
         results.removeAll { row in toDelete.contains { $0.element == row } }
@@ -134,7 +142,7 @@ extension UITableView {
         insertRows(at: toAddIndexPaths, with: animation)
     }
     
-    private func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
+    private final func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
         for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
             guard let oldIdx = results.firstIndex(of: row), oldIdx != idx else { continue }
             let oldIndexPath = IndexPath(row: oldIdx, section: section)

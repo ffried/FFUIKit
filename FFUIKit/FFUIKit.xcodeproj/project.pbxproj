@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		071F302922436B9D00F23109 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F302822436B9D00F23109 /* UIImage+Scaling.swift */; };
 		0735667F21B599280095E649 /* UIStoryboard+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */; };
+		0737AFA122708B2000E17208 /* RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737AFA022708B2000E17208 /* RGBA.swift */; };
+		0737AFA322708B5500E17208 /* HSBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737AFA222708B5500E17208 /* HSBA.swift */; };
+		0737AFA522708BE900E17208 /* BWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737AFA422708BE900E17208 /* BWA.swift */; };
+		0737AFA72270B93A00E17208 /* UIColor+ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737AFA62270B93900E17208 /* UIColor+ColorComponents.swift */; };
 		0747F31B210B519C009BFDAD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F31A210B519C009BFDAD /* Logging.swift */; };
 		0762C908207B988C00F9F0A8 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C905207B988B00F9F0A8 /* License.swift */; };
-		0762C909207B988C00F9F0A8 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C906207B988B00F9F0A8 /* LayoutGuide.swift */; };
 		0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C907207B988B00F9F0A8 /* ColorComponents.swift */; };
 		0762C91F207B98CE00F9F0A8 /* UIImage+CorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C90D207B98CE00F9F0A8 /* UIImage+CorderRadius.swift */; };
 		0762C920207B98CE00F9F0A8 /* UIImage+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C90E207B98CE00F9F0A8 /* UIImage+Colors.swift */; };
 		0762C921207B98CE00F9F0A8 /* UIImage+ColorImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C90F207B98CE00F9F0A8 /* UIImage+ColorImages.swift */; };
 		0762C922207B98CE00F9F0A8 /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C910207B98CE00F9F0A8 /* UIImage+FixOrientation.swift */; };
-		0762C923207B98CE00F9F0A8 /* UIColor+ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C912207B98CE00F9F0A8 /* UIColor+ColorComponents.swift */; };
 		0762C924207B98CE00F9F0A8 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C913207B98CE00F9F0A8 /* UIColor+Hex.swift */; };
 		0762C925207B98CE00F9F0A8 /* UIDevice+Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C914207B98CE00F9F0A8 /* UIDevice+Hardware.swift */; };
 		0762C926207B98CE00F9F0A8 /* UIEdgeInsets+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C915207B98CE00F9F0A8 /* UIEdgeInsets+AutoLayout.swift */; };
@@ -44,6 +46,7 @@
 		0762C94C207B998100F9F0A8 /* UIViewController+Foremost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */; };
 		07783C7821E4AECA00585133 /* UIImageView+Scales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07783C7721E4AECA00585133 /* UIImageView+Scales.swift */; };
 		077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C040D20F8B3B50074BEFA /* SwiftSupport.swift */; };
+		078CB39F225DC233008F5360 /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CB39E225DC233008F5360 /* UIColor+HexTests.swift */; };
 		07A9C78D19E3C7C4004ABC10 /* FFUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07F2F45D1FB03B770064559C /* FFFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2F45E1FB03B770064559C /* FFFoundation.framework */; };
 		07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */; };
@@ -63,15 +66,17 @@
 /* Begin PBXFileReference section */
 		071F302822436B9D00F23109 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		0735667E21B599280095E649 /* UIStoryboard+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifier.swift"; sourceTree = "<group>"; };
+		0737AFA022708B2000E17208 /* RGBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA.swift; sourceTree = "<group>"; };
+		0737AFA222708B5500E17208 /* HSBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBA.swift; sourceTree = "<group>"; };
+		0737AFA422708BE900E17208 /* BWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWA.swift; sourceTree = "<group>"; };
+		0737AFA62270B93900E17208 /* UIColor+ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorComponents.swift"; sourceTree = "<group>"; };
 		0747F31A210B519C009BFDAD /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		0762C905207B988B00F9F0A8 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
-		0762C906207B988B00F9F0A8 /* LayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
 		0762C907207B988B00F9F0A8 /* ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
 		0762C90D207B98CE00F9F0A8 /* UIImage+CorderRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CorderRadius.swift"; sourceTree = "<group>"; };
 		0762C90E207B98CE00F9F0A8 /* UIImage+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Colors.swift"; sourceTree = "<group>"; };
 		0762C90F207B98CE00F9F0A8 /* UIImage+ColorImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ColorImages.swift"; sourceTree = "<group>"; };
 		0762C910207B98CE00F9F0A8 /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
-		0762C912207B98CE00F9F0A8 /* UIColor+ColorComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorComponents.swift"; sourceTree = "<group>"; };
 		0762C913207B98CE00F9F0A8 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		0762C914207B98CE00F9F0A8 /* UIDevice+Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Hardware.swift"; sourceTree = "<group>"; };
 		0762C915207B98CE00F9F0A8 /* UIEdgeInsets+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+AutoLayout.swift"; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		0762C94B207B998100F9F0A8 /* UIViewController+Foremost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Foremost.swift"; sourceTree = "<group>"; };
 		07783C7721E4AECA00585133 /* UIImageView+Scales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Scales.swift"; sourceTree = "<group>"; };
 		077C040D20F8B3B50074BEFA /* SwiftSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSupport.swift; sourceTree = "<group>"; };
+		078CB39E225DC233008F5360 /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
 		07A9C78719E3C7C4004ABC10 /* FFUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A9C78B19E3C7C4004ABC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A9C78C19E3C7C4004ABC10 /* FFUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUIKit.h; sourceTree = "<group>"; };
@@ -127,11 +133,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0762C904207B988B00F9F0A8 /* Model */ = {
+		0737AF9F22708B1600E17208 /* ColorComponents */ = {
 			isa = PBXGroup;
 			children = (
 				0762C907207B988B00F9F0A8 /* ColorComponents.swift */,
-				0762C906207B988B00F9F0A8 /* LayoutGuide.swift */,
+				0737AFA022708B2000E17208 /* RGBA.swift */,
+				0737AFA222708B5500E17208 /* HSBA.swift */,
+				0737AFA422708BE900E17208 /* BWA.swift */,
+			);
+			path = ColorComponents;
+			sourceTree = "<group>";
+		};
+		0762C904207B988B00F9F0A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0737AF9F22708B1600E17208 /* ColorComponents */,
 				0762C905207B988B00F9F0A8 /* License.swift */,
 				0762C930207B98F400F9F0A8 /* NotificationStyle.swift */,
 			);
@@ -177,7 +193,7 @@
 		0762C911207B98CE00F9F0A8 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				0762C912207B98CE00F9F0A8 /* UIColor+ColorComponents.swift */,
+				0737AFA62270B93900E17208 /* UIColor+ColorComponents.swift */,
 				0762C913207B98CE00F9F0A8 /* UIColor+Hex.swift */,
 			);
 			path = UIColor;
@@ -285,6 +301,7 @@
 			children = (
 				07F830021DAA7F7600DBCBAA /* FFUIKit_Tests.swift */,
 				07F830041DAA7F7600DBCBAA /* Info.plist */,
+				078CB39E225DC233008F5360 /* UIColor+HexTests.swift */,
 			);
 			path = "FFUIKit Tests";
 			sourceTree = "<group>";
@@ -415,6 +432,8 @@
 				0762C93C207B990F00F9F0A8 /* NotificationView.swift in Sources */,
 				0762C93A207B990F00F9F0A8 /* TouchAwareControl.swift in Sources */,
 				0762C929207B98CE00F9F0A8 /* UIView+AutoLayout.swift in Sources */,
+				0737AFA322708B5500E17208 /* HSBA.swift in Sources */,
+				0737AFA72270B93A00E17208 /* UIColor+ColorComponents.swift in Sources */,
 				0762C92A207B98CE00F9F0A8 /* UIEdgeInsets+Init.swift in Sources */,
 				0762C94A207B994B00F9F0A8 /* NotificationPresentationController.swift in Sources */,
 				0762C926207B98CE00F9F0A8 /* UIEdgeInsets+AutoLayout.swift in Sources */,
@@ -426,13 +445,12 @@
 				0762C94C207B998100F9F0A8 /* UIViewController+Foremost.swift in Sources */,
 				0762C920207B98CE00F9F0A8 /* UIImage+Colors.swift in Sources */,
 				0762C908207B988C00F9F0A8 /* License.swift in Sources */,
-				0762C923207B98CE00F9F0A8 /* UIColor+ColorComponents.swift in Sources */,
 				0762C949207B994B00F9F0A8 /* NotificationAnimationController.swift in Sources */,
 				071F302922436B9D00F23109 /* UIImage+Scaling.swift in Sources */,
 				0762C90A207B988C00F9F0A8 /* ColorComponents.swift in Sources */,
 				0762C93B207B990F00F9F0A8 /* ProgressIndicatorView.swift in Sources */,
 				0762C92C207B98CE00F9F0A8 /* CoreGraphics+Helpers.swift in Sources */,
-				0762C909207B988C00F9F0A8 /* LayoutGuide.swift in Sources */,
+				0737AFA522708BE900E17208 /* BWA.swift in Sources */,
 				0762C928207B98CE00F9F0A8 /* UIApplication+AppStore.swift in Sources */,
 				0762C946207B994B00F9F0A8 /* LicenseDetailViewController.swift in Sources */,
 				0762C93D207B990F00F9F0A8 /* TextNotificationView.swift in Sources */,
@@ -440,6 +458,7 @@
 				077C040E20F8B3B50074BEFA /* SwiftSupport.swift in Sources */,
 				0762C939207B990F00F9F0A8 /* Label.swift in Sources */,
 				0762C925207B98CE00F9F0A8 /* UIDevice+Hardware.swift in Sources */,
+				0737AFA122708B2000E17208 /* RGBA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F830031DAA7F7600DBCBAA /* FFUIKit_Tests.swift in Sources */,
+				078CB39F225DC233008F5360 /* UIColor+HexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,11 +21,18 @@
 import class UIKit.UIColor
 
 extension UIColor {
-    public final var rgbaComponents: RGBA? { return RGBA(color: self) }
-    public final var hsbaComponents: HSBA? { return HSBA(color: self) }
-    public final var bwaComponents: BWA? { return BWA(color: self) }
+    @inlinable
+    public convenience init(rgba: RGBA<CGFloat>) {
+        self.init(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
+    }
 
-    public convenience init<Components: ColorComponents>(components: Components) {
-        self.init(cgColor: components.color.cgColor)
+    @inlinable
+    public convenience init(hsba: HSBA<CGFloat>) {
+        self.init(hue: hsba.hue, saturation: hsba.saturation, brightness: hsba.brightness, alpha: hsba.alpha)
+    }
+
+    @inlinable
+    public convenience init(bwa: BWA<CGFloat>) {
+        self.init(white: bwa.white, alpha: bwa.alpha)
     }
 }

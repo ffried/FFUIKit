@@ -20,7 +20,6 @@
 import UIKit
 
 open class NotificationView: UIView {
-
     public let backgroundView = UIView()
     public let contentView = UIView()
 
@@ -51,14 +50,14 @@ open class NotificationView: UIView {
             otherConstraints = [
                 contentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
                 contentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-                contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+                contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             ]
         } else {
             contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
             otherConstraints = [
                 contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+                contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             ]
         }
         contentViewTopConstraint.isActive = true
@@ -69,10 +68,15 @@ open class NotificationView: UIView {
         backgroundView.backgroundColor = style.suggestedBackgroundColor
     }
 
+    @inlinable
     internal func _willAppear(animated: Bool) { willAppear(animated: animated) }
+    @inlinable
     internal func _didAppear(animated: Bool) { didAppear(animated: animated) }
+    @inlinable
     internal func _willDisappear(animated: Bool) { willDisappear(animated: animated) }
+    @inlinable
     internal func _didDisappear(animated: Bool) { didDisappear(animated: animated) }
+    @inlinable
     internal func _didReceiveTouch(sender: Any?) { didReceiveTouch(sender: sender) }
 
     // MARK: - Methods for subclasses

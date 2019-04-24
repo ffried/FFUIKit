@@ -23,8 +23,9 @@ import struct UIKit.UIEdgeInsets
 import class UIKit.UILabel
 
 @IBDesignable
-public class Label: UILabel {
-    @IBInspectable public var edgeInsets = UIEdgeInsets() {
+public final class Label: UILabel {
+    @IBInspectable
+    public var edgeInsets: UIEdgeInsets = .zero {
         didSet { invalidateIntrinsicContentSize() }
     }
 

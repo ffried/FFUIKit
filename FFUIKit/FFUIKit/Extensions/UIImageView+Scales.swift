@@ -18,7 +18,9 @@
 //  limitations under the License.
 //
 
-import UIKit
+import struct CoreGraphics.CGFloat
+import struct CoreGraphics.CGSize
+import class UIKit.UIImageView
 
 extension UIImageView {
     private func scale(using dimensionPath: KeyPath<CGSize, CGFloat>) -> CGFloat {

@@ -31,19 +31,16 @@ extension UIViewController {
     internal static func findForemost() -> UIViewController? {
         var viewController: UIViewController? = nil
         let rootVC = Application.shared.delegate?.window??.rootViewController
-        if let vc = rootVC {
-            if let navController = vc as? UINavigationController {
-                viewController = navController.topViewController
-            }
-            if let tabBarController = vc as? UITabBarController {
-                viewController = tabBarController.selectedViewController
-            }
-            if let pageController = vc as? UIPageViewController {
-                viewController = pageController.viewControllers?.first
-            }
-            if viewController == nil {
-                viewController = vc
-            }
+        switch rootVC {
+        case let navController as UINavigationController:
+            viewController = navController.topViewController
+        case let tabBarController as UITabBarController:
+            viewController = tabBarController.selectedViewController
+        case let pageController as UIPageViewController:
+            viewController = pageController.viewControllers?.first
+        case let vc where viewController == nil:
+            viewController = vc
+        default: break
         }
         if let vc = viewController {
             var presentedViewController = vc

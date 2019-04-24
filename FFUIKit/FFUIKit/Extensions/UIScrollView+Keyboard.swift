@@ -36,8 +36,6 @@ import enum UIKit.UIViewAnimationCurve
 import struct UIKit.UIViewAnimationOptions
 import class UIKit.UIView
 import class UIKit.UIScrollView
-import let UIKit.UIKeyboardFrameBeginUserInfoKey
-import let UIKit.UIKeyboardFrameEndUserInfoKey
 
 private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 extension UIScrollView {
@@ -46,8 +44,7 @@ extension UIScrollView {
     private final var notificationObservers: [NotificationObserver] {
         get {
             guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? [NotificationObserver] else {
-                self.notificationObservers = [] // Associates them
-                return self.notificationObservers // returns the newly associated object
+                return []
             }
             return observers
         }
@@ -70,7 +67,7 @@ extension UIScrollView {
     }
     
     public final func unregisterFromKeyboardNotifications() {
-        notificationObservers.removeAll(keepingCapacity: false)
+        notificationObservers.removeAll()
     }
     
     // MARK: Keyboard functions
@@ -123,7 +120,7 @@ extension UIScrollView {
             }
         }
         if animated {
-            animate(changes, withKeyboardUserInfo: userInfo) { (finished) in offsetChanges() }
+            animate(changes, withKeyboardUserInfo: userInfo) { _ in offsetChanges() }
         } else {
             changes()
             offsetChanges()
@@ -142,7 +139,7 @@ extension UIScrollView {
             self.scrollIndicatorInsets = self.originalScrollIndicatorInsets
         }
         if animated {
-            animate(changes, withKeyboardUserInfo: userInfo, completion: nil)
+            animate(changes, withKeyboardUserInfo: userInfo)
         } else {
             changes()
         }
@@ -154,7 +151,7 @@ extension UIScrollView {
     }
     
     private final func keyboardHeight(from rect: CGRect) -> CGFloat {
-        var height: CGFloat = 0.0
+        var height: CGFloat = 0
         if let w = window {
             let windowFrame = w.convert(bounds, from: self)
             let keyboardFrame = windowFrame.intersection(rect)
@@ -165,17 +162,17 @@ extension UIScrollView {
     }
     
     private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
-        var duration: TimeInterval = 1.0 / 3.0
+        var duration: TimeInterval = 1 / 3
         var curve: UIView.AnimationCurve = .linear
         let options: UIView.AnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
         if let info = userInfo {
             if let d = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval { duration = d }
             if let c = UIView.AnimationCurve(rawValue: (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? UIView.AnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
         }
-        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
             UIView.setAnimationCurve(curve)
             animations()
-            }, completion: completion)
+        }, completion: completion)
     }
 }
 

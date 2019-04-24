@@ -19,20 +19,19 @@
 //
 
 import class Foundation.Scanner
-import struct CoreGraphics.CGFloat
 import class UIKit.UIColor
 
-fileprivate extension RGBA {
-    func hex(includeAlpha: Bool, uppercase: Bool) -> String {
-        func toHex(_ value: Value) -> String {
-            let str = String(UInt(value * 255), radix: 16, uppercase: uppercase)
-            return str.count == 2 ? str : "0" + str
-        }
-        return toHex(red) + toHex(green) + toHex(blue) + (includeAlpha ? toHex(alpha) : "")
-    }
-}
-
 extension UIColor {
+    @inlinable
+    public convenience init<I: BinaryInteger>(rgbHex: I) {
+        self.init(rgba: .init(rgb: .init(RGB(hex: rgbHex)), alpha: 1))
+    }
+
+    @inlinable
+    public convenience init<I: BinaryInteger>(rgbaHex: I) {
+        self.init(rgba: .init(RGBA(hex: rgbaHex)))
+    }
+
     public convenience init(hexString hex: String) {
         let rawHex: String
         switch true {
@@ -45,45 +44,15 @@ extension UIColor {
         }
 
         let charCount = rawHex.count
-        assert((charCount == 6 || charCount == 8), "Hex string has to have either 6 or 8 characters (without # or 0x)")
+        assert(charCount == 6 || charCount == 8,
+               "Hex string must have either 6 or 8 characters (without # or 0x)")
 
-        var startIndex = rawHex.startIndex
-        var endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let redHex = String(rawHex[startIndex..<endIndex])
-
-        startIndex = endIndex
-        endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let greenHex = String(rawHex[startIndex..<endIndex])
-
-        startIndex = endIndex
-        endIndex = rawHex.index(startIndex, offsetBy: 2)
-        let blueHex = String(rawHex[startIndex..<endIndex])
-
-        var alphaHex = ""
+        var value: UInt32 = 0
+        Scanner(string: rawHex).scanHexInt32(&value)
         if charCount == 8 {
-            startIndex = endIndex
-            endIndex = rawHex.index(startIndex, offsetBy: 2)
-            alphaHex = String(rawHex[startIndex..<endIndex])
+            self.init(rgbaHex: value)
+        } else {
+            self.init(rgbHex: value)
         }
-
-        var r: UInt32 = 0
-        var g: UInt32 = 0
-        var b: UInt32 = 0
-        var a: UInt32 = 255
-        Scanner(string: redHex).scanHexInt32(&r)
-        Scanner(string: greenHex).scanHexInt32(&g)
-        Scanner(string: blueHex).scanHexInt32(&b)
-        if !alphaHex.isEmpty {
-            Scanner(string: alphaHex).scanHexInt32(&a)
-        }
-
-        self.init(red: (CGFloat(r) / 255.0),
-                  green: (CGFloat(g) / 255.0),
-                  blue: (CGFloat(b) / 255.0),
-                  alpha: (CGFloat(a) / 255.0))
-    }
-
-    public func rgbaHex(prefix: String = "", postfix: String = "", uppercase: Bool = false) -> String? {
-        return rgbaComponents.map { prefix + $0.hex(includeAlpha: true, uppercase: uppercase) + postfix }
     }
 }
