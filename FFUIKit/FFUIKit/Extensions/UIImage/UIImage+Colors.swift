@@ -167,7 +167,12 @@ extension UIImage {
     }
 
     public final func imageTinted(with color: UIColor) -> UIImage? {
-        func draw(cgImage: CGImage, with rect: CGRect, in context: CGContext) {
+        guard let cgImage = cgImage else { return nil }
+        let rect = CGRect(origin: .zero, size: size)
+
+        func draw(in context: CGContext) {
+            color.setFill()
+
             // translate/flip the graphics context (for transforming from CG* coords to UI* coordinates)
             context.translateBy(x: 0, y: -1)
             context.scaleBy(x: 1, y: -1)
@@ -179,23 +184,14 @@ extension UIImage {
             context.drawPath(using: .fill)
         }
 
-        guard let cgImage = cgImage else { return nil }
-        let rect = CGRect(origin: .zero, size: size)
-
         if #available(iOS 10, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
-            return renderer.image {
-                color.setFill()
-                draw(cgImage: cgImage, with: rect, in: $0.cgContext)
-            }
+            return renderer.image { draw(in: $0.cgContext) }
         } else {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
             guard let context = UIGraphicsGetCurrentContext() else { return nil }
-
-            color.setFill()
-            draw(cgImage: cgImage, with: rect, in: context)
-
+            draw(in: context)
             return UIGraphicsGetImageFromCurrentImageContext()
         }
     }

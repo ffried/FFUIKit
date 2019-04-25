@@ -133,7 +133,8 @@ fileprivate extension UIDevice {
         "i386"             : "Simulator",
         "x86_64"           : "Simulator",
 
-        "AirPods1,1"       : "AirPods",
+        "AirPods1,1"       : "AirPods (1st Gen)",
+        "AirPods2,1"       : "AirPods (2nd Gen)",
 
         "AudioAccessory1,1": "HomePod",
         "AudioAccessory1,2": "HomePod",
