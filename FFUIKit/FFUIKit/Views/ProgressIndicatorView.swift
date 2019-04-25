@@ -9,7 +9,7 @@
 import class Foundation.NSCoder
 import typealias Foundation.TimeInterval
 import UIKit
-import enum FFFoundation.Angle
+import struct FFFoundation.Angle
 
 fileprivate extension CALayer.AnimationKey {
     static let rotation = CALayer.AnimationKey(rawValue: "FFProgressIndicatorAnimation")
