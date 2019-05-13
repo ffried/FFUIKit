@@ -36,7 +36,7 @@ public protocol UITableViewSectionObject: UITableViewReloadableObject {
 }
 
 extension UITableView {
-    private final func _performBatchUpdates(_ updates: @escaping () -> (), completion: ((Bool) -> ())? = nil) {
+    private final func _performBatchUpdates(_ updates: () -> (), completion: ((Bool) -> ())? = nil) {
         if #available(
             iOS 11, iOSApplicationExtension 11,
             tvOS 11, tvOSApplicationExtension 11,
@@ -51,22 +51,47 @@ extension UITableView {
         }
     }
 
-    public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true) {
+    public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true, completion: ((Bool) -> ())? = nil)
+        where Section.Row: UITableViewReloadableObject
+    {
+        update(from: oldSections, to: newSections, animated: animated, movingAndReloadingRowsWith: moveAndReload, completion: completion)
+    }
+
+    public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true, completion: ((Bool) -> ())? = nil) {
+        update(from: oldSections, to: newSections, animated: animated, movingAndReloadingRowsWith: move, completion: completion)
+    }
+
+    public func update<Row: UITableViewReloadableObject>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true, completion: ((Bool) -> ())? = nil) {
+        update(from: oldRows, to: newRows, in: section, animated: animated, movingAndReloadingWith: { results, animation in
+            self.moveAndReload(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
+        }, completion: completion)
+    }
+    
+    public func update<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true, completion: ((Bool) -> ())? = nil) {
+        update(from: oldRows, to: newRows, in: section, animated: animated, movingAndReloadingWith: { results, animation in
+            self.move(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
+        }, completion: completion)
+    }
+    
+    // MARK: - Helpers
+    private func update<Section: UITableViewSectionObject>(from oldSections: [Section], to newSections: [Section], animated: Bool,
+                                                           movingAndReloadingRowsWith moveAndReloadRows: @escaping ([Section.Row], [Section.Row], [Section.Row], Int, RowAnimation) -> (),
+                                                           completion: ((Bool) -> ())?) {
         let animation: RowAnimation = animated ? .automatic : .none
-        
+
         guard !oldSections.isEmpty else {
             return _performBatchUpdates({
-                self.insertSections(IndexSet(newSections.indices), with: animation)
-            })
+                insertSections(IndexSet(newSections.indices), with: animation)
+            }, completion: completion)
         }
-        
+
         var sectionResults = oldSections
         var rowResults = [Optional<Array<Section.Row>>]()
         _performBatchUpdates({
             // Remove sections
             let toRemove = oldSections.enumerated().filter { !newSections.contains($1) }
             sectionResults.removeAll { section in toRemove.contains { $0.element == section } }
-            self.deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
+            deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
 
             // Add sections
             var toAddSections = IndexSet()
@@ -78,7 +103,7 @@ extension UITableView {
                         rowResults.append(nil)
                     } else {
                         var currentRowResults = oldSections[oldIdx].rows
-                        self.insertAndDelete(from: oldSections[oldIdx].rows, to: section.rows, results: &currentRowResults, in: idx, with: animation)
+                        insertAndDelete(from: oldSections[oldIdx].rows, to: section.rows, results: &currentRowResults, in: idx, with: animation)
                         rowResults.append(currentRowResults)
                     }
                 } else {
@@ -87,8 +112,8 @@ extension UITableView {
                     toAddSections.insert(idx)
                 }
             }
-            self.insertSections(toAddSections, with: animation)
-            self.reloadSections(toReloadSections, with: animation)
+            insertSections(toAddSections, with: animation)
+            reloadSections(toReloadSections, with: animation)
         }) { _ in
             self._performBatchUpdates({
                 // Move and update sections
@@ -99,35 +124,32 @@ extension UITableView {
                             self.moveSection(resultIdx, toSection: idx)
                         }
                         if let results = rowResults[resultIdx] {
-                            self.move(from: oldSections[oldIdx].rows, to: section.rows, withPreviousResults: results, in: idx, with: animation)
-                        }/* else {
-                         // Reload Rows if section does not reload it.
-                         } */
+                            moveAndReloadRows(oldSections[oldIdx].rows, section.rows, results, idx, animation)
+                        }
                     }
                 }
-            })
+            }, completion: completion)
         }
     }
-    
-    public func update<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true) {
+
+    private final func update<Row: Equatable>(from oldRows: [Row], to newRows: [Row], in section: Int, animated: Bool,
+                                              movingAndReloadingWith moveAndReload: @escaping ([Row], RowAnimation) -> (),
+                                              completion: ((Bool) -> ())?) {
         let animation: RowAnimation = animated ? .automatic : .none
         guard !oldRows.isEmpty else {
             return _performBatchUpdates({
-                self.insertRows(at: newRows.indices.map { IndexPath(row: $0, section: section) }, with: animation)
-            })
+                insertRows(at: newRows.indices.map { IndexPath(row: $0, section: section) }, with: animation)
+            }, completion: completion)
         }
-        
+
         var results = Array<Row>(oldRows)
         _performBatchUpdates({
-            self.insertAndDelete(from: oldRows, to: newRows, results: &results, in: section, with: animation)
+            insertAndDelete(from: oldRows, to: newRows, results: &results, in: section, with: animation)
         }) { _ in
-            self._performBatchUpdates({
-                self.move(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
-            })
+            self._performBatchUpdates({ moveAndReload(results, animation) }, completion: completion)
         }
     }
-    
-    // MARK: - Helpers
+
     private final func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: RowAnimation) {
         // Remove rows
         let toDelete = oldRows.enumerated().filter { !newRows.contains($1) }
@@ -141,13 +163,29 @@ extension UITableView {
         let toAddIndexPaths = toAdd.map { IndexPath(row: $0.offset, section: section) }
         insertRows(at: toAddIndexPaths, with: animation)
     }
+
+    private final func moveAndReload<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation, rowNeedsReload: (Row, Row) -> Bool) {
+        var indexPathsToReload: [IndexPath] = []
+        for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
+            guard let oldIdx = results.firstIndex(of: row) else { continue }
+            let newIndexPath = IndexPath(row: idx, section: section)
+            if oldIdx != idx {
+                moveRow(at: IndexPath(row: oldIdx, section: section), to: newIndexPath)
+            }
+            if rowNeedsReload(results[oldIdx], row) {
+                indexPathsToReload.append(newIndexPath)
+            }
+        }
+        if !indexPathsToReload.isEmpty {
+            reloadRows(at: indexPathsToReload, with: animation)
+        }
+    }
+
+    private final func moveAndReload<Row: UITableViewReloadableObject>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
+        moveAndReload(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation, rowNeedsReload: { $1.needsReload(from: $0) })
+    }
     
     private final func move<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
-        for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
-            guard let oldIdx = results.firstIndex(of: row), oldIdx != idx else { continue }
-            let oldIndexPath = IndexPath(row: oldIdx, section: section)
-            let newIndexPath = IndexPath(row: idx, section: section)
-            moveRow(at: oldIndexPath, to: newIndexPath)
-        }
+        moveAndReload(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation, rowNeedsReload: { _, _ in false })
     }
 }
