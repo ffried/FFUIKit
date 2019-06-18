@@ -21,6 +21,7 @@
 import struct Foundation.URL
 import class Foundation.Bundle
 import class Foundation.NSAttributedString
+import struct FFFoundation.Lazy
 #if canImport(os)
 import func os.os_log
 #else
@@ -41,12 +42,12 @@ fileprivate extension NSAttributedString {
 public struct License: Hashable {
     public let title: String
     public let file: URL
-    public let content: Lazy<NSAttributedString?>
+    @Lazy public private(set) var content: NSAttributedString?
 
     public init(title: String, file: URL) {
         self.title = title
         self.file = file
-        self.content = Lazy { NSAttributedString(licenseFile: file) }
+        self.$content = Lazy(initialValue: NSAttributedString(licenseFile: file))
     }
 
     public init?(title: String, fileExtension: String, in bundle: Bundle = .main) {

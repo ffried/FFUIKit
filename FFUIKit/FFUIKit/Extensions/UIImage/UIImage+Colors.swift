@@ -35,12 +35,16 @@ private var UIImage_mostIntenseColorByQualityKey = "UIImage.mostIntenseColorByQu
 private var UIImage_simpleColorsByQualityKey = "UIImage.simpleColorsByQuality"
 private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
 
+fileprivate extension HSBBaseColorComponents where Value: AdditiveArithmetic {
+    var intensity: Value { return saturation + brightness }
+}
+
 extension UIImage {
     private struct SimpleColor: Hashable {
         let rgba: RGBA<UInt8>
 
-        let uiColor: Lazy<UIColor>
-        let intensity: Lazy<CGFloat>
+        @Lazy private(set) var uiColor: UIColor
+        @Lazy private(set) var intensity: CGFloat
 
         func hash(into hasher: inout Hasher) {
             hasher.combine(rgba)
@@ -49,12 +53,9 @@ extension UIImage {
         init(rgba: RGBA<UInt8>) {
             self.rgba = rgba
 
-            let cgRGBA = Lazy<RGBA<CGFloat>> { .init(rgba) }
-            uiColor = Lazy { cgRGBA.value.color }
-            intensity = Lazy {
-                let hsba = HSBA(rgba: cgRGBA.value)
-                return hsba.saturation + hsba.brightness
-            }
+            let cgRGBA = Lazy(initialValue: RGBA<CGFloat>(rgba))
+            $uiColor = Lazy(initialValue: cgRGBA.value.color)
+            $intensity = Lazy(initialValue: HSBA(rgba: cgRGBA.value).intensity)
         }
 
         static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
@@ -147,7 +148,7 @@ extension UIImage {
         set { setAssoc(newValue, for: &UIImage_colorsByQualityKey) }
     }
     public final func colors(quality: CGFloat) -> [UIColor] {
-        return colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor.value }].stored()
+        return colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor }].stored()
     }
 
     public final var colors: [UIColor] {
@@ -159,7 +160,7 @@ extension UIImage {
         set { setAssoc(newValue, for: &UIImage_mostIntenseColorByQualityKey) }
     }
     public final func mostIntenseColor(quality: CGFloat) -> UIColor? {
-        return mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor.value].stored()
+        return mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor].stored()
     }
 
     public final var mostIntenseColor: UIColor? {

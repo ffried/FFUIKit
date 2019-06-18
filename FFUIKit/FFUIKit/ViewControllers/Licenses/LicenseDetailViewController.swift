@@ -67,7 +67,7 @@ public final class LicenseDetailViewController: UIViewController, UITextViewDele
 
     private func updateContents() {
         title = license.title
-        textView.attributedText = license.content.value
+        textView.attributedText = license.content
     }
 
     @objc(textView:shouldInteractWithURL:inRange:)

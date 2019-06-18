@@ -41,9 +41,9 @@ private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 extension UIScrollView {
     private typealias UserInfoDictionary = [AnyHashable: Any]
     
-    private final var notificationObservers: [NotificationObserver] {
+    private final var notificationObservers: [NSObjectProtocol] {
         get {
-            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? [NotificationObserver] else {
+            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? [NSObjectProtocol] else {
                 return []
             }
             return observers
@@ -53,17 +53,17 @@ extension UIScrollView {
     
     // MARK: Register / Unregister
     public final func registerForKeyboardNotifications() {
-        func block(for selector: @escaping (UserInfoDictionary) -> ()) -> NotificationObserver.ObserverBlock {
+        typealias ObserverBlock = (Notification) -> Void
+        func block(for selector: @escaping (UserInfoDictionary) -> ()) -> ObserverBlock {
             return { $0.userInfo.map(selector) }
         }
 
-        let tuples: [(Notification.Name, NotificationObserver.ObserverBlock)] = [
+        let tuples: [(Notification.Name, ObserverBlock)] = [
             (UIResponder.keyboardWillChangeFrameNotification, block(for: keyboardWillChangeFrame)),
             (UIResponder.keyboardWillShowNotification, block(for: keyboardWillShow)),
             (UIResponder.keyboardDidHideNotification, block(for: keyboardDidHide))
         ]
-        
-        notificationObservers = tuples.map { .init(center: .default, name: $0, queue: .main, object: nil, block: $1) }
+        notificationObservers = tuples.map { NotificationCenter.default.addObserver(forName: $0, object: nil, queue: .main, using: $1) }
     }
     
     public final func unregisterFromKeyboardNotifications() {
