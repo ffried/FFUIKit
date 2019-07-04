@@ -54,8 +54,8 @@ extension UIImage {
             self.rgba = rgba
 
             let cgRGBA = Lazy(initialValue: RGBA<CGFloat>(rgba))
-            $uiColor = Lazy(initialValue: cgRGBA.value.color)
-            $intensity = Lazy(initialValue: HSBA(rgba: cgRGBA.value).intensity)
+            $uiColor = Lazy(initialValue: cgRGBA.wrappedValue.color)
+            $intensity = Lazy(initialValue: HSBA(rgba: cgRGBA.wrappedValue).intensity)
         }
 
         static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
