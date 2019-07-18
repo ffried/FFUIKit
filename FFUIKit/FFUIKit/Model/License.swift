@@ -47,7 +47,7 @@ public struct License: Hashable {
     public init(title: String, file: URL) {
         self.title = title
         self.file = file
-        self.$content = Lazy(initialValue: NSAttributedString(licenseFile: file))
+        self._content = Lazy { NSAttributedString(licenseFile: file) }
     }
 
     public init?(title: String, fileExtension: String, in bundle: Bundle = .main) {
