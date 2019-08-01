@@ -28,6 +28,7 @@ extension UIViewController {
     @available(iOSApplicationExtension, unavailable)
     @available(watchOSApplicationExtension, unavailable)
     @available(tvOSApplicationExtension, unavailable)
+    @available(macCatalystApplicationExtension, unavailable)
     internal static func findForemost() -> UIViewController? {
         var viewController: UIViewController? = nil
         let rootVC = Application.shared.delegate?.window??.rootViewController

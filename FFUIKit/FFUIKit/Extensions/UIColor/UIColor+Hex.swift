@@ -47,8 +47,14 @@ extension UIColor {
         assert(charCount == 6 || charCount == 8,
                "Hex string must have either 6 or 8 characters (without # or 0x)")
 
-        var value: UInt32 = 0
-        Scanner(string: rawHex).scanHexInt32(&value)
+        let value: UInt64
+        if #available(iOS 13.0, tvOS 13.0, watchOS 6.0, macCatalyst 13.0, *) {
+            value = Scanner(string: rawHex).scanUInt64(representation: .hexadecimal) ?? 0
+        } else {
+            var _value: UInt64 = 0
+            Scanner(string: rawHex).scanHexInt64(&_value)
+            value = _value
+        }
         if charCount == 8 {
             self.init(rgbaHex: value)
         } else {

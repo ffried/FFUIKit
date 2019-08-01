@@ -26,6 +26,7 @@ extension UIResponder {
     @available(iOSApplicationExtension, unavailable)
     @available(watchOSApplicationExtension, unavailable)
     @available(tvOSApplicationExtension, unavailable)
+    @available(macCatalystApplicationExtension, unavailable)
     public static func findFirstResponder() -> UIResponder? {
         return Application.shared.delegate?.window?.flatMap(firstResponder)
     }

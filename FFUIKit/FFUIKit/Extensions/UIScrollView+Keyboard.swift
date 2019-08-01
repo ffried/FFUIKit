@@ -103,15 +103,12 @@ extension UIScrollView {
     // MARK: Height Adjustments
     private final func setInsetsTo(keyboardHeight height: CGFloat, animated: Bool = false, withKeyboardUserInfo userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
-            var insets: UIEdgeInsets
-            
-            insets = self.contentInset
-            insets.bottom = height
-            self.contentInset = insets
-            
-            insets = self.scrollIndicatorInsets
-            insets.bottom = height
-            self.scrollIndicatorInsets = insets
+            self.contentInset.bottom = height
+            if #available(iOS 11.1, macCatalyst 13.0, *) {
+                self.verticalScrollIndicatorInsets.bottom = height
+            } else {
+                self.scrollIndicatorInsets.bottom = height
+            }
         }
         let offsetChanges: () -> () = {
             if let fr = UIResponder.firstResponder(in: self) as? UIView {
@@ -130,7 +127,11 @@ extension UIScrollView {
     // MARK: EdgeInsets
     private final func saveEdgeInsets() {
         originalContentInsets = contentInset
-        originalScrollIndicatorInsets = scrollIndicatorInsets
+        if #available(iOS 11.1, macCatalyst 13.0, *) {
+            originalScrollIndicatorInsets = verticalScrollIndicatorInsets
+        } else {
+            originalScrollIndicatorInsets = scrollIndicatorInsets
+        }
     }
     
     private final func restoreEdgeInsets(animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
@@ -164,13 +165,20 @@ extension UIScrollView {
     private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
         var duration: TimeInterval = 1 / 3
         var curve: UIView.AnimationCurve = .linear
-        let options: UIView.AnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
+        let options: UIView.AnimationOptions
         if let info = userInfo {
             if let d = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval { duration = d }
             if let c = UIView.AnimationCurve(rawValue: (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? UIView.AnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
         }
+        if #available(iOS 13, tvOS 13, watchOS 6, macCatalyst 13, *) {
+            options = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction, UIView.AnimationOptions(rawValue: UInt(curve.rawValue) << 16)]
+        } else {
+            options = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
+        }
         UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
-            UIView.setAnimationCurve(curve)
+            if #available(iOS 13, tvOS 13, watchOS 6, macCatalyst 13, *) {} else {
+                UIView.setAnimationCurve(curve)
+            }
             animations()
         }, completion: completion)
     }
