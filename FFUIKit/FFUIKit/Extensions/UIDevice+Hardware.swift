@@ -54,6 +54,9 @@ fileprivate extension UIDevice {
         "iPhone11,4"       : "iPhone XS Max (China)",
         "iPhone11,6"       : "iPhone XS Max",
         "iPhone11,8"       : "iPhone XR",
+        "iPhone12,1"       : "iPhone 11",
+        "iPhone12,3"       : "iPhone 11 Pro",
+        "iPhone12,5"       : "iPhone 11 Pro Max",
         
         "Watch1,1"         : "Apple Watch 38mm",
         "Watch1,2"         : "Apple Watch 42mm",
@@ -69,6 +72,10 @@ fileprivate extension UIDevice {
         "Watch4,2"         : "Apple Watch Series 4 44mm",
         "Watch4,3"         : "Apple Watch Series 4 40mm (Cellular)",
         "Watch4,4"         : "Apple Watch Series 4 44mm (Cellular)",
+        "Watch5,1"         : "Apple Watch Series 5 40mm",
+        "Watch5,2"         : "Apple Watch Series 5 44mm",
+        "Watch5,3"         : "Apple Watch Series 5 40mm (Cellular)",
+        "Watch5,4"         : "Apple Watch Series 5 44mm (Cellular)",
         
         "iPod1,1"          : "iPod Touch 1G",
         "iPod2,1"          : "iPod Touch 2G",
@@ -76,6 +83,7 @@ fileprivate extension UIDevice {
         "iPod4,1"          : "iPod Touch 4G",
         "iPod5,1"          : "iPod Touch 5G",
         "iPod7,1"          : "iPod Touch 6G",
+        "iPod9,1"          : "iPod Touch 7G",
         
         "iPad1,1"          : "iPad",
         "iPad2,1"          : "iPad 2 (WiFi)",
@@ -123,6 +131,10 @@ fileprivate extension UIDevice {
         "iPad8,6"          : "iPad Pro 3rd Gen (12.9\") (WiFi)",
         "iPad8,7"          : "iPad Pro 3rd Gen (12.9\") (Cellular)",
         "iPad8,8"          : "iPad Pro 3rd Gen (12.9\") (Cellular)",
+        "iPad11,1"         : "iPad mini 5 (WiFi)",
+        "iPad11,2"         : "iPad mini 5 (Cellular)",
+        "iPad11,3"         : "iPad Air 3rd Gen (WiFi)",
+        "iPad11,4"         : "iPad Air 3rd Gen (Cellular)",
         
         "AppleTV2,1"       : "Apple TV 2G",
         "AppleTV3,1"       : "Apple TV 3G",

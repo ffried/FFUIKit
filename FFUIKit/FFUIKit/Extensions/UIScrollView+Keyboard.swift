@@ -72,32 +72,29 @@ extension UIScrollView {
     
     // MARK: Keyboard functions
     private final func keyboardWillChangeFrame(userInfo: UserInfoDictionary) {
-        if keyboardVisible {
-            let beginFrame = rect(for: UIResponder.keyboardFrameBeginUserInfoKey, in: userInfo)
-            let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
-            let oldHeight = keyboardHeight(from: beginFrame)
-            let newHeight = keyboardHeight(from: endFrame)
-            if newHeight != oldHeight {
-                setInsetsTo(keyboardHeight: newHeight, animated: true, withKeyboardUserInfo: userInfo)
-            }
+        guard keyboardVisible else { return }
+        let beginFrame = rect(for: UIResponder.keyboardFrameBeginUserInfoKey, in: userInfo)
+        let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
+        let oldHeight = keyboardHeight(from: beginFrame)
+        let newHeight = keyboardHeight(from: endFrame)
+        if newHeight != oldHeight {
+            setInsetsTo(keyboardHeight: newHeight, animated: true, withKeyboardUserInfo: userInfo)
         }
     }
     
     private final func keyboardWillShow(userInfo: UserInfoDictionary) {
-        if !keyboardVisible {
-            saveEdgeInsets()
-            keyboardVisible = true
-            let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
-            let endHeight = keyboardHeight(from: endFrame)
-            setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
-        }
+        guard !keyboardVisible else { return }
+        saveEdgeInsets()
+        keyboardVisible = true
+        let endFrame = rect(for: UIResponder.keyboardFrameEndUserInfoKey, in: userInfo)
+        let endHeight = keyboardHeight(from: endFrame)
+        setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
     }
     
     private final func keyboardDidHide(userInfo: UserInfoDictionary) {
-        if keyboardVisible {
-            keyboardVisible = false
-            restoreEdgeInsets(animated: true, userInfo: userInfo)
-        }
+        guard keyboardVisible else { return }
+        keyboardVisible = false
+        restoreEdgeInsets(animated: true, userInfo: userInfo)
     }
     
     // MARK: Height Adjustments
@@ -128,7 +125,8 @@ extension UIScrollView {
     private final func saveEdgeInsets() {
         originalContentInsets = contentInset
         if #available(iOS 11.1, macCatalyst 13.0, *) {
-            originalScrollIndicatorInsets = verticalScrollIndicatorInsets
+            originalHorizontalScrollIndicatorInsets = horizontalScrollIndicatorInsets
+            originalVerticalScrollIndicatorInsets = verticalScrollIndicatorInsets
         } else {
             originalScrollIndicatorInsets = scrollIndicatorInsets
         }
@@ -137,7 +135,12 @@ extension UIScrollView {
     private final func restoreEdgeInsets(animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
             self.contentInset = self.originalContentInsets
-            self.scrollIndicatorInsets = self.originalScrollIndicatorInsets
+            if #available(iOS 11.1, macCatalyst 13.0, *) {
+                self.horizontalScrollIndicatorInsets = self.originalHorizontalScrollIndicatorInsets
+                self.verticalScrollIndicatorInsets = self.originalVerticalScrollIndicatorInsets
+            } else {
+                self.scrollIndicatorInsets = self.originalScrollIndicatorInsets
+            }
         }
         if animated {
             animate(changes, withKeyboardUserInfo: userInfo)
@@ -152,14 +155,11 @@ extension UIScrollView {
     }
     
     private final func keyboardHeight(from rect: CGRect) -> CGFloat {
-        var height: CGFloat = 0
-        if let w = window {
-            let windowFrame = w.convert(bounds, from: self)
-            let keyboardFrame = windowFrame.intersection(rect)
-            let coveredFrame = w.convert(keyboardFrame, to: self)
-            height = coveredFrame.size.height
-        }
-        return height
+        guard let w = window else { return 0 }
+        let windowFrame = w.convert(bounds, from: self)
+        let keyboardFrame = windowFrame.intersection(rect)
+        let coveredFrame = w.convert(keyboardFrame, to: self)
+        return coveredFrame.size.height
     }
     
     private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
@@ -171,6 +171,7 @@ extension UIScrollView {
             if let c = UIView.AnimationCurve(rawValue: (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? UIView.AnimationCurve.RawValue ?? curve.rawValue)) { curve = c }
         }
         if #available(iOS 13, tvOS 13, watchOS 6, macCatalyst 13, *) {
+            assert(UIView.AnimationOptions.curveEaseIn.rawValue == UInt(UIView.AnimationCurve.easeIn.rawValue) << 16)
             options = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction, UIView.AnimationOptions(rawValue: UInt(curve.rawValue) << 16)]
         } else {
             options = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction]
@@ -186,16 +187,36 @@ extension UIScrollView {
 
 private var _originalContentInsetsKey = "OriginalContentInsets"
 private var _originalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
+private var _originalHorizontalScrollIndicatorInsetsKey = "OriginalHorizontalScrollIndicatorInsets"
+private var _originalVerticalScrollIndicatorInsetsKey = "OriginalVerticalScrollIndicatorInsets"
 private var _keyboardVisibleKey = "KeyboardVisible"
 fileprivate extension UIScrollView {
+    private func edgeInsets(forKey key: UnsafeRawPointer) -> UIEdgeInsets? {
+        return (objc_getAssociatedObject(self, key) as? NSValue)?.uiEdgeInsetsValue
+    }
+
+    private func setEdgeInsets(_ edgeInsets: UIEdgeInsets?, forKey key: UnsafeRawPointer) {
+        objc_setAssociatedObject(self, key, edgeInsets.map(NSValue.init(uiEdgeInsets:)), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+
     final var originalContentInsets: UIEdgeInsets {
-        get { return (objc_getAssociatedObject(self, &_originalContentInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? .zero }
-        set { objc_setAssociatedObject(self, &_originalContentInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        get { return edgeInsets(forKey: &_originalContentInsetsKey) ?? .zero }
+        set { setEdgeInsets(newValue, forKey: &_originalContentInsetsKey) }
     }
     
     final var originalScrollIndicatorInsets: UIEdgeInsets {
-        get { return (objc_getAssociatedObject(self, &_originalScrollIndicatorInsetsKey) as? NSValue)?.uiEdgeInsetsValue ?? .zero }
-        set { objc_setAssociatedObject(self, &_originalScrollIndicatorInsetsKey, NSValue(uiEdgeInsets: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        get { return edgeInsets(forKey: &_originalScrollIndicatorInsetsKey) ?? .zero }
+        set { setEdgeInsets(newValue, forKey: &_originalScrollIndicatorInsetsKey) }
+    }
+
+    final var originalHorizontalScrollIndicatorInsets: UIEdgeInsets {
+        get { return edgeInsets(forKey: &_originalHorizontalScrollIndicatorInsetsKey) ?? .zero }
+        set { setEdgeInsets(newValue, forKey: &_originalHorizontalScrollIndicatorInsetsKey) }
+    }
+
+    final var originalVerticalScrollIndicatorInsets: UIEdgeInsets {
+        get { return edgeInsets(forKey: &_originalVerticalScrollIndicatorInsetsKey) ?? .zero }
+        set { setEdgeInsets(newValue, forKey: &_originalVerticalScrollIndicatorInsetsKey) }
     }
     
     final var keyboardVisible: Bool {
