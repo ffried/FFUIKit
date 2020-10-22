@@ -7,8 +7,7 @@
 //
 
 #if !os(watchOS)
-import class Foundation.NSCoder
-import typealias Foundation.TimeInterval
+import Foundation
 import UIKit
 import struct FFFoundation.Angle
 
@@ -18,17 +17,16 @@ fileprivate extension CALayer.AnimationKey {
 
 @IBDesignable
 public final class ProgressIndicatorView: TouchAwareControl {
-
     @IBInspectable public var gapInDegrees: CGFloat {
-        get { return gap.asDegrees.value }
-        set { return gap = .degrees(newValue) }
+        get { gap.asDegrees.value }
+        set { gap = .degrees(newValue) }
     }
-    @IBInspectable public var rotationDuration: TimeInterval = 1.0
+    @IBInspectable public var rotationDuration: TimeInterval = 1
     @IBInspectable public var hidesWhenStopped: Bool = true {
         didSet { isHidden = hidesWhenStopped && !isAnimating }
     }
     @IBInspectable public var showsStopButton: Bool {
-        get { return !stopButtonView.isHidden }
+        get { !stopButtonView.isHidden }
         set { stopButtonView.isHidden = !newValue }
     }
 
@@ -55,7 +53,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         return view
     }()
 
-    private var progressBarStrokeWidth: CGFloat { return frame.width / 12.5 }
+    private var progressBarStrokeWidth: CGFloat { frame.width / 12.5 }
     private var progressBarFrame: CGRect {
         let sideLength = bounds.width - progressBarStrokeWidth * 2
         let spacing = (bounds.width - sideLength) / 2
@@ -131,15 +129,15 @@ public final class ProgressIndicatorView: TouchAwareControl {
             return
         }
         if !hidden {
-            (alpha, isHidden) = (0.0, hidden)
+            (alpha, isHidden) = (0, hidden)
         }
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.15, delay: 0,
                                                        options: [.beginFromCurrentState, .allowAnimatedContent],
-                                                       animations: { self.alpha = hidden ? 0.0 : 1.0 },
+                                                       animations: { self.alpha = hidden ? 0 : 1 },
                                                        completion: {
                                                         if hidden {
                                                             self.isHidden = hidden
-                                                            self.alpha = 1.0
+                                                            self.alpha = 1
                                                         }
                                                         completion?($0)
         })
@@ -192,13 +190,13 @@ public final class ProgressIndicatorView: TouchAwareControl {
 
     private func updateVisuals() {
         let changes = {
-            self.alpha = self.isHighlighted ? 0.2 : 1.0
+            self.alpha = self.isHighlighted ? 0.2 : 1
             self.set(color: self.isEnabled ? self.tintColor : .lightGray)
         }
         if superview != nil && !isTrackingTouchInside {
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.25, delay: 0,
                                                            options: [.beginFromCurrentState, .allowAnimatedContent],
-                                                           animations: changes, completion: nil)
+                                                           animations: changes)
         } else {
             changes()
         }

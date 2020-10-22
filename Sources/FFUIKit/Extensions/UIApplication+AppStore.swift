@@ -25,17 +25,22 @@ import struct Foundation.URLQueryItem
 import class Foundation.Bundle
 import class UIKit.UIApplication
 
-/// FFUIKitiTunesIdentifier
-public let FFUIKitiTunesIdentifierInfoDictionaryKey: String = "FFUIKitiTunesIdentifier"
+@available(*, deprecated, message: "FFUIKitiTunesIdentifierInfoDictionaryKey was renamed to UIApplication.iTunesIdentifierInfoDictionaryKey", renamed: "UIApplication.iTunesIdentifierInfoDictionaryKey")
+public var FFUIKitiTunesIdentifierInfoDictionaryKey: String {
+    UIApplication.iTunesIdentifierInfoDictionaryKey
+}
 
 extension UIApplication {
+    /// FFUIKitiTunesIdentifier
+    public static let iTunesIdentifierInfoDictionaryKey: String = "FFUIKitiTunesIdentifier"
+
     private final var iTunesBaseURL: URL {
-        return URL(string: "https://itunes.apple.com")!
+        URL(string: "https://itunes.apple.com")!
     }
 
     /// Returns the value for "FFUIKitiTunesIdentifier" in info plist
     public final var iTunesIdentifier: String? {
-        return Bundle.main.infoDictionary?[FFUIKitiTunesIdentifierInfoDictionaryKey] as? String
+        Bundle.main.infoDictionary?[UIApplication.iTunesIdentifierInfoDictionaryKey] as? String
     }
 
     public final var iTunesURL: URL {

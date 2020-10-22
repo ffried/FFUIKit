@@ -7,9 +7,7 @@
 //
 
 #if !os(watchOS)
-import class UIKit.UIControl
-import class UIKit.UITouch
-import class UIKit.UIEvent
+import UIKit
 
 open class TouchAwareControl: UIControl {
     open private(set) var isTrackingTouchInside = false

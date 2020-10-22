@@ -18,19 +18,11 @@
 //
 
 #if !os(watchOS)
-import class Foundation.NSObject
-import struct Foundation.TimeInterval
-import protocol UIKit.UIViewControllerAnimatedTransitioning
-import protocol UIKit.UIViewControllerContextTransitioning
-import class UIKit.NSLayoutConstraint
-import enum UIKit.UIViewAnimatingPosition
-import class UIKit.UIView
-import struct UIKit.UITransitionContextViewControllerKey
-import struct UIKit.UIViewAnimationOptions
-import class UIKit.UIViewPropertyAnimator
+import Foundation
+import UIKit
 import FFFoundation
 
-internal final class NotificationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+final class NotificationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     private var topConstraint: NSLayoutConstraint!
     private var bottomConstraint: NSLayoutConstraint!
     private var originalVCContainer: UIView!
@@ -41,9 +33,7 @@ internal final class NotificationAnimationController: NSObject, UIViewController
     }
 
     @objc(transitionDuration:)
-    dynamic internal func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.3
-    }
+    dynamic internal func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval { 0.3 }
 
     @objc(animateTransition:)
     dynamic internal func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -92,7 +82,11 @@ internal final class NotificationAnimationController: NSObject, UIViewController
             transitionContext.completeTransition(pos == .end)
         }
         if transitionContext.isAnimated {
-            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: options, animations: animations, completion: completion)
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration,
+                                                           delay: 0,
+                                                           options: options,
+                                                           animations: animations,
+                                                           completion: completion)
         } else {
             animations()
             completion(.end)

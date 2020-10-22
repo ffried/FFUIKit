@@ -21,20 +21,13 @@
 #if !os(watchOS)
 import struct Foundation.NSRange
 import struct Foundation.URL
-import protocol UIKit.UITextViewDelegate
-import enum UIKit.UIStatusBarStyle
-import struct UIKit.UIEdgeInsets
-import class UIKit.UIViewController
-import class UIKit.UIColor
-import class UIKit.UIView
-import class UIKit.UITextView
+import UIKit
 
 public final class LicenseDetailViewController: UIViewController, UITextViewDelegate {
-
     #if !os(tvOS)
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        get { return _preferredStatusBarStyle }
+        get { _preferredStatusBarStyle }
         set { _preferredStatusBarStyle = newValue }
     }
     #endif
@@ -48,23 +41,33 @@ public final class LicenseDetailViewController: UIViewController, UITextViewDele
         tv.dataDetectorTypes = .link
         #endif
         tv.isSelectable = true
-        tv.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: -10.0)
+        tv.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
         tv.clipsToBounds = false
         return tv
     }()
 
-    public var license: License! {
-        didSet {
-            if isViewLoaded { updateContents() }
-        }
+    public let license: License
+
+    public init(license: License) {
+        self.license = license
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    public required init?(license: License, coder: NSCoder) {
+        self.license = license
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented. Use init(license:coder:)")
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        textView.setupFullscreen(in: view, with: UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0))
+        textView.setupFullscreen(in: view, with: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
         textView.delegate = self
-        if license != nil { updateContents() }
+        updateContents()
     }
 
     deinit {
@@ -77,8 +80,6 @@ public final class LicenseDetailViewController: UIViewController, UITextViewDele
     }
 
     @objc(textView:shouldInteractWithURL:inRange:)
-    public dynamic func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-        return true
-    }
+    public dynamic func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool { true }
 }
 #endif

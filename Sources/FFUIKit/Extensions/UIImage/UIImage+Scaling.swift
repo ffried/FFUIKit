@@ -18,39 +18,24 @@
 //  limitations under the License.
 //
 
-import struct CoreGraphics.CGRect
-import struct CoreGraphics.CGSize
-import class UIKit.UIImage
-#if !os(watchOS)
-import class UIKit.UIGraphicsImageRenderer
-import class UIKit.UIGraphicsImageRendererFormat
-#endif
-
-// Pre iOS 10
-import func UIKit.UIGraphicsBeginImageContextWithOptions
-import func UIKit.UIGraphicsEndImageContext
-import func UIKit.UIGraphicsGetImageFromCurrentImageContext
+import UIKit
 
 extension UIImage {
     public final func scaled(to size: CGSize) -> UIImage {
+        #if os(watchOS)
         func _legacyScaling() -> UIImage {
             UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
             defer { UIGraphicsEndImageContext() }
             draw(in: CGRect(origin: .zero, size: size))
             return UIGraphicsGetImageFromCurrentImageContext() ?? self
         }
-        #if os(watchOS)
-            return _legacyScaling()
+        return _legacyScaling()
         #else
-        if #available(iOS 10, tvOS 10, *) {
-            let format = UIGraphicsImageRendererFormat.osPreferred()
-            format.opaque = !hasAlpha
-            format.scale = scale
-            let renderer = UIGraphicsImageRenderer(size: size, format: format)
-            return renderer.image { _ in draw(in: CGRect(origin: .zero, size: size)) }
-        } else {
-            return _legacyScaling()
-        }
+        let format = UIGraphicsImageRendererFormat.osPreferred()
+        format.opaque = !hasAlpha
+        format.scale = scale
+        let renderer = UIGraphicsImageRenderer(size: size, format: format)
+        return renderer.image { _ in draw(in: CGRect(origin: .zero, size: size)) }
         #endif
     }
 }

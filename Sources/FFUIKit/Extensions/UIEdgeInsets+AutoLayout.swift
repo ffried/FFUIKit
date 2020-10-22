@@ -25,7 +25,7 @@ import FFFoundation
 
 extension UIEdgeInsets {
     public var asMetrics: NSLayoutConstraint.MetricsDictionary {
-        return ["top": top, "left": left, "bottom": bottom, "right": right]
+        ["top": top, "left": left, "bottom": bottom, "right": right]
     }
 }
 #endif

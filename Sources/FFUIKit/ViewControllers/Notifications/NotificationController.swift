@@ -21,18 +21,8 @@
 #if canImport(ObjectiveC)
 import ObjectiveC
 #endif
-import struct Foundation.TimeInterval
-import class Foundation.NSCoder
-import struct CoreGraphics.CGFloat
-import protocol UIKit.UIViewControllerTransitioningDelegate
-import protocol UIKit.UIViewControllerAnimatedTransitioning
-import enum UIKit.UIStatusBarAnimation
-import enum UIKit.UIStatusBarStyle
-import enum UIKit.UIModalPresentationStyle
-import class UIKit.UIView
-import class UIKit.UITapGestureRecognizer
-import class UIKit.UIViewController
-import class UIKit.UIPresentationController
+import Foundation
+import UIKit
 import typealias FFFoundation.AnyTimer
 
 internal protocol NotificationControllerProtocol: class {
@@ -42,14 +32,13 @@ internal protocol NotificationControllerProtocol: class {
 }
 
 public final class NotificationController<View: NotificationView>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol {
-
     public enum AutoDismissType {
         case none
         case afterDuration(TimeInterval)
     }
 
     public private(set) lazy var notificationView = View()
-    var noteView: NotificationView { return notificationView }
+    var noteView: NotificationView { notificationView }
 
     public var style: NotificationStyle {
         didSet {
@@ -63,15 +52,14 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     public private(set) lazy var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapNotification(_:)))
 
     public var dismissOnTap: Bool {
-        get { return tapGestureRecognizer.isEnabled }
+        get { tapGestureRecognizer.isEnabled }
         set { tapGestureRecognizer.isEnabled = newValue }
     }
 
     public let autoDismissType: AutoDismissType
     private lazy var timer: AnyTimer? = {
         switch autoDismissType {
-        case .none:
-            return nil
+        case .none: return nil
         case .afterDuration(let duration):
             let timer = AnyTimer(interval: duration) { [unowned self] _ in
                 self.dismissNotification()
@@ -127,12 +115,10 @@ public final class NotificationController<View: NotificationView>: UIViewControl
 
     // MARK: - Status Bar
     #if !os(tvOS)
-    public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return .slide
-    }
+    public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { .slide}
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (notificationView.backgroundView.backgroundColor.map { HSBA<CGFloat>($0).isDarkColor } ?? false) ? .lightContent : .default
+        (notificationView.backgroundView.backgroundColor.map { HSBA<CGFloat>($0).isDarkColor } ?? false) ? .lightContent : .default
     }
     #endif
 
@@ -163,12 +149,12 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     private lazy var animationController = NotificationAnimationController()
 
     public override var transitioningDelegate: UIViewControllerTransitioningDelegate? {
-        get { return self }
+        get { self }
         set { /* NoOp */ }
     }
 
     public override var modalPresentationStyle: UIModalPresentationStyle {
-        get { return .custom }
+        get { .custom }
         set { /* NoOp */ }
     }
 

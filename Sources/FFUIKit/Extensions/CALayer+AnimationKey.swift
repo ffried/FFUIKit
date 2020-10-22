@@ -31,12 +31,12 @@ extension CALayer {
 
     @inlinable
     public func animationKeys() -> [AnimationKey]? {
-        return animationKeys()?.map(AnimationKey.init(rawValue:))
+        animationKeys()?.map(AnimationKey.init(rawValue:))
     }
 
     @inlinable
     public func animation(for key: AnimationKey) -> CAAnimation? {
-        return animation(forKey: key.rawValue)
+        animation(forKey: key.rawValue)
     }
 }
 #endif

@@ -21,18 +21,13 @@
 import struct CoreGraphics.CGRect
 import class UIKit.UIPresentationController
 
-internal final class NotificationPresentationController: UIPresentationController {
-    internal override var frameOfPresentedViewInContainerView: CGRect {
+final class NotificationPresentationController: UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
         presentedView?.layoutIfNeeded()
         return presentedView?.bounds ?? .zero
     }
 
-    internal override var shouldPresentInFullscreen: Bool {
-        return false
-    }
-
-    internal override var shouldRemovePresentersView: Bool {
-        return false
-    }
+    override var shouldPresentInFullscreen: Bool { false }
+    override var shouldRemovePresentersView: Bool { false }
 }
 #endif

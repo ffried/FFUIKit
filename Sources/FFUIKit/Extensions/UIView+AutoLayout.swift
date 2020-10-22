@@ -19,9 +19,7 @@
 //
 
 #if !os(watchOS)
-import struct UIKit.UIEdgeInsets
-import class UIKit.NSLayoutConstraint
-import class UIKit.UIView
+import UIKit
 import FFFoundation
 
 extension UIView {

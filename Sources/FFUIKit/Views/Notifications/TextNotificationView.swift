@@ -18,10 +18,8 @@
 //
 
 #if !os(watchOS)
-import class Foundation.NSCoder
-import struct CoreGraphics.CGRect
-import class UIKit.UIView
-import class UIKit.UILabel
+import Foundation
+import UIKit
 import FFFoundation
 
 public final class TextNotificationView: NotificationView {

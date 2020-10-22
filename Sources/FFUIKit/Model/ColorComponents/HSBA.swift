@@ -43,102 +43,116 @@ extension HSBAColorComponents {
 }
 
 extension HSBColorComponents where Value: BinaryInteger {
+    @inlinable
     public init<Other: HSBBaseColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(hue: .init(other.hue), saturation: .init(other.saturation), brightness: .init(other.brightness))
     }
-
+    
+    @inlinable
     public init<Other: HSBBaseColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(hue: .init(colorConverting: other.hue),
                   saturation: .init(colorConverting: other.saturation),
                   brightness: .init(colorConverting: other.brightness))
     }
-
+    
+    @inlinable
     public init?<Other: HSBBaseColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let hue = Value(colorConvertingExactly: other.hue),
-            let saturation = Value(colorConvertingExactly: other.saturation),
-            let brightness = Value(colorConvertingExactly: other.brightness)
-            else { return nil }
+              let saturation = Value(colorConvertingExactly: other.saturation),
+              let brightness = Value(colorConvertingExactly: other.brightness)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness)
     }
 }
 
 extension HSBColorComponents where Value: BinaryFloatingPoint {
+    @inlinable
     public init<Other: HSBBaseColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(hue: .init(colorConverting: other.hue),
                   saturation: .init(colorConverting: other.saturation),
                   brightness: .init(colorConverting: other.brightness))
     }
-
+    
+    @inlinable
     public init?<Other: HSBBaseColorComponents>(exactly other: Other) where Other.Value: BinaryInteger {
         guard let hue = Value(colorConvertingExactly: other.hue),
-            let saturation = Value(colorConvertingExactly: other.saturation),
-            let brightness = Value(colorConvertingExactly: other.brightness)
-            else { return nil }
+              let saturation = Value(colorConvertingExactly: other.saturation),
+              let brightness = Value(colorConvertingExactly: other.brightness)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness)
     }
-
+    
+    @inlinable
     public init<Other: HSBBaseColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(hue: .init(other.hue), saturation: .init(other.saturation), brightness: .init(other.brightness))
     }
-
+    
+    @inlinable
     public init?<Other: HSBBaseColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let hue = Value(exactly: other.hue),
-            let saturation = Value(exactly: other.saturation),
-            let brightness = Value(exactly: other.brightness)
-            else { return nil }
+              let saturation = Value(exactly: other.saturation),
+              let brightness = Value(exactly: other.brightness)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness)
     }
 }
 
 extension HSBAColorComponents where Value: BinaryInteger {
+    @inlinable
     public init<Other: HSBAColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(hue: .init(other.hue), saturation: .init(other.saturation), brightness: .init(other.brightness), alpha: .init(other.alpha))
     }
-
+    
+    @inlinable
     public init<Other: HSBAColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(hue: .init(colorConverting: other.hue),
                   saturation: .init(colorConverting: other.saturation),
                   brightness: .init(colorConverting: other.brightness),
                   alpha: .init(colorConverting: other.alpha))
     }
-
+    
+    @inlinable
     public init?<Other: HSBAColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let hue = Value(colorConvertingExactly: other.hue),
-            let saturation = Value(colorConvertingExactly: other.saturation),
-            let brightness = Value(colorConvertingExactly: other.brightness),
-            let alpha = Value(colorConvertingExactly: other.alpha)
-            else { return nil }
+              let saturation = Value(colorConvertingExactly: other.saturation),
+              let brightness = Value(colorConvertingExactly: other.brightness),
+              let alpha = Value(colorConvertingExactly: other.alpha)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
 }
 
 extension HSBAColorComponents where Value: BinaryFloatingPoint {
+    @inlinable
     public init<Other: HSBAColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(hue: .init(colorConverting: other.hue),
                   saturation: .init(colorConverting: other.saturation),
                   brightness: .init(colorConverting: other.brightness),
                   alpha: .init(colorConverting: other.alpha))
     }
-
+    
+    @inlinable
     public init?<Other: HSBAColorComponents>(exactly other: Other) where Other.Value: BinaryInteger {
         guard let hue = Value(colorConvertingExactly: other.hue),
-            let saturation = Value(colorConvertingExactly: other.saturation),
-            let brightness = Value(colorConvertingExactly: other.brightness),
-            let alpha = Value(colorConvertingExactly: other.alpha)
-            else { return nil }
+              let saturation = Value(colorConvertingExactly: other.saturation),
+              let brightness = Value(colorConvertingExactly: other.brightness),
+              let alpha = Value(colorConvertingExactly: other.alpha)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
-
+    
+    @inlinable
     public init<Other: HSBAColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(hue: .init(other.hue), saturation: .init(other.saturation), brightness: .init(other.brightness), alpha: .init(other.alpha))
     }
-
+    
+    @inlinable
     public init?<Other: HSBAColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let hue = Value(exactly: other.hue),
-            let saturation = Value(exactly: other.saturation),
-            let brightness = Value(exactly: other.brightness),
-            let alpha = Value(exactly: other.alpha)
-            else { return nil }
+              let saturation = Value(exactly: other.saturation),
+              let brightness = Value(exactly: other.brightness),
+              let alpha = Value(exactly: other.alpha)
+        else { return nil }
         self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
 }
@@ -152,7 +166,8 @@ extension HSBBaseColorComponents where Self: FloatingPointOpaqueColorComponents 
 }
 
 // MARK: - UI{Opaque}ColorComponents
-fileprivate extension UIColor {
+extension UIColor {
+    @usableFromInline
     func _extractHSBA() -> (HSBA<CGFloat>, isExact: Bool) {
         var hsba = HSBA<CGFloat>(hue: 0, saturation: 0, brightness: 0, alpha: 1)
         let isExact = getHue(&hsba.hsb.hue, saturation: &hsba.hsb.saturation, brightness: &hsba.hsb.brightness, alpha: &hsba.alpha)
@@ -162,14 +177,16 @@ fileprivate extension UIColor {
 
 extension HSBColorComponents where Self: UIOpaqueColorCompontents, Value: BinaryFloatingPoint {
     @inlinable
-    public var color: UIColor { return UIColor(hue: .init(hue), saturation: .init(saturation), brightness: .init(brightness), alpha: 1) }
-
+    public var color: UIColor { UIColor(hue: .init(hue), saturation: .init(saturation), brightness: .init(brightness), alpha: 1) }
+    
+    @inlinable
     public init?(exactly color: UIColor) {
         let (hsba, isExact) = color._extractHSBA()
         guard isExact else { return nil }
         self.init(hsba)
     }
-
+    
+    @inlinable
     public init(_ color: UIColor) {
         self.init(color._extractHSBA().0)
     }
@@ -177,14 +194,16 @@ extension HSBColorComponents where Self: UIOpaqueColorCompontents, Value: Binary
 
 extension HSBAColorComponents where Self: UIOpaqueColorCompontents, Value: BinaryFloatingPoint {
     @inlinable
-    public var color: UIColor { return UIColor(hue: .init(hue), saturation: .init(saturation), brightness: .init(brightness), alpha: .init(alpha)) }
-
+    public var color: UIColor { UIColor(hue: .init(hue), saturation: .init(saturation), brightness: .init(brightness), alpha: .init(alpha)) }
+    
+    @inlinable
     public init?(exactly color: UIColor) {
         let (hsba, isExact) = color._extractHSBA()
         guard isExact else { return nil }
         self.init(hsba)
     }
-
+    
+    @inlinable
     public init(_ color: UIColor) {
         self.init(color._extractHSBA().0)
     }
@@ -218,8 +237,7 @@ public struct HSB<Value: ColorCompontentValue>: HSBColorComponents {
     public var hue: Value
     public var saturation: Value
     public var brightness: Value
-
-    @inlinable
+    
     public init(hue: Value, saturation: Value, brightness: Value) {
         (self.hue, self.saturation, self.brightness) = (hue, saturation, brightness)
     }
@@ -228,30 +246,29 @@ public struct HSB<Value: ColorCompontentValue>: HSBColorComponents {
 public struct HSBA<Value: ColorCompontentValue>: HSBAColorComponents {
     public var hsb: HSB<Value>
     public var alpha: Value
-
+    
     @inlinable
     public var hue: Value {
-        get { return hsb.hue }
+        get { hsb.hue }
         set { hsb.hue = newValue }
     }
-
+    
     @inlinable
     public var saturation: Value {
-        get { return hsb.saturation }
+        get { hsb.saturation }
         set { hsb.saturation = newValue }
     }
-
+    
     @inlinable
     public var brightness: Value {
-        get { return hsb.brightness }
+        get { hsb.brightness }
         set { hsb.brightness = newValue }
     }
-
-    @inlinable
+    
     public init(hsb: HSB<Value>, alpha: Value) {
         (self.hsb, self.alpha) = (hsb, alpha)
     }
-
+    
     @inlinable
     public init(hue: Value, saturation: Value, brightness: Value, alpha: Value) {
         self.init(hsb: .init(hue: hue, saturation: saturation, brightness: brightness), alpha: alpha)

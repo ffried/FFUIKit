@@ -61,6 +61,6 @@ public struct License: Hashable {
     }
 
     public static func ==(lhs: License, rhs: License) -> Bool {
-        return (lhs.title, lhs.file) == (rhs.title, rhs.file)
+        (lhs.title, lhs.file) == (rhs.title, rhs.file)
     }
 }

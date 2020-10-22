@@ -41,14 +41,17 @@ extension BWAColorComponents {
 }
 
 extension BWColorComponents where Value: BinaryInteger {
+    @inlinable
     public init<Other: BWBaseColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(white: .init(other.white))
     }
 
+    @inlinable
     public init<Other: BWBaseColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(white: .init(colorConverting: other.white))
     }
 
+    @inlinable
     public init?<Other: BWBaseColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let white = Value(colorConvertingExactly: other.white) else { return nil }
         self.init(white: white)
@@ -56,19 +59,23 @@ extension BWColorComponents where Value: BinaryInteger {
 }
 
 extension BWColorComponents where Value: BinaryFloatingPoint {
+    @inlinable
     public init<Other: BWBaseColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(white: .init(colorConverting: other.white))
     }
 
+    @inlinable
     public init?<Other: BWBaseColorComponents>(exactly other: Other) where Other.Value: BinaryInteger {
         guard let white = Value(colorConvertingExactly: other.white) else { return nil }
         self.init(white: white)
     }
 
+    @inlinable
     public init<Other: BWBaseColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(white: .init(other.white))
     }
 
+    @inlinable
     public init?<Other: BWBaseColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let white = Value(exactly: other.white) else { return nil }
         self.init(white: white)
@@ -76,41 +83,48 @@ extension BWColorComponents where Value: BinaryFloatingPoint {
 }
 
 extension BWAColorComponents where Value: BinaryInteger {
+    @inlinable
     public init<Other: BWAColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(white: .init(other.white), alpha: .init(other.alpha))
     }
 
+    @inlinable
     public init<Other: BWAColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(white: .init(colorConverting: other.white), alpha: .init(colorConverting: other.alpha))
     }
 
+    @inlinable
     public init?<Other: BWAColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let white = Value(colorConvertingExactly: other.white),
-            let alpha = Value(colorConvertingExactly: other.alpha)
-            else { return nil }
+              let alpha = Value(colorConvertingExactly: other.alpha)
+        else { return nil }
         self.init(white: white, alpha: alpha)
     }
 }
 
 extension BWAColorComponents where Value: BinaryFloatingPoint {
+    @inlinable
     public init<Other: BWAColorComponents>(_ other: Other) where Other.Value: BinaryInteger {
         self.init(white: .init(colorConverting: other.white), alpha: .init(colorConverting: other.alpha))
     }
 
+    @inlinable
     public init?<Other: BWAColorComponents>(exactly other: Other) where Other.Value: BinaryInteger {
         guard let white = Value(colorConvertingExactly: other.white),
-            let alpha = Value(colorConvertingExactly: other.alpha)
-            else { return nil }
+              let alpha = Value(colorConvertingExactly: other.alpha)
+        else { return nil }
         self.init(white: white, alpha: alpha)
     }
 
+    @inlinable
     public init<Other: BWAColorComponents>(_ other: Other) where Other.Value: BinaryFloatingPoint {
         self.init(white: .init(other.white), alpha: .init(other.alpha))
     }
 
+    @inlinable
     public init?<Other: BWAColorComponents>(exactly other: Other) where Other.Value: BinaryFloatingPoint {
         guard let white = Value(exactly: other.white), let alpha = Value(exactly: other.alpha)
-            else { return nil }
+        else { return nil }
         self.init(white: white, alpha: alpha)
     }
 }
@@ -118,7 +132,7 @@ extension BWAColorComponents where Value: BinaryFloatingPoint {
 // MARK: - FloatingPointOpaqueColorComponents
 extension BWBaseColorComponents where Self: FloatingPointOpaqueColorComponents {
     @inlinable
-    public var brightness: Value { return white }
+    public var brightness: Value { white }
 
     @inlinable
     public mutating func changeBrightness(by percent: Value) {
@@ -127,7 +141,8 @@ extension BWBaseColorComponents where Self: FloatingPointOpaqueColorComponents {
 }
 
 // MARK: - UI{Opaque}ColorComponents
-fileprivate extension UIColor {
+extension UIColor {
+    @usableFromInline
     func _extractBWA() -> (BWA<CGFloat>, isExact: Bool) {
         var bwa = BWA<CGFloat>(white: 0, alpha: 1)
         let isExact = getWhite(&bwa.bw.white, alpha: &bwa.alpha)
@@ -137,14 +152,16 @@ fileprivate extension UIColor {
 
 extension BWColorComponents where Self: UIOpaqueColorCompontents, Value: BinaryFloatingPoint {
     @inlinable
-    public var color: UIColor { return UIColor(white: .init(white), alpha: 1) }
+    public var color: UIColor { UIColor(white: .init(white), alpha: 1) }
 
+    @inlinable
     public init?(exactly color: UIColor) {
         let (bwa, isExact) = color._extractBWA()
         guard isExact else { return nil }
         self.init(bwa)
     }
 
+    @inlinable
     public init(_ color: UIColor) {
         self.init(color._extractBWA().0)
     }
@@ -152,14 +169,16 @@ extension BWColorComponents where Self: UIOpaqueColorCompontents, Value: BinaryF
 
 extension BWAColorComponents where Self: UIOpaqueColorCompontents, Value: BinaryFloatingPoint {
     @inlinable
-    public var color: UIColor { return UIColor(white: .init(white), alpha: .init(alpha)) }
+    public var color: UIColor { UIColor(white: .init(white), alpha: .init(alpha)) }
 
+    @inlinable
     public init?(exactly color: UIColor) {
         let (bwa, isExact) = color._extractBWA()
         guard isExact else { return nil }
         self.init(bwa)
     }
 
+    @inlinable
     public init(_ color: UIColor) {
         self.init(color._extractBWA().0)
     }
@@ -169,7 +188,6 @@ extension BWAColorComponents where Self: UIOpaqueColorCompontents, Value: Binary
 public struct BW<Value: ColorCompontentValue>: BWColorComponents {
     public var white: Value
 
-    @inlinable
     public init(white: Value) {
         self.white = white
     }
@@ -181,11 +199,10 @@ public struct BWA<Value: ColorCompontentValue>: BWAColorComponents {
 
     @inlinable
     public var white: Value {
-        get { return bw.white }
+        get { bw.white }
         set { bw.white = newValue }
     }
 
-    @inlinable
     public init(bw: BW<Value>, alpha: Value) {
         (self.bw, self.alpha) = (bw, alpha)
     }

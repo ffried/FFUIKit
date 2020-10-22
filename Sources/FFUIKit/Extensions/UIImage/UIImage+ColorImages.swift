@@ -22,6 +22,8 @@ import UIKit
 
 extension UIImage {
     public convenience init?(color: UIColor, size: CGSize) {
+        let image: UIImage?
+        #if os(watchOS)
         func _legacyDrawing() -> UIImage? {
             UIGraphicsBeginImageContext(size)
             defer { UIGraphicsEndImageContext() }
@@ -30,18 +32,12 @@ extension UIImage {
             context?.fill(CGRect(origin: .zero, size: size))
             return UIGraphicsGetImageFromCurrentImageContext()
         }
-        let image: UIImage?
-        #if os(watchOS)
         image = _legacyDrawing()
         #else
-        if #available(iOS 10, *) {
-            let renderer = UIGraphicsImageRenderer(size: size)
-            image = renderer.image {
-                $0.cgContext.setFillColor(color.cgColor)
-                $0.cgContext.fill(CGRect(origin: .zero, size: size))
-            }
-        } else {
-            image = _legacyDrawing()
+        let renderer = UIGraphicsImageRenderer(size: size)
+        image = renderer.image {
+            $0.cgContext.setFillColor(color.cgColor)
+            $0.cgContext.fill(CGRect(origin: .zero, size: size))
         }
         #endif
         if let cgimage = image?.cgImage {

@@ -24,7 +24,7 @@ open class NotificationView: UIView {
     public let backgroundView = UIView()
     public let contentView = UIView()
 
-    private(set) internal var contentViewTopConstraint: NSLayoutConstraint!
+    private(set) var contentViewTopConstraint: NSLayoutConstraint!
 
     public override init(frame: CGRect) {
         super.init(frame: frame)

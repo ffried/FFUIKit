@@ -18,12 +18,12 @@
 //  limitations under the License.
 //
 
-import UIKit
 import ObjectiveC
+import UIKit
 import FFFoundation
 
 fileprivate protocol Storable {}
-extension Storable { mutating func stored() -> Self { return self } }
+extension Storable { mutating func stored() -> Self { self } }
 
 extension Set: Storable {}
 extension Array: Storable {}
@@ -36,7 +36,7 @@ private var UIImage_simpleColorsByQualityKey = "UIImage.simpleColorsByQuality"
 private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
 
 fileprivate extension HSBBaseColorComponents where Value: AdditiveArithmetic {
-    var intensity: Value { return saturation + brightness }
+    var intensity: Value { saturation + brightness }
 }
 
 extension UIImage {
@@ -59,13 +59,13 @@ extension UIImage {
         }
 
         static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
-            return lhs.rgba == rhs.rgba
+            lhs.rgba == rhs.rgba
         }
     }
 
     @inline(__always)
     private final func getAssoc<T>(for key: inout String) -> T? {
-        return objc_getAssociatedObject(self, &key) as? T
+        objc_getAssociatedObject(self, &key) as? T
     }
 
     @inline(__always)
@@ -111,7 +111,7 @@ extension UIImage {
     }
 
     private final var simpleColorsByQuality: Dictionary<CGFloat, Set<SimpleColor>> {
-        get { return storedValue(for: &UIImage_simpleColorsByQualityKey, generatedBy: { [:] }) }
+        get { storedValue(for: &UIImage_simpleColorsByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_simpleColorsByQualityKey) }
     }
     private final func simpleColors(quality: CGFloat) -> Set<SimpleColor> {
@@ -140,31 +140,31 @@ extension UIImage {
     }
 
     private final var simpleColors: Set<SimpleColor> {
-        return simpleColors(quality: 1)
+        simpleColors(quality: 1)
     }
 
     private final var colorsByQuality: Dictionary<CGFloat, [UIColor]> {
-        get { return storedValue(for: &UIImage_colorsByQualityKey, generatedBy: { [:] }) }
+        get { storedValue(for: &UIImage_colorsByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_colorsByQualityKey) }
     }
     public final func colors(quality: CGFloat) -> [UIColor] {
-        return colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor }].stored()
+        colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor }].stored()
     }
 
     public final var colors: [UIColor] {
-        return colors(quality: 1)
+        colors(quality: 1)
     }
 
     private final var mostIntenseColorByQuality: Dictionary<CGFloat, UIColor?> {
-        get { return storedValue(for: &UIImage_mostIntenseColorByQualityKey, generatedBy: { [:] }) }
+        get { storedValue(for: &UIImage_mostIntenseColorByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_mostIntenseColorByQualityKey) }
     }
     public final func mostIntenseColor(quality: CGFloat) -> UIColor? {
-        return mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor].stored()
+        mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor].stored()
     }
 
     public final var mostIntenseColor: UIColor? {
-        return mostIntenseColor(quality: 1)
+        mostIntenseColor(quality: 1)
     }
 
     public final func imageTinted(with color: UIColor) -> UIImage? {
@@ -185,6 +185,7 @@ extension UIImage {
             context.drawPath(using: .fill)
         }
 
+        #if os(watchOS)
         func _legacyDrawing() -> UIImage? {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
@@ -192,16 +193,10 @@ extension UIImage {
             draw(in: context)
             return UIGraphicsGetImageFromCurrentImageContext()
         }
-
-        #if os(watchOS)
         return _legacyDrawing()
         #else
-        if #available(iOS 10, *) {
-            let renderer = UIGraphicsImageRenderer(size: size)
-            return renderer.image { draw(in: $0.cgContext) }
-        } else {
-            return _legacyDrawing()
-        }
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { draw(in: $0.cgContext) }
         #endif
     }
 }

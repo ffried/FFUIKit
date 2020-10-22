@@ -32,11 +32,11 @@ extension UIImageView {
     /// Returns the current horizontal (zoom) scale of the image compared to the image view.
     /// E.g. if the image has a size of 100x50, but the image view is only sized at 50x25, this will return 0.5.
     /// If there's no image, 0 is returned.
-    public var horizontalScale: CGFloat { return scale(using: \.width) }
+    public var horizontalScale: CGFloat { scale(using: \.width) }
 
     /// Returns the current vertical (zoom) scale of the image compared to the image view.
     /// E.g. if the image has a size of 100x50, but the image view is only sized at 50x25, this will return 0.5.
     /// If there's no image, 0 is returned.
-    public var verticalScale: CGFloat { return scale(using: \.height) }
+    public var verticalScale: CGFloat { scale(using: \.height) }
 }
 #endif

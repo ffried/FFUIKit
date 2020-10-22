@@ -22,7 +22,7 @@ import CoreGraphics
 
 extension CGRect {
     @inlinable
-    public var center: CGPoint { return CGPoint(x: midX, y: midY) }
+    public var center: CGPoint { CGPoint(x: midX, y: midY) }
 }
 
 extension CGPoint {
@@ -34,7 +34,7 @@ extension CGPoint {
 
 extension CGSize {
     @inlinable
-    public var surface: CGFloat { return width * height }
+    public var surface: CGFloat { width * height }
 
     @inlinable
     public init(sideLength: CGFloat) {

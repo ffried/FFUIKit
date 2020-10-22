@@ -24,6 +24,8 @@ extension UIImage {
     public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage {
         let rect = CGRect(origin: .zero, size: size)
 
+        let image: UIImage
+        #if os(watchOS)
         func _legacyRounding() -> UIImage! {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
@@ -31,21 +33,14 @@ extension UIImage {
             draw(in: rect)
             return UIGraphicsGetImageFromCurrentImageContext()
         }
-
-        let image: UIImage
-        #if os(watchOS)
         image = _legacyRounding()
         #else
-        if #available(iOS 10, tvOS 10, *) {
-            let format = UIGraphicsImageRendererFormat.osPreferred()
-            format.opaque = false
-            format.scale = scale
-            image = UIGraphicsImageRenderer(bounds: rect, format: format).image { _ in
-                UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-                draw(in: rect)
-            }
-        } else {
-            image = _legacyRounding()
+        let format = UIGraphicsImageRendererFormat.osPreferred()
+        format.opaque = false
+        format.scale = scale
+        image = UIGraphicsImageRenderer(bounds: rect, format: format).image { _ in
+            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+            draw(in: rect)
         }
         #endif
         return image.resizableImage(withCapInsets: UIEdgeInsets(

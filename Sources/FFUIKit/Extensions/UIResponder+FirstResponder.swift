@@ -29,7 +29,7 @@ extension UIResponder {
     @available(tvOSApplicationExtension, unavailable)
     @available(macCatalystApplicationExtension, unavailable)
     public static func findFirstResponder() -> UIResponder? {
-        return Application.shared.delegate?.window?.flatMap(firstResponder)
+        Application.shared.delegate?.window?.flatMap(firstResponder)
     }
 
     public static func firstResponder(in view: UIView) -> UIResponder? {

@@ -54,17 +54,17 @@ public typealias UIColorCompontents = UIOpaqueColorCompontents & ColorComponents
 
 extension OpaqueColorComponents {
     @inlinable
-    public var isClearColor: Bool { return false }
+    public var isClearColor: Bool { false }
 }
 
 extension ColorComponents {
     @inlinable
-    public var isClearColor: Bool { return alpha <= 0 }
+    public var isClearColor: Bool { alpha <= 0 }
 }
 
 extension FloatingPointOpaqueColorComponents where Value: ExpressibleByFloatLiteral {
     @inlinable
-    public var isDarkColor: Bool { return brightness < 0.5 }
+    public var isDarkColor: Bool { brightness < 0.5 }
 }
 
 extension UIOpaqueColorCompontents {

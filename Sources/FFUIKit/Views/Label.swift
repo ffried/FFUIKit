@@ -24,7 +24,7 @@ import struct UIKit.UIEdgeInsets
 import class UIKit.UILabel
 
 @IBDesignable
-public final class Label: UILabel {
+public final class InsettableLabel: UILabel {
     @IBInspectable
     public var edgeInsets: UIEdgeInsets = .zero {
         didSet { invalidateIntrinsicContentSize() }
@@ -37,4 +37,7 @@ public final class Label: UILabel {
         return size
     }
 }
+
+@available(*, deprecated, message: "Label was renamed to InsettableLabel", renamed: "InsettableLabel")
+public typealias Label = InsettableLabel
 #endif
