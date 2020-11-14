@@ -59,15 +59,15 @@ public final class LicensesTableViewController: UITableViewController {
         didSet {
             licensesLookup.removeAll(keepingCapacity: true)
             licensesLookup.reserveCapacity(licenses.count)
-            let indicesToRemove = licenses.enumerated().reduce(into: IndexSet()) {
-                let key = LicenseKey(license: $1.element)
+            licenses = licenses.filter {
+                let key = LicenseKey(license: $0)
                 if licensesLookup[key] != nil {
-                    $0.insert($1.offset)
+                    return false
                 } else {
-                    licensesLookup[key] = $1.element
+                    licensesLookup[key] = $0
+                    return true
                 }
             }
-            licenses.remove(atOffsets: indicesToRemove)
             guard isViewLoaded else { return }
             updateTableView(animated: true)
         }
