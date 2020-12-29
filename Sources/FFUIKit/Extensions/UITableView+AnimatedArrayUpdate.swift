@@ -24,18 +24,25 @@ import struct Foundation.IndexPath
 import enum UIKit.UITableViewRowAnimation
 import class UIKit.UITableView
 
+@available(iOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(tvOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(macCatalyst, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
 public protocol UITableViewReloadableObject: Equatable {
     func needsReload(from other: Self) -> Bool
 }
 
-// public protocol UITableViewRowObject: UITableViewReloadableObject {}
-
+@available(iOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(tvOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(macCatalyst, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
 public protocol UITableViewSectionObject: UITableViewReloadableObject {
     associatedtype Row: Equatable // UITableViewRowObject
     
     var rows: [Row] { get }
 }
 
+@available(iOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(tvOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
+@available(macCatalyst, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
 extension UITableView {
     private final func _performBatchUpdates(_ updates: () -> (), completion: ((Bool) -> ())? = nil) {
         if #available(

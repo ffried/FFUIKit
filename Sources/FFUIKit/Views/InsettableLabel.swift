@@ -37,7 +37,4 @@ public final class InsettableLabel: UILabel {
         return size
     }
 }
-
-@available(*, deprecated, message: "Label was renamed to InsettableLabel", renamed: "InsettableLabel")
-public typealias Label = InsettableLabel
 #endif

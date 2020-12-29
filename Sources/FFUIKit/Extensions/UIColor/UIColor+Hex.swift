@@ -19,17 +19,19 @@
 //
 
 import class Foundation.Scanner
+import struct CoreGraphics.CGFloat
 import class UIKit.UIColor
+import ColorComponents
 
 extension UIColor {
     @inlinable
     public convenience init<I: BinaryInteger>(rgbHex: I) {
-        self.init(rgba: .init(rgb: .init(RGB(hex: rgbHex)), alpha: 1))
+        self.init(RGBA<CGFloat>(rgb: .init(RGB(hex: rgbHex)), alpha: 1))
     }
 
     @inlinable
     public convenience init<I: BinaryInteger>(rgbaHex: I) {
-        self.init(rgba: .init(RGBA(hex: rgbaHex)))
+        self.init(RGBA<CGFloat>(RGBA(hex: rgbaHex)))
     }
 
     public convenience init(hexString hex: String) {

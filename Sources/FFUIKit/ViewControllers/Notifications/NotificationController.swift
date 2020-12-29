@@ -24,6 +24,7 @@ import ObjectiveC
 import Foundation
 import UIKit
 import typealias FFFoundation.AnyTimer
+import ColorComponents
 
 internal protocol NotificationControllerProtocol: class {
     var noteView: NotificationView { get }

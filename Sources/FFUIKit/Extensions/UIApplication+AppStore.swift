@@ -25,11 +25,6 @@ import struct Foundation.URLQueryItem
 import class Foundation.Bundle
 import class UIKit.UIApplication
 
-@available(*, deprecated, message: "FFUIKitiTunesIdentifierInfoDictionaryKey was renamed to UIApplication.iTunesIdentifierInfoDictionaryKey", renamed: "UIApplication.iTunesIdentifierInfoDictionaryKey")
-public var FFUIKitiTunesIdentifierInfoDictionaryKey: String {
-    UIApplication.iTunesIdentifierInfoDictionaryKey
-}
-
 extension UIApplication {
     /// FFUIKitiTunesIdentifier
     public static let iTunesIdentifierInfoDictionaryKey: String = "FFUIKitiTunesIdentifier"

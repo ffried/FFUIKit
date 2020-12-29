@@ -21,22 +21,33 @@
 import ObjectiveC
 import UIKit
 import FFFoundation
+import ColorComponents
 
-fileprivate protocol Storable {}
-extension Storable { mutating func stored() -> Self { self } }
+fileprivate extension Dictionary {
+    subscript(key: Key, orStored defaultProvider: @autoclosure () -> Value) -> Value {
+        mutating get {
+            if let existing = self[key] { return existing }
+            let new = defaultProvider()
+            self[key] = new
+            return new
+        }
+        set {
+            self[key] = newValue
+        }
+    }
+}
 
-extension Set: Storable {}
-extension Array: Storable {}
-extension Optional: Storable {}
-extension UIColor: Storable {}
+private var UIImage_averageColorKey: StaticString = "UIImage.averageColor"
+private var UIImage_mostIntenseColorByQualityKey: StaticString = "UIImage.mostIntenseColorByQuality"
+private var UIImage_simpleColorsByQualityKey: StaticString = "UIImage.simpleColorsByQuality"
+private var UIImage_colorsByQualityKey: StaticString = "UIImage.colorsByQuality"
 
-private var UIImage_averageColorKey = "UIImage.averageColor"
-private var UIImage_mostIntenseColorByQualityKey = "UIImage.mostIntenseColorByQuality"
-private var UIImage_simpleColorsByQualityKey = "UIImage.simpleColorsByQuality"
-private var UIImage_colorsByQualityKey = "UIImage.colorsByQuality"
-
-fileprivate extension HSBBaseColorComponents where Value: AdditiveArithmetic {
+fileprivate extension HSB where Value: AdditiveArithmetic {
     var intensity: Value { saturation + brightness }
+}
+
+fileprivate extension HSBA where Value: AdditiveArithmetic {
+    var intensity: Value { hsb.intensity }
 }
 
 extension UIImage {
@@ -54,7 +65,7 @@ extension UIImage {
             self.rgba = rgba
 
             let cgRGBA = Lazy<RGBA<CGFloat>> { RGBA<CGFloat>(rgba) }
-            _uiColor = Lazy { cgRGBA.wrappedValue.color }
+            _uiColor = Lazy { UIColor(cgRGBA.wrappedValue) }
             _intensity = Lazy { HSBA(rgba: cgRGBA.wrappedValue).intensity }
         }
 
@@ -64,17 +75,17 @@ extension UIImage {
     }
 
     @inline(__always)
-    private final func getAssoc<T>(for key: inout String) -> T? {
+    private final func getAssoc<T>(for key: inout StaticString) -> T? {
         objc_getAssociatedObject(self, &key) as? T
     }
 
     @inline(__always)
-    private final func setAssoc<T>(_ val: T?, for key: inout String, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
+    private final func setAssoc<T>(_ val: T?, for key: inout StaticString, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
         objc_setAssociatedObject(self, &key, val, policy)
     }
 
     @inline(__always)
-    private final func storedValue<T>(for key: inout String, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
+    private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
         if let val: T = getAssoc(for: &key) { return val }
         let val = generator()
         setAssoc(val, for: &key, policy: policy)
@@ -82,7 +93,7 @@ extension UIImage {
     }
 
     @inline(__always)
-    private final func storedValue<T>(for key: inout String, generatedBy generator: () -> T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T? {
+    private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T? {
         if let val: T = getAssoc(for: &key) { return val }
         let val = generator()
         setAssoc(val, for: &key, policy: policy)
@@ -105,7 +116,7 @@ extension UIImage {
             guard let data = context.data else { return nil }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
 
-            return RGBA<CGFloat>(RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])).color
+            return .init(RGBA<CGFloat>(RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])))
         }
         return storedValue(for: &UIImage_averageColorKey, generatedBy: getAverageColor)
     }
@@ -136,7 +147,7 @@ extension UIImage {
             })
             return Set(rawValues.map(SimpleColor.init))
         }
-        return simpleColorsByQuality[quality, default: getSimpleColors(quality: quality)].stored()
+        return simpleColorsByQuality[quality, orStored: getSimpleColors(quality: quality)]
     }
 
     private final var simpleColors: Set<SimpleColor> {
@@ -148,7 +159,7 @@ extension UIImage {
         set { setAssoc(newValue, for: &UIImage_colorsByQualityKey) }
     }
     public final func colors(quality: CGFloat) -> [UIColor] {
-        colorsByQuality[quality, default: simpleColors(quality: quality).map { $0.uiColor }].stored()
+        colorsByQuality[quality, orStored: simpleColors(quality: quality).map { $0.uiColor }]
     }
 
     public final var colors: [UIColor] {
@@ -160,7 +171,7 @@ extension UIImage {
         set { setAssoc(newValue, for: &UIImage_mostIntenseColorByQualityKey) }
     }
     public final func mostIntenseColor(quality: CGFloat) -> UIColor? {
-        mostIntenseColorByQuality[quality, default: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor].stored()
+        mostIntenseColorByQuality[quality, orStored: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor]
     }
 
     public final var mostIntenseColor: UIColor? {

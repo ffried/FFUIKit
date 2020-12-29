@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "color-components",
+        "repositoryURL": "https://github.com/sersoft-gmbh/color-components.git",
+        "state": {
+          "branch": null,
+          "revision": "ccc41ebfe0f687d852627cbf29bdf593d02e09bf",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "FFFoundation",
         "repositoryURL": "https://github.com/ffried/FFFoundation.git",
         "state": {
