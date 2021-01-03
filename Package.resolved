@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/sersoft-gmbh/color-components.git",
         "state": {
           "branch": null,
-          "revision": "ccc41ebfe0f687d852627cbf29bdf593d02e09bf",
-          "version": "1.0.0"
+          "revision": "6c18ae3356dcc760434405f0fea48443494987a8",
+          "version": "1.0.1"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ffried/FFFoundation.git",
         "state": {
           "branch": null,
-          "revision": "dd4a944d7e6880487358d19e45142ae39f65be12",
-          "version": "8.1.0"
+          "revision": "d84e104f580719d5974e90a6e184c8f6dbd53fe8",
+          "version": "9.0.0"
         }
       }
     ]
