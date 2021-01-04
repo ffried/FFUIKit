@@ -23,4 +23,5 @@ The following list provides some help in finding the correct replacement for API
     For SwiftUI, there's the `\.deviceInfo` environment key.
 -   `UIStoryboard.Identifier` and the corresponding `instantiateViewController` method were removed in favor of `UIStoryboard`s generic `instantiateViewController` method that already returns a typed view controller.
 -   The extensions on `UITableView` allowing animated updates have been soft-deprecated. `UIDiffableDataSource` is a great, more robust and more performant replacement for it.
--   The `LicensesTableViewController`, `LicenseDetailViewController` and `License` model have been replaced in favor of the [Licensed Components Package](https://github.com/sersoft-gmbh/licensed-components.git).
+-   The `LicensesTableViewController`, `LicenseDetailViewController` and `License` model have been replaced in favor of the [Licensed Components Package](https://github.com/sersoft-gmbh/licensed-components).
+-   The `UIApplication` extensions for the iTunes URL have been removed in favor of the [App Information Package](https://github.com/sersoft-gmbh/app-information).
