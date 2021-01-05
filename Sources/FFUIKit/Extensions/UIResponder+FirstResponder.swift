@@ -19,6 +19,7 @@
 //
 
 #if !os(watchOS)
+import class UIKit.UIApplication
 import class UIKit.UIResponder
 import class UIKit.UIView
 import FFFoundation
@@ -29,7 +30,7 @@ extension UIResponder {
     @available(tvOSApplicationExtension, unavailable)
     @available(macCatalystApplicationExtension, unavailable)
     public static func findFirstResponder() -> UIResponder? {
-        Application.shared.delegate?.window?.flatMap(firstResponder)
+        UIApplication.shared.delegate?.window?.flatMap(firstResponder)
     }
 
     public static func firstResponder(in view: UIView) -> UIResponder? {
