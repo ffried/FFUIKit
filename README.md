@@ -25,3 +25,4 @@ The following list provides some help in finding the correct replacement for API
 -   The extensions on `UITableView` allowing animated updates have been soft-deprecated. `UIDiffableDataSource` is a great, more robust and more performant replacement for it.
 -   The `LicensesTableViewController`, `LicenseDetailViewController` and `License` model have been replaced in favor of the [Licensed Components Package](https://github.com/sersoft-gmbh/licensed-components).
 -   The `UIApplication` extensions for the iTunes URL have been removed in favor of the [App Information Package](https://github.com/sersoft-gmbh/app-information).
+-   The `UIColor` extensions have been removed in favor of using [Color Components Package](https://github.com/sersoft-gmbh/color-components), which makes it as easy as of release 1.2.0.
