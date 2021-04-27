@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> 8.4.0 Docs</a> (5% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/InsettableLabel.html">InsettableLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotificationController.html">NotificationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotificationController/AutoDismissType.html">– AutoDismissType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotificationView.html">NotificationView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProgressIndicatorView.html">ProgressIndicatorView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TextNotificationView.html">TextNotificationView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TouchAwareControl.html">TouchAwareControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NotificationStyle.html">NotificationStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CALayer/AnimationKey.html">– AnimationKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CGPoint.html">CGPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIResponder.html">UIResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/UITableViewReloadableObject.html">UITableViewReloadableObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/UITableViewSectionObject.html">UITableViewSectionObject</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='ffuikit' class='heading'>FFUIKit</h1>
+
+<p><a href="https://github.com/ffried/FFUIKit/releases/latest"><img src="https://img.shields.io/github/release/ffried/ffuikit.svg?style=flat" alt="GitHub release"></a>
+<img src="https://github.com/ffried/FFUIKit/workflows/Tests/badge.svg" alt="Tests">
+<a href="https://www.codacy.com/app/ffried/FFUIKit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ffried/FFUIKit&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/2cd8044e536c4aefaf022d6552f94adb" alt="Codacy Badge"></a></p>
+
+<p>Some useful additions and classes for Apple&rsquo;s UIKit Framwork.</p>
+<h2 id='important-note' class='heading'>Important Note</h2>
+
+<p>Release 8.0 is the first step into retiring this framework.
+SwiftUI supersedes or provides many things FFUIKit added for UIKit.
+Also, UIKit gained support for another bunch of things FFUIKit provided until now.
+Finally, the remaining useful parts will be factored out into smaller packages.</p>
+
+<p>The following list provides some help in finding the correct replacement for APIs removed from FFUIKit:</p>
+
+<ul>
+<li>The Color Components implementations (<code>BW</code>, <code>BWA</code>, <code>RGB</code>, <code>RGBA</code>, <code>HSB</code> and <code>HSBA</code>) now live in the <a href="https://github.com/sersoft-gmbh/color-components">Color Components Package</a>.</li>
+<li><code>UIDevice.platform</code> and <code>UIDevice.platformName</code> are now found in the <a href="https://github.com/sersoft-gmbh/apple-device-information">Apple Device Information Package</a>.
+<code>UIDevice.platform</code> becomes <code>DeviceInfo.current.identifier</code> and <code>platformName</code> becomes <code>DeviceInfo.current.name</code>.
+For SwiftUI, there&rsquo;s the <code>\.deviceInfo</code> environment key.</li>
+<li><code>UIStoryboard.Identifier</code> and the corresponding <code>instantiateViewController</code> method were removed in favor of <code>UIStoryboard</code>s generic <code>instantiateViewController</code> method that already returns a typed view controller.</li>
+<li>The extensions on <code>UITableView</code> allowing animated updates have been soft-deprecated. <code>UIDiffableDataSource</code> is a great, more robust and more performant replacement for it.</li>
+<li>The <code>LicensesTableViewController</code>, <code>LicenseDetailViewController</code> and <code>License</code> model have been replaced in favor of the <a href="https://github.com/sersoft-gmbh/licensed-components">Licensed Components Package</a>.</li>
+<li>The <code>UIApplication</code> extensions for the iTunes URL have been removed in favor of the <a href="https://github.com/sersoft-gmbh/app-information">App Information Package</a>.</li>
+<li>The <code>UIColor</code> extensions have been removed in favor of using <a href="https://github.com/sersoft-gmbh/color-components">Color Components Package</a>, which makes it as easy as of release 1.2.0.</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-04-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
