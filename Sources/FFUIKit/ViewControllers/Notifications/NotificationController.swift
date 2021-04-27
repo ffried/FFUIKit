@@ -26,7 +26,7 @@ import UIKit
 import typealias FFFoundation.AnyTimer
 import ColorComponents
 
-internal protocol NotificationControllerProtocol: class {
+internal protocol NotificationControllerProtocol: AnyObject {
     var noteView: NotificationView { get }
 
     func dismissNotification(animated: Bool, completion: (() -> ())?)

@@ -116,7 +116,7 @@ extension UIImage {
             guard let data = context.data else { return nil }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
 
-            return .init(RGBA<CGFloat>(RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])))
+            return .init(RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]))
         }
         return storedValue(for: &UIImage_averageColorKey, generatedBy: getAverageColor)
     }
