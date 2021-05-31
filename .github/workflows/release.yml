@@ -21,7 +21,7 @@ jobs:
           module-version: ${{steps.get-tag.outputs.tag}}
           output: docs
           xcodebuild-destination: platform=iOS Simulator,OS=latest,name=iPhone 11 Pro
-      - uses: crazy-max/ghaction-github-pages@v2.4.1
+      - uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           build_dir: docs
         env:
