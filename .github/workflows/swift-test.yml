@@ -81,7 +81,7 @@ jobs:
       - uses: sersoft-gmbh/xcode-coverage-action@v1.0.0
         id: xcode-cov
         if: matrix.action == 'test'
-      - uses: codecov/codecov-action@v2.0.1
+      - uses: codecov/codecov-action@v2.0.2
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           files: ${{join(fromJSON(steps.xcode-cov.outputs.files), ',')}}
