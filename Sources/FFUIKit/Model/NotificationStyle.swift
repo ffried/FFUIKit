@@ -40,3 +40,7 @@ public enum NotificationStyle {
         }
     }
 }
+
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension NotificationStyle: Sendable {}
+#endif

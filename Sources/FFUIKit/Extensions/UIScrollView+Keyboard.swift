@@ -28,13 +28,12 @@ import UIKit
 private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 @available(tvOS, unavailable)
 extension UIScrollView {
-    private typealias UserInfoDictionary = [AnyHashable: Any]
+    private typealias UserInfoDictionary = Dictionary<AnyHashable, Any>
     
-    private final var notificationObservers: [NSObjectProtocol] {
+    private final var notificationObservers: Array<NSObjectProtocol> {
         get {
-            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? [NSObjectProtocol] else {
-                return []
-            }
+            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? Array<NSObjectProtocol>
+            else { return [] }
             return observers
         }
         set { objc_setAssociatedObject(self, &_keyboardNotificationObserversKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }

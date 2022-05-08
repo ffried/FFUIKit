@@ -39,4 +39,8 @@ extension CALayer {
         animation(forKey: key.rawValue)
     }
 }
+
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension CALayer.AnimationKey: Sendable {}
+#endif
 #endif

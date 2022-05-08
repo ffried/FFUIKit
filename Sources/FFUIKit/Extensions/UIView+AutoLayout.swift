@@ -29,9 +29,7 @@ extension UIView {
         }
     }
     
-    /**
-     Would you really want to use this!?
-     */
+    // Would you really want to use this!?
     public final func disableAutoLayout() {
         if !translatesAutoresizingMaskIntoConstraints {
             translatesAutoresizingMaskIntoConstraints = true
