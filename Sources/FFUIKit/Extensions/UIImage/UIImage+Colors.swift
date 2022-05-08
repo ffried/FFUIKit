@@ -110,7 +110,7 @@ extension UIImage {
                                           width: 1, height: 1,
                                           bitsPerComponent: 8, bytesPerRow: 4,
                                           space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
-                else { return nil }
+            else { return nil }
             context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1)))
 
             guard let data = context.data else { return nil }
@@ -136,7 +136,7 @@ extension UIImage {
                                           width: .init(size.width), height: .init(size.height),
                                           bitsPerComponent: 8, bytesPerRow: 0,
                                           space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
-                else { return [] }
+            else { return [] }
             context.draw(cgImage, in: CGRect(origin: .zero, size: size))
 
             guard let data = context.data else { return [] }
@@ -196,7 +196,7 @@ extension UIImage {
             context.drawPath(using: .fill)
         }
 
-        #if os(watchOS)
+#if os(watchOS)
         func _legacyDrawing() -> UIImage? {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
@@ -205,9 +205,9 @@ extension UIImage {
             return UIGraphicsGetImageFromCurrentImageContext()
         }
         return _legacyDrawing()
-        #else
+#else
         let renderer = UIGraphicsImageRenderer(size: size)
         return renderer.image { draw(in: $0.cgContext) }
-        #endif
+#endif
     }
 }
