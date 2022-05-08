@@ -84,6 +84,9 @@ jobs:
           DOCC_JSON_PRETTYPRINT: 'YES'
         with:
           package-version: ${{needs.release-context.outputs.version-name}}
+          use-xcodebuild: true
+          xcodebuild-scheme: ${{matrix.target}}
+          xcodebuild-destination: 'platform=iOS Simulator,OS=latest,name=iPhone 13'
           targets: ${{matrix.target}}
           enable-inherited-docs: true
           enable-index-building: false
