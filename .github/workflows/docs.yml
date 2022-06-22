@@ -68,7 +68,7 @@ jobs:
         with:
           xcode-version: ^13.3
       - name: Read Swift Version
-        uses: sersoft-gmbh/swift-version-action@v1.0.1
+        uses: sersoft-gmbh/swift-version-action@v2.0.0
         id: swift-version
       - name: Read OS Version
         uses: sersoft-gmbh/os-version-action@v1.0.0
