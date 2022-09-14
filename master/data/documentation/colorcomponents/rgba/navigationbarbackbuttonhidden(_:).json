@@ -145,7 +145,7 @@
             },
             {
               "kind" : "text",
-              "text" : ") -> "
+              "text" : " = true) -> "
             },
             {
               "kind" : "keyword",
@@ -185,7 +185,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "hide the back button.",
+                  "text" : "hide the back button. The default value is ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "true",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -260,7 +268,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

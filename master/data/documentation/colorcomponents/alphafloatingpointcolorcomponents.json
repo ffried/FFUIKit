@@ -74,7 +74,15 @@
             },
             {
               "kind" : "text",
-              "text" : " = "
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : "> = "
             },
             {
               "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
@@ -84,13 +92,35 @@
             },
             {
               "kind" : "text",
-              "text" : " & "
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:15ColorComponents018AlphaFloatingPointaB0a5Valuexmfp",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : "> & "
             },
             {
               "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents05AlphaaB0P",
               "text" : "AlphaColorComponents"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:15ColorComponents018AlphaFloatingPointaB0a5Valuexmfp",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">"
             }
           ]
         }
@@ -100,7 +130,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
