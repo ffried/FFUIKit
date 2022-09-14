@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sersoft-gmbh/color-components.git",
       "state" : {
-        "revision" : "e665fe0425d25822227a5261f2ca2ee882edc026",
-        "version" : "1.7.0"
+        "revision" : "bd04112e2dc5c82c450e3654e34ec7b3c4d447ef",
+        "version" : "1.8.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ffried/FFFoundation.git",
       "state" : {
-        "revision" : "f01c25f484ed31220ae0dbb9972d93a07db8e763",
-        "version" : "9.4.0"
+        "revision" : "ccc1998e5bfb75d20eb51d120765d334459baba4",
+        "version" : "9.5.0"
       }
     }
   ],
