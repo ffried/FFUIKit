@@ -62,7 +62,7 @@ jobs:
       matrix:
         target: ${{fromJson(needs.spm-context.outputs.package-dump).products.*.targets.*}}
     steps:
-      - uses: maxim-lobanov/setup-xcode@v1.5.0
+      - uses: maxim-lobanov/setup-xcode@v1.5.1
         with:
           xcode-version: ^14.0
       - name: Read Swift Version
