@@ -41,7 +41,7 @@ jobs:
         with:
           swift-version: '5.7'
       - name: Read OS Version
-        uses: sersoft-gmbh/os-version-action@v2.0.0
+        uses: sersoft-gmbh/os-version-action@v2.0.1
         id: os-version
       - uses: actions/checkout@v3
       # We don't use a cache here, because SPM doesn't resolve dependencies when dumping packages.
@@ -69,7 +69,7 @@ jobs:
         uses: sersoft-gmbh/swift-version-action@v2.0.1
         id: swift-version
       - name: Read OS Version
-        uses: sersoft-gmbh/os-version-action@v2.0.0
+        uses: sersoft-gmbh/os-version-action@v2.0.1
         id: os-version
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
