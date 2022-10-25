@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "number of rows.",
+      "text" : "number of columns.",
       "type" : "text"
     }
   ],
@@ -360,7 +360,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "When you tell a cell to span multiple rows, the grid",
+                  "text" : "When you tell a cell to span multiple columns, the grid",
                   "type" : "text"
                 },
                 {
@@ -569,7 +569,7 @@
       "type" : "text"
     },
     {
-      "text" : "number of rows.",
+      "text" : "number of columns.",
       "type" : "text"
     }
   ],

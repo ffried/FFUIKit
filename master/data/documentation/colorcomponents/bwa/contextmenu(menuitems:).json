@@ -499,7 +499,7 @@
               "type" : "text"
             },
             {
-              "code" : "View\/contextMenu(forSelectionType:menu:)",
+              "code" : "View\/contextMenu(forSelectionType:menu:primaryAction:)",
               "type" : "codeVoice"
             },
             {

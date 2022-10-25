@@ -79,6 +79,13 @@
         "beta" : false,
         "deprecated" : false,
         "introducedAt" : "13.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
         "name" : "tvOS",
         "unavailable" : false
       },

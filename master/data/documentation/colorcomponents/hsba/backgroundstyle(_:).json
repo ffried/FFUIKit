@@ -226,15 +226,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The following examples sets the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ShapeStyle\/background",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " style",
+              "text" : "The following example uses this modifier to set the",
               "type" : "text"
             },
             {
@@ -242,7 +234,55 @@
               "type" : "text"
             },
             {
-              "text" : "to draw symbol backgrounds when enabled:",
+              "code" : "EnvironmentValues\/backgroundStyle",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " environment value to a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ShapeStyle\/blue",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " color that includes a subtle ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color\/gradient",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "SwiftUI fills the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Circle",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " shape that acts as a background element",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with this style:",
               "type" : "text"
             }
           ],
@@ -251,8 +291,9 @@
         {
           "code" : [
             "Image(systemName: \"swift\")",
-            "    .backgroundStyle(.blue)",
-            "    .symbolVariant(.background)"
+            "    .padding()",
+            "    .background(in: Circle())",
+            "    .backgroundStyle(.blue.gradient)"
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -260,15 +301,20 @@
         {
           "inlineContent" : [
             {
-              "text" : "To restore the default background style, set",
+              "identifier" : "View-backgroundStyle-1-iOS",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To restore the default background style, set the",
               "type" : "text"
             },
             {
               "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the ",
               "type" : "text"
             },
             {
@@ -296,11 +342,18 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " modifer.",
+              "text" : " modifer:",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "code" : [
+            ".environment(\\.backgroundStyle, nil)"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"

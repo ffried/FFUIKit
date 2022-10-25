@@ -567,16 +567,6 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/colorcomponents\/bw\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/bw\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/bw\/accessibilityremovetraits(_:)",
                     "title" : "func accessibilityRemoveTraits(AccessibilityTraits) -> ModifiedContent<Self, AccessibilityAttachmentModifier>",
                     "type" : "method"
@@ -1359,8 +1349,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/bw\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/bw\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/bw\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -2350,60 +2350,6 @@
                     "type" : "method"
                   },
                   {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:placement:prompt:token:suggestions:)-1nfsi",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:placement:prompt:token:suggestions:)-7imu9",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:placement:prompt:token:suggestions:)-8w90g",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-3elsn",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-7v4uc",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-8ia1d",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-8omqt",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-8tfzm",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-98rk2",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/bw\/searchable(text:tokens:suggestedtokens:placement:prompt:token:)-1mizs",
                     "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, suggestedTokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T) -> some View",
                     "type" : "method"
@@ -3204,16 +3150,6 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/colorcomponents\/bwa\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/bwa\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/bwa\/accessibilityremovetraits(_:)",
                     "title" : "func accessibilityRemoveTraits(AccessibilityTraits) -> ModifiedContent<Self, AccessibilityAttachmentModifier>",
                     "type" : "method"
@@ -3996,8 +3932,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/bwa\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/bwa\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -4987,60 +4933,6 @@
                     "type" : "method"
                   },
                   {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:placement:prompt:token:suggestions:)-1fc7l",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:placement:prompt:token:suggestions:)-2yxfl",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:placement:prompt:token:suggestions:)-7vfhw",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-19tnt",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-7xp8z",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-9dgd1",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-1heyu",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-417fv",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-4xyda",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/bwa\/searchable(text:tokens:suggestedtokens:placement:prompt:token:)-205x6",
                     "title" : "func searchable<C, T>(text: Binding<String>, tokens: Binding<C>, suggestedTokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T) -> some View",
                     "type" : "method"
@@ -5822,16 +5714,6 @@
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/accessibilitylinkedgroup(id:in:)",
                     "title" : "func accessibilityLinkedGroup<ID>(id: ID, in: Namespace.ID) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/hsb\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/hsb\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
                     "type" : "method"
                   },
                   {
@@ -6617,8 +6499,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/hsb\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/hsb\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -7608,60 +7500,6 @@
                     "type" : "method"
                   },
                   {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:placement:prompt:token:suggestions:)-1lvbd",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:placement:prompt:token:suggestions:)-3p46n",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:placement:prompt:token:suggestions:)-5th1q",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-7oumo",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-rwvg",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-txv4",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-55363",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-7lr2v",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-lgi",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/hsb\/searchable(text:tokens:suggestedtokens:placement:prompt:token:)-4rzgf",
                     "title" : "func searchable<C, T>(text: Binding<String>, tokens: Binding<C>, suggestedTokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T) -> some View",
                     "type" : "method"
@@ -8477,16 +8315,6 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/colorcomponents\/hsba\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/hsba\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/hsba\/accessibilityremovetraits(_:)",
                     "title" : "func accessibilityRemoveTraits(AccessibilityTraits) -> ModifiedContent<Self, AccessibilityAttachmentModifier>",
                     "type" : "method"
@@ -9269,8 +9097,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/hsba\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/hsba\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -10260,60 +10098,6 @@
                     "type" : "method"
                   },
                   {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:placement:prompt:token:suggestions:)-2r1o3",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:placement:prompt:token:suggestions:)-7l7z8",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:placement:prompt:token:suggestions:)-99kij",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-1rf3p",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-3gyy7",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-4x10k",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-3bt1k",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-3m2dg",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-7iu91",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/hsba\/searchable(text:tokens:suggestedtokens:placement:prompt:token:)-3zqxt",
                     "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, suggestedTokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T) -> some View",
                     "type" : "method"
@@ -11157,16 +10941,6 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/colorcomponents\/rgb\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/rgb\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/rgb\/accessibilityremovetraits(_:)",
                     "title" : "func accessibilityRemoveTraits(AccessibilityTraits) -> ModifiedContent<Self, AccessibilityAttachmentModifier>",
                     "type" : "method"
@@ -11949,8 +11723,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/rgb\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/rgb\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -12940,60 +12724,6 @@
                     "type" : "method"
                   },
                   {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:placement:prompt:token:suggestions:)-427xn",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:placement:prompt:token:suggestions:)-59mvk",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:placement:prompt:token:suggestions:)-7ypry",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-6qkgb",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-9f5tg",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-jwlq",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-3dv9g",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-6udhk",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-nsoi",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/rgb\/searchable(text:tokens:suggestedtokens:placement:prompt:token:)-485gh",
                     "title" : "func searchable<C, T>(text: Binding<String>, tokens: Binding<C>, suggestedTokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T) -> some View",
                     "type" : "method"
@@ -13868,16 +13598,6 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/colorcomponents\/rgba\/accessibilityquickaction(style:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/colorcomponents\/rgba\/accessibilityquickaction(style:isactive:content:)",
-                    "title" : "func accessibilityQuickAction<Style, Content>(style: Style, isActive: Binding<Bool>, content: () -> Content) -> some View",
-                    "type" : "method"
-                  },
-                  {
                     "path" : "\/documentation\/colorcomponents\/rgba\/accessibilityremovetraits(_:)",
                     "title" : "func accessibilityRemoveTraits(AccessibilityTraits) -> ModifiedContent<Self, AccessibilityAttachmentModifier>",
                     "type" : "method"
@@ -14660,8 +14380,18 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/colorcomponents\/rgba\/fontdesign(_:)",
+                    "title" : "func fontDesign(Font.Design?) -> some View",
+                    "type" : "method"
+                  },
+                  {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fontweight(_:)",
                     "title" : "func fontWeight(Font.Weight?) -> some View",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/colorcomponents\/rgba\/fontwidth(_:)",
+                    "title" : "func fontWidth(Font.Width?) -> some View",
                     "type" : "method"
                   },
                   {
@@ -15648,60 +15378,6 @@
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:placement:prompt:token:)-6f37d",
                     "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:placement:prompt:token:suggestions:)-25ek",
-                    "title" : "func searchable<C, T, V, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, suggestions: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:placement:prompt:token:suggestions:)-4rsnm",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:placement:prompt:token:suggestions:)-5bxz",
-                    "title" : "func searchable<C, T, S>(text: Binding<String>, tokens: Binding<C>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, suggestions: () -> S) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-3ah0h",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-486ds",
-                    "title" : "func searchable<C, T, D, V>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:)-5a42i",
-                    "title" : "func searchable<C, T, D, V, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-2jafi",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: Text?, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-43hkm",
-                    "title" : "func searchable<C, T, D, V1, V2>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: LocalizedStringKey, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
-                    "type" : "method"
-                  },
-                  {
-                    "deprecated" : true,
-                    "path" : "\/documentation\/colorcomponents\/rgba\/searchable(text:tokens:scope:placement:prompt:token:scopes:suggestions:)-91ur2",
-                    "title" : "func searchable<C, T, D, V1, V2, S>(text: Binding<String>, tokens: Binding<C>, scope: Binding<D>, placement: SearchFieldPlacement, prompt: S, token: (C.Element) -> T, scopes: () -> V1, suggestions: () -> V2) -> some View",
                     "type" : "method"
                   },
                   {

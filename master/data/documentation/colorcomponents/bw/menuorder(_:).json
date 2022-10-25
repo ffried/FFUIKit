@@ -397,12 +397,8 @@
             "    Button(\"Select\", action: selectFolders)",
             "    Button(\"New Folder\", action: createFolder)",
             "    Picker(\"Appearance\", selection: $appearance) {",
-            "        PickerOption(value: .icons) {",
-            "            Label(\"Icons\", systemImage: \"square.grid.2x2\")",
-            "        }",
-            "        PickerOption(value: .list) {",
-            "            Label(\"List\", systemImage: \"list.bullet\")",
-            "        }",
+            "        Label(\"Icons\", systemImage: \"square.grid.2x2\").tag(Appearance.icons)",
+            "        Label(\"List\", systemImage: \"list.bullet\").tag(Appearance.list)",
             "    }",
             "} label: {",
             "    Label(\"Settings\", systemImage: \"ellipsis.circle\")",
@@ -452,9 +448,9 @@
         {
           "code" : [
             "Picker(\"Flavor\", selection: $selectedFlavor) {",
-            "    PickerOption(\"Chocolate\", value: .chocolate)",
-            "    PickerOption(\"Vanilla\", value: .vanilla)",
-            "    PickerOption(\"Strawberry\", value: .strawberry)",
+            "    Text(\"Chocolate\").tag(Flavor.chocolate)",
+            "    Text(\"Vanilla\").tag(Flavor.vanilla)",
+            "    Text(\"Strawberry\").tag(Flavor.strawberry)",
             "}",
             ".pickerStyle(.menu)",
             ".menuOrder(.priority)"

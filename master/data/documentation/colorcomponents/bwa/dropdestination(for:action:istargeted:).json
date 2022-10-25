@@ -535,6 +535,15 @@
         {
           "inlineContent" : [
             {
+              "text" : "The dropped content can be provided as binary data, file URLs, or file promises.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
               "text" : "The drop destination is the same size and position as this view.",
               "type" : "text"
             }

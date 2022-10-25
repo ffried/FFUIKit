@@ -611,11 +611,15 @@
               "type" : "text"
             },
             {
-              "text" : "of the container, use ",
+              "text" : "of the container, use",
               "type" : "text"
             },
             {
-              "code" : "View\/contextMenu(forSelectionType:menu:)",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/contextMenu(forSelectionType:menu:primaryAction:)",
               "type" : "codeVoice"
             },
             {
