@@ -11,10 +11,13 @@ import class UIKit.CALayer
 import class UIKit.CAAnimation
 
 extension CALayer {
-    public struct AnimationKey: RawRepresentable {
+    public struct AnimationKey: RawRepresentable, Sendable, Hashable {
         public typealias RawValue = String
+
         public let rawValue: RawValue
+
         public init(rawValue: RawValue) { self.rawValue = rawValue }
+
         @inlinable
         public init(_ rawValue: RawValue) { self.init(rawValue: rawValue) }
     }
@@ -39,8 +42,4 @@ extension CALayer {
         animation(forKey: key.rawValue)
     }
 }
-
-#if compiler(>=5.5.2) && canImport(_Concurrency)
-extension CALayer.AnimationKey: Sendable {}
-#endif
 #endif

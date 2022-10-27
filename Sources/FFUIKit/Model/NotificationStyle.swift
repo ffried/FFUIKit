@@ -9,7 +9,7 @@
 import struct CoreGraphics.CGFloat
 import class UIKit.UIColor
 
-public enum NotificationStyle {
+public enum NotificationStyle: Sendable, Hashable {
     case `default` // White
     case warning // Yellow
     case failure // Red
@@ -40,7 +40,3 @@ public enum NotificationStyle {
         }
     }
 }
-
-#if compiler(>=5.5.2) && canImport(_Concurrency)
-extension NotificationStyle: Sendable {}
-#endif
