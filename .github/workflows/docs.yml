@@ -6,16 +6,16 @@ on:
       - published
       - edited
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   release-context:
     runs-on: ubuntu-latest
     outputs:
       version-name: ${{ github.ref_name }}
-      is-latest: ${{ steps.compare-tags.output.is-latest }}
+      is-latest: ${{ steps.compare-tags.outputs.is-latest }}
     steps:
-      - uses: joutvhu/get-release@v1.0.2
+      - uses: joutvhu/get-release@v1
         id: latest-release
         with:
           latest: true
@@ -62,14 +62,14 @@ jobs:
       matrix:
         target: ${{ fromJson(needs.spm-context.outputs.package-dump).products.*.targets.* }}
     steps:
-      - uses: maxim-lobanov/setup-xcode@v1.5.1
+      - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: ^14.1
       - name: Read Swift Version
-        uses: sersoft-gmbh/swift-version-action@v2.0.1
+        uses: sersoft-gmbh/swift-version-action@v2
         id: swift-version
       - name: Read OS Version
-        uses: sersoft-gmbh/os-version-action@v2.0.1
+        uses: sersoft-gmbh/os-version-action@v2
         id: os-version
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
@@ -78,7 +78,7 @@ jobs:
           key: ${{ runner.os }}-${{ steps.os-version.outputs.version }}-spm-${{ steps.swift-setup.outputs.version }}-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-${{ steps.os-version.outputs.version }}-spm-${{ steps.swift-setup.outputs.version }}-
-      - uses: sersoft-gmbh/swifty-docs-action@v2.0.3
+      - uses: sersoft-gmbh/swifty-docs-action@v2
         env:
           ENABLE_DOCC_SUPPORT: '1'
           DOCC_JSON_PRETTYPRINT: 'YES'
@@ -221,7 +221,7 @@ jobs:
           else
             echo 'has-changes=false' >> "${GITHUB_OUTPUT}"
           fi
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
+      - uses: crazy-max/ghaction-github-pages@v3
         if: ${{ steps.check-changes.outputs.has-changes }}
         with:
           keep_history: true
