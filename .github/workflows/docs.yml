@@ -40,7 +40,7 @@ jobs:
     outputs:
       package-dump: ${{ steps.dump-package.outputs.package-dump }}
     steps:
-      - uses: swift-actions/setup-swift@v1.22.0
+      - uses: swift-actions/setup-swift@v1.23.0
         with:
           swift-version: '5.7'
       - uses: actions/checkout@v3
