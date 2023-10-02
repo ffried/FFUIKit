@@ -153,7 +153,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -268,6 +271,19 @@
             {
               "kind" : "text",
               "text" : ")? = nil, "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -536,7 +552,8 @@
         {
           "code" : [
             "struct FullScreenCoverItemOnDismissContent: View {",
-            "    @State var coverData: CoverData?",
+            "    @State private var coverData: CoverData?",
+            "",
             "    var body: some View {",
             "        Button(\"Present Full-Screen Cover With Data\") {",
             "            coverData = CoverData(body: \"Custom Data\")",
@@ -570,10 +587,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-FullScreenCoverItemOnDismissContent.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

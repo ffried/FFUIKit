@@ -84,7 +84,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -104,6 +107,15 @@
         "introducedAt" : "13.0",
         "message" : "Use toolbar(_:) with navigationBarLeading or navigationBarTrailing placement",
         "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "Use toolbar(_:) with navigationBarLeading or navigationBarTrailing placement",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],

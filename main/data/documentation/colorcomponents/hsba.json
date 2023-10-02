@@ -159,6 +159,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
         "doc:\/\/ColorComponents\/Se",
         "doc:\/\/ColorComponents\/SE",
         "doc:\/\/ColorComponents\/SQ",
@@ -203,6 +204,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7z28f",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-87uur",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsb:alpha:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hue:saturation:brightness:alpha:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-6ghu0",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-p9pc"
@@ -225,6 +228,7 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Decodable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Equatable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations",
@@ -461,6 +465,17 @@
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/alphacolorcomponents-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSBA/ColorComponents-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ColorComponents Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba\/colorcomponents-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/Decodable-Implementations": {
   "abstract" : [
@@ -2440,6 +2455,170 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(hsb:alpha:)"
 },
+"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-2g50l": {
+  "abstract" : [
+    {
+      "text" : "Creates new HSBA components using the given HSLA components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsla"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4HSLAV",
+      "text" : "HSLA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4HSBAVAASzRzrlE5Valuexmfp",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsla:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba\/init(hsla:)-2g50l"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-6y8vq": {
+  "abstract" : [
+    {
+      "text" : "Creates new HSBA components using the given HSLA components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsla"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4HSLAV",
+      "text" : "HSLA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4HSBAVAASBRzrlE5Valuexmfp",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsla:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba\/init(hsla:)-6y8vq"
+},
 "doc://ColorComponents/documentation/ColorComponents/HSBA/init(hue:saturation:brightness:alpha:)": {
   "abstract" : [
     {
@@ -2732,6 +2911,11 @@
   "title" : "saturation",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/saturation"
+},
+"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+  "title" : "Swift.CustomPlaygroundDisplayConvertible",
+  "type" : "unresolvable"
 },
 "doc://ColorComponents/s8SendableP": {
   "identifier" : "doc:\/\/ColorComponents\/s8SendableP",

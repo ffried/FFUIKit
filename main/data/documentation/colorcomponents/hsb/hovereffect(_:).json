@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Applies a pointer hover effect to the view.",
+      "text" : "Applies a hover effect to this view.",
       "type" : "text"
     }
   ],
@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -80,6 +83,13 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "1.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -163,6 +173,67 @@
       "kind" : "declarations"
     },
     {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The effect to apply to this view.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "effect"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Whether the effect is enabled or not.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "isEnabled"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A new view that applies a hover effect to ",
+              "type" : "text"
+            },
+            {
+              "code" : "self",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
       "content" : [
         {
           "anchor" : "discussion",
@@ -171,20 +242,41 @@
           "type" : "heading"
         },
         {
-          "content" : [
+          "inlineContent" : [
             {
-              "inlineContent" : [
-                {
-                  "text" : "The system may fall back to a more appropriate effect.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
+              "text" : "By default, ",
+              "type" : "text"
+            },
+            {
+              "code" : "HoverEffect\/automatic",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is used. You can control the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "behavior of the automatic effect with the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/defaultHoverEffect(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifier.",
+              "type" : "text"
             }
           ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
+          "type" : "paragraph"
         }
       ],
       "kind" : "content"
@@ -271,7 +363,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/hoverEffect(_:)": {
   "abstract" : [
     {
-      "text" : "Applies a pointer hover effect to the view.",
+      "text" : "Applies a hover effect to this view.",
       "type" : "text"
     }
   ],

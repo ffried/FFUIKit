@@ -110,7 +110,9 @@
     {
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
       ],
       "kind" : "relationships",
@@ -321,6 +323,40 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+  "abstract" : [
+    {
+      "text" : "An XYZA (x, y, z, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyza"
+},
 "doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
@@ -388,6 +424,40 @@
   "title" : "HSBA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+  "abstract" : [
+    {
+      "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSLA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsla"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [

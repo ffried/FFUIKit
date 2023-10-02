@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "View.body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The content and behavior of the view.",
       "type" : "text"
     }
   ],
@@ -189,6 +181,90 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When you implement a custom view, you must implement a computed",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "body",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " property to provide the content for your view. Return a view",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "that’s composed of built-in views that SwiftUI provides, plus other",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "composite views that you’ve already defined:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct MyView: View {",
+            "    var body: some View {",
+            "        Text(\"Hello, World!\")",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For more information about composing views and a view hierarchy,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "see ",
+              "type" : "text"
+            },
+            {
+              "text" : "doc:Declaring-a-Custom-View",
+              "type" : "text"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -272,15 +348,7 @@
 "doc://ColorComponents/documentation/ColorComponents/BWA/body": {
   "abstract" : [
     {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "View.body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The content and behavior of the view.",
       "type" : "text"
     }
   ],

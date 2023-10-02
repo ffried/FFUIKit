@@ -46,6 +46,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
       ],
@@ -54,9 +56,24 @@
     {
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSV",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSVA"
       ],
       "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/SwiftUI",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit"
+      ],
+      "title" : "Extended Modules"
     }
   ],
   "variants" : [
@@ -219,6 +236,40 @@
   "title" : "BWA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE": {
+  "abstract" : [
+    {
+      "text" : "Namespace for all CIE components.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CIE"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CIE"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie"
 },
 "doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
@@ -390,6 +441,142 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
+"doc://ColorComponents/documentation/ColorComponents/HSL": {
+  "abstract" : [
+    {
+      "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSL",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsl"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+  "abstract" : [
+    {
+      "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSLA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsla"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSV": {
+  "abstract" : [
+    {
+      "text" : "HSV is just an alias for HSB.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSV"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSV",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSV"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSV",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsv"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSVA": {
+  "abstract" : [
+    {
+      "text" : "HSVA is just an alias for HSBA.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSVA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSVA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSVA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSVA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsva"
+},
 "doc://ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
@@ -457,6 +644,28 @@
   "title" : "RGBA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
+},
+"doc://ColorComponents/documentation/ColorComponents/SwiftUI": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/SwiftUI",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftUI",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/swiftui"
+},
+"doc://ColorComponents/documentation/ColorComponents/UIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "UIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/uikit"
 }
 }
 }

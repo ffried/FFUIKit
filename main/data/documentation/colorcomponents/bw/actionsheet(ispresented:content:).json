@@ -109,7 +109,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -138,6 +141,15 @@
         "introducedAt" : "6.0",
         "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -402,10 +414,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-ActionSheetisPresentedContent.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

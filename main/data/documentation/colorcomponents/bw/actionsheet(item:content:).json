@@ -132,7 +132,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -161,6 +164,15 @@
         "introducedAt" : "6.0",
         "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -462,8 +474,10 @@
             "    let name: String",
             "    let fileType: UTType",
             "}",
+            "",
             "struct ConfirmFileImport: View {",
-            "    @State var sheetDetail: FileDetails?",
+            "    @State private var sheetDetail: FileDetails?",
+            "",
             "    var body: some View {",
             "        Button(\"Show Action Sheet\") {",
             "            sheetDetail = FileDetails(name: \"MyImageFile.png\",",
@@ -494,10 +508,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-ActionSheetItemContent.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }
