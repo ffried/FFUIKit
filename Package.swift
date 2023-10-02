@@ -19,7 +19,7 @@ let package = Package(
         .macOS(.v10_13),
         .iOS(.v12),
         .tvOS(.v12),
-        .watchOS(.v4),
+        .watchOS(.v5), // Theoretically, Xcode 15 should support watchOS 4...
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
