@@ -22,7 +22,7 @@ import UIKit
 
 extension UIImage {
     public final func scaled(to size: CGSize) -> UIImage {
-        #if os(watchOS)
+#if os(watchOS)
         func _legacyScaling() -> UIImage {
             UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
             defer { UIGraphicsEndImageContext() }
@@ -30,12 +30,12 @@ extension UIImage {
             return UIGraphicsGetImageFromCurrentImageContext() ?? self
         }
         return _legacyScaling()
-        #else
+#else
         let format = UIGraphicsImageRendererFormat.osPreferred()
         format.opaque = !hasAlpha
         format.scale = scale
         let renderer = UIGraphicsImageRenderer(size: size, format: format)
         return renderer.image { _ in draw(in: CGRect(origin: .zero, size: size)) }
-        #endif
+#endif
     }
 }

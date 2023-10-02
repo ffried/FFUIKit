@@ -45,7 +45,7 @@ open class NotificationView: UIView {
         backgroundView.setupFullscreen(in: self)
         contentView.enableAutoLayout()
         addSubview(contentView)
-        let otherConstraints: [NSLayoutConstraint]
+        let otherConstraints: Array<NSLayoutConstraint>
         if #available(iOS 11, tvOS 11, *) {
             contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
             otherConstraints = [

@@ -30,13 +30,17 @@ private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
 extension UIScrollView {
     private typealias UserInfoDictionary = Dictionary<AnyHashable, Any>
     
-    private final var notificationObservers: Array<NSObjectProtocol> {
+    private final var notificationObservers: Array<any NSObjectProtocol> {
         get {
-            guard let observers = objc_getAssociatedObject(self, &_keyboardNotificationObserversKey) as? Array<NSObjectProtocol>
+            guard let observers = withUnsafePointer(to: &_keyboardNotificationObserversKey, { objc_getAssociatedObject(self, $0) }) as? Array<any NSObjectProtocol>
             else { return [] }
             return observers
         }
-        set { objc_setAssociatedObject(self, &_keyboardNotificationObserversKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        set {
+            withUnsafePointer(to: &_keyboardNotificationObserversKey) {
+                objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
     }
     
     // MARK: Register / Unregister
@@ -189,28 +193,28 @@ fileprivate extension UIScrollView {
     }
 
     final var originalContentInsets: UIEdgeInsets {
-        get { edgeInsets(forKey: &_originalContentInsetsKey) ?? .zero }
-        set { setEdgeInsets(newValue, forKey: &_originalContentInsetsKey) }
+        get { withUnsafePointer(to: &_originalContentInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
+        set { withUnsafePointer(to: &_originalContentInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
     
     final var originalScrollIndicatorInsets: UIEdgeInsets {
-        get { edgeInsets(forKey: &_originalScrollIndicatorInsetsKey) ?? .zero }
-        set { setEdgeInsets(newValue, forKey: &_originalScrollIndicatorInsetsKey) }
+        get { withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
+        set { withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
 
     final var originalHorizontalScrollIndicatorInsets: UIEdgeInsets {
-        get { edgeInsets(forKey: &_originalHorizontalScrollIndicatorInsetsKey) ?? .zero }
-        set { setEdgeInsets(newValue, forKey: &_originalHorizontalScrollIndicatorInsetsKey) }
+        get { withUnsafePointer(to: &_originalHorizontalScrollIndicatorInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
+        set { withUnsafePointer(to: &_originalHorizontalScrollIndicatorInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
 
     final var originalVerticalScrollIndicatorInsets: UIEdgeInsets {
-        get { edgeInsets(forKey: &_originalVerticalScrollIndicatorInsetsKey) ?? .zero }
-        set { setEdgeInsets(newValue, forKey: &_originalVerticalScrollIndicatorInsetsKey) }
+        get { withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
+        set { withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
     
     final var keyboardVisible: Bool {
-        get { (objc_getAssociatedObject(self, &_keyboardVisibleKey) as? Bool) ?? false }
-        set { objc_setAssociatedObject(self, &_keyboardVisibleKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
+        get { withUnsafePointer(to: &_keyboardVisibleKey) { objc_getAssociatedObject(self, $0) as? Bool } ?? false }
+        set { withUnsafePointer(to: &_keyboardVisibleKey) { objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_ASSIGN) } }
     }
 }
 #endif

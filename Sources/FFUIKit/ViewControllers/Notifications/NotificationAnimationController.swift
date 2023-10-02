@@ -26,27 +26,29 @@ final class NotificationAnimationController: NSObject, UIViewControllerAnimatedT
     private var topConstraint: NSLayoutConstraint!
     private var bottomConstraint: NSLayoutConstraint!
     private var originalVCContainer: UIView!
-
+    
     private final func setupTopBottomConstraints(for view: UIView) {
         topConstraint = view.superview?.topAnchor.constraint(equalTo: view.topAnchor)
         bottomConstraint = view.superview?.topAnchor.constraint(equalTo: view.bottomAnchor)
     }
-
+    
     @objc(transitionDuration:)
-    dynamic internal func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval { 0.3 }
-
+    dynamic internal func transitionDuration(using transitionContext: (any UIViewControllerContextTransitioning)?) -> TimeInterval {
+        0.3
+    }
+    
     @objc(animateTransition:)
-    dynamic internal func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    dynamic internal func animateTransition(using transitionContext: any UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from),
-            let toVC = transitionContext.viewController(forKey: .to)
-            else { return }
-
+              let toVC = transitionContext.viewController(forKey: .to)
+        else { return }
+        
         let presenting = toVC.isBeingPresented
         guard let vcView = presenting ? fromVC.view : toVC.view,
-            let noteView = presenting ? toVC.view : fromVC.view,
-            let noteVC = (presenting ? toVC : fromVC) as? NotificationControllerProtocol
-            else { return }
-
+              let noteView = presenting ? toVC.view : fromVC.view,
+              let noteVC = (presenting ? toVC : fromVC) as? any NotificationControllerProtocol
+        else { return }
+        
         let container = transitionContext.containerView
         if presenting {
             originalVCContainer = vcView.superview
@@ -59,7 +61,7 @@ final class NotificationAnimationController: NSObject, UIViewControllerAnimatedT
             ([bottomConstraint] + ["H:|[note]|"].constraints(with: views)).activate()
             container.layoutIfNeeded()
         }
-
+        
         let curveOption: UIView.AnimationOptions = presenting ? .curveEaseOut : .curveEaseIn
         let options: UIView.AnimationOptions = [.beginFromCurrentState, .allowAnimatedContent, .allowUserInteraction, curveOption]
         let duration = transitionDuration(using: transitionContext)

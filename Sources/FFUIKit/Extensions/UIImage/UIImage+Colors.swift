@@ -53,37 +53,37 @@ fileprivate extension HSBA where Value: AdditiveArithmetic {
 extension UIImage {
     private struct SimpleColor: Hashable {
         let rgba: RGBA<UInt8>
-
+        
         @Lazy private(set) var uiColor: UIColor
         @Lazy private(set) var intensity: CGFloat
-
+        
         func hash(into hasher: inout Hasher) {
             hasher.combine(rgba)
         }
-
+        
         init(rgba: RGBA<UInt8>) {
             self.rgba = rgba
-
+            
             let cgRGBA = Lazy<RGBA<CGFloat>> { RGBA<CGFloat>(rgba) }
             _uiColor = Lazy { UIColor(cgRGBA.wrappedValue) }
             _intensity = Lazy { HSBA(rgba: cgRGBA.wrappedValue).intensity }
         }
-
+        
         static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
             lhs.rgba == rhs.rgba
         }
     }
-
+    
     @inline(__always)
     private final func getAssoc<T>(for key: inout StaticString) -> T? {
         objc_getAssociatedObject(self, &key) as? T
     }
-
+    
     @inline(__always)
     private final func setAssoc<T>(_ val: T?, for key: inout StaticString, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
         objc_setAssociatedObject(self, &key, val, policy)
     }
-
+    
     @inline(__always)
     private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
         if let val: T = getAssoc(for: &key) { return val }
@@ -91,7 +91,7 @@ extension UIImage {
         setAssoc(val, for: &key, policy: policy)
         return val
     }
-
+    
     @inline(__always)
     private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T? {
         if let val: T = getAssoc(for: &key) { return val }
@@ -99,7 +99,7 @@ extension UIImage {
         setAssoc(val, for: &key, policy: policy)
         return val
     }
-
+    
     public final var averageColor: UIColor? {
         func getAverageColor() -> UIColor? {
             guard let cgImage = cgImage else { return nil }
@@ -112,15 +112,15 @@ extension UIImage {
                                           space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
             else { return nil }
             context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1)))
-
+            
             guard let data = context.data else { return nil }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
-
+            
             return .init(RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3]))
         }
         return storedValue(for: &UIImage_averageColorKey, generatedBy: getAverageColor)
     }
-
+    
     private final var simpleColorsByQuality: Dictionary<CGFloat, Set<SimpleColor>> {
         get { storedValue(for: &UIImage_simpleColorsByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_simpleColorsByQualityKey) }
@@ -138,10 +138,10 @@ extension UIImage {
                                           space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
             else { return [] }
             context.draw(cgImage, in: CGRect(origin: .zero, size: size))
-
+            
             guard let data = context.data else { return [] }
             let rgba = data.assumingMemoryBound(to: UInt8.self)
-
+            
             let rawValues = Set(stride(from: 0, to: context.width * context.height * 4, by: 4).map {
                 RGBA(red: rgba[$0/* + 0*/], green: rgba[$0 + 1], blue: rgba[$0 + 2], alpha: rgba[$0 + 3])
             })
@@ -149,11 +149,11 @@ extension UIImage {
         }
         return simpleColorsByQuality[quality, orStored: getSimpleColors(quality: quality)]
     }
-
+    
     private final var simpleColors: Set<SimpleColor> {
         simpleColors(quality: 1)
     }
-
+    
     private final var colorsByQuality: Dictionary<CGFloat, [UIColor]> {
         get { storedValue(for: &UIImage_colorsByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_colorsByQualityKey) }
@@ -161,11 +161,11 @@ extension UIImage {
     public final func colors(quality: CGFloat) -> [UIColor] {
         colorsByQuality[quality, orStored: simpleColors(quality: quality).map { $0.uiColor }]
     }
-
+    
     public final var colors: [UIColor] {
         colors(quality: 1)
     }
-
+    
     private final var mostIntenseColorByQuality: Dictionary<CGFloat, UIColor?> {
         get { storedValue(for: &UIImage_mostIntenseColorByQualityKey, generatedBy: { [:] }) }
         set { setAssoc(newValue, for: &UIImage_mostIntenseColorByQualityKey) }
@@ -173,29 +173,29 @@ extension UIImage {
     public final func mostIntenseColor(quality: CGFloat) -> UIColor? {
         mostIntenseColorByQuality[quality, orStored: simpleColors(quality: quality).max { $0.intensity < $1.intensity }?.uiColor]
     }
-
+    
     public final var mostIntenseColor: UIColor? {
         mostIntenseColor(quality: 1)
     }
-
+    
     public final func imageTinted(with color: UIColor) -> UIImage? {
         guard let cgImage = cgImage else { return nil }
         let rect = CGRect(origin: .zero, size: size)
-
+        
         func draw(in context: CGContext) {
             color.setFill()
-
+            
             // translate/flip the graphics context (for transforming from CG* coords to UI* coordinates)
             context.translateBy(x: 0, y: -1)
             context.scaleBy(x: 1, y: -1)
-
+            
             context.setBlendMode(.colorBurn)
             context.draw(cgImage, in: rect)
             context.clip(to: rect, mask: cgImage)
             context.addRect(rect)
             context.drawPath(using: .fill)
         }
-
+        
 #if os(watchOS)
         func _legacyDrawing() -> UIImage? {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)

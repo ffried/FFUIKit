@@ -139,7 +139,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
             source.present(self, animated: animated, completion: completion)
         }
         // We need to cast to the protocol instead of the class, because a different NotificationView could be used.
-        if let note = source.presentedViewController as? NotificationControllerProtocol {
+        if let note = source.presentedViewController as? any NotificationControllerProtocol {
             note.dismissNotification(animated: animated, completion: presentationBlock)
         } else {
             presentationBlock()
@@ -149,7 +149,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     // MARK: - Transitioning
     private lazy var animationController = NotificationAnimationController()
 
-    public override var transitioningDelegate: UIViewControllerTransitioningDelegate? {
+    public override var transitioningDelegate: (any UIViewControllerTransitioningDelegate)? {
         get { self }
         set { /* NoOp */ }
     }
@@ -160,27 +160,30 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
 
     @objc(animationControllerForPresentedController:presentingController:sourceController:)
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, 
+                                    presenting: UIViewController,
+                                    source: UIViewController) -> (any UIViewControllerAnimatedTransitioning)? {
         // TODO: Can this be replaced with `presented === self`?
-        if presented is NotificationControllerProtocol {
+        if presented is any NotificationControllerProtocol {
             return animationController
         }
         return nil
     }
 
     @objc(animationControllerForDismissedController:)
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> (any UIViewControllerAnimatedTransitioning)? {
         // TODO: Can this be replaced with `dismissed === self`?
-        if dismissed is NotificationControllerProtocol {
+        if dismissed is any NotificationControllerProtocol {
             return animationController
         }
         return nil
     }
 
     @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    public func presentationController(forPresented presented: UIViewController, 
+                                       presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         // TODO: Can this be replaced with `presented === self`?
-        if presented is NotificationControllerProtocol {
+        if presented is any NotificationControllerProtocol {
             return NotificationPresentationController(presentedViewController: presented, presenting:  presenting)
         }
         return nil

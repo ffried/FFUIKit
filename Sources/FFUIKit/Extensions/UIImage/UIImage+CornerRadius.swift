@@ -25,7 +25,7 @@ extension UIImage {
         let rect = CGRect(origin: .zero, size: size)
 
         let image: UIImage
-        #if os(watchOS)
+#if os(watchOS)
         func _legacyRounding() -> UIImage! {
             UIGraphicsBeginImageContextWithOptions(size, false, scale)
             defer { UIGraphicsEndImageContext() }
@@ -34,7 +34,7 @@ extension UIImage {
             return UIGraphicsGetImageFromCurrentImageContext()
         }
         image = _legacyRounding()
-        #else
+#else
         let format = UIGraphicsImageRendererFormat.osPreferred()
         format.opaque = false
         format.scale = scale
@@ -42,7 +42,7 @@ extension UIImage {
             UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
             draw(in: rect)
         }
-        #endif
+#endif
         return image.resizableImage(withCapInsets: UIEdgeInsets(
             horizontal: cornerRadius,
             vertical: 0)
