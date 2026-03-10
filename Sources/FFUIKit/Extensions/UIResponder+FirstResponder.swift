@@ -28,9 +28,9 @@ extension UIResponder {
     @available(macCatalystApplicationExtension, unavailable)
     public static func findFirstResponder() -> UIResponder? {
 #if compiler(>=6.2)
-        unsafe UIApplication.shared.delegate?.window?.flatMap(firstResponder)
+        unsafe UIApplication.shared.delegate?.window?.flatMap { firstResponder(in: $0) }
 #else
-        UIApplication.shared.delegate?.window?.flatMap(firstResponder)
+        UIApplication.shared.delegate?.window?.flatMap { firstResponder(in: $0) }
 #endif
     }
 
