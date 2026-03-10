@@ -35,7 +35,7 @@ extension UIImage {
         }
         image = _legacyRounding()
 #else
-        let format = UIGraphicsImageRendererFormat.osPreferred()
+        let format = UIGraphicsImageRendererFormat.preferred()
         format.opaque = false
         format.scale = scale
         image = UIGraphicsImageRenderer(bounds: rect, format: format).image { _ in

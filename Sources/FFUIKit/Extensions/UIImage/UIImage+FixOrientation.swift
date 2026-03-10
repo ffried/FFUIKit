@@ -38,7 +38,7 @@ extension UIImage {
         }
         return _legacyConversion()
 #else
-        let format = UIGraphicsImageRendererFormat.osPreferred()
+        let format = UIGraphicsImageRendererFormat.preferred()
         format.opaque = !hasAlpha
         format.scale = scale
         let renderer = UIGraphicsImageRenderer(size: size, format: format)
