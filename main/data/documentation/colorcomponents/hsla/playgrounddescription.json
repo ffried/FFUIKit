@@ -2,15 +2,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/ColorComponents-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/playgroundDescription"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/playgroundDescription"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -75,6 +74,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L74"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
@@ -151,18 +154,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA": {
   "abstract" : [
     {
       "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
@@ -183,7 +189,7 @@
       "text" : "HSLA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -196,18 +202,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsla"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA/ColorComponents-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/ColorComponents-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "ColorComponents Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsla\/colorcomponents-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSLA/playgroundDescription": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA/playgroundDescription": {
   "abstract" : [
 
   ],
@@ -265,7 +260,7 @@
       "text" : "Any"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/playgroundDescription",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/playgroundDescription",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "playgroundDescription",

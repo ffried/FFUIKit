@@ -8,15 +8,15 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/init(_:)-8yla0"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/init(_:)-8yla0"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -89,6 +89,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "10.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "10.11",
         "name" : "macOS",
         "unavailable" : false
@@ -108,6 +122,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "CIEXYZA+CoreGraphics.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/Platforms\/CIEXYZA+CoreGraphics.swift#L93"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -239,18 +257,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -271,7 +292,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -284,7 +305,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZ": {
   "abstract" : [
     {
       "text" : "An opaque XYZ color components representation.",
@@ -305,7 +326,7 @@
       "text" : "XYZ"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -318,7 +339,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/init(_:)-8yla0": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZ/init(_:)-8yla0": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZ components from the given color.",
@@ -376,7 +397,7 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/init(_:)-8yla0",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/init(_:)-8yla0",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",

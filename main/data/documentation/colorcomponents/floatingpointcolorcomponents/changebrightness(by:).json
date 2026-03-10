@@ -24,14 +24,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/changeBrightness(by:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/changeBrightness(by:)"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -76,6 +76,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L26"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -134,7 +138,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponentsAAP5ValueQa",
               "text" : "Value"
@@ -190,18 +194,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
   "abstract" : [
     {
       "text" : "The value type of these color components.",
@@ -249,7 +256,7 @@
       "text" : "Numeric"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
@@ -257,7 +264,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/value"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -278,7 +285,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -291,7 +298,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/changeBrightness(by:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/changeBrightness(by:)": {
   "abstract" : [
     {
       "text" : "Changes the brightness by the given percent value.",
@@ -349,7 +356,7 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/changeBrightness(by:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/changeBrightness(by:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",

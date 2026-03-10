@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "AlphaFloatingPointColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L31"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
     "symbolKind" : "typealias",
@@ -85,7 +89,7 @@
               "text" : "> = "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents013FloatingPointaB0P",
               "text" : "FloatingPointColorComponents"
@@ -104,7 +108,7 @@
               "text" : "> & "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents05AlphaaB0P",
               "text" : "AlphaColorComponents"
@@ -144,7 +148,7 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+                  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
                   "isActive" : true,
                   "type" : "reference"
                 },
@@ -153,7 +157,7 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+                  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
                   "isActive" : true,
                   "type" : "reference"
                 }
@@ -191,18 +195,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -223,7 +230,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -236,7 +243,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaFloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaFloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components whose value is a floating point type.",
@@ -257,7 +264,7 @@
       "text" : "AlphaFloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -270,7 +277,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphafloatingpointcolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -291,7 +298,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {

@@ -2,13 +2,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -33,8 +33,10 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Classes",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
       ],
       "title" : "Extended Classes"
     }
@@ -53,29 +55,32 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "UIKit",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
   "abstract" : [
 
   ],
@@ -94,7 +99,7 @@
       "text" : "UIColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
   "kind" : "symbol",
   "navigatorTitle" : [
     {

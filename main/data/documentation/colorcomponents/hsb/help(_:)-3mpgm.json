@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds help text to a view using a text view that you provide.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/help(_:)-3mpgm"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/help(_:)-3mpgm"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE4helpyQrAA4TextVF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -116,6 +123,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,86 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The Text view to use as help.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "text"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Adding help to a view configures the view’s accessibility hint and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "its tooltip (“help tag”) on macOS.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "For more information on using help tags, see",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "identifier" : "https:\/\/developer.apple.com\/design\/human-interface-guidelines\/macos\/user-interaction\/help\/",
-              "isActive" : true,
-              "type" : "reference"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in the macOS Human Interface Guidelines.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Slider(\"Opacity\", value: $selectedShape.opacity)",
-            "    .help(Text(\"Adjust the opacity of the selected \\(selectedShape.name)\"))"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -282,18 +217,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -314,7 +252,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -327,23 +265,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/help(_:)-3mpgm": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/help(_:)-3mpgm": {
-  "abstract" : [
-    {
-      "text" : "Adds help text to a view using a text view that you provide.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -385,24 +309,12 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/help(_:)-3mpgm",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/help(_:)-3mpgm",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "help(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb\/help(_:)-3mpgm"
-},
-"https://developer.apple.com/design/human-interface-guidelines/macos/user-interaction/help/": {
-  "identifier" : "https:\/\/developer.apple.com\/design\/human-interface-guidelines\/macos\/user-interaction\/help\/",
-  "title" : "Help",
-  "titleInlineContent" : [
-    {
-      "text" : "Help",
-      "type" : "text"
-    }
-  ],
-  "type" : "link",
-  "url" : "https:\/\/developer.apple.com\/design\/human-interface-guidelines\/macos\/user-interaction\/help\/"
 }
 }
 }

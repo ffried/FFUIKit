@@ -1,43 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Reads the specified preference value from the view, using it to",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "produce a second view that is applied as an overlay to the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "original view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/overlayPreferenceValue(_:alignment:_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/overlayPreferenceValue(_:alignment:_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE22overlayPreferenceValue_9alignment_Qrqd__m_AA9AlignmentVqd_0_0F0Qyd__ctAA0E3KeyRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -107,6 +84,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
         "text" : "Value"
       },
       {
@@ -139,7 +117,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -149,6 +127,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -189,6 +181,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -292,12 +292,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -309,6 +309,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
               "text" : "Value"
             },
             {
@@ -386,117 +387,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The preference key type whose value is to be read.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "key"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An optional alignment to use when positioning the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "overlay view relative to the original view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "alignment"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A function that produces the overlay view from",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the preference value read from the original view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "transform"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that layers a second view in front of the view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The values of the preference key from both views",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "are combined and made visible to the parent view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -521,18 +411,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -553,7 +446,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -566,7 +459,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -587,7 +480,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -600,39 +493,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/overlayPreferenceValue(_:alignment:_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/overlayPreferenceValue(_:alignment:_:)": {
-  "abstract" : [
-    {
-      "text" : "Reads the specified preference value from the view, using it to",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "produce a second view that is applied as an overlay to the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "original view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -702,6 +565,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -730,7 +594,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/overlayPreferenceValue(_:alignment:_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/overlayPreferenceValue(_:alignment:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "overlayPreferenceValue(_:alignment:_:)",

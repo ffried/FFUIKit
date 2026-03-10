@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Add additional accessibility information to the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibilityCustomContent(_:_:importance:)-6vll6"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibilityCustomContent(_:_:importance:)-6vll6"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE26accessibilityCustomContent__10importanceAA08ModifiedF0VyxAA31AccessibilityAttachmentModifierVGAA0ieF3KeyV_AA015LocalizedStringL0VSo08AXCustomF10ImportanceVtF::SYNTHESIZED::s:15ColorComponents4RGBAV",
     "fragments" : [
       {
@@ -114,7 +107,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -124,6 +117,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -164,6 +171,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -286,265 +301,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Key used to specify the identifier and label of the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "of the additional accessibility information entry.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "key"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Text value for the additional accessibility",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "information. For example: “landscape.” A value of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will remove",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "any entry of additional information added earlier for any ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "key",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " with",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the same identifier.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "valueKey"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Importance of the accessibility information.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "High-importance information gets read out immediately, while",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "default-importance information must be explicitly asked for by the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "user.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "importance"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to add information you want accessibility users to be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "able to access about this element, beyond the basics of label, value,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and hint. For example, ",
-              "type" : "text"
-            },
-            {
-              "code" : "accessibilityCustomContent",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " can be used to add",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "information about the orientation of a photograph, or the number of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "people found in the picture.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Repeated calls of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "accessibilityCustomContent",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " with ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "key",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : "s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "having different identifiers will create new entries of",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "additional information.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "Calling ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "accessibilityAdditionalContent",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " repeatedly with ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "key",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : "s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "having matching identifiers will replace the previous entry.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -569,18 +325,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -601,7 +360,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -614,23 +373,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/accessibilityCustomContent(_:_:importance:)-6vll6": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgba\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGBA/accessibilityCustomContent(_:_:importance:)-6vll6": {
-  "abstract" : [
-    {
-      "text" : "Add additional accessibility information to the view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -720,7 +465,7 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibilityCustomContent(_:_:importance:)-6vll6",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibilityCustomContent(_:_:importance:)-6vll6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "accessibilityCustomContent(_:_:importance:)",

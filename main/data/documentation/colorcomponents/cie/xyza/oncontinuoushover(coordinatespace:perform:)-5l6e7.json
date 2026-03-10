@@ -1,35 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the pointer enters, moves within, and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "exits the view’s bounds.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onContinuousHover(coordinateSpace:perform:)-5l6e7"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onContinuousHover(coordinateSpace:perform:)-5l6e7"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE17onContinuousHover15coordinateSpace7performQrqd___yAA0F5PhaseOctAA010CoordinateH8ProtocolRd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -54,7 +39,15 @@
       },
       {
         "kind" : "text",
-        "text" : ": some "
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -109,7 +102,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -119,6 +112,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -153,6 +160,14 @@
           ],
           "tokens" : [
             {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "keyword",
               "text" : "func"
             },
@@ -174,7 +189,15 @@
             },
             {
               "kind" : "text",
-              "text" : ": some "
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "typeIdentifier",
@@ -202,12 +225,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -248,237 +271,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The coordinate space for the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "location values. Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "CoordinateSpace\/local",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "coordinateSpace"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform whenever the pointer enters,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "moves within, or exits the view’s bounds. The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " closure",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "passes the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "HoverPhase\/active(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " phase with the pointer’s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "coordinates if the pointer is in the view’s bounds; otherwise, it",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "passes ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "HoverPhase\/ended",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that calls ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the pointer enters,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "moves within, or exits the view’s bounds.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Call this method to define a region for detecting pointer movement with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the size and position of this view.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "The following example updates ",
-              "type" : "text"
-            },
-            {
-              "code" : "hoverLocation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and ",
-              "type" : "text"
-            },
-            {
-              "code" : "isHovering",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "based on the phase provided to the closure:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var hoverLocation: CGPoint = .zero",
-            "@State private var isHovering = false",
-            "",
-            "var body: some View {",
-            "    VStack {",
-            "        Color.red",
-            "            .frame(width: 400, height: 400)",
-            "            .onContinuousHover { phase in",
-            "                switch phase {",
-            "                case .active(let location):",
-            "                    hoverLocation = location",
-            "                    isHovering = true",
-            "                case .ended:",
-            "                    isHovering = false",
-            "                }",
-            "            }",
-            "            .overlay {",
-            "                Rectangle()",
-            "                    .frame(width: 50, height: 50)",
-            "                    .foregroundColor(isHovering ? .green : .blue)",
-            "                    .offset(x: hoverLocation.x, y: hoverLocation.y)",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -503,18 +295,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -535,7 +330,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -548,7 +343,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -569,7 +364,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -582,31 +377,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/onContinuousHover(coordinateSpace:perform:)-5l6e7": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/onContinuousHover(coordinateSpace:perform:)-5l6e7": {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the pointer enters, moves within, and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "exits the view’s bounds.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -631,7 +404,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -682,7 +463,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onContinuousHover(coordinateSpace:perform:)-5l6e7",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onContinuousHover(coordinateSpace:perform:)-5l6e7",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "onContinuousHover(coordinateSpace:perform:)",

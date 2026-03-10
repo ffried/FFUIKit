@@ -1,27 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the specified style to render backgrounds within the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/backgroundStyle(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/backgroundStyle(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE15backgroundStyleyQrqd__AA05ShapeE0Rd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -74,7 +67,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -84,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -124,6 +131,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -218,146 +233,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example uses this modifier to set the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "EnvironmentValues\/backgroundStyle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " environment value to a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ShapeStyle\/blue",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " color that includes a subtle ",
-              "type" : "text"
-            },
-            {
-              "code" : "Color\/gradient",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "SwiftUI fills the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " shape that acts as a background element",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with this style:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Image(systemName: \"swift\")",
-            "    .padding()",
-            "    .background(in: Circle())",
-            "    .backgroundStyle(.blue.gradient)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To restore the default background style, set the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "EnvironmentValues\/backgroundStyle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " environment value to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "nil",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " using the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/environment(_:_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifer:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            ".environment(\\.backgroundStyle, nil)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -382,18 +257,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -414,7 +292,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -427,7 +305,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -448,7 +326,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -461,23 +339,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/backgroundStyle(_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/backgroundStyle(_:)": {
-  "abstract" : [
-    {
-      "text" : "Sets the specified style to render backgrounds within the view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -526,7 +390,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/backgroundStyle(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/backgroundStyle(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "backgroundStyle(_:)",

@@ -1,34 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Registers a handler to invoke when the view receives a url for the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scene or window the view is in.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/onOpenURL(perform:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/onOpenURL(perform:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE9onOpenURL7performQry10Foundation0F0Vc_tF::SYNTHESIZED::s:15ColorComponents3RGBV",
     "fragments" : [
       {
@@ -82,7 +67,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -92,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -133,6 +132,14 @@
           ],
           "tokens" : [
             {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "keyword",
               "text" : "func"
             },
@@ -165,12 +172,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -202,96 +209,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A function that takes a",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Foundation\/URL",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "object as its parameter when delivering the URL to the scene or window",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the view is in.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This method handles the reception of Universal Links,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "rather than a",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Foundation\/NSUserActivity",
-                  "type" : "text"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -316,18 +233,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -348,7 +268,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -361,31 +281,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/onOpenURL(perform:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGB/onOpenURL(perform:)": {
-  "abstract" : [
-    {
-      "text" : "Registers a handler to invoke when the view receives a url for the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scene or window the view is in.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -435,7 +333,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/onOpenURL(perform:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/onOpenURL(perform:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "onOpenURL(perform:)",

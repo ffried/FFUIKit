@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents an action sheet when a given condition is true.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -19,19 +13,18 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/actionSheet(isPresented:content:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/actionSheet(isPresented:content:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE11actionSheet11isPresented7contentQrAA7BindingVySbG_AA06ActionE0VyXEtF::SYNTHESIZED::s:15ColorComponents4RGBAV",
     "fragments" : [
       {
@@ -111,7 +104,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -130,17 +123,26 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
-        "name" : "tvOS",
+        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting::actions:)`instead.",
+        "name" : "iPadOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "6.0",
+        "introducedAt" : "13.0",
+        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting::actions:)`instead.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
         "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
-        "name" : "watchOS",
+        "name" : "tvOS",
         "unavailable" : false
       },
       {
@@ -150,6 +152,15 @@
         "introducedAt" : "1.0",
         "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
         "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "6.0",
+        "message" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -169,6 +180,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -249,209 +268,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to a Boolean value that determines whether",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to present the action sheet that you create in the modifier’s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "content",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " closure. When the user presses or taps the sheet’s default",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "action button the system sets this value to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "false",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " dismissing",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the sheet.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresented"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure returning the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ActionSheet",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to present.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "content"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, a button conditionally presents an action sheet",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "depending upon the value of a bound Boolean variable. When the Boolean",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "value is set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "true",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", the system displays an action sheet with both",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "destructive and default actions:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ConfirmEraseItems: View {",
-            "    @State private var isShowingSheet = false",
-            "    var body: some View {",
-            "        Button(\"Show Action Sheet\", action: {",
-            "            isShowingSheet = true",
-            "        })",
-            "        .actionSheet(isPresented: $isShowingSheet) {",
-            "            ActionSheet(",
-            "                title: Text(\"Permanently erase the items in the Trash?\"),",
-            "                message: Text(\"You can't undo this action.\"),",
-            "                buttons:[",
-            "                    .destructive(Text(\"Empty Trash\"),",
-            "                                 action: emptyTrashAction),",
-            "                    .cancel()",
-            "                ]",
-            "            )}",
-            "    }",
-            "",
-            "    func emptyTrashAction() {",
-            "        \/\/ Handle empty trash action.",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "In regular size classes in iOS, the system renders alert sheets",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "as a popover that the user dismisses by tapping anywhere outside the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "popover, rather than displaying the default dismiss button.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -476,18 +292,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -508,7 +327,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -521,23 +340,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/actionSheet(isPresented:content:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgba\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGBA/actionSheet(isPresented:content:)": {
-  "abstract" : [
-    {
-      "text" : "Presents an action sheet when a given condition is true.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -614,7 +419,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/actionSheet(isPresented:content:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/actionSheet(isPresented:content:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "actionSheet(isPresented:content:)",

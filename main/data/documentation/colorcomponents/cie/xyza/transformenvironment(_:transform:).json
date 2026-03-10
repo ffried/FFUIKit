@@ -1,35 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Transforms the environment value of the specified key path with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "given function.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/transformEnvironment(_:transform:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/transformEnvironment(_:transform:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE20transformEnvironment_0D0Qrs15WritableKeyPathCyAA0E6ValuesVqd__G_yqd__zctlF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -133,7 +118,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -143,6 +128,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -183,6 +182,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -258,12 +265,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "keyword",
@@ -335,18 +342,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -367,7 +377,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -380,7 +390,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -401,7 +411,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -414,31 +424,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/transformEnvironment(_:transform:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/transformEnvironment(_:transform:)": {
-  "abstract" : [
-    {
-      "text" : "Transforms the environment value of the specified key path with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "given function.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -538,7 +526,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/transformEnvironment(_:transform:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/transformEnvironment(_:transform:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "transformEnvironment(_:transform:)",

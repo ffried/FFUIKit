@@ -24,15 +24,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/changeBrightness(by:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/changeBrightness(by:)"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -118,6 +117,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "RGBA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/RGBA.swift#L283"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
@@ -230,18 +233,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -262,7 +268,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -275,18 +281,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/FloatingPointColorComponents-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "FloatingPointColorComponents Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgba\/floatingpointcolorcomponents-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGBA/changeBrightness(by:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/changeBrightness(by:)": {
   "abstract" : [
     {
       "text" : "Changes the brightness by the given percent value.",
@@ -384,7 +379,7 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/changeBrightness(by:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/changeBrightness(by:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "changeBrightness(by:)",

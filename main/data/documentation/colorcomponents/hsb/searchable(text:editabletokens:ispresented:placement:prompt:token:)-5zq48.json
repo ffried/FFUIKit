@@ -1,34 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Marks this view as searchable, which configures the display of a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search field.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE10searchable4text14editableTokens11isPresented9placement6prompt5tokenQrAA7BindingVySSG_ALyqd__GALySbGAA20SearchFieldPlacementVqd_0_qd_1_ALy7ElementSTQyd__GctSkRd__SmRd__SyRd_0_AaBRd_1_s12IdentifiableASRQr1_lF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -155,7 +140,15 @@
       },
       {
         "kind" : "text",
-        "text" : ": some "
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -193,11 +186,20 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ST7ElementQa",
         "text" : "Element"
       },
       {
         "kind" : "text",
-        "text" : ">) -> some "
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -226,7 +228,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -236,6 +238,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -262,6 +278,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -386,7 +410,15 @@
             },
             {
               "kind" : "text",
-              "text" : ": some "
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "typeIdentifier",
@@ -419,12 +451,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -445,11 +477,20 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST7ElementQa",
               "text" : "Element"
             },
             {
               "kind" : "text",
-              "text" : ">) -> some "
+              "text" : ">) -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "typeIdentifier",
@@ -529,6 +570,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST7ElementQa",
               "text" : "Element"
             },
             {
@@ -548,175 +590,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The text to display and edit in the search field.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "text"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A collection of tokens to display and edit in the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "search field.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "editableTokens"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Binding",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " which controls the presented state",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "of search.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresenting"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The preferred placement of the search field within the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "containing view hierarchy.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "placement"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A string representing the prompt of the search field",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "which provides users with guidance on what to search for.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "prompt"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A view builder that creates a view given an element in",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "tokens.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "token"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For more information about using searchable modifiers, see",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "doc:Adding-a-search-interface-to-your-app",
-              "type" : "text"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -741,18 +614,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -773,7 +649,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -786,31 +662,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48": {
-  "abstract" : [
-    {
-      "text" : "Marks this view as searchable, which configures the display of a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search field.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -937,7 +791,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -975,11 +837,20 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -1004,7 +875,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/searchable(text:editableTokens:isPresented:placement:prompt:token:)-5zq48",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "searchable(text:editableTokens:isPresented:placement:prompt:token:)",

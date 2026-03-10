@@ -8,14 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/init(_:)-4dch1"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/init(_:)-4dch1"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -80,6 +80,10 @@
     "platforms" : [
 
     ],
+    "remoteSource" : {
+      "fileName" : "HSLA+UIKit.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/HSLA\/Platforms\/HSLA+UIKit.swift#L106"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -176,18 +180,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA": {
   "abstract" : [
     {
       "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
@@ -208,7 +215,7 @@
       "text" : "HSLA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -221,7 +228,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsla"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA/init(_:)-4dch1": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA/init(_:)-4dch1": {
   "abstract" : [
     {
       "text" : "Creates new HSLA components from the given color.",
@@ -260,7 +267,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -280,7 +286,7 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/init(_:)-4dch1",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/init(_:)-4dch1",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",

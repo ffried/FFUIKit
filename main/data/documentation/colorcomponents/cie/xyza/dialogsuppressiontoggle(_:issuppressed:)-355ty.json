@@ -1,43 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Enables user suppression of dialogs and alerts presented within ",
-      "type" : "text"
-    },
-    {
-      "code" : "self",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom suppression message on macOS. Unused on other platforms.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/dialogSuppressionToggle(_:isSuppressed:)-355ty"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/dialogSuppressionToggle(_:isSuppressed:)-355ty"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE23dialogSuppressionToggle_12isSuppressedQrAA4TextV_AA7BindingVySbGtF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -109,7 +86,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -119,6 +96,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -159,6 +150,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -247,188 +246,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The label of the suppression toggle in the dialog. This",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "parameter can be elided to use the default suppression title.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the suppression toggle is on or off in the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "dialog.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isSuppressed"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Applying dialog suppression adds a toggle to dialogs on macOS,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "which allows the user to request the alert not be displayed again.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Typically whether a dialog is suppressed is stored in ",
-              "type" : "text"
-            },
-            {
-              "code" : "AppStorage",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and used to decide whether to present the dialog in the future.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example configures a ",
-              "type" : "text"
-            },
-            {
-              "code" : "confirmationDialog",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "suppression toggle. The toggle’s state is stored in ",
-              "type" : "text"
-            },
-            {
-              "code" : "AppStorage",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "used to determine whether or not to show the dialog when the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "“Delete Items” button is pressed.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ConfirmEraseItems: View {",
-            "    @State private var isShowingDialog = false",
-            "",
-            "    @AppStorage(\"suppressEraseItemAlert\")",
-            "    private var suppressAlert = false",
-            "",
-            "    var body: some View {",
-            "        Button(\"Delete Items\") {",
-            "            if !suppressAlert {",
-            "                isShowingDialog = true",
-            "            } else {",
-            "                \/\/ Handle item deletion.",
-            "            }",
-            "        }",
-            "        .confirmationDialog(",
-            "            \"Are you sure you want to erase these items?\",",
-            "            isPresented: $isShowingDialog",
-            "        ) {",
-            "            Button(\"Erase\", role: .destructive) {",
-            "                \/\/ Handle item deletion.",
-            "            }",
-            "            Button(\"Cancel\", role: .cancel) {",
-            "                isShowingDialog = false",
-            "            }",
-            "        }",
-            "        .dialogSuppressionToggle(",
-            "            Text(\"Do not ask about erasing items again\"),",
-            "            isSuppressed: $suppressAlert)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -453,18 +270,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -485,7 +305,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -498,7 +318,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -519,7 +339,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -532,39 +352,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/dialogSuppressionToggle(_:isSuppressed:)-355ty": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/dialogSuppressionToggle(_:isSuppressed:)-355ty": {
-  "abstract" : [
-    {
-      "text" : "Enables user suppression of dialogs and alerts presented within ",
-      "type" : "text"
-    },
-    {
-      "code" : "self",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom suppression message on macOS. Unused on other platforms.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -632,7 +422,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/dialogSuppressionToggle(_:isSuppressed:)-355ty",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/dialogSuppressionToggle(_:isSuppressed:)-355ty",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "dialogSuppressionToggle(_:isSuppressed:)",

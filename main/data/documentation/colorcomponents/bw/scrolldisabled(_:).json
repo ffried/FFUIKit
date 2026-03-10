@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Disables or enables scrolling in scrollable views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/scrollDisabled(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/scrollDisabled(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE14scrollDisabledyQrSbF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -116,6 +123,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,158 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A Boolean that indicates whether scrolling is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "disabled.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "disabled"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to control whether a ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " can scroll:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var isScrollDisabled = false",
-            "",
-            "var body: some View {",
-            "    ScrollView {",
-            "        VStack {",
-            "            Toggle(\"Disable\", isOn: $isScrollDisabled)",
-            "            MyContent()",
-            "        }",
-            "    }",
-            "    .scrollDisabled(isScrollDisabled)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "SwiftUI passes the disabled property through the environment, which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "means you can use this modifier to disable scrolling for all scroll",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "views within a view hierarchy. In the following example, the modifier",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "affects both scroll views:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            " ScrollView {",
-            "     ForEach(rows) { row in",
-            "         ScrollView(.horizontal) {",
-            "             RowContent(row)",
-            "         }",
-            "     }",
-            " }",
-            " .scrollDisabled(true)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use this modifier to disable scrolling for other kinds",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of scrollable views, like a ",
-              "type" : "text"
-            },
-            {
-              "code" : "List",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or a ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextEditor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -354,18 +217,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -386,7 +252,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -399,23 +265,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW/scrollDisabled(_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/scrollDisabled(_:)": {
-  "abstract" : [
-    {
-      "text" : "Disables or enables scrolling in scrollable views.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -457,7 +309,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/scrollDisabled(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/scrollDisabled(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "scrollDisabled(_:)",

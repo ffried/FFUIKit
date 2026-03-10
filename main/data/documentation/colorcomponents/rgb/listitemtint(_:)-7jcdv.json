@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the tint effect associated with specific content in a list.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/listItemTint(_:)-7jcdv"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/listItemTint(_:)-7jcdv"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12listItemTintyQrAA04ListeF0VSgF::SYNTHESIZED::s:15ColorComponents3RGBV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -116,6 +123,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,85 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The tint effect to use, or nil to not override the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "inherited tint.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "tint"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The containing list’s style will apply that tint as appropriate. watchOS",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "uses the tint color for its background platter appearance. Sidebars on",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "iOS and macOS apply the tint color to their ",
-              "type" : "text"
-            },
-            {
-              "code" : "Label",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " icons, which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "otherwise use the accent color by default.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -281,18 +217,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -313,7 +252,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -326,23 +265,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/listItemTint(_:)-7jcdv": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGB/listItemTint(_:)-7jcdv": {
-  "abstract" : [
-    {
-      "text" : "Sets the tint effect associated with specific content in a list.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -384,7 +309,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/listItemTint(_:)-7jcdv",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/listItemTint(_:)-7jcdv",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "listItemTint(_:)",

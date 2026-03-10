@@ -8,15 +8,15 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -95,6 +95,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "CIEXYZA+RGBA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/CIEXYZA+RGBA.swift#L40"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -128,7 +132,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents4RGBAV",
               "text" : "RGBA"
@@ -224,18 +228,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -256,7 +263,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -269,7 +276,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -290,7 +297,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -303,7 +310,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-zu6l": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-zu6l": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZ components using the given RGBA components.",
@@ -378,14 +385,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(rgba:)-zu6l"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -406,7 +413,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {

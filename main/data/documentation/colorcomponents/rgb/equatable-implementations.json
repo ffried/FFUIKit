@@ -2,14 +2,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/Equatable-Implementations"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/Equatable-Implementations"
   },
   "kind" : "article",
   "metadata" : {
@@ -19,6 +19,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "Equatable Implementations"
   },
   "schemaVersion" : {
@@ -31,9 +32,10 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Operators",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/!=(_:_:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/!=(_:_:)"
       ],
       "title" : "Operators"
     }
@@ -52,18 +54,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -84,7 +89,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -97,7 +102,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/!=(_:_:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/!=(_:_:)": {
   "abstract" : [
 
   ],
@@ -152,7 +157,7 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/!=(_:_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/!=(_:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "!=(_:_:)",

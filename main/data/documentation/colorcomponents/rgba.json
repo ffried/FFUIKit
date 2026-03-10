@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "RGBA"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "RGBA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/RGBA.swift#L23"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -156,16 +160,18 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
-        "doc:\/\/ColorComponents\/Se",
-        "doc:\/\/ColorComponents\/SE",
-        "doc:\/\/ColorComponents\/SQ",
-        "doc:\/\/ColorComponents\/SH",
-        "doc:\/\/ColorComponents\/s8SendableP",
-        "doc:\/\/ColorComponents\/7SwiftUI4ViewP"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+        "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+        "doc:\/\/color-components.ColorComponents\/Se",
+        "doc:\/\/color-components.ColorComponents\/SE",
+        "doc:\/\/color-components.ColorComponents\/SQ",
+        "doc:\/\/color-components.ColorComponents\/SH",
+        "doc:\/\/color-components.ColorComponents\/s8SendableP",
+        "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+        "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -182,74 +188,81 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2hjjg",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2omwf",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2wn58",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-3dkvn",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5sgdq",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5w0ud",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-6t6hy",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-7jkbo",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-82gmc",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-fwmp",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-244ca",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-4zpod",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5bin3",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5opek",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6hxiu",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6v6ak",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-965az",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-9p2sl",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-ijse",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-jmm8",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-4unpf",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-6n0f0",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-851zy",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-69xke",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-7e9qg",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-4iqh9",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-6ajt2",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-5zx83",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(red:green:blue:alpha:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(rgb:alpha:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2hjjg",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2omwf",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2wn58",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-3dkvn",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5sgdq",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5w0ud",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-6t6hy",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-7jkbo",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-82gmc",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-fwmp",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-244ca",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-4zpod",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5bin3",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5opek",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6hxiu",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6v6ak",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-965az",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-9p2sl",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-ijse",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-jmm8",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-4unpf",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-6n0f0",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-851zy",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-69xke",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-7e9qg",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-4iqh9",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-6ajt2",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-5zx83",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(red:green:blue:alpha:)",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(rgb:alpha:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/alpha",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/blue",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-4mo3b",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-7gquh",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/green",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/red",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/rgb"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/alpha",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/blue",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-4mo3b",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-7gquh",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/green",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/red",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/rgb"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-8u145",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-9xjax",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue()",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-8pn4z",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-957vi"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-8u145",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-9xjax",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue()",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-8pn4z",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-957vi"
       ],
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/AlphaColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Decodable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Equatable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/AlphaColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/Decodable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/Equatable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -268,43 +281,46 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/7SwiftUI4ViewP": {
-  "identifier" : "doc:\/\/ColorComponents\/7SwiftUI4ViewP",
-  "title" : "SwiftUI.View",
+"doc://color-components.ColorComponents/7SwiftUI4ViewP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP",
+  "title" : "SwiftUICore.View",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SE": {
-  "identifier" : "doc:\/\/ColorComponents\/SE",
+"doc://color-components.ColorComponents/SE": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SE",
   "title" : "Swift.Encodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SH": {
-  "identifier" : "doc:\/\/ColorComponents\/SH",
+"doc://color-components.ColorComponents/SH": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SH",
   "title" : "Swift.Hashable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SQ": {
-  "identifier" : "doc:\/\/ColorComponents\/SQ",
+"doc://color-components.ColorComponents/SQ": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SQ",
   "title" : "Swift.Equatable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/Se": {
-  "identifier" : "doc:\/\/ColorComponents\/Se",
+"doc://color-components.ColorComponents/Se": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/Se",
   "title" : "Swift.Decodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -325,7 +341,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -338,53 +354,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -399,7 +375,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -412,7 +388,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -473,7 +449,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -486,7 +462,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -507,7 +483,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -520,73 +496,73 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/AlphaColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/AlphaColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/AlphaColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/AlphaColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/alphacolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/ColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/ColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "ColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/colorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/Decodable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/Decodable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Decodable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/Decodable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Decodable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/decodable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/Equatable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/Equatable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Equatable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/Equatable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/equatable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/FloatingPointColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/FloatingPointColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "FloatingPointColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/floatingpointcolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "View Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/view-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/alpha": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/alpha": {
   "abstract" : [
     {
       "text" : "The alpha component.",
@@ -616,14 +592,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/alpha",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/alpha",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "alpha",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/alpha"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/blue": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/blue": {
   "abstract" : [
     {
       "text" : "The green component.",
@@ -653,14 +629,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/blue",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/blue",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "blue",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/blue"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/cgColor-4mo3b": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/cgColor-4mo3b": {
   "abstract" : [
     {
       "text" : "The ",
@@ -730,14 +706,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-4mo3b",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-4mo3b",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/cgcolor-4mo3b"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/cgColor-7gquh": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/cgColor-7gquh": {
   "abstract" : [
     {
       "text" : "The ",
@@ -807,14 +783,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-7gquh",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/cgColor-7gquh",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/cgcolor-7gquh"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/green": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/green": {
   "abstract" : [
     {
       "text" : "The green component.",
@@ -844,14 +820,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/green",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/green",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "green",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/green"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/hexString(prefix:postfix:uppercase:)-8u145": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/hexString(prefix:postfix:uppercase:)-8u145": {
   "abstract" : [
     {
       "text" : "Returns an RGBA hex string representing these components.",
@@ -964,14 +940,14 @@
       "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-8u145",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-8u145",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hexString(prefix:postfix:uppercase:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/hexstring(prefix:postfix:uppercase:)-8u145"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/hexString(prefix:postfix:uppercase:)-9xjax": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/hexString(prefix:postfix:uppercase:)-9xjax": {
   "abstract" : [
     {
       "text" : "Returns an RGBA hex string representing these components.",
@@ -1084,14 +1060,14 @@
       "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-9xjax",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexString(prefix:postfix:uppercase:)-9xjax",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hexString(prefix:postfix:uppercase:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/hexstring(prefix:postfix:uppercase:)-9xjax"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/hexValue()": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/hexValue()": {
   "abstract" : [
     {
       "text" : "Computes the combined hex value for this RGBA components.",
@@ -1177,14 +1153,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue()",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue()",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hexValue()",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/hexvalue()"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/hexValue(as:)-8pn4z": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/hexValue(as:)-8pn4z": {
   "abstract" : [
     {
       "text" : "Computes the combined hex value for this RGBA components using a given integer type.",
@@ -1303,14 +1279,14 @@
       "text" : "I"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-8pn4z",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-8pn4z",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hexValue(as:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/hexvalue(as:)-8pn4z"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/hexValue(as:)-957vi": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/hexValue(as:)-957vi": {
   "abstract" : [
     {
       "text" : "Computes the combined hex value for this RGBA components using a given integer type.",
@@ -1421,14 +1397,14 @@
       "text" : "I"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-957vi",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/hexValue(as:)-957vi",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hexValue(as:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/hexvalue(as:)-957vi"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2hjjg": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2hjjg": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -1467,7 +1443,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1487,14 +1462,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2hjjg",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2hjjg",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-2hjjg"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2omwf": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2omwf": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -1533,7 +1508,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1553,14 +1527,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2omwf",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2omwf",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-2omwf"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2wn58": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-2wn58": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from another RGBA color components object with integer values.",
@@ -1635,14 +1609,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2wn58",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-2wn58",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-2wn58"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-3dkvn": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-3dkvn": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -1700,14 +1674,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-3dkvn",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-3dkvn",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-3dkvn"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-5sgdq": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-5sgdq": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from another RGBA color components object with integer values.",
@@ -1782,14 +1756,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5sgdq",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5sgdq",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-5sgdq"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-5w0ud": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-5w0ud": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from another RGBA color components object with floating point values.",
@@ -1864,14 +1838,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5w0ud",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-5w0ud",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-5w0ud"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-6t6hy": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-6t6hy": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -1929,14 +1903,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-6t6hy",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-6t6hy",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-6t6hy"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-7jkbo": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-7jkbo": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -1994,14 +1968,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-7jkbo",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-7jkbo",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-7jkbo"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-82gmc": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-82gmc": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from the given color.",
@@ -2059,14 +2033,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-82gmc",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-82gmc",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-82gmc"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(_:)-fwmp": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(_:)-fwmp": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components from another RGBA color components object with floating point values.",
@@ -2141,14 +2115,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-fwmp",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-fwmp",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-fwmp"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-4lwm7": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-4lwm7": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given CIE.XYZA components.",
@@ -2232,14 +2206,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(cieXYZA:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(ciexyza:)-4lwm7"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-7oeiu": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-7oeiu": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given CIE.XYZA components.",
@@ -2323,14 +2297,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(cieXYZA:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(ciexyza:)-7oeiu"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-244ca": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-244ca": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the components of the given color.",
@@ -2369,7 +2343,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -2397,14 +2370,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-244ca",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-244ca",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-244ca"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-4zpod": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-4zpod": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the components of the given color.",
@@ -2443,7 +2416,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -2471,14 +2443,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-4zpod",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-4zpod",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-4zpod"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-5bin3": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-5bin3": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the values",
@@ -2569,14 +2541,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5bin3",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5bin3",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-5bin3"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-5opek": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-5opek": {
   "abstract" : [
     {
       "text" : "Tries to create new RGB components that exactly match the components of the given color.",
@@ -2642,14 +2614,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5opek",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5opek",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-5opek"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-6hxiu": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-6hxiu": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the values",
@@ -2740,14 +2712,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6hxiu",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6hxiu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-6hxiu"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-6v6ak": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-6v6ak": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the values",
@@ -2838,14 +2810,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6v6ak",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-6v6ak",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-6v6ak"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-965az": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-965az": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the values",
@@ -2936,14 +2908,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-965az",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-965az",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-965az"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-9p2sl": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-9p2sl": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the components of the given color.",
@@ -3009,14 +2981,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-9p2sl",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-9p2sl",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-9p2sl"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-ijse": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-ijse": {
   "abstract" : [
     {
       "text" : "Tries to create new RGBA components that exactly match the components of the given color.",
@@ -3082,14 +3054,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-ijse",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-ijse",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-ijse"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-jmm8": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-jmm8": {
   "abstract" : [
     {
       "text" : "Tries to create new RGB components that exactly match the components of the given color.",
@@ -3155,14 +3127,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-jmm8",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-jmm8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(exactly:)-jmm8"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-4unpf": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-4unpf": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components by splitting the combined hex value into RGBA components.",
@@ -3292,14 +3264,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-4unpf",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-4unpf",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hex:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hex:)-4unpf"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-6n0f0": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-6n0f0": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components by splitting the combined hex value into RGBA components.",
@@ -3397,14 +3369,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-6n0f0",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-6n0f0",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hex:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hex:)-6n0f0"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-851zy": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hex:)-851zy": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components by splitting the combined hex value into RGBA components.",
@@ -3494,14 +3466,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-851zy",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hex:)-851zy",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hex:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hex:)-851zy"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hexString:)-69xke": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hexString:)-69xke": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components by parsing a given hex string into RGBA components.",
@@ -3631,14 +3603,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-69xke",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-69xke",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hexString:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hexstring:)-69xke"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hexString:)-7e9qg": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hexString:)-7e9qg": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components by parsing a given hex string into RGBA components.",
@@ -3768,14 +3740,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-7e9qg",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hexString:)-7e9qg",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hexString:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hexstring:)-7e9qg"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hsba:)-4iqh9": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hsba:)-4iqh9": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given HSBA components.",
@@ -3850,14 +3822,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-4iqh9",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-4iqh9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hsba:)-4iqh9"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hsba:)-6ajt2": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hsba:)-6ajt2": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given HSBA components.",
@@ -3932,14 +3904,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-6ajt2",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsba:)-6ajt2",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hsba:)-6ajt2"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hsla:)-5zx83": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hsla:)-5zx83": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given HSLA components.",
@@ -4014,14 +3986,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-5zx83",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-5zx83",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsla:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hsla:)-5zx83"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hsla:)-8iqcf": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(hsla:)-8iqcf": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given HSLA components.",
@@ -4096,14 +4068,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsla:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(hsla:)-8iqcf"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(red:green:blue:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(red:green:blue:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given values.",
@@ -4188,14 +4160,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(red:green:blue:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(red:green:blue:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(red:green:blue:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(red:green:blue:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/init(rgb:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/init(rgb:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new RGBA components using the given values.",
@@ -4255,14 +4227,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(rgb:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/init(rgb:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgb:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(rgb:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/red": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/red": {
   "abstract" : [
     {
       "text" : "The red component.",
@@ -4292,14 +4264,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/red",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/red",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "red",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/red"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/rgb": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/rgb": {
   "abstract" : [
     {
       "text" : "The RGB components.",
@@ -4342,20 +4314,30 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/rgb",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/rgb",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "rgb",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/rgb"
 },
-"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
-  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+"doc://color-components.ColorComponents/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
   "title" : "Swift.CustomPlaygroundDisplayConvertible",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/s8SendableP": {
-  "identifier" : "doc:\/\/ColorComponents\/s8SendableP",
+"doc://color-components.ColorComponents/s8CopyableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s8SendableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8SendableP",
   "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }

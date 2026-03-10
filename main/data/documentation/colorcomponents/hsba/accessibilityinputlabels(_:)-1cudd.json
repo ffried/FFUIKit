@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets alternate input labels with which users identify a view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/accessibilityInputLabels(_:)-1cudd"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/accessibilityInputLabels(_:)-1cudd"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE24accessibilityInputLabelsyAA15ModifiedContentVyxAA31AccessibilityAttachmentModifierVGSayAA4TextVGF::SYNTHESIZED::s:15ColorComponents4HSBAV",
     "fragments" : [
       {
@@ -79,7 +72,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -89,6 +82,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -129,6 +136,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -200,89 +215,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An array of Text elements to use as input labels.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "inputLabels"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Provide labels in descending order of importance. Voice Control",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and Full Keyboard Access use the input labels.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If you don’t specify any input labels, the user can still",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "refer to the view using the accessibility label that you add with the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "accessibilityLabel()",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " modifier.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -307,18 +239,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -339,7 +274,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -352,23 +287,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/accessibilityInputLabels(_:)-1cudd": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsba\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSBA/accessibilityInputLabels(_:)-1cudd": {
-  "abstract" : [
-    {
-      "text" : "Sets alternate input labels with which users identify a view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -423,7 +344,7 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/accessibilityInputLabels(_:)-1cudd",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/accessibilityInputLabels(_:)-1cudd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "accessibilityInputLabels(_:)",

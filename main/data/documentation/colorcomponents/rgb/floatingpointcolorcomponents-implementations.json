@@ -2,14 +2,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/FloatingPointColorComponents-Implementations"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/FloatingPointColorComponents-Implementations"
   },
   "kind" : "article",
   "metadata" : {
@@ -19,6 +19,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "FloatingPointColorComponents Implementations"
   },
   "schemaVersion" : {
@@ -31,18 +32,20 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/brightness",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/isBrightColor",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/isDarkColor"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/brightness",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/isBrightColor",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/isDarkColor"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/changeBrightness(by:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/changeBrightness(by:)"
       ],
       "title" : "Instance Methods"
     }
@@ -61,18 +64,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/brightness": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/brightness": {
   "abstract" : [
     {
       "text" : "The brightness of these color components.",
@@ -102,7 +108,7 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
@@ -110,7 +116,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents\/brightness"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -131,7 +137,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -144,7 +150,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/brightness": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/brightness": {
   "abstract" : [
     {
       "text" : "The brightness of these color components. The red, green and blue components are weighted in this.",
@@ -214,14 +220,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/brightness",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/brightness",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "brightness",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/brightness"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/changeBrightness(by:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/changeBrightness(by:)": {
   "abstract" : [
     {
       "text" : "Changes the brightness by the given percent value.",
@@ -319,21 +325,21 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/changeBrightness(by:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/changeBrightness(by:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "changeBrightness(by:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/changebrightness(by:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/isBrightColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/isBrightColor": {
   "abstract" : [
     {
       "text" : "Returns whether these color components represent a light color (",
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+      "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
       "isActive" : true,
       "type" : "reference"
     },
@@ -397,21 +403,21 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/isBrightColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/isBrightColor",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isBrightColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/isbrightcolor"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/isDarkColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/isDarkColor": {
   "abstract" : [
     {
       "text" : "Returns whether these color components represent a dark color (",
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+      "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
       "isActive" : true,
       "type" : "reference"
     },
@@ -475,7 +481,7 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/isDarkColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/isDarkColor",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isDarkColor",

@@ -8,14 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -103,6 +103,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "RGBA+CIEXYZA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/RGBA+CIEXYZA.swift#L19"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -136,7 +140,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3CIEO",
               "text" : "CIE"
@@ -146,7 +150,7 @@
               "text" : "."
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3CIEO3XYZV",
               "text" : "XYZ"
@@ -168,25 +172,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The CIE.XYZ components to convert to RGB.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "hsb"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -211,18 +196,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -243,7 +231,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -256,7 +244,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZ": {
   "abstract" : [
     {
       "text" : "An opaque XYZ color components representation.",
@@ -277,7 +265,7 @@
       "text" : "XYZ"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -290,7 +278,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -311,7 +299,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -324,7 +312,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/init(cieXYZ:)-153ri": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/init(cieXYZ:)-153ri": {
   "abstract" : [
     {
       "text" : "Creates new RGB components using the given CIE.XYZ components.",
@@ -408,7 +396,7 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(cieXYZ:)",

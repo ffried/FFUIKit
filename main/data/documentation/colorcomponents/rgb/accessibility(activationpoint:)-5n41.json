@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the point where activations occur in the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/accessibility(activationPoint:)-5n41"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/accessibility(activationPoint:)-5n41"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE13accessibility15activationPointAA15ModifiedContentVyxAA31AccessibilityAttachmentModifierVGSo7CGPointV_tF::SYNTHESIZED::s:15ColorComponents3RGBV",
     "fragments" : [
       {
@@ -87,7 +80,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -98,6 +91,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityActivationPoint(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityActivationPoint(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityActivationPoint(_:)",
         "unavailable" : false
       },
@@ -123,8 +134,8 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "6.0",
-        "name" : "watchOS",
+        "introducedAt" : "1.0",
+        "name" : "visionOS",
         "renamed" : "accessibilityActivationPoint(_:)",
         "unavailable" : false
       },
@@ -132,8 +143,8 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "1.0",
-        "name" : "visionOS",
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
         "renamed" : "accessibilityActivationPoint(_:)",
         "unavailable" : false
       }
@@ -154,6 +165,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -241,18 +260,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
@@ -273,7 +295,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -286,23 +308,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB/accessibility(activationPoint:)-5n41": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGB/accessibility(activationPoint:)-5n41": {
-  "abstract" : [
-    {
-      "text" : "Specifies the point where activations occur in the view.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -366,7 +374,7 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/accessibility(activationPoint:)-5n41",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB\/accessibility(activationPoint:)-5n41",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "accessibility(activationPoint:)",

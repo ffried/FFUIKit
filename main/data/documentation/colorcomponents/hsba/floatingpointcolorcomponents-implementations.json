@@ -2,14 +2,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations"
   },
   "kind" : "article",
   "metadata" : {
@@ -19,6 +19,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "FloatingPointColorComponents Implementations"
   },
   "schemaVersion" : {
@@ -31,17 +32,19 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isBrightColor",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isDarkColor"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isBrightColor",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isDarkColor"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/changeBrightness(by:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/changeBrightness(by:)"
       ],
       "title" : "Instance Methods"
     }
@@ -60,18 +63,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/brightness": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents/brightness": {
   "abstract" : [
     {
       "text" : "The brightness of these color components.",
@@ -101,7 +107,7 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
@@ -109,7 +115,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents\/brightness"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -130,7 +136,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -143,7 +149,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/changeBrightness(by:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/changeBrightness(by:)": {
   "abstract" : [
     {
       "text" : "Changes the brightness by the given percent value.",
@@ -233,21 +239,21 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/changeBrightness(by:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/changeBrightness(by:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "changeBrightness(by:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/changebrightness(by:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/isBrightColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/isBrightColor": {
   "abstract" : [
     {
       "text" : "Returns whether these color components represent a light color (",
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+      "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
       "isActive" : true,
       "type" : "reference"
     },
@@ -311,21 +317,21 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isBrightColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isBrightColor",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isBrightColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/isbrightcolor"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/isDarkColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/isDarkColor": {
   "abstract" : [
     {
       "text" : "Returns whether these color components represent a dark color (",
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
+      "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents\/brightness",
       "isActive" : true,
       "type" : "reference"
     },
@@ -389,7 +395,7 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isDarkColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isDarkColor",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isDarkColor",

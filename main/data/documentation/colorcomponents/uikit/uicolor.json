@@ -2,14 +2,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -89,27 +89,29 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-1cbvn",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-24a4l",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-27t8p",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2d38m",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2zvgj",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-3not",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4enkd",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4r4pu",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6k4op",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6sjih",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7dsl6",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7ryf7",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-8uvsw",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9072i",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-91n6v",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9buz8",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9epma",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-v95s"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-1cbvn",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-24a4l",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-27t8p",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2d38m",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2zvgj",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-3not",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4enkd",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4r4pu",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6k4op",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6sjih",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7dsl6",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7ryf7",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-8uvsw",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9072i",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-91n6v",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9buz8",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9epma",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-v95s"
       ],
       "title" : "Initializers"
     }
@@ -128,29 +130,32 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "UIKit",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
   "abstract" : [
 
   ],
@@ -169,7 +174,7 @@
       "text" : "UIColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -182,14 +187,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-159gs": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-159gs": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given CIE.XYZ components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -235,21 +239,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-159gs"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-1cbvn": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-1cbvn": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given RGBA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -286,21 +289,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-1cbvn",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-1cbvn",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-1cbvn"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-24a4l": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-24a4l": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given black\/white components with alpha channel.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -337,21 +339,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-24a4l",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-24a4l",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-24a4l"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-27t8p": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-27t8p": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given CIE.XYZA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -397,21 +398,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-27t8p",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-27t8p",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-27t8p"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-2d38m": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-2d38m": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSL components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -448,21 +448,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2d38m",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2d38m",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-2d38m"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-2zvgj": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-2zvgj": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given CIE.XYZA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -508,21 +507,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2zvgj",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-2zvgj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-2zvgj"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-39s1v": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-39s1v": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given black\/white components with alpha channel.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -559,21 +557,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-39s1v"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-3not": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-3not": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSB components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -610,21 +607,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-3not",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-3not",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-3not"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-4enkd": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-4enkd": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given black\/white components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -661,21 +657,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4enkd",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4enkd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-4enkd"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-4r4pu": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-4r4pu": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSLA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -712,21 +707,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4r4pu",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-4r4pu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-4r4pu"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-6k4op": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-6k4op": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given CIE.XYZ components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -772,21 +766,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6k4op",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6k4op",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-6k4op"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-6sjih": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-6sjih": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSLA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -823,21 +816,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6sjih",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-6sjih",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-6sjih"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-7dsl6": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-7dsl6": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSBA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -874,21 +866,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7dsl6",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7dsl6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-7dsl6"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-7ryf7": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-7ryf7": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSL components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -925,21 +916,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7ryf7",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-7ryf7",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-7ryf7"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-8uvsw": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-8uvsw": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given black\/white components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -976,21 +966,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-8uvsw",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-8uvsw",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-8uvsw"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9072i": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9072i": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given RGB components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1027,21 +1016,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9072i",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9072i",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-9072i"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-91n6v": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-91n6v": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSBA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1078,21 +1066,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-91n6v",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-91n6v",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-91n6v"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9buz8": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9buz8": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given RGBA components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1129,21 +1116,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9buz8",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9buz8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-9buz8"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9epma": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-9epma": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given RGB components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1180,21 +1166,20 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9epma",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-9epma",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor\/init(_:)-9epma"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-v95s": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-v95s": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given HSB components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1231,7 +1216,7 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-v95s",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-v95s",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",

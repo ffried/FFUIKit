@@ -8,14 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/brightness"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/brightness"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -48,6 +48,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "HSBA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/HSBA\/HSBA.swift#L9"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
@@ -113,18 +117,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -145,7 +152,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -158,7 +165,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/brightness": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/brightness": {
   "abstract" : [
     {
       "text" : "The brightness component.",
@@ -188,7 +195,7 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/brightness",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/brightness",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "brightness",

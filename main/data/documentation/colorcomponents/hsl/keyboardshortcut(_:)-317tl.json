@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Assigns an optional keyboard shortcut to the modified control.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/keyboardShortcut(_:)-317tl"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/keyboardShortcut(_:)-317tl"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE16keyboardShortcutyQrAA08KeyboardE0VSgF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "15.4",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.4",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.4",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -102,6 +109,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -164,124 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Pressing the control’s shortcut while the control is anywhere in the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "frontmost window or scene, or anywhere in the macOS main menu, is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "equivalent to direct interaction with the control to perform its primary",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "action.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The target of a keyboard shortcut is resolved in a leading-to-trailing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "traversal of one or more view hierarchies. On macOS, the system looks in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the key window first, then the main window, and then the command groups;",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "on other platforms, the system looks in the active scene, and then the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "command groups.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If multiple controls are associated with the same shortcut, the first",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "one found is used. If the provided shortcut is ",
-              "type" : "text"
-            },
-            {
-              "code" : "nil",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", the modifier will",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "have no effect.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -306,18 +203,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL": {
   "abstract" : [
     {
       "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
@@ -338,7 +238,7 @@
       "text" : "HSL"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -351,23 +251,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsl"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL/keyboardShortcut(_:)-317tl": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsl\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSL/keyboardShortcut(_:)-317tl": {
-  "abstract" : [
-    {
-      "text" : "Assigns an optional keyboard shortcut to the modified control.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -409,7 +295,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/keyboardShortcut(_:)-317tl",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/keyboardShortcut(_:)-317tl",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "keyboardShortcut(_:)",

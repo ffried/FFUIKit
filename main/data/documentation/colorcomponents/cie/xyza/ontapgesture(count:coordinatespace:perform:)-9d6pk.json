@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and provides the action with the location of the interaction.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -27,20 +13,19 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onTapGesture(count:coordinateSpace:perform:)-9d6pk"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onTapGesture(count:coordinateSpace:perform:)-9d6pk"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12onTapGesture5count15coordinateSpace7performQrSi_AA010CoordinateI0OySo7CGPointVctF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -137,7 +122,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -155,6 +140,24 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
         "name" : "macOS",
@@ -164,18 +167,18 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "9.0",
+        "introducedAt" : "1.0",
         "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
-        "name" : "watchOS",
+        "name" : "visionOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "1.0",
+        "introducedAt" : "9.0",
         "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
-        "name" : "visionOS",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -195,6 +198,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -262,12 +273,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -308,244 +319,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The number of taps or clicks required to trigger the action",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "closure provided in ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ". Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "count"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The coordinate space in which to receive",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "location values. Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "CoordinateSpace\/local",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "coordinateSpace"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform. This closure receives an input",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "that indicates where the interaction occurred.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to perform the specified ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the user clicks",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "or taps on the modified view ",
-              "type" : "text"
-            },
-            {
-              "code" : "count",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " times. The action closure receives",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the location of the interaction.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If you create a control that’s functionally equivalent",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Button",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ButtonStyle",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to create a customized button",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "instead.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following code adds a tap gesture to a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " that toggles the color",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the circle based on the tap location.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct TapGestureExample: View {",
-            "    @State private var location: CGPoint = .zero",
-            "",
-            "    var body: some View {",
-            "        Circle()",
-            "            .fill(self.location.y > 50 ? Color.blue : Color.red)",
-            "            .frame(width: 100, height: 100, alignment: .center)",
-            "            .onTapGesture { location in",
-            "                self.location = location",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -570,18 +343,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -602,7 +378,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -615,7 +391,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -636,7 +412,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -649,31 +425,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/onTapGesture(count:coordinateSpace:perform:)-9d6pk": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/onTapGesture(count:coordinateSpace:perform:)-9d6pk": {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and provides the action with the location of the interaction.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -767,7 +521,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onTapGesture(count:coordinateSpace:perform:)-9d6pk",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/onTapGesture(count:coordinateSpace:perform:)-9d6pk",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "onTapGesture(count:coordinateSpace:perform:)",

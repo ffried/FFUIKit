@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the title and display mode in the navigation bar for this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -19,19 +13,18 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/navigationBarTitle(_:displayMode:)-735qd"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/navigationBarTitle(_:displayMode:)-735qd"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE18navigationBarTitle_11displayModeQrAA4TextV_AA010NavigationE4ItemV0f7DisplayH0OtF::SYNTHESIZED::s:15ColorComponents4HSLAV",
     "fragments" : [
       {
@@ -103,7 +96,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -115,6 +108,24 @@
         "introducedAt" : "13.0",
         "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -143,6 +154,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -231,186 +250,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A title for this view to display in the navigation bar.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "title"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The style to use for displaying the navigation bar title.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "displayMode"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "navigationBarTitle(_:displayMode:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to set the title of the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "navigation bar for this view and specify a display mode for the title",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "from one of the ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationBarItem\/TitleDisplayMode",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " styles. This",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "modifier only takes effect when this view is inside of and visible",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, text for the navigation bar title is provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "using a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. The navigation bar title’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationBarItem\/TitleDisplayMode",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is set to ",
-              "type" : "text"
-            },
-            {
-              "code" : ".inline",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " which places",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the navigation bar title in the bounds of the navigation bar.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct FlavorView: View {",
-            "   let items = [\"Chocolate\", \"Vanilla\", \"Strawberry\", \"Mint Chip\",",
-            "                \"Pistachio\"]",
-            "   var body: some View {",
-            "        NavigationView {",
-            "            List(items, id: \\.self) {",
-            "                Text($0)",
-            "            }",
-            "            .navigationBarTitle(Text(\"Today's Flavors\", displayMode: .inline)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -435,18 +274,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA": {
   "abstract" : [
     {
       "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
@@ -467,7 +309,7 @@
       "text" : "HSLA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -480,23 +322,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsla"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA/navigationBarTitle(_:displayMode:)-735qd": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsla\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSLA/navigationBarTitle(_:displayMode:)-735qd": {
-  "abstract" : [
-    {
-      "text" : "Sets the title and display mode in the navigation bar for this view.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -565,7 +393,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/navigationBarTitle(_:displayMode:)-735qd",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA\/navigationBarTitle(_:displayMode:)-735qd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "navigationBarTitle(_:displayMode:)",

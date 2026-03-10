@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets a value for the given preference.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/preference(key:value:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/preference(key:value:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE10preference3key5valueQrqd__m_5ValueQyd__tAA13PreferenceKeyRd__lF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -81,6 +74,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
         "text" : "Value"
       },
       {
@@ -105,7 +99,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -115,6 +109,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -155,6 +163,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -213,6 +229,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
               "text" : "Value"
             },
             {
@@ -289,18 +306,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -321,7 +341,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -334,23 +354,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/preference(key:value:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BWA/preference(key:value:)": {
-  "abstract" : [
-    {
-      "text" : "Sets a value for the given preference.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -411,6 +417,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -431,7 +438,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/preference(key:value:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/preference(key:value:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "preference(key:value:)",

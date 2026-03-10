@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the search scopes for this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/searchScopes(_:scopes:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/searchScopes(_:scopes:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12searchScopes_6scopesQrAA7BindingVyqd__G_qd_0_yXEtSHRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -106,7 +99,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -116,6 +109,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -149,6 +156,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -306,232 +321,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The active scope of the search field.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "scope"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A view builder that represents the scoping options",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "SwiftUI uses to populate a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Picker",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "scopes"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To enable people to narrow the scope of their searches, you can",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "create a type that represents the possible scopes, and then create a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "state variable to hold the current selection. For example, you can",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "scope the product search to just fruits or just vegetables:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "enum ProductScope {",
-            "    case fruit",
-            "    case vegetable",
-            "}",
-            "",
-            "@State private var scope: ProductScope = .fruit"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Provide a binding to the scope, as well as a view that represents each",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "scope:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ProductList()",
-            "    .searchable(text: $text, tokens: $tokens) { token in",
-            "        switch token {",
-            "        case .apple: Text(\"Apple\")",
-            "        case .pear: Text(\"Pear\")",
-            "        case .banana: Text(\"Banana\")",
-            "        }",
-            "    }",
-            "    .searchScopes($scope) {",
-            "        Text(\"Fruit\").tag(ProductScope.fruit)",
-            "        Text(\"Vegetable\").tag(ProductScope.vegetable)",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "SwiftUI uses this binding and view to add a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with the search",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "field. In iOS, iPadOS, macOS, and tvOS, the picker appears below the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "search field when search is active. To ensure that the picker operates",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "correctly, match the type of the scope binding with the type of each",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view’s tag. Then modify your search to account for the current value of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the ",
-              "type" : "text"
-            },
-            {
-              "code" : "scope",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " state property.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For more information about using searchable modifiers, see",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "doc:Adding-a-search-interface-to-your-app",
-              "type" : "text"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -556,18 +345,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -588,7 +380,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -601,23 +393,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW/searchScopes(_:scopes:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/searchScopes(_:scopes:)": {
-  "abstract" : [
-    {
-      "text" : "Configures the search scopes for this view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -699,7 +477,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/searchScopes(_:scopes:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/searchScopes(_:scopes:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "searchScopes(_:scopes:)",

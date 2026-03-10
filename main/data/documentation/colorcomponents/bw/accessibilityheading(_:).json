@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the accessibility level of this heading.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/accessibilityHeading(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/accessibilityHeading(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE20accessibilityHeadingyAA15ModifiedContentVyxAA31AccessibilityAttachmentModifierVGAA0hE5LevelOF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -79,7 +72,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -89,6 +82,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -129,6 +136,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -200,114 +215,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The heading level to associate with this element",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "from the available ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "AccessibilityHeadingLevel",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " levels.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "level"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to set the level of this heading in relation to other headings. The system speaks",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the level number of levels ",
-              "type" : "text"
-            },
-            {
-              "code" : "AccessibilityHeadingLevel\/h1",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " through",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "AccessibilityHeadingLevel\/h6",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " alongside the text.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The default heading level if you don’t use this modifier",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "is ",
-              "type" : "text"
-            },
-            {
-              "code" : "AccessibilityHeadingLevel\/unspecified",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -332,18 +239,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -364,7 +274,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -377,23 +287,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW/accessibilityHeading(_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/accessibilityHeading(_:)": {
-  "abstract" : [
-    {
-      "text" : "Sets the accessibility level of this heading.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -448,7 +344,7 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/accessibilityHeading(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/accessibilityHeading(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "accessibilityHeading(_:)",

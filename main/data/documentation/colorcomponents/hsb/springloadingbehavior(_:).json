@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the spring loading behavior this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/springLoadingBehavior(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/springLoadingBehavior(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE21springLoadingBehavioryQrAA06SpringeF0VF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -116,6 +123,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,184 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether spring loading is enabled or not. If",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "unspecified, the default behavior is ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".automatic.",
-                  "type" : "codeVoice"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "behavior"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Spring loading refers to a view being activated during a drag and drop",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "interaction. On iOS this can occur when pausing briefly on top of a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view with dragged content. On macOS this can occur with similar brief",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "pauses or on pressure-sensitive systems by “force clicking” during the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drag. This has no effect on tvOS or watchOS.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This is commonly used with views that have a navigation or presentation",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "effect, allowing the destination to be revealed without pausing the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drag interaction. For example, a button that reveals a list of folders",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that a dragged item can be dropped onto.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Button {",
-            "    showFolders = true",
-            "} label: {",
-            "    Label(\"Show Folders\", systemImage: \"folder\")",
-            "}",
-            ".springLoadingBehavior(.enabled)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Unlike ",
-              "type" : "text"
-            },
-            {
-              "code" : "disabled(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", this modifier overrides the value set by an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "ancestor view rather than being unioned with it. For example, the below",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button would allow spring loading:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "HStack {",
-            "    Button {",
-            "        showFolders = true",
-            "    } label: {",
-            "        Label(\"Show Folders\", systemImage: \"folder\")",
-            "    }",
-            "    .springLoadingBehavior(.enabled)",
-            "",
-            "    ...",
-            "}",
-            ".springLoadingBehavior(.disabled)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -380,18 +217,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -412,7 +252,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -425,23 +265,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/springLoadingBehavior(_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/springLoadingBehavior(_:)": {
-  "abstract" : [
-    {
-      "text" : "Sets the spring loading behavior this view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -483,7 +309,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/springLoadingBehavior(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/springLoadingBehavior(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "springLoadingBehavior(_:)",

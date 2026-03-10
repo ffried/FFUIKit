@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Limits the Dynamic Type size within the view to the given range.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/dynamicTypeSize(_:)-299ta"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/dynamicTypeSize(_:)-299ta"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE15dynamicTypeSizeyQrqd__SXRd__AA07DynamiceF0O5BoundRtd__lF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -73,7 +66,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -83,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -123,6 +130,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -223,6 +238,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SX5BoundQa",
               "text" : "Bound"
             },
             {
@@ -242,182 +258,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The range of sizes that are allowed in this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "range"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that constrains the Dynamic Type size of this view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within the specified ",
-              "type" : "text"
-            },
-            {
-              "code" : "range",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "As an example, you can constrain the maximum Dynamic Type size in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to be no larger than ",
-              "type" : "text"
-            },
-            {
-              "code" : "DynamicTypeSize\/large",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ContentView()",
-            "    .dynamicTypeSize(...DynamicTypeSize.large)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If the Dynamic Type size is limited to multiple ranges, the result is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "their intersection:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ContentView() \/\/ Dynamic Type sizes are from .small to .large",
-            "    .dynamicTypeSize(.small...)",
-            "    .dynamicTypeSize(...DynamicTypeSize.large)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A specific Dynamic Type size can still be set after a range is applied:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ContentView() \/\/ Dynamic Type size is .xLarge",
-            "    .dynamicTypeSize(.xLarge)",
-            "    .dynamicTypeSize(...DynamicTypeSize.large)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "When limiting the Dynamic Type size, consider if adding a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "large content view with ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/accessibilityShowsLargeContentViewer()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "would be appropriate.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -442,18 +282,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -474,7 +317,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -487,23 +330,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/dynamicTypeSize(_:)-299ta": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/dynamicTypeSize(_:)-299ta": {
-  "abstract" : [
-    {
-      "text" : "Limits the Dynamic Type size within the view to the given range.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -552,7 +381,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/dynamicTypeSize(_:)-299ta",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/dynamicTypeSize(_:)-299ta",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "dynamicTypeSize(_:)",

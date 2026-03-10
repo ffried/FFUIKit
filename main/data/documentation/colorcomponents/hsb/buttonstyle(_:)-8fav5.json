@@ -1,34 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the style for buttons within this view to a button style with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "custom appearance and standard interaction behavior.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/buttonStyle(_:)-8fav5"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/buttonStyle(_:)-8fav5"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE11buttonStyleyQrqd__AA06ButtonE0Rd__lF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -81,7 +66,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -91,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -131,6 +130,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -225,149 +232,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to set a specific style for all button instances",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a view:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "HStack {",
-            "    Button(\"Sign In\", action: signIn)",
-            "    Button(\"Register\", action: register)",
-            "}",
-            ".buttonStyle(.bordered)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use this modifier to set the style for controls with a button",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "style through composition:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    Menu(\"Terms and Conditions\") {",
-            "        Button(\"Open in Preview\", action: openInPreview)",
-            "        Button(\"Save as PDF\", action: saveAsPDF)",
-            "    }",
-            "    Toggle(\"Remember Password\", isOn: $isToggleOn)",
-            "    Toggle(\"Flag\", isOn: $flagged)",
-            "    Button(\"Sign In\", action: signIn)",
-            "}",
-            ".menuStyle(.button)",
-            ".toggleStyle(.button)",
-            ".buttonStyle(.bordered)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In this example, ",
-              "type" : "text"
-            },
-            {
-              "code" : ".menuStyle(.button)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " says that the Terms and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Conditions menu renders as a button, while",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : ".toggleStyle(.button)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " says that the two toggles also render as",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "buttons. Finally, ",
-              "type" : "text"
-            },
-            {
-              "code" : ".buttonStyle(.bordered)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " says that the menu,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "both toggles, and the Sign In button all render with the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "bordered button style.```",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -392,18 +256,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -424,7 +291,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -437,31 +304,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/buttonStyle(_:)-8fav5": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/buttonStyle(_:)-8fav5": {
-  "abstract" : [
-    {
-      "text" : "Sets the style for buttons within this view to a button style with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "custom appearance and standard interaction behavior.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -510,7 +355,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/buttonStyle(_:)-8fav5",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/buttonStyle(_:)-8fav5",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "buttonStyle(_:)",

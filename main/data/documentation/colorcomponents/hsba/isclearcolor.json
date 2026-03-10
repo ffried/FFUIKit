@@ -16,15 +16,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isClearColor"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isClearColor"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -58,6 +57,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L36"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
@@ -135,18 +138,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -167,7 +173,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -180,18 +186,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/AlphaColorComponents-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "AlphaColorComponents Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsba\/alphacolorcomponents-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSBA/isClearColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/isClearColor": {
   "abstract" : [
     {
       "text" : "Returns whether these color components represent a clear color (",
@@ -229,7 +224,7 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/isClearColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/isClearColor",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isClearColor",

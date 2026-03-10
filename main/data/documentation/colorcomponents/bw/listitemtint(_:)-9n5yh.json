@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets a fixed tint color associated with specific content in a list.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/listItemTint(_:)-9n5yh"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/listItemTint(_:)-9n5yh"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12listItemTintyQrAA5ColorVSgF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -66,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -76,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -116,6 +123,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,118 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The color to use to tint the content, or nil to not",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "override the inherited tint.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "color"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This is equivalent to using a tint of ",
-              "type" : "text"
-            },
-            {
-              "code" : "ListItemTint.fixed(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "provided ",
-              "type" : "text"
-            },
-            {
-              "code" : "tint",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " color.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The containing list’s style will apply that tint as appropriate. watchOS",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "uses the tint color for its background platter appearance. Sidebars on",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "iOS and macOS apply the tint color to their ",
-              "type" : "text"
-            },
-            {
-              "code" : "Label",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " icons, which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "otherwise use the accent color by default.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -314,18 +217,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -346,7 +252,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -359,23 +265,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW/listItemTint(_:)-9n5yh": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/listItemTint(_:)-9n5yh": {
-  "abstract" : [
-    {
-      "text" : "Sets a fixed tint color associated with specific content in a list.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -417,7 +309,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/listItemTint(_:)-9n5yh",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/listItemTint(_:)-9n5yh",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "listItemTint(_:)",

@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L5"
+    },
     "role" : "symbol",
     "roleHeading" : "Protocol",
     "symbolKind" : "protocol",
@@ -77,7 +81,9 @@
               "text" : "<"
             },
             {
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:15ColorComponentsAAP5ValueQa",
               "text" : "Value"
             },
             {
@@ -98,8 +104,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/SQ",
-        "doc:\/\/ColorComponents\/SH"
+        "doc:\/\/color-components.ColorComponents\/SQ",
+        "doc:\/\/color-components.ColorComponents\/SH"
       ],
       "kind" : "relationships",
       "title" : "Inherits From",
@@ -107,8 +113,8 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents"
       ],
       "kind" : "relationships",
       "title" : "Inherited By",
@@ -116,16 +122,16 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
       ],
       "kind" : "relationships",
       "title" : "Conforming Types",
@@ -142,16 +148,20 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Associated-Types",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value"
       ],
       "title" : "Associated Types"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep"
       ],
       "title" : "Instance Properties"
     }
@@ -170,28 +180,31 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/SH": {
-  "identifier" : "doc:\/\/ColorComponents\/SH",
+"doc://color-components.ColorComponents/SH": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SH",
   "title" : "Swift.Hashable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SQ": {
-  "identifier" : "doc:\/\/ColorComponents\/SQ",
+"doc://color-components.ColorComponents/SQ": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SQ",
   "title" : "Swift.Equatable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -212,7 +225,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -225,7 +238,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -246,7 +259,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -259,45 +272,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -312,7 +293,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -325,53 +306,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZ": {
   "abstract" : [
     {
       "text" : "An opaque XYZ color components representation.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -386,7 +327,7 @@
       "text" : "XYZ"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -399,53 +340,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -460,7 +361,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -473,7 +374,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
@@ -494,7 +395,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -507,7 +408,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
   "abstract" : [
     {
       "text" : "The value type of these color components.",
@@ -555,7 +456,7 @@
       "text" : "Numeric"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
@@ -563,7 +464,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/value"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-4z5s8": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-4z5s8": {
   "abstract" : [
 
   ],
@@ -637,14 +538,14 @@
       "text" : "Any"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "playgroundDescription",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-4z5s8"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-6qj63": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-6qj63": {
   "abstract" : [
 
   ],
@@ -702,14 +603,14 @@
       "text" : "Any"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "playgroundDescription",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-6qj63"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-86oep": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-86oep": {
   "abstract" : [
 
   ],
@@ -783,14 +684,14 @@
       "text" : "Any"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "playgroundDescription",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-86oep"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -811,7 +712,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -824,7 +725,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -845,7 +746,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -858,7 +759,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -879,7 +780,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -892,7 +793,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL": {
   "abstract" : [
     {
       "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
@@ -913,7 +814,7 @@
       "text" : "HSL"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -926,7 +827,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsl"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSLA": {
   "abstract" : [
     {
       "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
@@ -947,7 +848,7 @@
       "text" : "HSLA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSLA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -960,53 +861,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsla"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [
     {
       "text" : "An opaque RGB (red, green, blue) color components representation.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -1021,7 +882,7 @@
       "text" : "RGB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -1034,53 +895,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -1095,7 +916,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {

@@ -1,27 +1,31 @@
 {
-  "abstract" : [
+  "deprecationSummary" : [
     {
-      "text" : "Sets the tab bar item associated with this view.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Use `Tab(title:image:value:content:)` and related initializers instead",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/tabItem(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/tabItem(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE7tabItemyQrqd__yXEAaBRd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -74,7 +78,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -82,28 +86,54 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "10.15",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "7.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -124,6 +154,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -231,112 +269,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The tab bar item to associate with this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "tabItem(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to configure a view as a tab bar item in a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". The example below adds two views as tabs in a ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct View1: View {",
-            "    var body: some View {",
-            "        Text(\"View 1\")",
-            "    }",
-            "}",
-            "",
-            "struct View2: View {",
-            "    var body: some View {",
-            "        Text(\"View 2\")",
-            "    }",
-            "}",
-            "",
-            "struct TabItem: View {",
-            "    var body: some View {",
-            "        TabView {",
-            "            View1()",
-            "                .tabItem {",
-            "                    Label(\"Menu\", systemImage: \"list.dash\")",
-            "                }",
-            "",
-            "            View2()",
-            "                .tabItem {",
-            "                    Label(\"Order\", systemImage: \"square.and.pencil\")",
-            "                }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -361,18 +293,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -393,7 +328,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -406,7 +341,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -427,7 +362,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -440,24 +375,11 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/tabItem(_:)": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/tabItem(_:)": {
-  "abstract" : [
-    {
-      "text" : "Sets the tab bar item associated with this view.",
-      "type" : "text"
-    }
-  ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",
@@ -505,7 +427,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/tabItem(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/tabItem(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "tabItem(_:)",

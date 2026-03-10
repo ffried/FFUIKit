@@ -8,15 +8,15 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -78,6 +78,10 @@
     "platforms" : [
 
     ],
+    "remoteSource" : {
+      "fileName" : "CIEXYZA+UIKit.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/Platforms\/CIEXYZA+UIKit.swift#L28"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -135,7 +139,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3CIEO",
               "text" : "CIE"
@@ -145,7 +149,7 @@
               "text" : "."
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3CIEO3XYZV",
               "text" : "XYZ"
@@ -231,18 +235,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -263,7 +270,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -276,7 +283,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZ": {
   "abstract" : [
     {
       "text" : "An opaque XYZ color components representation.",
@@ -297,7 +304,7 @@
       "text" : "XYZ"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -310,18 +317,18 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "UIKit",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
   "abstract" : [
 
   ],
@@ -340,7 +347,7 @@
       "text" : "UIColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -353,14 +360,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-159gs": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-159gs": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given CIE.XYZ components.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -406,7 +412,7 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-159gs",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",

@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures how to display search suggestions within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/searchSuggestions(_:for:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/searchSuggestions(_:for:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE17searchSuggestions_3forQrAA10VisibilityO_AA06SearchE9PlacementV3SetVtF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -92,7 +85,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -102,6 +95,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -142,6 +149,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -238,139 +253,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The visibility of the search suggestions",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "for the specified locations.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The set of locations in which to set the visibility of",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "search suggestions.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "placements"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "SwiftUI presents search suggestions differently depending on several",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "factors, like the platform, the position of the search field, and the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "size class. Use this modifier when you want to only display suggestions",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in certain ways under certain conditions. For example, you might choose",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to display suggestions in a menu when possible, but directly filter",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "your data source otherwise.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "enum FruitSuggestion: String, Identifiable {",
-            "    case apple, banana, orange",
-            "    var id: Self { self }",
-            "}",
-            "",
-            "@State private var text = \"\"",
-            "@State private var suggestions: [FruitSuggestion] = []",
-            "",
-            "var body: some View {",
-            "    MainContent()",
-            "        .searchable(text: $text) {",
-            "            ForEach(suggestions) { suggestion",
-            "                Text(suggestion.rawValue)",
-            "                    .searchCompletion(suggestion.rawValue)",
-            "            }",
-            "            .searchSuggestions(.hidden, for: .content)",
-            "        }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -395,18 +277,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -427,7 +312,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -440,23 +325,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/searchSuggestions(_:for:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BWA/searchSuggestions(_:for:)": {
-  "abstract" : [
-    {
-      "text" : "Configures how to display search suggestions within this view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -524,7 +395,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/searchSuggestions(_:for:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/searchSuggestions(_:for:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "searchSuggestions(_:for:)",

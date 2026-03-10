@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Returns a new view with a symbol effect added to it.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/symbolEffect(_:options:value:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/symbolEffect(_:options:value:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12symbolEffect_7options5valueQrqd___7Symbols06SymbolE7OptionsVqd_0_tAG08DiscreteiE0Rd__AG0iE0Rd__SQRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -114,7 +107,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -124,6 +117,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -164,6 +171,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -333,138 +348,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A symbol effect to add to the view. Existing effects",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "added by ancestors of the view are preserved, but may be",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "overridden by the new effect. Added effects will be applied",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to the ``SwiftUI\/Image` views contained by the child view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "effect"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "the value to monitor for changes, the animation is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "triggered each time the value changes.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "a copy of the view with a symbol effect added.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example adds a bounce effect to two symbol",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "images, the animation will play each time ",
-              "type" : "text"
-            },
-            {
-              "code" : "counter",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " changes:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    Image(systemName: \"bolt.slash.fill\")",
-            "    Image(systemName: \"folder.fill.badge.person.crop\")",
-            "}",
-            ".symbolEffect(.bounce, value: counter)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -489,18 +372,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL": {
   "abstract" : [
     {
       "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
@@ -521,7 +407,7 @@
       "text" : "HSL"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -534,23 +420,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsl"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL/symbolEffect(_:options:value:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsl\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSL/symbolEffect(_:options:value:)": {
-  "abstract" : [
-    {
-      "text" : "Returns a new view with a symbol effect added to it.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -640,7 +512,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/symbolEffect(_:options:value:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/symbolEffect(_:options:value:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "symbolEffect(_:options:value:)",

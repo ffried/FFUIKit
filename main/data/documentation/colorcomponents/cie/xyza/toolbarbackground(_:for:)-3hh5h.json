@@ -1,35 +1,20 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the preferred visibility of backgrounds on a bar managed by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "SwiftUI.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/toolbarBackground(_:for:)-3hh5h"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/toolbarBackground(_:for:)-3hh5h"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE17toolbarBackground_3forQrAA10VisibilityO_AA16ToolbarPlacementVdtF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -92,7 +77,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -100,29 +85,55 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "macOS",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "16.0",
         "name" : "tvOS",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "9.0",
         "name" : "watchOS",
+        "renamed" : "toolbarBackgroundVisibility(_:for:)",
         "unavailable" : false
       }
     ],
@@ -142,6 +153,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -229,260 +248,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The preferred visibility of the background of the bar.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The bars to update the color scheme of or",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ToolbarPlacement\/automatic",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " if empty.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "bars"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The preferred visibility flows up to the nearest container that",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "renders a bar. This could be a ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in iOS, or the root view of a ",
-              "type" : "text"
-            },
-            {
-              "code" : "WindowGroup",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " in macOS.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In iOS, a value of ",
-              "type" : "text"
-            },
-            {
-              "code" : "ToolbarPlacement\/automatic",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " makes the visibility",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of a tab bar or navigation bar background depend on where a ",
-              "type" : "text"
-            },
-            {
-              "code" : "List",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " settles. For example, when aligned to the bottom edge of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of a scroll view’s content, the background of a tab bar becomes",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "transparent.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Specify a value of ",
-              "type" : "text"
-            },
-            {
-              "code" : "Visibility\/visible",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to ensure that the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "background of a bar remains visible regardless of where any scroll",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view or list stops scrolling.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example shows a view that prefers to always have the tab bar",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "visible when the middle tab is selected:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TabView {",
-            "    FirstTab()",
-            "    MiddleTab()",
-            "        .toolbarBackground(.visible, for: .tabBar)",
-            "    LastTab()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can provide multiple placements to customize multiple bars",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "at once, as in the following example:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TabView {",
-            "    NavigationView {",
-            "        ContentView()",
-            "            .toolbarBackground(",
-            "                .visible, for: .navigationBar, .tabBar)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -507,18 +272,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -539,7 +307,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -552,7 +320,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -573,7 +341,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -586,32 +354,11 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/toolbarBackground(_:for:)-3hh5h": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/toolbarBackground(_:for:)-3hh5h": {
-  "abstract" : [
-    {
-      "text" : "Specifies the preferred visibility of backgrounds on a bar managed by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "SwiftUI.",
-      "type" : "text"
-    }
-  ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",
@@ -669,7 +416,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/toolbarBackground(_:for:)-3hh5h",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/toolbarBackground(_:for:)-3hh5h",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "toolbarBackground(_:for:)",

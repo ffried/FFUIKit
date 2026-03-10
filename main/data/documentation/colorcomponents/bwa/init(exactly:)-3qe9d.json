@@ -16,14 +16,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -110,6 +110,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "BWA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/BWA.swift#L208"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -159,7 +163,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3BWAV",
               "text" : "BWA"
@@ -276,18 +280,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -308,7 +315,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -321,7 +328,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-3qe9d": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-3qe9d": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly match the values",
@@ -412,7 +419,7 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",

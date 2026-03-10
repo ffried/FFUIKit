@@ -1,34 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Controls the visibility of a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Table",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "’s column header views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/tableColumnHeaders(_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/tableColumnHeaders(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE18tableColumnHeadersyQrAA10VisibilityOF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -74,7 +59,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -84,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -110,6 +109,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -172,141 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "visible",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will show table columns,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "hidden",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will remove them, and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "automatic",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will defer to default",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "behavior.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, ",
-              "type" : "text"
-            },
-            {
-              "code" : "Table",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will display a global header view with the labels",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of each table column. This area is also where users can sort, resize,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and rearrange the columns. For simple cases that don’t require those",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "features, this header can be hidden.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This will not affect the header of any ",
-              "type" : "text"
-            },
-            {
-              "code" : "Section",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : "s in a table.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Table(article.authors) {",
-            "    TableColumn(\"Name\", value: \\.name)",
-            "    TableColumn(\"Title\", value: \\.title)",
-            "}",
-            ".tableColumnHeaders(.hidden)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -331,18 +203,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL": {
   "abstract" : [
     {
       "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
@@ -363,7 +238,7 @@
       "text" : "HSL"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -376,31 +251,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsl"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSL/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSL/tableColumnHeaders(_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsl\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSL/tableColumnHeaders(_:)": {
-  "abstract" : [
-    {
-      "text" : "Controls the visibility of a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Table",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "’s column header views.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -442,7 +295,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/tableColumnHeaders(_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSL\/tableColumnHeaders(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "tableColumnHeaders(_:)",

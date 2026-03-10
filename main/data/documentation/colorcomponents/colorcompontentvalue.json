@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "ColorCompontentValue"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L2"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
     "symbolKind" : "typealias",
@@ -127,18 +131,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorCompontentValue": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorCompontentValue": {
   "abstract" : [
     {
       "text" : "The type of values that can be used with color components.",
@@ -159,7 +166,7 @@
       "text" : "ColorCompontentValue"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue",
   "kind" : "symbol",
   "navigatorTitle" : [
     {

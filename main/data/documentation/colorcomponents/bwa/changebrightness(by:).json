@@ -24,15 +24,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/changeBrightness(by:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/changeBrightness(by:)"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -110,6 +109,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "BWA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/BWA.swift#L241"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
@@ -222,18 +225,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -254,7 +260,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -267,18 +273,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/FloatingPointColorComponents-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "FloatingPointColorComponents Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bwa\/floatingpointcolorcomponents-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BWA/changeBrightness(by:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/changeBrightness(by:)": {
   "abstract" : [
     {
       "text" : "Changes the brightness by the given percent value.",
@@ -368,7 +363,7 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/changeBrightness(by:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/changeBrightness(by:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "changeBrightness(by:)",

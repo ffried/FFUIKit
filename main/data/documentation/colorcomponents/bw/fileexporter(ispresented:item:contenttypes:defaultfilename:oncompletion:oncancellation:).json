@@ -1,42 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents a system interface allowing the user to export",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Transferable",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " item to file on disk.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12fileExporter11isPresented4item12contentTypes15defaultFilename12onCompletion0M12CancellationQrAA7BindingVySbG_qd__SgSay22UniformTypeIdentifiers6UTTypeVGSSSgys6ResultOy10Foundation3URLVs5Error_pGcyyct16CoreTransferable0Z0Rd__lF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -163,7 +140,7 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : ", any "
       },
       {
         "kind" : "typeIdentifier",
@@ -218,7 +195,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -228,6 +205,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -254,6 +245,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -363,12 +362,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -386,7 +385,7 @@
             },
             {
               "kind" : "text",
-              "text" : ", "
+              "text" : ", any "
             },
             {
               "kind" : "typeIdentifier",
@@ -415,12 +414,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " () -> "
+              "text" : "() -> "
             },
             {
               "kind" : "typeIdentifier",
@@ -477,233 +476,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to whether the interface should be shown.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresented"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The item to be saved on disk.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "item"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The optional content types to use for the exported file.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "If empty, SwiftUI uses the content types from the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "transferRepresentation",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "property provided for ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Transferable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " conformance.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "contentTypes"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A callback that will be invoked when the operation",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "has succeeded or failed.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onCompletion"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A callback that will be invoked",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "if the operation was cancelled.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onCancellation"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In order for the interface to appear ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " must be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "true",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "When the operation is finished,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " before ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is called. If",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the user cancels the operation, ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will not be called.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -728,18 +500,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW": {
   "abstract" : [
     {
       "text" : "An opaque black\/white color components representation.",
@@ -760,7 +535,7 @@
       "text" : "BW"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -773,39 +548,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BW/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)": {
-  "abstract" : [
-    {
-      "text" : "Presents a system interface allowing the user to export",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Transferable",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " item to file on disk.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -932,7 +677,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -983,7 +728,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BW\/fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)",

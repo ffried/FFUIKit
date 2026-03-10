@@ -8,14 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -66,6 +66,10 @@
         "name" : "ColorComponents"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorComponents.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/ColorComponents.swift#L7"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Associated Type",
@@ -150,18 +154,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
@@ -182,7 +189,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -195,7 +202,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents/Value": {
   "abstract" : [
     {
       "text" : "The value type of these color components.",
@@ -243,7 +250,7 @@
       "text" : "Numeric"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",

@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Removes the given traits from this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibility(removeTraits:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibility(removeTraits:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE13accessibility12removeTraitsAA15ModifiedContentVyxAA31AccessibilityAttachmentModifierVGAA0iF0V_tF::SYNTHESIZED::s:15ColorComponents4RGBAV",
     "fragments" : [
       {
@@ -87,7 +80,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -98,6 +91,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityRemoveTraits(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityRemoveTraits(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityRemoveTraits(_:)",
         "unavailable" : false
       },
@@ -123,8 +134,8 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "6.0",
-        "name" : "watchOS",
+        "introducedAt" : "1.0",
+        "name" : "visionOS",
         "renamed" : "accessibilityRemoveTraits(_:)",
         "unavailable" : false
       },
@@ -132,8 +143,8 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "1.0",
-        "name" : "visionOS",
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
         "renamed" : "accessibilityRemoveTraits(_:)",
         "unavailable" : false
       }
@@ -154,6 +165,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -249,18 +268,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA": {
   "abstract" : [
     {
       "text" : "An RGBA (red, green, blue, alpha) color components representation.",
@@ -281,7 +303,7 @@
       "text" : "RGBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -294,23 +316,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
 },
-"doc://ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/RGBA/accessibility(removeTraits:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgba\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGBA/accessibility(removeTraits:)": {
-  "abstract" : [
-    {
-      "text" : "Removes the given traits from this view.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -374,7 +382,7 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibility(removeTraits:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/RGBA\/accessibility(removeTraits:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "accessibility(removeTraits:)",

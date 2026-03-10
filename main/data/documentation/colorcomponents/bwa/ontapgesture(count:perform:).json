@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/onTapGesture(count:perform:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/onTapGesture(count:perform:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12onTapGesture5count7performQrSi_yyctF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -91,7 +84,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -101,6 +94,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -141,6 +148,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -191,12 +206,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " () -> "
+              "text" : "() -> "
             },
             {
               "kind" : "typeIdentifier",
@@ -228,215 +243,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The number of taps or clicks required to trigger the action",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "closure provided in ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ". Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "count"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to perform the specified ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the user clicks",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "or taps on the view or container ",
-              "type" : "text"
-            },
-            {
-              "code" : "count",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " times.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If you create a control that’s functionally equivalent",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Button",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ButtonStyle",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to create a customized button",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "instead.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, the color of the heart images changes to a random",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "color from the ",
-              "type" : "text"
-            },
-            {
-              "code" : "colors",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " array whenever the user clicks or taps on the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view twice:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct TapGestureExample: View {",
-            "    let colors: [Color] = [.gray, .red, .orange, .yellow,",
-            "                           .green, .blue, .purple, .pink]",
-            "    @State private var fgColor: Color = .gray",
-            "",
-            "    var body: some View {",
-            "        Image(systemName: \"heart.fill\")",
-            "            .resizable()",
-            "            .frame(width: 200, height: 200)",
-            "            .foregroundColor(fgColor)",
-            "            .onTapGesture(count: 2) {",
-            "                fgColor = colors.randomElement()!",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -461,18 +267,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -493,7 +302,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -506,23 +315,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/onTapGesture(count:perform:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BWA/onTapGesture(count:perform:)": {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -589,7 +384,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/onTapGesture(count:perform:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/onTapGesture(count:perform:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "onTapGesture(count:perform:)",

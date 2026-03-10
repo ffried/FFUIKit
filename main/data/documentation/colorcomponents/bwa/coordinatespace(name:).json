@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Assigns a name to the view’s coordinate space, so other code can operate",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on dimensions like points and sizes relative to the named space.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -27,19 +13,18 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/coordinateSpace(name:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/coordinateSpace(name:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE15coordinateSpace4nameQrqd___tSHRd__lF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -100,7 +85,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -112,6 +97,24 @@
         "introducedAt" : "13.0",
         "message" : "use coordinateSpace(_:) instead",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "use coordinateSpace(_:) instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "use coordinateSpace(_:) instead",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -136,18 +139,18 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "6.0",
+        "introducedAt" : "1.0",
         "message" : "use coordinateSpace(_:) instead",
-        "name" : "watchOS",
+        "name" : "visionOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "introducedAt" : "1.0",
+        "introducedAt" : "6.0",
         "message" : "use coordinateSpace(_:) instead",
-        "name" : "visionOS",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -167,6 +170,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -253,248 +264,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A name used to identify this coordinate space.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "name"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "coordinateSpace(name:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to allow another function to find and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "operate on a view and operate on dimensions relative to that view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below demonstrates how a nested view can find and operate on",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "its enclosing view’s coordinate space:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State private var location = CGPoint.zero",
-            "",
-            "    var body: some View {",
-            "        VStack {",
-            "            Color.red.frame(width: 100, height: 100)",
-            "                .overlay(circle)",
-            "            Text(\"Location: \\(Int(location.x)), \\(Int(location.y))\")",
-            "        }",
-            "        .coordinateSpace(name: \"stack\")",
-            "    }",
-            "",
-            "    var circle: some View {",
-            "        Circle()",
-            "            .frame(width: 25, height: 25)",
-            "            .gesture(drag)",
-            "            .padding(5)",
-            "    }",
-            "",
-            "    var drag: some Gesture {",
-            "        DragGesture(coordinateSpace: .named(\"stack\"))",
-            "            .onChanged { info in location = info.location }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Here, the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " in the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " named “stack” is composed of a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "red frame with a custom ",
-              "type" : "text"
-            },
-            {
-              "code" : "Circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/overlay(_:alignment:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "at its center.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view has an attached ",
-              "type" : "text"
-            },
-            {
-              "code" : "DragGesture",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " that targets the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "enclosing VStack’s coordinate space. As the gesture recognizer’s closure",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "registers events inside ",
-              "type" : "text"
-            },
-            {
-              "code" : "circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " it stores them in the shared ",
-              "type" : "text"
-            },
-            {
-              "code" : "location",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "state variable and the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " displays the coordinates in a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -519,18 +288,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -551,7 +323,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -564,31 +336,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/coordinateSpace(name:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/BWA/coordinateSpace(name:)": {
-  "abstract" : [
-    {
-      "text" : "Assigns a name to the view’s coordinate space, so other code can operate",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on dimensions like points and sizes relative to the named space.",
-      "type" : "text"
-    }
   ],
   "deprecated" : true,
   "fragments" : [
@@ -646,7 +396,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/coordinateSpace(name:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/coordinateSpace(name:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "coordinateSpace(name:)",

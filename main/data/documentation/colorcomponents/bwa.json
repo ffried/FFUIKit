@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "BWA"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "BWA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/BWA.swift#L16"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -156,16 +160,18 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
-        "doc:\/\/ColorComponents\/Se",
-        "doc:\/\/ColorComponents\/SE",
-        "doc:\/\/ColorComponents\/SQ",
-        "doc:\/\/ColorComponents\/SH",
-        "doc:\/\/ColorComponents\/s8SendableP",
-        "doc:\/\/ColorComponents\/7SwiftUI4ViewP"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+        "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+        "doc:\/\/color-components.ColorComponents\/Se",
+        "doc:\/\/color-components.ColorComponents\/SE",
+        "doc:\/\/color-components.ColorComponents\/SQ",
+        "doc:\/\/color-components.ColorComponents\/SH",
+        "doc:\/\/color-components.ColorComponents\/s8SendableP",
+        "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+        "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -182,51 +188,56 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-1hs9b",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-22rrs",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-3hrj2",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-4m32w",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-52oai",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6flxw",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6ml6s",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6sn9u",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-73a2m",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-8hh4c",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(bw:alpha:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-1t0w9",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-4k7no",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-6mttp",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gaa9",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gsdp",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7mvfg",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7yewg",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-87cld",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-8dfs5",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(white:alpha:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-1hs9b",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-22rrs",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-3hrj2",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-4m32w",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-52oai",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6flxw",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6ml6s",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6sn9u",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-73a2m",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-8hh4c",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(bw:alpha:)",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-1t0w9",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-4k7no",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-6mttp",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gaa9",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gsdp",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7mvfg",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7yewg",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-87cld",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-8dfs5",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(white:alpha:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/alpha",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/bw",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-6b9ur",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-9jwlx",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/white"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/alpha",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/bw",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-6b9ur",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-9jwlx",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/white"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/AlphaColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/ColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/Decodable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/Equatable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/AlphaColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/ColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/Decodable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/Equatable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -245,43 +256,46 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/7SwiftUI4ViewP": {
-  "identifier" : "doc:\/\/ColorComponents\/7SwiftUI4ViewP",
-  "title" : "SwiftUI.View",
+"doc://color-components.ColorComponents/7SwiftUI4ViewP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP",
+  "title" : "SwiftUICore.View",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SE": {
-  "identifier" : "doc:\/\/ColorComponents\/SE",
+"doc://color-components.ColorComponents/SE": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SE",
   "title" : "Swift.Encodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SH": {
-  "identifier" : "doc:\/\/ColorComponents\/SH",
+"doc://color-components.ColorComponents/SH": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SH",
   "title" : "Swift.Hashable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SQ": {
-  "identifier" : "doc:\/\/ColorComponents\/SQ",
+"doc://color-components.ColorComponents/SQ": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SQ",
   "title" : "Swift.Equatable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/Se": {
-  "identifier" : "doc:\/\/ColorComponents\/Se",
+"doc://color-components.ColorComponents/Se": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/Se",
   "title" : "Swift.Decodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -302,7 +316,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -315,7 +329,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -336,7 +350,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -349,73 +363,73 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/AlphaColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/AlphaColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/AlphaColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/AlphaColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/alphacolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/ColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/ColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/ColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/ColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "ColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/colorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/Decodable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/Decodable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/Decodable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/Decodable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Decodable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/decodable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/Equatable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/Equatable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/Equatable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/Equatable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/equatable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/FloatingPointColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/FloatingPointColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/FloatingPointColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "FloatingPointColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/floatingpointcolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "View Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/alpha": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/alpha": {
   "abstract" : [
     {
       "text" : "The alpha component.",
@@ -445,14 +459,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/alpha",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/alpha",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "alpha",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/alpha"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/bw": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/bw": {
   "abstract" : [
     {
       "text" : "The black\/white components.",
@@ -495,14 +509,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/bw",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/bw",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "bw",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/bw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/cgColor-6b9ur": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/cgColor-6b9ur": {
   "abstract" : [
     {
       "text" : "The ",
@@ -572,14 +586,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-6b9ur",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-6b9ur",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/cgcolor-6b9ur"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/cgColor-9jwlx": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/cgColor-9jwlx": {
   "abstract" : [
     {
       "text" : "The ",
@@ -649,14 +663,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-9jwlx",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/cgColor-9jwlx",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/cgcolor-9jwlx"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-1hs9b": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-1hs9b": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from another b\/w color components object with floating point values.",
@@ -731,14 +745,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-1hs9b",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-1hs9b",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-1hs9b"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-22rrs": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-22rrs": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from another b\/w color components object with floating point values.",
@@ -813,14 +827,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-22rrs",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-22rrs",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-22rrs"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-3hrj2": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-3hrj2": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -878,14 +892,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-3hrj2",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-3hrj2",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-3hrj2"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-4m32w": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-4m32w": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -943,14 +957,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-4m32w",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-4m32w",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-4m32w"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-52oai": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-52oai": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from another b\/w color components object with integer values.",
@@ -1025,14 +1039,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-52oai",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-52oai",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-52oai"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-6flxw": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-6flxw": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -1090,14 +1104,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6flxw",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6flxw",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-6flxw"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-6ml6s": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-6ml6s": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -1136,7 +1150,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1156,14 +1169,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6ml6s",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6ml6s",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-6ml6s"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-6sn9u": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-6sn9u": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -1202,7 +1215,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1222,14 +1234,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6sn9u",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-6sn9u",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-6sn9u"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-73a2m": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-73a2m": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from the given color.",
@@ -1287,14 +1299,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-73a2m",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-73a2m",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-73a2m"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(_:)-8hh4c": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(_:)-8hh4c": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with alpha channel from another b\/w color components object with integer values.",
@@ -1369,14 +1381,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-8hh4c",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(_:)-8hh4c",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(_:)-8hh4c"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(bw:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(bw:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with an alpha channel with the given values.",
@@ -1436,14 +1448,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(bw:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(bw:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(bw:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(bw:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-1t0w9": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-1t0w9": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel",
@@ -1517,14 +1529,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-1t0w9",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-1t0w9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-1t0w9"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-3qe9d": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-3qe9d": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly match the values",
@@ -1615,14 +1627,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-3qe9d",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-3qe9d"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-4k7no": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-4k7no": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly match the values",
@@ -1713,14 +1725,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-4k7no",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-4k7no",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-4k7no"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-6mttp": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-6mttp": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel",
@@ -1767,7 +1779,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1795,14 +1806,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-6mttp",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-6mttp",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-6mttp"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7gaa9": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7gaa9": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly",
@@ -1876,14 +1887,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gaa9",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gaa9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-7gaa9"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7gsdp": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7gsdp": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly match the values",
@@ -1974,14 +1985,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gsdp",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7gsdp",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-7gsdp"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7mvfg": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7mvfg": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel",
@@ -2028,7 +2039,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -2056,14 +2066,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7mvfg",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7mvfg",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-7mvfg"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7yewg": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-7yewg": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly",
@@ -2137,14 +2147,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7yewg",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-7yewg",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-7yewg"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-87cld": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-87cld": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel",
@@ -2218,14 +2228,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-87cld",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-87cld",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-87cld"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-8dfs5": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(exactly:)-8dfs5": {
   "abstract" : [
     {
       "text" : "Tries to create new black\/white components with alpha channel that exactly match the values",
@@ -2316,14 +2326,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-8dfs5",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(exactly:)-8dfs5",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(exactly:)-8dfs5"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/init(white:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/init(white:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new black\/white components with an alpha channel with the given values.",
@@ -2374,14 +2384,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/init(white:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/init(white:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(white:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/init(white:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA/white": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA/white": {
   "abstract" : [
     {
       "text" : "The white component.",
@@ -2411,52 +2421,20 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/white",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA\/white",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "white",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/white"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -2471,7 +2449,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -2484,7 +2462,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -2537,7 +2515,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -2550,13 +2528,23 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
-  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+"doc://color-components.ColorComponents/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
   "title" : "Swift.CustomPlaygroundDisplayConvertible",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/s8SendableP": {
-  "identifier" : "doc:\/\/ColorComponents\/s8SendableP",
+"doc://color-components.ColorComponents/s8CopyableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s8SendableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8SendableP",
   "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }

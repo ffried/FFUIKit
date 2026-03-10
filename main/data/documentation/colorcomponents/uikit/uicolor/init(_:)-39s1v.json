@@ -8,15 +8,15 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -69,6 +69,10 @@
     "platforms" : [
 
     ],
+    "remoteSource" : {
+      "fileName" : "BWA+UIKit.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/Platforms\/BWA+UIKit.swift#L36"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -126,7 +130,7 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+              "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:15ColorComponents3BWAV",
               "text" : "BWA"
@@ -212,18 +216,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/BWA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/BWA": {
   "abstract" : [
     {
       "text" : "A black\/white color components representation with an alpha channel.",
@@ -244,7 +251,7 @@
       "text" : "BWA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/BWA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -257,18 +264,18 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "UIKit",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor": {
   "abstract" : [
 
   ],
@@ -287,7 +294,7 @@
       "text" : "UIColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -300,14 +307,13 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/uikit\/uicolor"
 },
-"doc://ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-39s1v": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/UIKit/UIColor/init(_:)-39s1v": {
   "abstract" : [
     {
       "text" : "Creates a new color using the given black\/white components with alpha channel.",
       "type" : "text"
     }
   ],
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -344,7 +350,7 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/UIKit\/UIColor\/init(_:)-39s1v",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",

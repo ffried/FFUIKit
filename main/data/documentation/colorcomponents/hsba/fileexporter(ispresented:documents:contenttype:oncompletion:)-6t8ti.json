@@ -1,34 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents a system interface for exporting a collection of reference type",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "documents to files on disk.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12fileExporter11isPresented9documents11contentType12onCompletionQrAA7BindingVySbG_qd__07UniformJ11Identifiers6UTTypeVys6ResultOySay10Foundation3URLVGs5Error_pGctSlRd__AA21ReferenceFileDocument7ElementRpd__lF::SYNTHESIZED::s:15ColorComponents4HSBAV",
     "fragments" : [
       {
@@ -138,7 +123,7 @@
       },
       {
         "kind" : "text",
-        "text" : "], "
+        "text" : "], any "
       },
       {
         "kind" : "typeIdentifier",
@@ -176,7 +161,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -186,6 +171,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -212,6 +211,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -304,12 +311,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " ("
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
@@ -327,7 +334,7 @@
             },
             {
               "kind" : "text",
-              "text" : "], "
+              "text" : "], any "
             },
             {
               "kind" : "typeIdentifier",
@@ -399,6 +406,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST7ElementQa",
               "text" : "Element"
             },
             {
@@ -418,254 +426,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to whether the interface should be shown.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresented"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The collection of in-memory documents to export.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "documents"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The content type to use for the exported file.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "contentType"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A callback that will be invoked when the operation has",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "has succeeded or failed.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onCompletion"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Result",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " indicating whether the operation succeeded or",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "failed.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "result"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In order for the interface to appear, both ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " must be ",
-              "type" : "text"
-            },
-            {
-              "code" : "true",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and ",
-              "type" : "text"
-            },
-            {
-              "code" : "documents",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " must not be empty. When the operation is finished,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " before ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is called. If",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the user cancels the operation, ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will not be called.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "contentType",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " provided must be included within the document type’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "writableContentTypes",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", otherwise the first valid writable content type",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "will be used instead.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -690,18 +450,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -722,7 +485,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -735,31 +498,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsba\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSBA/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti": {
-  "abstract" : [
-    {
-      "text" : "Presents a system interface for exporting a collection of reference type",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "documents to files on disk.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -869,7 +610,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -903,7 +644,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/fileExporter(isPresented:documents:contentType:onCompletion:)-6t8ti",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "fileExporter(isPresented:documents:contentType:onCompletion:)",

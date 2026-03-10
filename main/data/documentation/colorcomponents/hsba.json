@@ -8,13 +8,13 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -44,6 +44,10 @@
         "text" : "HSBA"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "HSBA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/HSBA\/HSBA.swift#L26"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -156,16 +160,18 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
-        "doc:\/\/ColorComponents\/Se",
-        "doc:\/\/ColorComponents\/SE",
-        "doc:\/\/ColorComponents\/SQ",
-        "doc:\/\/ColorComponents\/SH",
-        "doc:\/\/ColorComponents\/s8SendableP",
-        "doc:\/\/ColorComponents\/7SwiftUI4ViewP"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+        "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+        "doc:\/\/color-components.ColorComponents\/Se",
+        "doc:\/\/color-components.ColorComponents\/SE",
+        "doc:\/\/color-components.ColorComponents\/SQ",
+        "doc:\/\/color-components.ColorComponents\/SH",
+        "doc:\/\/color-components.ColorComponents\/s8SendableP",
+        "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+        "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -182,57 +188,62 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-32x2d",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-4mqi",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6eqn9",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6ij6e",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8eb6d",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8j1an",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-94q37",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-9xcvj",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-ramy",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-zczw",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-3w2l0",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-46wsy",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-4lgz2",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-5ln0e",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-623e3",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-73gqd",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-76aig",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7u5a8",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7z28f",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-87uur",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsb:alpha:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hue:saturation:brightness:alpha:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-6ghu0",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-p9pc"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-32x2d",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-4mqi",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6eqn9",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6ij6e",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8eb6d",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8j1an",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-94q37",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-9xcvj",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-ramy",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-zczw",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-3w2l0",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-46wsy",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-4lgz2",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-5ln0e",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-623e3",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-73gqd",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-76aig",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7u5a8",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7z28f",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-87uur",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsb:alpha:)",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hue:saturation:brightness:alpha:)",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-6ghu0",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-p9pc"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/alpha",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/brightness",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-1lkox",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-608ox",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/hsb",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/hue",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/saturation"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/alpha",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/brightness",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-1lkox",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-608ox",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/hsb",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/hue",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/saturation"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Decodable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Equatable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/Decodable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/Equatable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -251,43 +262,46 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/7SwiftUI4ViewP": {
-  "identifier" : "doc:\/\/ColorComponents\/7SwiftUI4ViewP",
-  "title" : "SwiftUI.View",
+"doc://color-components.ColorComponents/7SwiftUI4ViewP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP",
+  "title" : "SwiftUICore.View",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SE": {
-  "identifier" : "doc:\/\/ColorComponents\/SE",
+"doc://color-components.ColorComponents/SE": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SE",
   "title" : "Swift.Encodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SH": {
-  "identifier" : "doc:\/\/ColorComponents\/SH",
+"doc://color-components.ColorComponents/SH": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SH",
   "title" : "Swift.Hashable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SQ": {
-  "identifier" : "doc:\/\/ColorComponents\/SQ",
+"doc://color-components.ColorComponents/SQ": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SQ",
   "title" : "Swift.Equatable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/Se": {
-  "identifier" : "doc:\/\/ColorComponents\/Se",
+"doc://color-components.ColorComponents/Se": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/Se",
   "title" : "Swift.Decodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -308,7 +322,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -321,7 +335,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
@@ -342,7 +356,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -355,7 +369,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -408,7 +422,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -421,7 +435,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA": {
   "abstract" : [
     {
       "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
@@ -442,7 +456,7 @@
       "text" : "HSBA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -455,73 +469,73 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/AlphaColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/AlphaColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/AlphaColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/alphacolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/ColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/ColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/ColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "ColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/colorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/Decodable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/Decodable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Decodable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/Decodable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Decodable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/decodable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/Equatable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/Equatable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/Equatable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/Equatable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/equatable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/FloatingPointColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/FloatingPointColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/FloatingPointColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "FloatingPointColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/floatingpointcolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "View Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/view-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/alpha": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/alpha": {
   "abstract" : [
     {
       "text" : "The alpha component.",
@@ -551,14 +565,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/alpha",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/alpha",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "alpha",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/alpha"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/brightness": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/brightness": {
   "abstract" : [
     {
       "text" : "The brightness component.",
@@ -588,14 +602,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/brightness",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/brightness",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "brightness",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/brightness"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/cgColor-1lkox": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/cgColor-1lkox": {
   "abstract" : [
     {
       "text" : "The ",
@@ -665,14 +679,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-1lkox",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-1lkox",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/cgcolor-1lkox"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/cgColor-608ox": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/cgColor-608ox": {
   "abstract" : [
     {
       "text" : "The ",
@@ -742,14 +756,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-608ox",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/cgColor-608ox",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/cgcolor-608ox"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/hsb": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/hsb": {
   "abstract" : [
     {
       "text" : "The HSB components.",
@@ -792,14 +806,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/hsb",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/hsb",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hsb",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/hue": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/hue": {
   "abstract" : [
     {
       "text" : "The hue component.",
@@ -829,14 +843,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/hue",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/hue",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "hue",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/hue"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-32x2d": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-32x2d": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -894,14 +908,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-32x2d",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-32x2d",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-32x2d"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-4mqi": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-4mqi": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -940,7 +954,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -960,14 +973,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-4mqi",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-4mqi",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-4mqi"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-6eqn9": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-6eqn9": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -1006,7 +1019,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1026,14 +1038,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6eqn9",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6eqn9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-6eqn9"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-6ij6e": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-6ij6e": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -1091,14 +1103,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6ij6e",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-6ij6e",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-6ij6e"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-8eb6d": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-8eb6d": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from another HSBA color components object with floating point values.",
@@ -1173,14 +1185,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8eb6d",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8eb6d",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-8eb6d"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-8j1an": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-8j1an": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -1238,14 +1250,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8j1an",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-8j1an",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-8j1an"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-94q37": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-94q37": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from the given color.",
@@ -1303,14 +1315,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-94q37",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-94q37",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-94q37"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-9xcvj": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-9xcvj": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from another HSBA color components object with floating point values.",
@@ -1385,14 +1397,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-9xcvj",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-9xcvj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-9xcvj"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-ramy": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-ramy": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from another HSBA color components object with integer values.",
@@ -1467,14 +1479,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-ramy",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-ramy",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-ramy"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(_:)-zczw": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(_:)-zczw": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components from another HSBA color components object with integer values.",
@@ -1549,14 +1561,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-zczw",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(_:)-zczw",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(_:)-zczw"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-3w2l0": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-3w2l0": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the values",
@@ -1647,14 +1659,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-3w2l0",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-3w2l0",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-3w2l0"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-46wsy": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-46wsy": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the values",
@@ -1745,14 +1757,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-46wsy",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-46wsy",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-46wsy"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-4lgz2": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-4lgz2": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the components of the given color.",
@@ -1818,14 +1830,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-4lgz2",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-4lgz2",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-4lgz2"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-5ln0e": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-5ln0e": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the components of the given color.",
@@ -1864,7 +1876,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1892,14 +1903,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-5ln0e",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-5ln0e",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-5ln0e"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-623e3": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-623e3": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the values",
@@ -1990,14 +2001,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-623e3",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-623e3",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-623e3"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-73gqd": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-73gqd": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the components of the given color.",
@@ -2036,7 +2047,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -2064,14 +2074,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-73gqd",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-73gqd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-73gqd"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-76aig": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-76aig": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the values",
@@ -2162,14 +2172,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-76aig",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-76aig",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-76aig"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-7u5a8": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-7u5a8": {
   "abstract" : [
     {
       "text" : "Tries to create new HSB components that exactly match the components of the given color.",
@@ -2235,14 +2245,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7u5a8",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7u5a8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-7u5a8"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-7z28f": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-7z28f": {
   "abstract" : [
     {
       "text" : "Tries to create new HSBA components that exactly match the components of the given color.",
@@ -2308,14 +2318,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7z28f",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-7z28f",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-7z28f"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-87uur": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(exactly:)-87uur": {
   "abstract" : [
     {
       "text" : "Tries to create new HSB components that exactly match the components of the given color.",
@@ -2381,14 +2391,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-87uur",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(exactly:)-87uur",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(exactly:)-87uur"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hsb:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(hsb:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given values.",
@@ -2448,14 +2458,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsb:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsb:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsb:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(hsb:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-2g50l": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-2g50l": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given HSLA components.",
@@ -2530,14 +2540,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-2g50l",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsla:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(hsla:)-2g50l"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-6y8vq": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(hsla:)-6y8vq": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given HSLA components.",
@@ -2612,14 +2622,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hsla:)-6y8vq",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hsla:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(hsla:)-6y8vq"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(hue:saturation:brightness:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(hue:saturation:brightness:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given values.",
@@ -2704,14 +2714,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hue:saturation:brightness:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(hue:saturation:brightness:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(hue:saturation:brightness:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(hue:saturation:brightness:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(rgba:)-6ghu0": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(rgba:)-6ghu0": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given RGBA components.",
@@ -2786,14 +2796,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-6ghu0",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-6ghu0",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(rgba:)-6ghu0"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/init(rgba:)-p9pc": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/init(rgba:)-p9pc": {
   "abstract" : [
     {
       "text" : "Creates new HSBA components using the given RGBA components.",
@@ -2868,14 +2878,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-p9pc",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/init(rgba:)-p9pc",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/init(rgba:)-p9pc"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSBA/saturation": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSBA/saturation": {
   "abstract" : [
     {
       "text" : "The saturation component.",
@@ -2905,20 +2915,30 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/saturation",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSBA\/saturation",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "saturation",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba\/saturation"
 },
-"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
-  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+"doc://color-components.ColorComponents/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
   "title" : "Swift.CustomPlaygroundDisplayConvertible",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/s8SendableP": {
-  "identifier" : "doc:\/\/ColorComponents\/s8SendableP",
+"doc://color-components.ColorComponents/s8CopyableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s8SendableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8SendableP",
   "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }

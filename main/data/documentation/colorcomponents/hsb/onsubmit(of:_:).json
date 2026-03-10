@@ -1,26 +1,19 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the user submits a value to this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/onSubmit(of:_:)"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/onSubmit(of:_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE8onSubmit2of_QrAA0E8TriggersV_yyctF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -54,7 +47,7 @@
       },
       {
         "kind" : "text",
-        "text" : ", (() -> "
+        "text" : ", () -> "
       },
       {
         "kind" : "typeIdentifier",
@@ -63,7 +56,7 @@
       },
       {
         "kind" : "text",
-        "text" : ")) -> "
+        "text" : ") -> "
       },
       {
         "kind" : "keyword",
@@ -83,7 +76,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -93,6 +86,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -133,6 +140,14 @@
             "iOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -191,12 +206,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " (() -> "
+              "text" : "() -> "
             },
             {
               "kind" : "typeIdentifier",
@@ -205,7 +220,7 @@
             },
             {
               "kind" : "text",
-              "text" : ")) -> "
+              "text" : ") -> "
             },
             {
               "kind" : "keyword",
@@ -228,246 +243,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The triggers that should invoke the provided action.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "triggers"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform on submission of a value.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Different views may have different triggers for the provided action.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "A ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextField",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", or ",
-              "type" : "text"
-            },
-            {
-              "code" : "SecureField",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will trigger this action when the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "user hits the hardware or software return key. This modifier may also",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "bind this action to a default action keyboard shortcut. You may set this",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "action on an individual view or an entire view hierarchy.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TextField(\"Username\", text: $username)",
-            "    .onSubmit {",
-            "        guard viewModel.validate() else { return }",
-            "        viewModel.login()",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/submitScope(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to stop a submit",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "trigger from a control from propagating higher up in the view hierarchy",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to higher ",
-              "type" : "text"
-            },
-            {
-              "code" : "View.onSubmit(of:_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifiers.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Form {",
-            "    TextField(\"Username\", text: $viewModel.userName)",
-            "    SecureField(\"Password\", text: $viewModel.password)",
-            "",
-            "    TextField(\"Tags\", text: $viewModel.tags)",
-            "        .submitScope()",
-            "}",
-            ".onSubmit {",
-            "    guard viewModel.validate() else { return }",
-            "    viewModel.login()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can use different submit triggers to filter the types of triggers",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that should invoke the provided submission action. For example, you",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "may provide a value of ",
-              "type" : "text"
-            },
-            {
-              "code" : "SubmitTriggers\/search",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to only hear",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "submission triggers that originate from search fields vended by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "searchable modifiers.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@StateObject private var viewModel = ViewModel()",
-            "",
-            "NavigationView {",
-            "    SidebarView()",
-            "    DetailView()",
-            "}",
-            ".searchable(",
-            "    text: $viewModel.searchText,",
-            "    placement: .sidebar",
-            ") {",
-            "    SuggestionsView()",
-            "}",
-            ".onSubmit(of: .search) {",
-            "    viewModel.submitCurrentSearchQuery()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -492,18 +267,21 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB": {
   "abstract" : [
     {
       "text" : "An opaque HSB (hue, saturation, brightness) color components representation.",
@@ -524,7 +302,7 @@
       "text" : "HSB"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -537,23 +315,9 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb"
 },
-"doc://ColorComponents/documentation/ColorComponents/HSB/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/HSB/onSubmit(of:_:)": {
   "abstract" : [
 
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsb\/view-implementations"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSB/onSubmit(of:_:)": {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the user submits a value to this view.",
-      "type" : "text"
-    }
   ],
   "fragments" : [
     {
@@ -587,7 +351,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", (() -> "
+      "text" : ", () -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -596,7 +360,7 @@
     },
     {
       "kind" : "text",
-      "text" : ")) -> "
+      "text" : ") -> "
     },
     {
       "kind" : "keyword",
@@ -612,7 +376,7 @@
       "text" : "View"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/onSubmit(of:_:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/HSB\/onSubmit(of:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "onSubmit(of:_:)",

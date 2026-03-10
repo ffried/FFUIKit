@@ -8,14 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
+    "url" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -46,6 +46,10 @@
         "text" : "XYZA"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "CIEXYZA.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/CIEXYZA.swift#L24"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -158,16 +162,18 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
-        "doc:\/\/ColorComponents\/Se",
-        "doc:\/\/ColorComponents\/SE",
-        "doc:\/\/ColorComponents\/SQ",
-        "doc:\/\/ColorComponents\/SH",
-        "doc:\/\/ColorComponents\/s8SendableP",
-        "doc:\/\/ColorComponents\/7SwiftUI4ViewP"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+        "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+        "doc:\/\/color-components.ColorComponents\/Se",
+        "doc:\/\/color-components.ColorComponents\/SE",
+        "doc:\/\/color-components.ColorComponents\/SQ",
+        "doc:\/\/color-components.ColorComponents\/SH",
+        "doc:\/\/color-components.ColorComponents\/s8SendableP",
+        "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+        "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -184,55 +190,60 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-14i7h",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-27n3k",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-4n1u7",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-5jijj",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6bt75",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6pqq4",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-7ioaz",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-92o29",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-p4cy",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-sfdk",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-116nm",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-16lmi",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1qbq1",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1xu8s",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-30oym",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-39lnz",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4983z",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4xn5",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-6hd04",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-d0qu",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-1p963",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(x:y:z:alpha:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(xyz:alpha:)"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-14i7h",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-27n3k",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-4n1u7",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-5jijj",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6bt75",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6pqq4",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-7ioaz",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-92o29",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-p4cy",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-sfdk",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-116nm",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-16lmi",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1qbq1",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1xu8s",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-30oym",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-39lnz",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4983z",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4xn5",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-6hd04",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-d0qu",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-1p963",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(x:y:z:alpha:)",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(xyz:alpha:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/alpha",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-2ln1x",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-67rnd",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/x",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/xyz",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/y",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/z"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/alpha",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-2ln1x",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-67rnd",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/x",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/xyz",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/y",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/z"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/AlphaColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/ColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Decodable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Equatable-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/FloatingPointColorComponents-Implementations",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/AlphaColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/ColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Decodable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Equatable-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/FloatingPointColorComponents-Implementations",
+        "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -251,43 +262,46 @@
   ]
 , 
 "references": {
-"doc://ColorComponents/7SwiftUI4ViewP": {
-  "identifier" : "doc:\/\/ColorComponents\/7SwiftUI4ViewP",
-  "title" : "SwiftUI.View",
+"doc://color-components.ColorComponents/7SwiftUI4ViewP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/7SwiftUI4ViewP",
+  "title" : "SwiftUICore.View",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SE": {
-  "identifier" : "doc:\/\/ColorComponents\/SE",
+"doc://color-components.ColorComponents/SE": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SE",
   "title" : "Swift.Encodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SH": {
-  "identifier" : "doc:\/\/ColorComponents\/SH",
+"doc://color-components.ColorComponents/SH": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SH",
   "title" : "Swift.Hashable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/SQ": {
-  "identifier" : "doc:\/\/ColorComponents\/SQ",
+"doc://color-components.ColorComponents/SQ": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/SQ",
   "title" : "Swift.Equatable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/Se": {
-  "identifier" : "doc:\/\/ColorComponents\/Se",
+"doc://color-components.ColorComponents/Se": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/Se",
   "title" : "Swift.Decodable",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/documentation/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
   "role" : "collection",
   "title" : "ColorComponents",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/AlphaColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents color components with an alpha channel.",
@@ -308,7 +322,7 @@
       "text" : "AlphaColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -321,7 +335,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/alphacolorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE": {
   "abstract" : [
     {
       "text" : "Namespace for all CIE components.",
@@ -342,7 +356,7 @@
       "text" : "CIE"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -355,7 +369,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA": {
   "abstract" : [
     {
       "text" : "An XYZA (x, y, z, alpha) color components representation.",
@@ -376,7 +390,7 @@
       "text" : "XYZA"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -389,73 +403,73 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/AlphaColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/AlphaColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/AlphaColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/AlphaColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/alphacolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/ColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/ColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/ColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/ColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "ColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/colorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/Decodable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/Decodable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Decodable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Decodable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Decodable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/decodable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/Equatable-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/Equatable-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Equatable-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/Equatable-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/equatable-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/FloatingPointColorComponents-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/FloatingPointColorComponents-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/FloatingPointColorComponents-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/FloatingPointColorComponents-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "FloatingPointColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/floatingpointcolorcomponents-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
   "title" : "View Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/alpha": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/alpha": {
   "abstract" : [
     {
       "text" : "The alpha component.",
@@ -485,14 +499,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/alpha",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/alpha",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "alpha",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/alpha"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/cgColor-2ln1x": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/cgColor-2ln1x": {
   "abstract" : [
     {
       "text" : "The ",
@@ -562,14 +576,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-2ln1x",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-2ln1x",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/cgcolor-2ln1x"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/cgColor-67rnd": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/cgColor-67rnd": {
   "abstract" : [
     {
       "text" : "The ",
@@ -639,14 +653,14 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-67rnd",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/cgColor-67rnd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "cgColor",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/cgcolor-67rnd"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-14i7h": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-14i7h": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components from another XYZA color components object with integer values.",
@@ -730,14 +744,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-14i7h",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-14i7h",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-14i7h"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-27n3k": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-27n3k": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -776,7 +790,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -796,14 +809,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-27n3k",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-27n3k",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-27n3k"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-4n1u7": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-4n1u7": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -861,14 +874,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-4n1u7",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-4n1u7",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-4n1u7"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-5jijj": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-5jijj": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -926,14 +939,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-5jijj",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-5jijj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-5jijj"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-6bt75": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-6bt75": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components from another XYZA color components object with floating point values.",
@@ -1017,14 +1030,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6bt75",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6bt75",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-6bt75"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-6pqq4": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-6pqq4": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -1082,14 +1095,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6pqq4",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-6pqq4",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-6pqq4"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-7ioaz": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-7ioaz": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -1128,7 +1141,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1148,14 +1160,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-7ioaz",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-7ioaz",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-7ioaz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-92o29": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-92o29": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZA components from the given color.",
@@ -1213,14 +1225,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-92o29",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-92o29",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-92o29"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-p4cy": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-p4cy": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components from another XYZA color components object with integer values.",
@@ -1304,14 +1316,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-p4cy",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-p4cy",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-p4cy"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-sfdk": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(_:)-sfdk": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components from another XYZA color components object with floating point values.",
@@ -1395,14 +1407,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-sfdk",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(_:)-sfdk",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(_:)-sfdk"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-116nm": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-116nm": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -1468,14 +1480,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-116nm",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-116nm",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-116nm"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-16lmi": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-16lmi": {
   "abstract" : [
     {
       "text" : "Tries to create new XYZA components that exactly match the values",
@@ -1575,14 +1587,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-16lmi",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-16lmi",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-16lmi"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-1qbq1": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-1qbq1": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -1648,14 +1660,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1qbq1",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1qbq1",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-1qbq1"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-1xu8s": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-1xu8s": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -1694,7 +1706,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -1722,14 +1733,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1xu8s",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-1xu8s",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-1xu8s"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-30oym": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-30oym": {
   "abstract" : [
     {
       "text" : "Tries to create new XYZA components that exactly match the values",
@@ -1829,14 +1840,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-30oym",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-30oym",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-30oym"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-39lnz": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-39lnz": {
   "abstract" : [
     {
       "text" : "Tries to create new XYZA components that exactly match the values",
@@ -1936,14 +1947,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-39lnz",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-39lnz",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-39lnz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-4983z": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-4983z": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -2009,14 +2020,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4983z",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4983z",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-4983z"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-4xn5": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-4xn5": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -2082,14 +2093,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4xn5",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-4xn5",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-4xn5"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-6hd04": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-6hd04": {
   "abstract" : [
     {
       "text" : "Tries to create new CIE.XYZA components that exactly match the components of the given color.",
@@ -2128,7 +2139,6 @@
       }
     ]
   },
-  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "identifier",
@@ -2156,14 +2166,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-6hd04",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-6hd04",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-6hd04"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-d0qu": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(exactly:)-d0qu": {
   "abstract" : [
     {
       "text" : "Tries to create new XYZA components that exactly match the values",
@@ -2263,14 +2273,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-d0qu",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(exactly:)-d0qu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(exactly:)-d0qu"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-1p963": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-1p963": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components using the given RGBA components.",
@@ -2345,14 +2355,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-1p963",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-1p963",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(rgba:)-1p963"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-zu6l": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(rgba:)-zu6l": {
   "abstract" : [
     {
       "text" : "Creates new CIE.XYZ components using the given RGBA components.",
@@ -2427,14 +2437,14 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(rgba:)-zu6l",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(rgba:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(rgba:)-zu6l"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(x:y:z:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(x:y:z:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components using the given values.",
@@ -2519,14 +2529,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(x:y:z:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(x:y:z:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(x:y:z:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(x:y:z:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/init(xyz:alpha:)": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/init(xyz:alpha:)": {
   "abstract" : [
     {
       "text" : "Creates new XYZA components using the given values.",
@@ -2595,14 +2605,14 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(xyz:alpha:)",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/init(xyz:alpha:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(xyz:alpha:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/init(xyz:alpha:)"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/x": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/x": {
   "abstract" : [
     {
       "text" : "The x component.",
@@ -2632,14 +2642,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/x",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/x",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "x",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/x"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/xyz": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/xyz": {
   "abstract" : [
     {
       "text" : "The XYZ components.",
@@ -2691,14 +2701,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/xyz",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/xyz",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "xyz",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/y": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/y": {
   "abstract" : [
     {
       "text" : "The y component.",
@@ -2728,14 +2738,14 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/y",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/y",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "y",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/y"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/z": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/CIE/XYZA/z": {
   "abstract" : [
     {
       "text" : "The y component.",
@@ -2765,60 +2775,20 @@
       "text" : "Value"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/z",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/z",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "z",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/z"
 },
-"doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components without an alpha channel.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Value",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "ExpressibleByFloatLiteral",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "FloatingPoint",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -2833,7 +2803,7 @@
       "text" : "ColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/ColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -2846,7 +2816,7 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents"
 },
-"doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
+"doc://color-components.ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [
     {
       "text" : "Describes a type that represents (opaque) color components whose value is a floating point type.",
@@ -2907,7 +2877,7 @@
       "text" : "FloatingPointColorComponents"
     }
   ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+  "identifier" : "doc:\/\/color-components.ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -2920,13 +2890,23 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/floatingpointcolorcomponents"
 },
-"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
-  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+"doc://color-components.ColorComponents/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
   "title" : "Swift.CustomPlaygroundDisplayConvertible",
   "type" : "unresolvable"
 },
-"doc://ColorComponents/s8SendableP": {
-  "identifier" : "doc:\/\/ColorComponents\/s8SendableP",
+"doc://color-components.ColorComponents/s8CopyableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://color-components.ColorComponents/s8SendableP": {
+  "identifier" : "doc:\/\/color-components.ColorComponents\/s8SendableP",
   "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }
