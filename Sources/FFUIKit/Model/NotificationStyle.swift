@@ -6,8 +6,7 @@
 //  Copyright © 2016 Florian Friedrich. All rights reserved.
 //
 
-import struct CoreGraphics.CGFloat
-import class UIKit.UIColor
+public import UIKit
 
 public enum NotificationStyle: Sendable, Hashable {
     case `default` // White
@@ -16,7 +15,7 @@ public enum NotificationStyle: Sendable, Hashable {
     case success // Green
     case info    // Blue
     case custom // Whatever you like
-    
+
     public var suggestedBackgroundColor: UIColor {
         let alpha: CGFloat = 0.85
         switch self {
@@ -28,7 +27,7 @@ public enum NotificationStyle: Sendable, Hashable {
         case .custom: return .white
         }
     }
-    
+
     public var suggestedTextColor: UIColor {
         switch self {
         case .default: return .black

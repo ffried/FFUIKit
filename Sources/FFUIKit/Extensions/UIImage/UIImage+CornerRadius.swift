@@ -18,12 +18,12 @@
 //  limitations under the License.
 //
 
-import UIKit
+public import UIKit
 
 extension UIImage {
     public final func roundingCorners(to cornerRadius: CGFloat) -> UIImage {
         let rect = CGRect(origin: .zero, size: size)
-
+        
         let image: UIImage
 #if os(watchOS)
         func _legacyRounding() -> UIImage! {
@@ -43,9 +43,6 @@ extension UIImage {
             draw(in: rect)
         }
 #endif
-        return image.resizableImage(withCapInsets: UIEdgeInsets(
-            horizontal: cornerRadius,
-            vertical: 0)
-        )
+        return image.resizableImage(withCapInsets: UIEdgeInsets(horizontal: cornerRadius, vertical: 0))
     }
 }

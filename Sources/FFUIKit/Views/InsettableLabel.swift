@@ -19,9 +19,7 @@
 //
 
 #if !os(watchOS)
-import struct CoreGraphics.CGSize
-import struct UIKit.UIEdgeInsets
-import class UIKit.UILabel
+public import UIKit
 
 @IBDesignable
 public final class InsettableLabel: UILabel {

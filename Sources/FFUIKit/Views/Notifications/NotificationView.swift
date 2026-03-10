@@ -18,7 +18,8 @@
 //
 
 #if !os(watchOS)
-import UIKit
+public import UIKit
+import FFFoundation
 
 open class NotificationView: UIView {
     public let backgroundView = UIView()
@@ -37,7 +38,9 @@ open class NotificationView: UIView {
 
     open override func awakeFromNib() {
         super.awakeFromNib()
-        initialize()
+        MainActor.assumeIsolated {
+            initialize()
+        }
     }
 
     private final func initialize() {
@@ -45,24 +48,13 @@ open class NotificationView: UIView {
         backgroundView.setupFullscreen(in: self)
         contentView.enableAutoLayout()
         addSubview(contentView)
-        let otherConstraints: Array<NSLayoutConstraint>
-        if #available(iOS 11, tvOS 11, *) {
-            contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
-            otherConstraints = [
-                contentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-                contentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-                contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            ]
-        } else {
-            contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
-            otherConstraints = [
-                contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ]
-        }
-        contentViewTopConstraint.isActive = true
-        otherConstraints.activate()
+        contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
+        [
+            contentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            contentViewTopConstraint,
+        ].activate()
     }
 
     open func configure(for style: NotificationStyle) {

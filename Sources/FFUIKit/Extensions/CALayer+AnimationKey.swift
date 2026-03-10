@@ -7,8 +7,7 @@
 //
 
 #if !os(watchOS)
-import class UIKit.CALayer
-import class UIKit.CAAnimation
+public import UIKit
 
 extension CALayer {
     public struct AnimationKey: RawRepresentable, Sendable, Hashable {

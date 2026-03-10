@@ -19,9 +19,8 @@
 //
 
 #if !os(watchOS)
-import struct UIKit.UIEdgeInsets
-import class UIKit.NSLayoutConstraint
-import FFFoundation
+public import UIKit
+public import FFFoundation
 
 extension UIEdgeInsets {
     public var asMetrics: NSLayoutConstraint.MetricsDictionary {

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-import UIKit
+public import UIKit
 
 extension UIImage {
     public final var hasAlpha: Bool {
@@ -26,7 +26,7 @@ extension UIImage {
         let allowedValues: Set<CGImageAlphaInfo> = [.first, .last, .premultipliedFirst, .premultipliedLast]
         return allowedValues.contains(alpha)
     }
-    
+
     public final var normalizedImage: UIImage {
         guard imageOrientation != .up else { return self }
 #if os(watchOS)

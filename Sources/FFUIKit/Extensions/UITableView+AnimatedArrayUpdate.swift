@@ -19,10 +19,8 @@
 //
 
 #if !os(watchOS)
-import struct Foundation.IndexSet
-import struct Foundation.IndexPath
-import enum UIKit.UITableViewRowAnimation
-import class UIKit.UITableView
+import Foundation
+public import UIKit
 
 @available(iOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
 @available(tvOS, deprecated: 10000, message: "Use UIDiffableTableViewDataSource")
@@ -58,17 +56,17 @@ extension UITableView {
             completion?(true)
         }
     }
-
+    
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true, completion: ((Bool) -> ())? = nil)
-        where Section.Row: UITableViewReloadableObject
+    where Section.Row: UITableViewReloadableObject
     {
         update(from: oldSections, to: newSections, animated: animated, movingAndReloadingRowsWith: moveAndReload, completion: completion)
     }
-
+    
     public func update<Section: UITableViewSectionObject>(from oldSections: [Section] = [], to newSections: [Section], animated: Bool = true, completion: ((Bool) -> ())? = nil) {
         update(from: oldSections, to: newSections, animated: animated, movingAndReloadingRowsWith: move, completion: completion)
     }
-
+    
     public func update<Row: UITableViewReloadableObject>(from oldRows: [Row] = [], to newRows: [Row], in section: Int, animated: Bool = true, completion: ((Bool) -> ())? = nil) {
         update(from: oldRows, to: newRows, in: section, animated: animated, movingAndReloadingWith: { results, animation in
             self.moveAndReload(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation)
@@ -86,13 +84,13 @@ extension UITableView {
                                                            movingAndReloadingRowsWith moveAndReloadRows: @escaping ([Section.Row], [Section.Row], [Section.Row], Int, RowAnimation) -> (),
                                                            completion: ((Bool) -> ())?) {
         let animation: RowAnimation = animated ? .automatic : .none
-
+        
         guard !oldSections.isEmpty else {
             return _performBatchUpdates({
                 insertSections(IndexSet(newSections.indices), with: animation)
             }, completion: completion)
         }
-
+        
         var sectionResults = oldSections
         var rowResults = [Optional<Array<Section.Row>>]()
         _performBatchUpdates({
@@ -100,7 +98,7 @@ extension UITableView {
             let toRemove = oldSections.enumerated().filter { !newSections.contains($1) }
             sectionResults.removeAll { section in toRemove.contains { $0.element == section } }
             deleteSections(IndexSet(toRemove.map { $0.offset }), with: animation)
-
+            
             // Add sections
             var toAddSections = IndexSet()
             var toReloadSections = IndexSet()
@@ -127,7 +125,7 @@ extension UITableView {
                 // Move and update sections
                 for (idx, section) in newSections.enumerated() {
                     if let oldIdx = oldSections.firstIndex(of: section),
-                        let resultIdx = sectionResults.firstIndex(of: section) {
+                       let resultIdx = sectionResults.firstIndex(of: section) {
                         if idx != resultIdx {
                             self.moveSection(resultIdx, toSection: idx)
                         }
@@ -139,7 +137,7 @@ extension UITableView {
             }, completion: completion)
         }
     }
-
+    
     private final func update<Row: Equatable>(from oldRows: [Row], to newRows: [Row], in section: Int, animated: Bool,
                                               movingAndReloadingWith moveAndReload: @escaping ([Row], RowAnimation) -> (),
                                               completion: ((Bool) -> ())?) {
@@ -149,7 +147,7 @@ extension UITableView {
                 insertRows(at: newRows.indices.map { IndexPath(row: $0, section: section) }, with: animation)
             }, completion: completion)
         }
-
+        
         var results = Array<Row>(oldRows)
         _performBatchUpdates({
             insertAndDelete(from: oldRows, to: newRows, results: &results, in: section, with: animation)
@@ -157,7 +155,7 @@ extension UITableView {
             self._performBatchUpdates({ moveAndReload(results, animation) }, completion: completion)
         }
     }
-
+    
     private final func insertAndDelete<Row: Equatable>(from oldRows: [Row] = [], to newRows: [Row], results: inout [Row], in section: Int, with animation: RowAnimation) {
         // Remove rows
         let toDelete = oldRows.enumerated().filter { !newRows.contains($1) }
@@ -171,7 +169,7 @@ extension UITableView {
         let toAddIndexPaths = toAdd.map { IndexPath(row: $0.offset, section: section) }
         insertRows(at: toAddIndexPaths, with: animation)
     }
-
+    
     private final func moveAndReload<Row: Equatable>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation, rowNeedsReload: (Row, Row) -> Bool) {
         var indexPathsToReload: [IndexPath] = []
         for (idx, row) in newRows.enumerated() where oldRows.contains(row) {
@@ -188,7 +186,7 @@ extension UITableView {
             reloadRows(at: indexPathsToReload, with: animation)
         }
     }
-
+    
     private final func moveAndReload<Row: UITableViewReloadableObject>(from oldRows: [Row], to newRows: [Row], withPreviousResults results: [Row], in section: Int, with animation: RowAnimation) {
         moveAndReload(from: oldRows, to: newRows, withPreviousResults: results, in: section, with: animation, rowNeedsReload: { $1.needsReload(from: $0) })
     }

@@ -18,11 +18,8 @@
 //  limitations under the License.
 //
 
-#if !os(watchOS)
-import class UIKit.UIApplication
-import class UIKit.UIResponder
-import class UIKit.UIView
-import FFFoundation
+#if compiler(>=6.0) && !os(watchOS)
+public import UIKit
 
 extension UIResponder {
     @available(iOSApplicationExtension, unavailable)
@@ -30,7 +27,11 @@ extension UIResponder {
     @available(tvOSApplicationExtension, unavailable)
     @available(macCatalystApplicationExtension, unavailable)
     public static func findFirstResponder() -> UIResponder? {
+#if compiler(>=6.2)
+        unsafe UIApplication.shared.delegate?.window?.flatMap(firstResponder)
+#else
         UIApplication.shared.delegate?.window?.flatMap(firstResponder)
+#endif
     }
 
     public static func firstResponder(in view: UIView) -> UIResponder? {

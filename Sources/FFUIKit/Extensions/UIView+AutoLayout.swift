@@ -19,7 +19,7 @@
 //
 
 #if !os(watchOS)
-import UIKit
+public import UIKit
 import FFFoundation
 
 extension UIView {

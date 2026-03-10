@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-import UIKit
+public import UIKit
 
 extension UIImage {
     public final func scaled(to size: CGSize) -> UIImage {

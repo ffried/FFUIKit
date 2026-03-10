@@ -19,10 +19,8 @@
 //
 
 #if !os(watchOS)
-import typealias Foundation.TimeInterval
-import class UIKit.UIView
-import class UIKit.UIImage
-import class UIKit.UIImageView
+public import Foundation
+public import UIKit
 
 extension UIImageView {
     public final func setImage(image: UIImage?, animated: Bool, animationDuration: TimeInterval = 1.0) {

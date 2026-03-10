@@ -8,8 +8,8 @@
 
 #if !os(watchOS)
 import Foundation
-import UIKit
-import struct FFFoundation.Angle
+public import UIKit
+public import FFFoundation
 
 fileprivate extension CALayer.AnimationKey {
     static let rotation = CALayer.AnimationKey(rawValue: "FFProgressIndicatorAnimation")
@@ -135,11 +135,11 @@ public final class ProgressIndicatorView: TouchAwareControl {
                                                        options: [.beginFromCurrentState, .allowAnimatedContent],
                                                        animations: { self.alpha = hidden ? 0 : 1 },
                                                        completion: {
-                                                        if hidden {
-                                                            self.isHidden = hidden
-                                                            self.alpha = 1
-                                                        }
-                                                        completion?($0)
+            if hidden {
+                self.isHidden = hidden
+                self.alpha = 1
+            }
+            completion?($0)
         })
     }
 
@@ -152,7 +152,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
                             startAngle: -startAngle.asRadians.value,
                             endAngle: -endAngle.asRadians.value,
                             clockwise: true)
-        
+
     }
 
     private func animate() {
@@ -168,7 +168,7 @@ public final class ProgressIndicatorView: TouchAwareControl {
         stopButtonView.backgroundColor = color
         circleLayer.strokeColor = color.cgColor
     }
-    
+
     // MARK: - Actions
     @objc dynamic private func stopButtonPressed(sender: Any?) {
         guard isAnimating else { return }

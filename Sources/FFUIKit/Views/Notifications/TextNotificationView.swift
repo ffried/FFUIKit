@@ -19,7 +19,7 @@
 
 #if !os(watchOS)
 import Foundation
-import UIKit
+public import UIKit
 import FFFoundation
 
 public final class TextNotificationView: NotificationView {
@@ -41,7 +41,7 @@ public final class TextNotificationView: NotificationView {
 
     public override func awakeFromNib() {
         super.awakeFromNib()
-        initialize()
+        MainActor.assumeIsolated { initialize() }
     }
 
     private final func initialize() {

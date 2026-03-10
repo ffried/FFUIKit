@@ -18,15 +18,14 @@
 //
 
 #if !os(watchOS)
-import struct CoreGraphics.CGRect
-import class UIKit.UIPresentationController
+import UIKit
 
 final class NotificationPresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         presentedView?.layoutIfNeeded()
         return presentedView?.bounds ?? .zero
     }
-
+    
     override var shouldPresentInFullscreen: Bool { false }
     override var shouldRemovePresentersView: Bool { false }
 }

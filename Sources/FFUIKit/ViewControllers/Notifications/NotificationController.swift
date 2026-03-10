@@ -22,10 +22,11 @@
 import ObjectiveC
 #endif
 import Foundation
-import UIKit
+public import UIKit
 import typealias FFFoundation.AnyTimer
 import ColorComponents
 
+@MainActor
 internal protocol NotificationControllerProtocol: AnyObject {
     var noteView: NotificationView { get }
 
@@ -44,9 +45,9 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     public var style: NotificationStyle {
         didSet {
             notificationView.configure(for: style)
-            #if !os(tvOS)
+#if !os(tvOS)
             setNeedsStatusBarAppearanceUpdate()
-            #endif
+#endif
         }
     }
 
@@ -115,13 +116,13 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
 
     // MARK: - Status Bar
-    #if !os(tvOS)
+#if !os(tvOS)
     public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { .slide}
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         (notificationView.backgroundView.backgroundColor.map { HSBA<CGFloat>($0).isDarkColor } ?? false) ? .lightContent : .default
     }
-    #endif
+#endif
 
     // MARK: - Actions
     @objc dynamic internal func didTapNotification(_ recognizer: UITapGestureRecognizer) {
@@ -160,7 +161,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
 
     @objc(animationControllerForPresentedController:presentingController:sourceController:)
-    public func animationController(forPresented presented: UIViewController, 
+    public func animationController(forPresented presented: UIViewController,
                                     presenting: UIViewController,
                                     source: UIViewController) -> (any UIViewControllerAnimatedTransitioning)? {
         // TODO: Can this be replaced with `presented === self`?
@@ -180,7 +181,7 @@ public final class NotificationController<View: NotificationView>: UIViewControl
     }
 
     @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
-    public func presentationController(forPresented presented: UIViewController, 
+    public func presentationController(forPresented presented: UIViewController,
                                        presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         // TODO: Can this be replaced with `presented === self`?
         if presented is any NotificationControllerProtocol {

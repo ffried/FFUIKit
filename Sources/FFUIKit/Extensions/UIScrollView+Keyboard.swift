@@ -18,36 +18,52 @@
 //  limitations under the License.
 //
 
-#if !os(watchOS)
-import enum ObjectiveC.objc_AssociationPolicy
-import func ObjectiveC.objc_getAssociatedObject
-import func ObjectiveC.objc_setAssociatedObject
+#if compiler(>=6.0) && !os(watchOS)
+import ObjectiveC
 import Foundation
-import UIKit
+public import UIKit
 
-private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
+nonisolated(unsafe) private var _keyboardNotificationObserversKey = "KeyboardNotificationsObserver"
+
 @available(tvOS, unavailable)
 extension UIScrollView {
     private typealias UserInfoDictionary = Dictionary<AnyHashable, Any>
-    
+
     private final var notificationObservers: Array<any NSObjectProtocol> {
         get {
+#if compiler(>=6.2)
+            guard let observers = unsafe withUnsafePointer(to: &_keyboardNotificationObserversKey, {
+                unsafe objc_getAssociatedObject(self, $0)
+            }) as? Array<any NSObjectProtocol>
+            else { return [] }
+#else
             guard let observers = withUnsafePointer(to: &_keyboardNotificationObserversKey, { objc_getAssociatedObject(self, $0) }) as? Array<any NSObjectProtocol>
             else { return [] }
+#endif
             return observers
         }
         set {
+#if compiler(>=6.2)
+            unsafe withUnsafePointer(to: &_keyboardNotificationObserversKey) {
+                unsafe objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+#else
             withUnsafePointer(to: &_keyboardNotificationObserversKey) {
                 objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
+#endif
         }
     }
-    
+
     // MARK: Register / Unregister
     public final func registerForKeyboardNotifications() {
-        typealias ObserverBlock = (Notification) -> Void
-        func block(for selector: @escaping (UserInfoDictionary) -> ()) -> ObserverBlock {
-            return { $0.userInfo.map(selector) }
+        typealias ObserverBlock = @Sendable (Notification) -> Void
+        func block(for selector: @escaping @MainActor (UserInfoDictionary) -> ()) -> ObserverBlock {
+#if compiler(>=6.2)
+            unsafe unsafeBitCast({ (note: Notification) in note.userInfo.map(selector) }, to: ObserverBlock.self)
+#else
+            unsafeBitCast({ (note: Notification) in note.userInfo.map(selector) }, to: ObserverBlock.self)
+#endif
         }
 
         let tuples: [(Notification.Name, ObserverBlock)] = [
@@ -55,13 +71,15 @@ extension UIScrollView {
             (UIResponder.keyboardWillShowNotification, block(for: keyboardWillShow)),
             (UIResponder.keyboardDidHideNotification, block(for: keyboardDidHide))
         ]
-        notificationObservers = tuples.map { NotificationCenter.default.addObserver(forName: $0, object: nil, queue: .main, using: $1) }
+        notificationObservers = tuples.map {
+            NotificationCenter.default.addObserver(forName: $0, object: nil, queue: .main, using: $1)
+        }
     }
-    
+
     public final func unregisterFromKeyboardNotifications() {
         notificationObservers.removeAll()
     }
-    
+
     // MARK: Keyboard functions
     private final func keyboardWillChangeFrame(userInfo: UserInfoDictionary) {
         guard keyboardVisible else { return }
@@ -73,7 +91,7 @@ extension UIScrollView {
             setInsetsTo(keyboardHeight: newHeight, animated: true, withKeyboardUserInfo: userInfo)
         }
     }
-    
+
     private final func keyboardWillShow(userInfo: UserInfoDictionary) {
         guard !keyboardVisible else { return }
         saveEdgeInsets()
@@ -82,13 +100,13 @@ extension UIScrollView {
         let endHeight = keyboardHeight(from: endFrame)
         setInsetsTo(keyboardHeight: endHeight, animated: true, withKeyboardUserInfo: userInfo)
     }
-    
+
     private final func keyboardDidHide(userInfo: UserInfoDictionary) {
         guard keyboardVisible else { return }
         keyboardVisible = false
         restoreEdgeInsets(animated: true, userInfo: userInfo)
     }
-    
+
     // MARK: Height Adjustments
     private final func setInsetsTo(keyboardHeight height: CGFloat, animated: Bool = false, withKeyboardUserInfo userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
@@ -113,7 +131,7 @@ extension UIScrollView {
             offsetChanges()
         }
     }
-    
+
     // MARK: EdgeInsets
     private final func saveEdgeInsets() {
         originalContentInsets = contentInset
@@ -124,7 +142,7 @@ extension UIScrollView {
             originalScrollIndicatorInsets = scrollIndicatorInsets
         }
     }
-    
+
     private final func restoreEdgeInsets(animated: Bool = false, userInfo: UserInfoDictionary? = nil) {
         let changes: () -> () = {
             self.contentInset = self.originalContentInsets
@@ -141,12 +159,12 @@ extension UIScrollView {
             changes()
         }
     }
-    
+
     // MARK: Helpers
     private final func rect(for key: String, in userInfo: UserInfoDictionary) -> CGRect {
         (userInfo[key] as? NSValue)?.cgRectValue ?? .zero
     }
-    
+
     private final func keyboardHeight(from rect: CGRect) -> CGFloat {
         guard let w = window else { return 0 }
         let windowFrame = w.convert(bounds, from: self)
@@ -154,7 +172,7 @@ extension UIScrollView {
         let coveredFrame = w.convert(keyboardFrame, to: self)
         return coveredFrame.size.height
     }
-    
+
     private final func animate(_ animations: @escaping () -> (), withKeyboardUserInfo userInfo: UserInfoDictionary? = nil, completion: ((_ finished: Bool) -> ())? = nil) {
         var duration: TimeInterval = 1 / 3
         var curve: UIView.AnimationCurve = .linear
@@ -178,12 +196,47 @@ extension UIScrollView {
     }
 }
 
-private var _originalContentInsetsKey = "OriginalContentInsets"
-private var _originalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
-private var _originalHorizontalScrollIndicatorInsetsKey = "OriginalHorizontalScrollIndicatorInsets"
-private var _originalVerticalScrollIndicatorInsetsKey = "OriginalVerticalScrollIndicatorInsets"
-private var _keyboardVisibleKey = "KeyboardVisible"
+nonisolated(unsafe) private var _originalContentInsetsKey = "OriginalContentInsets"
+nonisolated(unsafe) private var _originalScrollIndicatorInsetsKey = "OriginalScrollIndicatorInsets"
+nonisolated(unsafe) private var _originalHorizontalScrollIndicatorInsetsKey = "OriginalHorizontalScrollIndicatorInsets"
+nonisolated(unsafe) private var _originalVerticalScrollIndicatorInsetsKey = "OriginalVerticalScrollIndicatorInsets"
+nonisolated(unsafe) private var _keyboardVisibleKey = "KeyboardVisible"
+
 fileprivate extension UIScrollView {
+#if compiler(>=6.2)
+    private func edgeInsets(forKey key: UnsafeRawPointer) -> UIEdgeInsets? {
+        unsafe (objc_getAssociatedObject(self, key) as? NSValue)?.uiEdgeInsetsValue
+    }
+
+    private func setEdgeInsets(_ edgeInsets: UIEdgeInsets?, forKey key: UnsafeRawPointer) {
+        unsafe objc_setAssociatedObject(self, key, edgeInsets.map(NSValue.init(uiEdgeInsets:)), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+
+    final var originalContentInsets: UIEdgeInsets {
+        get { unsafe withUnsafePointer(to: &_originalContentInsetsKey) { unsafe edgeInsets(forKey: $0) } ?? .zero }
+        set { unsafe withUnsafePointer(to: &_originalContentInsetsKey) { unsafe setEdgeInsets(newValue, forKey: $0) } }
+    }
+
+    final var originalScrollIndicatorInsets: UIEdgeInsets {
+        get { unsafe withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { unsafe edgeInsets(forKey: $0) } ?? .zero }
+        set { unsafe withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { unsafe setEdgeInsets(newValue, forKey: $0) } }
+    }
+
+    final var originalHorizontalScrollIndicatorInsets: UIEdgeInsets {
+        get { unsafe withUnsafePointer(to: &_originalHorizontalScrollIndicatorInsetsKey) { unsafe edgeInsets(forKey: $0) } ?? .zero }
+        set { unsafe withUnsafePointer(to: &_originalHorizontalScrollIndicatorInsetsKey) { unsafe setEdgeInsets(newValue, forKey: $0) } }
+    }
+
+    final var originalVerticalScrollIndicatorInsets: UIEdgeInsets {
+        get { unsafe withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { unsafe edgeInsets(forKey: $0) } ?? .zero }
+        set { unsafe withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { unsafe setEdgeInsets(newValue, forKey: $0) } }
+    }
+
+    final var keyboardVisible: Bool {
+        get { unsafe withUnsafePointer(to: &_keyboardVisibleKey) { unsafe objc_getAssociatedObject(self, $0) as? Bool } ?? false }
+        set { unsafe withUnsafePointer(to: &_keyboardVisibleKey) { unsafe objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_ASSIGN) } }
+    }
+#else
     private func edgeInsets(forKey key: UnsafeRawPointer) -> UIEdgeInsets? {
         (objc_getAssociatedObject(self, key) as? NSValue)?.uiEdgeInsetsValue
     }
@@ -196,7 +249,7 @@ fileprivate extension UIScrollView {
         get { withUnsafePointer(to: &_originalContentInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
         set { withUnsafePointer(to: &_originalContentInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
-    
+
     final var originalScrollIndicatorInsets: UIEdgeInsets {
         get { withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
         set { withUnsafePointer(to: &_originalScrollIndicatorInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
@@ -211,10 +264,11 @@ fileprivate extension UIScrollView {
         get { withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { edgeInsets(forKey: $0) } ?? .zero }
         set { withUnsafePointer(to: &_originalVerticalScrollIndicatorInsetsKey) { setEdgeInsets(newValue, forKey: $0) } }
     }
-    
+
     final var keyboardVisible: Bool {
         get { withUnsafePointer(to: &_keyboardVisibleKey) { objc_getAssociatedObject(self, $0) as? Bool } ?? false }
         set { withUnsafePointer(to: &_keyboardVisibleKey) { objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_ASSIGN) } }
     }
+#endif
 }
 #endif

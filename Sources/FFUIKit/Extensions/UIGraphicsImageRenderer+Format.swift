@@ -19,7 +19,7 @@
 //
 
 #if !os(watchOS)
-import class UIKit.UIGraphicsImageRendererFormat
+public import UIKit
 
 extension UIGraphicsImageRendererFormat {
     @inlinable
