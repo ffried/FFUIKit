@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sersoft-gmbh/color-components",
       "state" : {
-        "revision" : "ec2fe5833af7e51a9c4f5138a112f87d583565e1",
-        "version" : "1.16.0"
+        "revision" : "0465c63ba2c3cfb0c1d114d49dbc3cd2362ff53b",
+        "version" : "1.16.1"
       }
     },
     {
