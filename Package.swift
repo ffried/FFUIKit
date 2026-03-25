@@ -33,7 +33,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.0.0"),
-        .package(url: "https://github.com/ffried/FFFoundation", from: "9.7.0"),
+        .package(url: "https://github.com/ffried/FFFoundation", from: "9.8.0"),
         .package(url: "https://github.com/sersoft-gmbh/color-components", from: "1.2.0"),
     ],
     targets: [
