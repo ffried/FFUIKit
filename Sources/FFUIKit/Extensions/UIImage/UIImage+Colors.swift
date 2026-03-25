@@ -57,10 +57,6 @@ extension UIImage {
         @Lazy private(set) var uiColor: UIColor
         @Lazy private(set) var intensity: CGFloat
 
-        func hash(into hasher: inout Hasher) {
-            hasher.combine(rgba)
-        }
-
         init(rgba: RGBA<UInt8>) {
             self.rgba = rgba
 
@@ -69,11 +65,21 @@ extension UIImage {
             _intensity = Lazy { HSBA(rgba: cgRGBA.wrappedValue).intensity }
         }
 
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(rgba)
+        }
+
         static func ==(lhs: SimpleColor, rhs: SimpleColor) -> Bool {
             lhs.rgba == rhs.rgba
         }
     }
 
+#if compiler(>=6.3)
+    @inline(always)
+    private final func getAssoc<T>(for key: inout StaticString) -> T? {
+        unsafe objc_getAssociatedObject(self, &key) as? T
+    }
+#else
     @inline(__always)
     private final func getAssoc<T>(for key: inout StaticString) -> T? {
 #if compiler(>=6.2)
@@ -82,7 +88,14 @@ extension UIImage {
         objc_getAssociatedObject(self, &key) as? T
 #endif
     }
+#endif
 
+#if compiler(>=6.3)
+    @inline(always)
+    private final func setAssoc<T>(_ val: T?, for key: inout StaticString, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
+        unsafe objc_setAssociatedObject(self, &key, val, policy)
+    }
+#else
     @inline(__always)
     private final func setAssoc<T>(_ val: T?, for key: inout StaticString, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
 #if compiler(>=6.2)
@@ -91,7 +104,25 @@ extension UIImage {
         objc_setAssociatedObject(self, &key, val, policy)
 #endif
     }
+#endif
 
+#if compiler(>=6.3)
+    @inline(always)
+    private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
+        if let val: T = getAssoc(for: &key) { return val }
+        let val = generator()
+        setAssoc(val, for: &key, policy: policy)
+        return val
+    }
+
+    @inline(always)
+    private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T? {
+        if let val: T = getAssoc(for: &key) { return val }
+        let val = generator()
+        setAssoc(val, for: &key, policy: policy)
+        return val
+    }
+#else
     @inline(__always)
     private final func storedValue<T>(for key: inout StaticString, generatedBy generator: () -> T, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) -> T {
         if let val: T = getAssoc(for: &key) { return val }
@@ -107,6 +138,7 @@ extension UIImage {
         setAssoc(val, for: &key, policy: policy)
         return val
     }
+#endif
 
     public final var averageColor: UIColor? {
         func getAverageColor() -> UIColor? {
