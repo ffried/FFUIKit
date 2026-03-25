@@ -1,0 +1,438 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7FFUIKit17NotificationStyleO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "NotificationStyle"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "NotificationStyle"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "NotificationStyle.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/tags\/8.8.0\/Sources\/FFUIKit\/Model\/NotificationStyle.swift#L11"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "NotificationStyle"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "NotificationStyle"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/SQ",
+        "doc:\/\/ffuikit.FFUIKit\/SH",
+        "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+        "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Enumeration-Cases",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/custom",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/default",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/failure",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/info",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/success",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/warning"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/suggestedBackgroundColor",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/suggestedTextColor"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/notificationstyle"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/SH": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/SQ": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NotificationStyle"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NotificationStyle"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NotificationStyle",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/equatable-implementations"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/custom": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "custom"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/custom",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.custom",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/custom"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/default": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "`default`"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/default",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.default",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/default"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/failure": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "failure"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/failure",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.failure",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/failure"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/info": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "info"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/info",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.info",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/info"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/success": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "success"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/success",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.success",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/success"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/suggestedBackgroundColor": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "suggestedBackgroundColor"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIColor",
+      "text" : "UIColor"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/suggestedBackgroundColor",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "suggestedBackgroundColor",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/suggestedbackgroundcolor"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/suggestedTextColor": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "suggestedTextColor"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIColor",
+      "text" : "UIColor"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/suggestedTextColor",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "suggestedTextColor",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/suggestedtextcolor"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationStyle/warning": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "warning"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationStyle\/warning",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "NotificationStyle.warning",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationstyle\/warning"
+},
+"doc://ffuikit.FFUIKit/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s8SendableP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

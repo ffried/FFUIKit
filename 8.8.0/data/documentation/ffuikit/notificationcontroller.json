@@ -1,0 +1,1426 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7FFUIKit22NotificationControllerC",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "class"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "NotificationController"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "NotificationController"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "NotificationController.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/tags\/8.8.0\/Sources\/FFUIKit\/ViewControllers\/Notifications\/NotificationController.swift#L36"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Class",
+    "symbolKind" : "class",
+    "title" : "NotificationController"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:ScM",
+              "text" : "MainActor"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "final"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "class"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "NotificationController"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationView",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "c:@M@FFUIKit@objc(cs)NotificationView",
+              "text" : "NotificationView"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/objc(cs)UIViewController"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSCoding",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSExtensionRequestHandling",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSObject",
+        "doc:\/\/ffuikit.FFUIKit\/s7CVarArgP",
+        "doc:\/\/ffuikit.FFUIKit\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/ffuikit.FFUIKit\/s23CustomStringConvertibleP",
+        "doc:\/\/ffuikit.FFUIKit\/SQ",
+        "doc:\/\/ffuikit.FFUIKit\/SH",
+        "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+        "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIActivityItemsConfigurationProviding",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearanceContainer",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIContentContainer",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusEnvironment",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPasteConfigurationSupporting",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIResponderStandardEditActions",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIStateRestoring",
+        "doc:\/\/ffuikit.FFUIKit\/5UIKit23UITraitChangeObservableP",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UITraitEnvironment",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIUserActivityRestoring",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIViewControllerTransitioningDelegate"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/init(coder:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/init(style:autoDismissType:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/autoDismissType-swift.property",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/dismissOnTap",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/modalPresentationStyle",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/notificationView",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/preferredStatusBarStyle",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/preferredStatusBarUpdateAnimation",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/style",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/tapGestureRecognizer",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/transitioningDelegate"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/animationController(forDismissed:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/animationController(forPresented:presenting:source:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/dismissNotification(animated:completion:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/presentNotification(from:animated:completion:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/presentationController(forPresented:presenting:source:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidAppear(_:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidDisappear(_:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidLoad()",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewWillAppear(_:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewWillDisappear(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "anchor" : "Enumerations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/AutoDismissType-swift.enum"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/notificationcontroller"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/5UIKit23UITraitChangeObservableP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/5UIKit23UITraitChangeObservableP",
+  "title" : "UIKit.UITraitChangeObservable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/SH": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/SQ": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NotificationController"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NotificationController"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NotificationController",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/AutoDismissType-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AutoDismissType"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/AutoDismissType-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AutoDismissType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NotificationController.AutoDismissType",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/autodismisstype-swift.enum"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/animationController(forDismissed:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "animationController"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "forDismissed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(pl)UIViewControllerAnimatedTransitioning",
+      "text" : "UIViewControllerAnimatedTransitioning"
+    },
+    {
+      "kind" : "text",
+      "text" : ")?"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/animationController(forDismissed:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "animationController(forDismissed:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/animationcontroller(fordismissed:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/animationController(forPresented:presenting:source:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "animationController"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "forPresented"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "presenting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(pl)UIViewControllerAnimatedTransitioning",
+      "text" : "UIViewControllerAnimatedTransitioning"
+    },
+    {
+      "kind" : "text",
+      "text" : ")?"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/animationController(forPresented:presenting:source:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "animationController(forPresented:presenting:source:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/animationcontroller(forpresented:presenting:source:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/autoDismissType-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "autoDismissType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7FFUIKit22NotificationControllerC15AutoDismissTypeO",
+      "text" : "AutoDismissType"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/autoDismissType-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "autoDismissType",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/autodismisstype-swift.property"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/dismissNotification(animated:completion:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dismissNotification"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "animated"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "completion"
+    },
+    {
+      "kind" : "text",
+      "text" : ": (() -> ())?)"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/dismissNotification(animated:completion:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dismissNotification(animated:completion:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/dismissnotification(animated:completion:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/dismissOnTap": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dismissOnTap"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/dismissOnTap",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dismissOnTap",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/dismissontap"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/init(coder:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "coder"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSCoder",
+      "text" : "NSCoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/init(coder:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(coder:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/init(coder:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/init(style:autoDismissType:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "style"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7FFUIKit17NotificationStyleO",
+      "text" : "NotificationStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "autoDismissType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7FFUIKit22NotificationControllerC15AutoDismissTypeO",
+      "text" : "AutoDismissType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/init(style:autoDismissType:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(style:autoDismissType:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/init(style:autodismisstype:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/modalPresentationStyle": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "modalPresentationStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@E@UIModalPresentationStyle",
+      "text" : "UIModalPresentationStyle"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/modalPresentationStyle",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "modalPresentationStyle",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/modalpresentationstyle"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/notificationView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notificationView"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/notificationView",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notificationView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/notificationview"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/preferredStatusBarStyle": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "preferredStatusBarStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@E@UIStatusBarStyle",
+      "text" : "UIStatusBarStyle"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/preferredStatusBarStyle",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "preferredStatusBarStyle",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/preferredstatusbarstyle"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/preferredStatusBarUpdateAnimation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "preferredStatusBarUpdateAnimation"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@E@UIStatusBarAnimation",
+      "text" : "UIStatusBarAnimation"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/preferredStatusBarUpdateAnimation",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "preferredStatusBarUpdateAnimation",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/preferredstatusbarupdateanimation"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/presentNotification(from:animated:completion:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "presentNotification"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "animated"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "completion"
+    },
+    {
+      "kind" : "text",
+      "text" : ": (() -> ())?)"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/presentNotification(from:animated:completion:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "presentNotification(from:animated:completion:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/presentnotification(from:animated:completion:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/presentationController(forPresented:presenting:source:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "presentationController"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "forPresented"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "presenting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIViewController",
+      "text" : "UIViewController"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIPresentationController",
+      "text" : "UIPresentationController"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/presentationController(forPresented:presenting:source:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "presentationController(forPresented:presenting:source:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/presentationcontroller(forpresented:presenting:source:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/style": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "style"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7FFUIKit17NotificationStyleO",
+      "text" : "NotificationStyle"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/style",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "style",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/style"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/tapGestureRecognizer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tapGestureRecognizer"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UITapGestureRecognizer",
+      "text" : "UITapGestureRecognizer"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/tapGestureRecognizer",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "tapGestureRecognizer",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/tapgesturerecognizer"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/transitioningDelegate": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transitioningDelegate"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(pl)UIViewControllerTransitioningDelegate",
+      "text" : "UIViewControllerTransitioningDelegate"
+    },
+    {
+      "kind" : "text",
+      "text" : ")?"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/transitioningDelegate",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transitioningDelegate",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/transitioningdelegate"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/viewDidAppear(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "viewDidAppear"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidAppear(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "viewDidAppear(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/viewdidappear(_:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/viewDidDisappear(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "viewDidDisappear"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidDisappear(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "viewDidDisappear(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/viewdiddisappear(_:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/viewDidLoad()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "viewDidLoad"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewDidLoad()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "viewDidLoad()",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/viewdidload()"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/viewWillAppear(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "viewWillAppear"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewWillAppear(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "viewWillAppear(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/viewwillappear(_:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationController/viewWillDisappear(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "viewWillDisappear"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationController\/viewWillDisappear(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "viewWillDisappear(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationcontroller\/viewwilldisappear(_:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/NotificationView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NotificationView"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/NotificationView",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NotificationView"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NotificationView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/notificationview"
+},
+"doc://ffuikit.FFUIKit/objc(cs)UIViewController": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(cs)UIViewController",
+  "title" : "UIKit.UIViewController",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)NSCoding": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSCoding",
+  "title" : "Foundation.NSCoding",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)NSExtensionRequestHandling": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSExtensionRequestHandling",
+  "title" : "Foundation.NSExtensionRequestHandling",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)NSObject": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSObject",
+  "title" : "ObjectiveC.NSObjectProtocol",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIActivityItemsConfigurationProviding": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIActivityItemsConfigurationProviding",
+  "title" : "UIKit.UIActivityItemsConfigurationProviding",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIAppearanceContainer": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearanceContainer",
+  "title" : "UIKit.UIAppearanceContainer",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIContentContainer": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIContentContainer",
+  "title" : "UIKit.UIContentContainer",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIFocusEnvironment": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusEnvironment",
+  "title" : "UIKit.UIFocusEnvironment",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIPasteConfigurationSupporting": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPasteConfigurationSupporting",
+  "title" : "UIKit.UIPasteConfigurationSupporting",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIResponderStandardEditActions": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIResponderStandardEditActions",
+  "title" : "UIKit.UIResponderStandardEditActions",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIStateRestoring": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIStateRestoring",
+  "title" : "UIKit.UIStateRestoring",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UITraitEnvironment": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UITraitEnvironment",
+  "title" : "UIKit.UITraitEnvironment",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIUserActivityRestoring": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIUserActivityRestoring",
+  "title" : "UIKit.UIUserActivityRestoring",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIViewControllerTransitioningDelegate": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIViewControllerTransitioningDelegate",
+  "title" : "UIKit.UIViewControllerTransitioningDelegate",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s7CVarArgP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s7CVarArgP",
+  "title" : "Swift.CVarArg",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s8SendableP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
