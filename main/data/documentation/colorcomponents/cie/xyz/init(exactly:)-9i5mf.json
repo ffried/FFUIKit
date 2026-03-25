@@ -140,7 +140,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CIEXYZA+CoreGraphics.swift",
-      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/Platforms\/CIEXYZA+CoreGraphics.swift#L104"
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/CIE\/XYZ\/Platforms\/CIEXYZA+CoreGraphics.swift#L113"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",

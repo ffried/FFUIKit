@@ -135,7 +135,7 @@
     ],
     "remoteSource" : {
       "fileName" : "RGBA+CoreGraphics.swift",
-      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/Platforms\/RGBA+CoreGraphics.swift#L97"
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/Platforms\/RGBA+CoreGraphics.swift#L106"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
