@@ -50,7 +50,7 @@ extension UIView {
             "H:|-(==left)-[view]-(==right)-|",
             "V:|-(==top)-[view]-(==bottom)-|",
         ].constraints(with: ["view": self], metrics: insets.asMetrics)
-        if let preps = constraintPreparations { constraints.forEach(preps) }
+        if let constraintPreparations { constraints.forEach(constraintPreparations) }
         constraints.activate()
         return constraints
     }

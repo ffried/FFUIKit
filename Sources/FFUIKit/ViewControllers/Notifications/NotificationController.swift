@@ -34,7 +34,7 @@ internal protocol NotificationControllerProtocol: AnyObject {
 }
 
 public final class NotificationController<View: NotificationView>: UIViewController, UIViewControllerTransitioningDelegate, NotificationControllerProtocol {
-    public enum AutoDismissType {
+    public enum AutoDismissType: Sendable {
         case none
         case afterDuration(TimeInterval)
     }

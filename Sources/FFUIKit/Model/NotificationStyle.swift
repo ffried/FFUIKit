@@ -18,24 +18,24 @@ public enum NotificationStyle: Sendable, Hashable {
 
     public var suggestedBackgroundColor: UIColor {
         let alpha: CGFloat = 0.85
-        switch self {
-        case .default: return UIColor.lightGray.withAlphaComponent(alpha)
-        case .warning: return UIColor.yellow.withAlphaComponent(alpha)
-        case .failure: return UIColor.red.withAlphaComponent(alpha)
-        case .success: return UIColor.green.withAlphaComponent(alpha)
-        case .info: return UIColor.blue.withAlphaComponent(alpha)
-        case .custom: return .white
+        return switch self {
+        case .default: UIColor.lightGray.withAlphaComponent(alpha)
+        case .warning: UIColor.yellow.withAlphaComponent(alpha)
+        case .failure: UIColor.red.withAlphaComponent(alpha)
+        case .success: UIColor.green.withAlphaComponent(alpha)
+        case .info: UIColor.blue.withAlphaComponent(alpha)
+        case .custom: .white
         }
     }
 
     public var suggestedTextColor: UIColor {
         switch self {
-        case .default: return .black
-        case .warning: return .black
-        case .failure: return .white
-        case .success: return .black
-        case .info: return .white
-        case .custom: return .black
+        case .default: .black
+        case .warning: .black
+        case .failure: .white
+        case .success: .black
+        case .info: .white
+        case .custom: .black
         }
     }
 }
