@@ -1,0 +1,217 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/registerForKeyboardNotifications()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "UIKit",
+    "externalID" : "s:So12UIScrollViewC7FFUIKitE32registerForKeyboardNotificationsyyF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "registerForKeyboardNotifications"
+      },
+      {
+        "kind" : "text",
+        "text" : "()"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit",
+        "relatedModules" : [
+          "UIKit"
+        ]
+      }
+    ],
+    "platforms" : [
+
+    ],
+    "remoteSource" : {
+      "fileName" : "UIScrollView+Keyboard.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/Sources\/FFUIKit\/Extensions\/UIScrollView+Keyboard.swift#L59"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "registerForKeyboardNotifications()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:ScM",
+              "text" : "MainActor"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "final"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "registerForKeyboardNotifications"
+            },
+            {
+              "kind" : "text",
+              "text" : "()"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/uikit\/uiscrollview\/registerforkeyboardnotifications()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "UIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIScrollView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "c:objc(cs)UIScrollView",
+      "text" : "UIScrollView"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UIScrollView"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UIScrollView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiscrollview"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIScrollView/registerForKeyboardNotifications()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "registerForKeyboardNotifications"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/registerForKeyboardNotifications()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "registerForKeyboardNotifications()",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiscrollview\/registerforkeyboardnotifications()"
+}
+}
+}

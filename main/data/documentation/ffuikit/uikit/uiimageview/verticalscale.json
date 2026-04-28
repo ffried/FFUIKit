@@ -1,0 +1,274 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns the current vertical (zoom) scale of the image compared to the image view.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "E.g. if the image has a size of 100x50, but the image view is only sized at 50x25, this will return 0.5.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "If there’s no image, 0 is returned.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIImageView"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIImageView\/verticalScale"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "UIKit",
+    "externalID" : "s:So11UIImageViewC7FFUIKitE13verticalScale14CoreFoundation7CGFloatVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "verticalScale"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit",
+        "relatedModules" : [
+          "UIKit"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "UIImageView+Scales.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/Sources\/FFUIKit\/Extensions\/UIImageView+Scales.swift#L38"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "verticalScale"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:ScM",
+              "text" : "MainActor"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "verticalScale"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+              "text" : "CGFloat"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/uikit\/uiimageview\/verticalscale"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "UIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIImageView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "c:objc(cs)UIImageView",
+      "text" : "UIImageView"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIImageView",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UIImageView"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UIImageView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiimageview"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIImageView/verticalScale": {
+  "abstract" : [
+    {
+      "text" : "Returns the current vertical (zoom) scale of the image compared to the image view.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "E.g. if the image has a size of 100x50, but the image view is only sized at 50x25, this will return 0.5.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "If there’s no image, 0 is returned.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "verticalScale"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+      "text" : "CGFloat"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIImageView\/verticalScale",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "verticalScale",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiimageview\/verticalscale"
+}
+}
+}

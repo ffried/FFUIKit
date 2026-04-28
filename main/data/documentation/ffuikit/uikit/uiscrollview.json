@@ -1,0 +1,228 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "UIKit",
+    "externalID" : "s:e:s:So12UIScrollViewC7FFUIKitE18UserInfoDictionary33_36ADE836A10B54AF0BCA2F7EECDB77A6LLa",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "c:objc(cs)UIScrollView",
+        "text" : "UIScrollView"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit",
+        "relatedModules" : [
+          "UIKit"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "UIScrollView"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Class",
+    "symbolKind" : "extension",
+    "title" : "UIScrollView"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "c:objc(cs)UIScrollView",
+              "text" : "UIScrollView"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/registerForKeyboardNotifications()",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/unregisterFromKeyboardNotifications()"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/uikit\/uiscrollview"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "UIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIScrollView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "c:objc(cs)UIScrollView",
+      "text" : "UIScrollView"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UIScrollView"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UIScrollView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiscrollview"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIScrollView/registerForKeyboardNotifications()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "registerForKeyboardNotifications"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/registerForKeyboardNotifications()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "registerForKeyboardNotifications()",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiscrollview\/registerforkeyboardnotifications()"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIScrollView/unregisterFromKeyboardNotifications()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unregisterFromKeyboardNotifications"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIScrollView\/unregisterFromKeyboardNotifications()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "unregisterFromKeyboardNotifications()",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiscrollview\/unregisterfromkeyboardnotifications()"
+}
+}
+}

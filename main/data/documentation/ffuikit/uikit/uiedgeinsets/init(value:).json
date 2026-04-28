@@ -1,0 +1,220 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIEdgeInsets"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIEdgeInsets\/init(value:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "UIKit",
+    "externalID" : "s:So12UIEdgeInsetsV7FFUIKitE5valueAB14CoreFoundation7CGFloatV_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit",
+        "relatedModules" : [
+          "UIKit"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "UIEdgeInsets+Init.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/Sources\/FFUIKit\/Extensions\/UIEdgeInsets+Init.swift#L25"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(value:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "value"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+              "text" : "CGFloat"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/uikit\/uiedgeinsets\/init(value:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "UIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIEdgeInsets": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "c:@S@UIEdgeInsets",
+      "text" : "UIEdgeInsets"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIEdgeInsets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UIEdgeInsets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UIEdgeInsets",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiedgeinsets"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/UIKit/UIEdgeInsets/init(value:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "value"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14CoreFoundation7CGFloatV",
+      "text" : "CGFloat"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/UIKit\/UIEdgeInsets\/init(value:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(value:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/uikit\/uiedgeinsets\/init(value:)"
+}
+}
+}

@@ -1,0 +1,609 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "c:@M@FFUIKit@objc(cs)TouchAwareControl",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "class"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TouchAwareControl"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FFUIKit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "TouchAwareControl"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "TouchAwareControl.swift",
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/Sources\/FFUIKit\/Views\/TouchAwareControl.swift#L12"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Class",
+    "symbolKind" : "class",
+    "title" : "TouchAwareControl"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "iOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:ScM",
+              "text" : "MainActor"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "class"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "TouchAwareControl"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/objc(cs)UIControl"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/ProgressIndicatorView"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherited By",
+      "type" : "inheritedBy"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSCoding",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSObject",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)CALayerDelegate",
+        "doc:\/\/ffuikit.FFUIKit\/s7CVarArgP",
+        "doc:\/\/ffuikit.FFUIKit\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/ffuikit.FFUIKit\/s23CustomStringConvertibleP",
+        "doc:\/\/ffuikit.FFUIKit\/SQ",
+        "doc:\/\/ffuikit.FFUIKit\/SH",
+        "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+        "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAccessibilityIdentification",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIActivityItemsConfigurationProviding",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearance",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearanceContainer",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIContextMenuInteractionDelegate",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIDynamicItem",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusEnvironment",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusItem",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusItemContainer",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UILargeContentViewerItem",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPasteConfigurationSupporting",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPopoverPresentationControllerSourceItem",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIResponderStandardEditActions",
+        "doc:\/\/ffuikit.FFUIKit\/5UIKit23UITraitChangeObservableP",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UITraitEnvironment",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIUserActivityRestoring",
+        "doc:\/\/ffuikit.FFUIKit\/objc(pl)UICoordinateSpace"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/isTrackingTouchInside"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/beginTracking(_:with:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/continueTracking(_:with:)",
+        "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/endTracking(_:with:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/ffuikit\/touchawarecontrol"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ffuikit.FFUIKit/5UIKit23UITraitChangeObservableP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/5UIKit23UITraitChangeObservableP",
+  "title" : "UIKit.UITraitChangeObservable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/SH": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/SQ": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FFUIKit",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/ProgressIndicatorView": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ProgressIndicatorView"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/ProgressIndicatorView",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ProgressIndicatorView"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ProgressIndicatorView",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/progressindicatorview"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/TouchAwareControl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TouchAwareControl"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TouchAwareControl"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TouchAwareControl",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/touchawarecontrol"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/TouchAwareControl/beginTracking(_:with:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "beginTracking"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UITouch",
+      "text" : "UITouch"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIEvent",
+      "text" : "UIEvent"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/beginTracking(_:with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "beginTracking(_:with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/touchawarecontrol\/begintracking(_:with:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/TouchAwareControl/continueTracking(_:with:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "continueTracking"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UITouch",
+      "text" : "UITouch"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIEvent",
+      "text" : "UIEvent"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/continueTracking(_:with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "continueTracking(_:with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/touchawarecontrol\/continuetracking(_:with:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/TouchAwareControl/endTracking(_:with:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "endTracking"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UITouch",
+      "text" : "UITouch"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)UIEvent",
+      "text" : "UIEvent"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/endTracking(_:with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "endTracking(_:with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/touchawarecontrol\/endtracking(_:with:)"
+},
+"doc://ffuikit.FFUIKit/documentation/FFUIKit/TouchAwareControl/isTrackingTouchInside": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isTrackingTouchInside"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/documentation\/FFUIKit\/TouchAwareControl\/isTrackingTouchInside",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isTrackingTouchInside",
+  "type" : "topic",
+  "url" : "\/documentation\/ffuikit\/touchawarecontrol\/istrackingtouchinside"
+},
+"doc://ffuikit.FFUIKit/objc(cs)UIControl": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(cs)UIControl",
+  "title" : "UIKit.UIControl",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)CALayerDelegate": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)CALayerDelegate",
+  "title" : "QuartzCore.CALayerDelegate",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)NSCoding": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSCoding",
+  "title" : "Foundation.NSCoding",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)NSObject": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)NSObject",
+  "title" : "ObjectiveC.NSObjectProtocol",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIAccessibilityIdentification": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAccessibilityIdentification",
+  "title" : "UIKit.UIAccessibilityIdentification",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIActivityItemsConfigurationProviding": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIActivityItemsConfigurationProviding",
+  "title" : "UIKit.UIActivityItemsConfigurationProviding",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIAppearance": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearance",
+  "title" : "UIKit.UIAppearance",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIAppearanceContainer": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIAppearanceContainer",
+  "title" : "UIKit.UIAppearanceContainer",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIContextMenuInteractionDelegate": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIContextMenuInteractionDelegate",
+  "title" : "UIKit.UIContextMenuInteractionDelegate",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UICoordinateSpace": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UICoordinateSpace",
+  "title" : "UIUtilities.UICoordinateSpace",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIDynamicItem": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIDynamicItem",
+  "title" : "UIKit.UIDynamicItem",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIFocusEnvironment": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusEnvironment",
+  "title" : "UIKit.UIFocusEnvironment",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIFocusItem": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusItem",
+  "title" : "UIKit.UIFocusItem",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIFocusItemContainer": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIFocusItemContainer",
+  "title" : "UIKit.UIFocusItemContainer",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UILargeContentViewerItem": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UILargeContentViewerItem",
+  "title" : "UIKit.UILargeContentViewerItem",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIPasteConfigurationSupporting": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPasteConfigurationSupporting",
+  "title" : "UIKit.UIPasteConfigurationSupporting",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIPopoverPresentationControllerSourceItem": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIPopoverPresentationControllerSourceItem",
+  "title" : "UIKit.UIPopoverPresentationControllerSourceItem",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIResponderStandardEditActions": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIResponderStandardEditActions",
+  "title" : "UIKit.UIResponderStandardEditActions",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UITraitEnvironment": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UITraitEnvironment",
+  "title" : "UIKit.UITraitEnvironment",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/objc(pl)UIUserActivityRestoring": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/objc(pl)UIUserActivityRestoring",
+  "title" : "UIKit.UIUserActivityRestoring",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s7CVarArgP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s7CVarArgP",
+  "title" : "Swift.CVarArg",
+  "type" : "unresolvable"
+},
+"doc://ffuikit.FFUIKit/s8SendableP": {
+  "identifier" : "doc:\/\/ffuikit.FFUIKit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
