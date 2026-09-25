@@ -1,13 +1,13 @@
 {
-  "originHash" : "7906b5416537f5e97461bfa368c9724af9962dcd42694feadf474ab263ae96ad",
+  "originHash" : "2f989b2186efad16b82fdfd03501b7d4ea24105d8a78bfa23ccae10acb00271b",
   "pins" : [
     {
       "identity" : "color-components",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sersoft-gmbh/color-components",
       "state" : {
-        "revision" : "0465c63ba2c3cfb0c1d114d49dbc3cd2362ff53b",
-        "version" : "1.16.1"
+        "revision" : "e25d49f51d0056a3be1794853b1d526760873d70",
+        "version" : "1.17.0"
       }
     },
     {
