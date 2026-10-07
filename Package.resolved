@@ -1,13 +1,13 @@
 {
-  "originHash" : "7906b5416537f5e97461bfa368c9724af9962dcd42694feadf474ab263ae96ad",
+  "originHash" : "ce300568abaeec3efb831dd18b45e0b4affab95b52863865144c5c37c043100b",
   "pins" : [
     {
       "identity" : "color-components",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sersoft-gmbh/color-components",
       "state" : {
-        "revision" : "0465c63ba2c3cfb0c1d114d49dbc3cd2362ff53b",
-        "version" : "1.16.1"
+        "revision" : "e25d49f51d0056a3be1794853b1d526760873d70",
+        "version" : "1.17.0"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ffried/FFFoundation",
       "state" : {
-        "revision" : "ff2c8aa6644bcc4a70ec7156a5f49cfacc95601c",
-        "version" : "9.8.0"
+        "revision" : "ec377fc3906f0b7cd9596ca608aaac3194b6ec98",
+        "version" : "9.9.0"
       }
     },
     {
