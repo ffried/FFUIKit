@@ -84,6 +84,13 @@
         "introducedAt" : "15.0",
         "name" : "Mac Catalyst",
         "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "tvOS",
+        "unavailable" : false
       }
     ],
     "role" : "symbol",
@@ -99,7 +106,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {

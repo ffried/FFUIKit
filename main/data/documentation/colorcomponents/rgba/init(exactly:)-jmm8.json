@@ -131,7 +131,7 @@
     ],
     "remoteSource" : {
       "fileName" : "RGBA+CoreGraphics.swift",
-      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/Platforms\/RGBA+CoreGraphics.swift#L125"
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/RGBA\/Platforms\/RGBA+CoreGraphics.swift#L124"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -146,7 +146,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {

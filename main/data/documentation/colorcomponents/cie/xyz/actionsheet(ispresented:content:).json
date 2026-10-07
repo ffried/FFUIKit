@@ -3,7 +3,7 @@
     {
       "inlineContent" : [
         {
-          "text" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting:actions:)`instead.",
+          "text" : "use `confirmationDialog(title:isPresented:titleVisibility:presenting::actions:)`instead.",
           "type" : "text"
         }
       ],
@@ -178,7 +178,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {

@@ -128,25 +128,14 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {
               "kind" : "attribute",
-              "text" : "@"
-            },
-            {
-              "kind" : "attribute",
-              "preciseIdentifier" : "s:ScM",
-              "text" : "MainActor"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "attribute",
-              "text" : "@preconcurrency"
+              "text" : "nonisolated"
             },
             {
               "kind" : "text",

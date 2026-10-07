@@ -3,7 +3,7 @@
     {
       "inlineContent" : [
         {
-          "text" : "Use overload where mask accepts a @ViewBuilder instead.",
+          "text" : "Use overload where mask accepts a @ContentBuilder instead.",
           "type" : "text"
         }
       ],
@@ -87,7 +87,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "iOS",
         "unavailable" : false
       },
@@ -96,7 +96,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "iPadOS",
         "unavailable" : false
       },
@@ -105,7 +105,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "Mac Catalyst",
         "unavailable" : false
       },
@@ -114,7 +114,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "10.15",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "macOS",
         "unavailable" : false
       },
@@ -123,7 +123,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
@@ -131,7 +131,7 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "visionOS",
         "unavailable" : false
       },
@@ -140,7 +140,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "6.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -158,7 +158,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {

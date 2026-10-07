@@ -1,4 +1,15 @@
 {
+  "deprecationSummary" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -68,42 +79,62 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "15.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "15.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "iPadOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "15.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "12.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "15.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "8.0",
+        "message" : "Use #Preview(traits: .landscapeLeft) or other orientation traits instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -121,7 +152,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {
@@ -304,6 +337,7 @@
   "abstract" : [
 
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

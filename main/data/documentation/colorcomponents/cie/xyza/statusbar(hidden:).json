@@ -1,4 +1,15 @@
 {
+  "deprecationSummary" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Has no effect on visionOS",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -105,8 +116,8 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "1.0",
+        "message" : "Has no effect on visionOS",
         "name" : "visionOS",
-        "renamed" : "statusBarHidden(_:)",
         "unavailable" : false
       }
     ],
@@ -123,7 +134,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {

@@ -66,12 +66,9 @@
         ]
       }
     ],
-    "platforms" : [
-
-    ],
     "remoteSource" : {
       "fileName" : "BWA+UIKit.swift",
-      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/Platforms\/BWA+UIKit.swift#L22"
+      "url" : "https:\/\/github.com\/ffried\/FFUIKit\/blob\/refs\/heads\/main\/.derived-data\/SourcePackages\/checkouts\/color-components\/Sources\/ColorComponents\/BWA\/Platforms\/BWA+UIKit.swift#L21"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -86,7 +83,9 @@
             "swift"
           ],
           "platforms" : [
-            "iOS"
+            "iOS",
+            "iPadOS",
+            "Mac Catalyst"
           ],
           "tokens" : [
             {
